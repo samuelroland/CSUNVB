@@ -1,0 +1,26 @@
+{
+  "name": "133-teacher",
+  "version": "1.0.0",
+  "description": "![introBanner](imgIntroReadme.PNG)",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "fontawesome": "^5.6.3",
+    "jquery": "^3.4.1",
+    "popper": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PBA-CPNV/133-Teacher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PBA-CPNV/133-Teacher/issues"
+  },
+  "homepage": "https://github.com/PBA-CPNV/133-Teacher#readme"
+}
