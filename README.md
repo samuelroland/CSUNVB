@@ -37,7 +37,7 @@ Pour les admins, un accès à la page d’administration est proposé.
   - Choix de la base
 
 ## Gérer une liste de bases (admin)
-- Afficher la liste. Clic  gérer la base
+- Afficher la liste. Clic -> gérer la base
 - Créer
 - Renommer
 - Supprimer (s’il n’y a plus de données associées)
@@ -51,7 +51,7 @@ Pour les admins, un accès à la page d’administration est proposé.
      - Clic -> édition
      - Bouton permettant de le désigner comme actif
   
-  - Si le dernier a été utilisé  bouton permettant de créer une nouvelle version
+  - Si le dernier a été utilisé -> bouton permettant de créer une nouvelle version
 - Liste des véhicules
 - Archiver les données
 
