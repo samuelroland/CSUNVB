@@ -31,7 +31,7 @@ Pour les admins, un accès à la page d’administration est proposé.
 ## Gérer des secouristes (admin)
 
 - Login
-- Inscription
+- Nouveu secouriste. L'administrateur le crée, il a un status de 'nouveau'. Quand la personne va sur le site pour la première fois, elle va à la page d'activation, où elle définit son mdp
 - Les admins gèrent les secouristes
   - Donner/Retirer le droit d’administrer (sauf à soi-même)
   - Choix de la base
