@@ -26,6 +26,13 @@
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
+    <!-- Javascript de l'application -->
+    <script src="js/global.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/shiftEnd.js"></script>
+    <script src="js/stups.js"></script>
+    <script src="js/todoList.js"></script>
+
 </head>
 <body>
 
