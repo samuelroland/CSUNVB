@@ -11,4 +11,9 @@ function todoListHomePage()
 {
     require_once 'view/todoListHome.php';
 }
+
+function addNewToDo()
+{
+
+}
 ?>

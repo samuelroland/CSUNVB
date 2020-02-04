@@ -7,3 +7,17 @@
     background-color: aliceblue;
     font-size: xx-large;
 }
+
+.day {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2px;
+    margin: 2px;
+}
+.hour {
+    background-color: chartreuse;
+    padding: 4px;
+    margin: 2px;
+}
