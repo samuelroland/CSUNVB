@@ -1,6 +1,6 @@
 <?php
 /*
- * Programm : CSUNVBA2 todoList dans le model
+ * Program : CSUNVBA2 todoList dans le model
  * Author: Gatien Jayme / Miguel Soares
  * Date: 04.02.2020
  * Version: 1.0
