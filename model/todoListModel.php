@@ -1,9 +1,10 @@
 <?php
-/**
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
- * Date: Février 2020
- **/
+/*
+ * Programm : CSUNVBA2 todoList dans le model
+ * Author: Gatien Jayme / Miguel Soares
+ * Date: 04.02.2020
+ * Version: 1.0
+ * */
 
 /**
  * Retourne tous les items dans un tableau indexé de tableaux associatifs
