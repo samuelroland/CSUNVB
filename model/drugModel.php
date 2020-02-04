@@ -1,24 +1,23 @@
 <?php
 /**
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
- * Date: Février 2020
- **/
+ * Auteur: Christopher Pardo
+ * Date: 04.02.2020
+ *
 
 /**
  * Retourne tous les items dans un tableau indexé de tableaux associatifs
  * Des points seront également retirés au groupe qui osera laisser une des fonctions de ce fichier telle quelle
  * sans l'adapter au niveau de son nom et de son code pour qu'elle dise plus précisément de quelles données elle traite
  */
-function readDrugItems()
+function getAllDrugs()
 {
-    return json_decode(file_get_contents("model/dataStorage/items.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/drugs.json"),true);
 }
-
+/*
 /**
  * Retourne un item précis, identifié par son id
  * ...
- */
+ 
 function readDrugItem($id)
 {
     $items = getDrugItems();
@@ -29,7 +28,7 @@ function readDrugItem($id)
 /**
  * Sauve l'ensemble des items dans le fichier json
  * ...
- */
+ 
 function updateDrugItems($items)
 {
     file_put_contents("model/dataStorage/items.json",json_encode($items));
@@ -39,7 +38,7 @@ function updateDrugItems($items)
  * Modifie un item précis
  * Le paramètre $item est un item complet (donc un tableau associatif)
  * ...
- */
+ 
 function updateDrugItem($item)
 {
     $items = getDrugItems();
@@ -50,7 +49,7 @@ function updateDrugItem($item)
 /**
  * Détruit un item précis, identifié par son id
  * ...
- */
+ 
 function destroyDrugItem($id)
 {
     $items = getDrugItems();
@@ -63,7 +62,7 @@ function destroyDrugItem($id)
  * Le paramètre $item est un item complet (donc un tableau associatif), sauf que la valeur de son id n'est pas valable
  * puisque le modèle ne l'a pas encore traité
  * ...
- */
+ 
 function createDrugItem($item)
 {
     $items = getDrugItems();
@@ -71,6 +70,6 @@ function createDrugItem($item)
     saveDrugItem($items);
     return ($item); // Pour que l'appelant connaisse l'id qui a été donné
 }
-
+*/
 
 ?>
