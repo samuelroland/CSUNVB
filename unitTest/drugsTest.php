@@ -5,10 +5,15 @@
   Date : 04.02.2020
 */
 
-require_once "..\model\drugModel.php";
+require_once "model/drugModel.php";
 
 $drugs = getAllDrugs();
 
-echo "il y a ".count($drugs);
+$weekDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+$test = 0;
+foreach ($drugs as $drug){
+    echo $drug[$weekDays[$test]]["BY45677"]["31"];
+    $test++;
+}
 
 ?>
