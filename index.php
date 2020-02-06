@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 var_dump($_SESSION);
 
 // Login token if exists
@@ -36,6 +35,18 @@ switch ($action)
         break;
     case 'tryLogin':
         tryLogin($username,$password);
+        break;
+    case 'disconnect':
+        diconnect();
+        break;
+    case 'add':
+        addNewToDo();
+        break;
+    case 'delete':
+        deletenewtodo();
+        break;
+    case 'update':
+        updatenewtodo();
         break;
     default: // unknown action
         require_once 'view/home.php';
