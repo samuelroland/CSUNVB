@@ -20,9 +20,6 @@ function tryLogin($username,$password)
         }
     }else
         {
-            $username = "";
-           return ($username);
-
             login();
         }
 }
