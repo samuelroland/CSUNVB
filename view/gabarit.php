@@ -47,7 +47,6 @@
             <p> Welcome <?php echo $_SESSION["username"]?></p>
             <?php } else { ?>
                 <a href="?action=tryLogin" class="btn btn-primary m-1 pull-right">Login</a>
-
             <?php } ?>
 
 
