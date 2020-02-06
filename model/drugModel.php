@@ -11,7 +11,13 @@
  */
 function getAllDrugs()
 {
-    return json_decode(file_get_contents("model/dataStorage/drugs.json"),true);
+    $badArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"),true);
+
+    foreach ($badArray as $p){
+        $goodArray[$p["id"]] = $p;
+    }
+
+    return $goodArray;
 }
 /*
 /**

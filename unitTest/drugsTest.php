@@ -5,15 +5,23 @@
   Date : 04.02.2020
 */
 
-require_once "model/drugModel.php";
+require_once "../model/drugModel.php";
 
 $drugs = getAllDrugs();
 
-$weekDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+/*$weekDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 $test = 0;
-foreach ($drugs as $drug){
-    echo $drug[$weekDays[$test]]["BY45677"]["31"];
+for ($test; $test < count($weekDays);$test++){
+    var_dump($weekDays[$test],$drugs[$weekDays[$test]]);
     $test++;
-}
+}*/
+
+/*foreach ($drugs as $drug){
+    if ($drug == "morphinesamples"){
+        var_dump($drug);
+    }
+}*/
+
+var_dump($drugs["morphinesamples"]);
 
 ?>
