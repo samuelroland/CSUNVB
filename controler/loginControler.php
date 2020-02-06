@@ -17,11 +17,11 @@ function tryLogin($username,$password)
         {
             $_SESSION['username'] = $UserLog['username'];
             require_once "view/home.php";
-        }
-    }else
+        }else
         {
             login();
         }
+    }
 }
 function login()
 {
