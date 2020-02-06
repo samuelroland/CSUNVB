@@ -27,4 +27,8 @@ function login()
 {
     require_once 'view/login.php';
 }
+function diconnect(){
+    session_unset();
+    require_once "view/home.php";
+}
 ?>
