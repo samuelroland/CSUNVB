@@ -16,6 +16,21 @@
     padding: 2px;
     margin: 2px;
 }
+
+.week {
+    background-color: #4DB9EE;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin: 2px;
+}
+.dayheader {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding: 3px;
+}
 .hour {
     background-color: chartreuse;
     padding: 4px;

@@ -36,6 +36,15 @@ switch ($action)
     case 'tryLogin':
         tryLogin($username,$password);
         break;
+    case 'add':
+        addNewToDo();
+        break;
+    case 'delete':
+        deletenewtodo();
+        break;
+    case 'update':
+        updatenewtodo();
+        break;
     default: // unknown action
         require_once 'view/home.php';
         break;
