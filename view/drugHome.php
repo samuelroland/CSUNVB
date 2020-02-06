@@ -11,6 +11,17 @@ $title = "CSU-NVB - Stupéfiants";
 <h1>Semaine N 51</h1>
 <h2><em>Pour lundi 1 février 2020</em></h2>
 <br>
+<h3>Jours de la semaine 51</h3>
+<div id="divJoursSemaine" class="bg-success">
+    <button class="col-1 bg-danger">1.02</button>
+    <button class="col-1 bg-danger">2.02</button>
+    <button class="col-1 bg-danger">3.02</button>
+    <button class="col-1 bg-danger">4.02</button>
+    <button class="col-1 bg-danger">5.02</button>
+    <button class="col-1 bg-danger">6.02</button>
+    <button class="col-1 bg-danger">7.02</button>
+</div>
+<br>
 
 <!-- Morphine -->
 <table class="table table-striped table-bordered">
