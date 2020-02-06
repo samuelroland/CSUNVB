@@ -36,6 +36,9 @@ switch ($action)
     case 'tryLogin':
         tryLogin($username,$password);
         break;
+    case 'disconnect':
+        diconnect();
+        break;
     case 'add':
         addNewToDo();
         break;
