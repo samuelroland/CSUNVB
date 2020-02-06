@@ -7,10 +7,11 @@
 
 function getListUsers()
 {
-    return json_decode(file_get_contents("model/dataStorage/UsersTest.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/Users.json"),true);
 }
 function getUser($name)
 {
+
     $listUsers = getListUsers();
     foreach ($listUsers as $User)
     {

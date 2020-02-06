@@ -7,6 +7,7 @@
 
 require_once 'model/loginModel.php';
 
+
 function tryLogin($username,$password)
 {
     $UserLog = getUser($username);
@@ -14,15 +15,19 @@ function tryLogin($username,$password)
     {
         if ($UserLog['password'] == $password)
         {
-            unset($_SESSION['erreur']);
-            $_SESSION['username'] = $UserLog[''];
+            $_SESSION['username'] = $UserLog['username'];
             require_once "view/home.php";
         }
     }else
         {
-            $_SESSION['erreur'];
-            require_once "view/login.php";
-        }
+            $username = "";
+           return ($username);
 
+            login();
+        }
+}
+function login()
+{
+    require_once 'view/login.php';
 }
 ?>
