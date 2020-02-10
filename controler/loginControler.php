@@ -10,6 +10,7 @@ require_once 'model/loginModel.php';
 
 function tryLogin($username,$password)
 {
+    if ($username != "")
     $UserLog = getUser($username);
     if ($UserLog != '')
     {
@@ -19,6 +20,7 @@ function tryLogin($username,$password)
             require_once "view/home.php";
         }else
         {
+            $_SESSION['erreur'] = true;
             login();
         }
     }else

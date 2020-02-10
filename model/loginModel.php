@@ -20,6 +20,7 @@ function getUser($name)
             return $User;
         }
     }
+    $_SESSION['erreur'] = true;
     return '';
 }
 ?>

@@ -15,9 +15,9 @@ $title = "CSU-NVB - login";
             <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
             <?php
-            if(isset($_GET['erreur'])){
-                $err = $_GET['erreur'];
+            if(isset($_SESSION['erreur'])){
                 echo "<br><p class='alert-warning'>Utilisateur ou mot de passe incorrect</p>";
+                unset($_SESSION['erreur']);
             }
             ?>
             <br>
