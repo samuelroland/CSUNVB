@@ -15,9 +15,20 @@ function tryLogin($username,$password)
         $UserLog = getUser($username);
         if ($UserLog != '') {
             if ($UserLog['password'] == $password) {
-                $_SESSION['username'] = $UserLog['username'];
-                require_once "view/home.php";
-            } else {
+                if ($_SESSION["admin"]== true){
+                    echo "<a class='text-decoration-none card col-4 menutile pl-3 pr-3 pt-5 pb-5 m-1 align-items-center' href='?action=admin'>Administration</a>";
+                    $_SESSION['username'] = $UserLog['username'];
+                    require_once "view/home.php";
+
+                }
+                else {
+                    $_SESSION['username'] = $UserLog['username'];
+                    require_once "view/home.php";
+                }
+
+            }
+
+            else {
                 $_SESSION['erreur'] = true;
                 login();
             }
