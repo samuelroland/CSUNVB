@@ -14,12 +14,12 @@ function tryLogin($username, $password)
     if ($UserLog != '') {
         if ($UserLog['password'] == $password) {
             if ($_SESSION["username"] == "admin") {
-
                  $_SESSION['username'] = $UserLog['username'];
                 require_once "view/home.php";
                 echo "<a class='text-decoration-none card col-4 menutile pl-3 pr-3 pt-5 pb-5 m-1 align-items-center' href='?action=admin'>Administration</a>";
             }
                 else{
+
                     $_SESSION['username'] = $UserLog['username'];
                     require_once "view/home.php";
                 }
