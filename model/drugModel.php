@@ -11,13 +11,14 @@
  */
 function getAllDrugs()
 {
-    $badArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"),true);
+    $badArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"),true); //Prend les éléments d'un fichier Json
 
+    //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p){
         $goodArray[$p["id"]] = $p;
     }
 
-    return $goodArray;
+    return $goodArray; //Retourne le tableau indexé avec ses id
 }
 /*
 /**
