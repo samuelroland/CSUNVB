@@ -22,6 +22,6 @@ for ($test; $test < count($weekDays);$test++){
     }
 }*/
 
-var_dump($drugs["morphinesamples"]);
+var_dump($drugs["12"]["morphinesamples"]);
 
 ?>
