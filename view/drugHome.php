@@ -12,14 +12,14 @@ $title = "CSU-NVB - Stupéfiants";
 <h2><em>Pour lundi 1 février 2020</em></h2>
 <br>
 <h3>Jours de la semaine 51</h3>
-<div id="divJoursSemaine" class="bg-success">
-    <button class="col-1 bg-danger">1.02</button>
-    <button class="col-1 bg-danger">2.02</button>
-    <button class="col-1 bg-danger">3.02</button>
-    <button class="col-1 bg-danger">4.02</button>
-    <button class="col-1 bg-danger">5.02</button>
-    <button class="col-1 bg-danger">6.02</button>
-    <button class="col-1 bg-danger">7.02</button>
+<div id="divJoursSemaine" class="">
+    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">1.02</button></a>
+    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">2.02</button></a>
+    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">3.02</button></a>
+    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">4.02</button></a>
+    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">5.02</button></a>
+    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">6.02</button></a>
+    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">7.02</button></a>
 </div>
 <br>
 
