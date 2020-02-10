@@ -17,7 +17,7 @@ function addNewToDo()
 
 }
 
-function createTodoListItem($item)
+/*function createTodoListItem($item)
 {
     if (isset($_POST["user"]) && isset($_POST["password"])  != "" && $_POST["user"] != "" && $_POST["password"] != "") {
 
@@ -34,7 +34,7 @@ function createTodoListItem($item)
         $createtodoList[] = ["id" => $id, "date" => $date, "base" => $base, "nightjob" => $nightjob, "description" => $description, "" => $ , "type" => $type, "value" => $value];
         getTodoListItem($item);
     }
-    require_once '';
+    require_once '';*/
 }
 ?>
 "id": 101,
