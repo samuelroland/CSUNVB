@@ -4,6 +4,31 @@
     flex-wrap: wrap;
     margin: 2px;
 }
-.jourSemaine{
 
+.jourSemaine {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2px;
+    margin: 2px;
+}
+
+.imgheadertablezone {
+    text-align: center;
+}
+
+.imgheadertable {
+    height: 85px;
+}
+
+.txtvertical {
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    width: 20px;
+    height: 20px;
 }

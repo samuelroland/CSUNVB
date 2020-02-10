@@ -27,8 +27,8 @@ $title = "CSU-NVB - Stupéfiants";
 <table class="table table-striped table-bordered">
     <thead>
     <tr>
-        <th colspan="2" rowspan="2"><img src="/model/dataStorage/img/logo-stups.png" alt="" height="80px"></th>
-        <th rowspan="2">Pharmacie</th>
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png" alt="stups logo" class="imgheadertable"></th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
         <th colspan="8">Numéros des véhicules</th>
     </tr>
     <tr>
@@ -89,8 +89,8 @@ $title = "CSU-NVB - Stupéfiants";
 <table class="table table-striped table-bordered">
     <thead>
     <tr>
-        <th colspan="2" rowspan="2"><img src="/model/dataStorage/img/logo-stups.png" alt="" height="80px"></th>
-        <th rowspan="2">Pharmacie</th>
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png" alt="stups logo" class="imgheadertable"></th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
         <th colspan="8">Numéros des véhicules</th>
     </tr>
     <tr>
@@ -150,8 +150,8 @@ $title = "CSU-NVB - Stupéfiants";
 <table class="table table-striped table-bordered">
     <thead>
     <tr>
-        <th colspan="2" rowspan="2"><img src="/model/dataStorage/img/logo-stups.png" alt="" height="80px"></th>
-        <th rowspan="2" style="">Pharmacie</th>
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png" alt="stups logo" class="imgheadertable"></th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
         <th colspan="8">Numéros des véhicules</th>
     </tr>
     <tr>
