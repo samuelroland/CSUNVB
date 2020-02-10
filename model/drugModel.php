@@ -20,16 +20,23 @@ function getAllDrugs()
 
     return $goodArray; //Retourne le tableau indexé avec ses id
 }
-/*
+
 /**
  * Retourne un item précis, identifié par son id
  * ...
+ */
  
-function readDrugItem($id)
+function getADrug($id)
 {
-    $items = getDrugItems();
-    // TODO: coder la recherche de l'item demandé
-    return $item;
+    $items = getAllDrugs(); //Récupère les Drogues
+
+    //Vérifie l'id choisi et retourne la valeur du tableau ou si non retourne "NULL"
+    if (isset($items[$id])){
+        return $items[$id];
+    }
+    else{
+        return null;
+    }
 }
 
 /**

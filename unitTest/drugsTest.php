@@ -7,7 +7,7 @@
 
 require_once "../model/drugModel.php";
 
-$drugs = getAllDrugs();
+$drugs = getADrug(12);
 
 /*$weekDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 $test = 0;
@@ -22,6 +22,6 @@ for ($test; $test < count($weekDays);$test++){
     }
 }*/
 
-var_dump($drugs["12"]["morphinesamples"]);
+var_dump($drugs["morphinesamples"]["1"]);
 
 ?>
