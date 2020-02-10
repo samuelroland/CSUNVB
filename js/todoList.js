@@ -5,3 +5,33 @@
  * Auteur: X. Carrel
  * Date: Février 2020
  **/
+
+document.addEventListener("DOMContentLoaded", init);
+
+
+function init() {
+
+    cmdedit.addEventListener("click", taskedit);
+    cmdsave.addEventListener("click", tasksave);
+
+
+    function taskedit() {
+        table = div.children
+        for (nbrow = 0; nbrow < div.children.length; nbrow++) {
+            row = div.children[nbrow]
+
+            for (nbcol = 0; nbcol < row.children.length; nbcol++) {
+                div = row.children[nbcol]
+                inp = document.createElement('input')
+                inp.type = 'text'
+                inp.value = div.innerText;
+                div.innerText = ''
+
+                div.appendChild(inp)
+
+
+            }
+
+        }
+    }
+}
