@@ -11,33 +11,42 @@
  */
 function getAllDrugs()
 {
-    $badArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"),true);
+    $badArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"),true); //Prend les éléments d'un fichier Json
 
+    //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p){
         $goodArray[$p["id"]] = $p;
     }
 
-    return $goodArray;
+    return $goodArray; //Retourne le tableau indexé avec ses id
 }
-/*
+
 /**
  * Retourne un item précis, identifié par son id
  * ...
+ */
  
-function readDrugItem($id)
+function getADrug($id)
 {
-    $items = getDrugItems();
-    // TODO: coder la recherche de l'item demandé
-    return $item;
+    $items = getAllDrugs(); //Récupère les Drogues
+
+    //Vérifie l'id choisi et retourne la valeur du tableau ou si non retourne "NULL"
+    if (isset($items[$id])){
+        return $items[$id];
+    }
+    else{
+        return null;
+    }
 }
 
 /**
  * Sauve l'ensemble des items dans le fichier json
  * ...
- 
-function updateDrugItems($items)
+ */
+
+function saveDrugs($items)
 {
-    file_put_contents("model/dataStorage/items.json",json_encode($items));
+    file_put_contents("model/dataStorage/items.json",json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
 }
 
 /**
