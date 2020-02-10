@@ -42,10 +42,11 @@ function getADrug($id)
 /**
  * Sauve l'ensemble des items dans le fichier json
  * ...
- 
-function updateDrugItems($items)
+ */
+
+function saveDrugs($items)
 {
-    file_put_contents("model/dataStorage/items.json",json_encode($items));
+    file_put_contents("model/dataStorage/items.json",json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
 }
 
 /**
