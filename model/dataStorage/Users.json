@@ -7,6 +7,6 @@
   {
     "username": "toto",
     "password": "123",
-    "admin": true
+    "admin": false
   }
 ]
