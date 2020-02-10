@@ -21,7 +21,10 @@ function tryLogin($username,$password)
         {
             login();
         }
-    }
+    }else
+        {
+            login();
+        }
 }
 function login()
 {
