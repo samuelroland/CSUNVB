@@ -5,9 +5,9 @@ $title = "CSU-NVB - login";
     <div id="container" >
         <!-- zone de connexion -->
 
-        <form action="index.php?action=tryLogin" method="POST">
+        <form action="index.php?action=tryLogin" method="POST" class="form-group text-center">
             <h1 class="">Connexion</h1>
-
+            <img src="/assets/images/login.png" class="center"/><br>
             <label><b>Nom d'utilisateur</b></label>
             <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
             <br>
