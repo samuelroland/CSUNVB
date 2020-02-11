@@ -38,3 +38,14 @@
     padding: 4px;
     margin: 2px;
 }
+
+.horizontal{
+    color: white;
+    text-align: center !important;
+    font-weight: bold;
+    writing-mode: vertical-rl !important;
+    text-orientation: upright !important;
+
+}
+
+
