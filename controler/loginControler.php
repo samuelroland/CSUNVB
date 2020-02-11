@@ -16,7 +16,7 @@ function tryLogin($username,$password)
         $UserLog = getUser($username);
         if ($UserLog != '') {
             if ($UserLog['password'] == $password) {
-                $_SESSION['user'] = $UserLog;
+                $_SESSION['user'] = [$UserLog['username'],$UserLog['admin']];
                 require_once 'view/home.php';
             }
             else {
@@ -42,7 +42,7 @@ function diconnect(){
 }
 function adminTrue($UserVef)
 {
-    if ($UserVef['admin'] == true)
+    if ($UserVef[1] == true)
     {
         echo "<a class='text-decoration-none card col-4 menutile pl-3 pr-3 pt-5 pb-5 m-1 align-items-center' href='?action=admin'>Administration</a></div>";
 
