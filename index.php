@@ -24,6 +24,9 @@ switch ($action)
     case 'admin':
         adminHomePage();
         break;
+    case 'crew':
+        crew();
+        break;
     case 'shiftend':
         shiftEndHomePage();
         break;

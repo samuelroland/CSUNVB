@@ -11,4 +11,10 @@ function adminHomePage()
 {
     require_once 'view/adminHome.php';
 }
+
+function crew()
+{
+    require_once 'view/crew.php';
+}
+
 ?>
