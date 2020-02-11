@@ -16,15 +16,7 @@ function tryLogin($username,$password)
         $UserLog = getUser($username);
         if ($UserLog != '') {
             if ($UserLog['password'] == $password) {
-                if ($UserLog["admin"]== true){
-                    $_SESSION['user'] = $UserLog;
-
-
-
-                }
-                else {
-                    $_SESSION['user'] = $UserLog;
-                }
+                $_SESSION['user'] = $UserLog;
                 require_once 'view/home.php';
             }
             else {
