@@ -44,9 +44,9 @@
         <div class="row banner">
             <img class="col-2" src="/assets/images/logo.png">
             <a href="index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
-            <?php if(isset($_SESSION["username"])){?>
+            <?php if(isset($_SESSION["user"])){?>
             <a href='index.php?action=disconnect' class="btn btn-primary m-1 pull-right">Disconnect</a>
-            <p> Welcome <?php echo $_SESSION["username"]?></p>
+            <p> Welcome <?php echo $_SESSION["user"]['username']?></p>
             <?php } else { ?>
                 <a href="?action=tryLogin" class="btn btn-primary m-1 pull-right">Login</a>
             <?php } ?>
