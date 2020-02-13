@@ -34,6 +34,7 @@
     padding: 3px;
 }
 .hour {
+    overflow: visible; !important;
     background-color: rgb(182, 255, 188);
     padding: 4px;
     margin: 2px;
@@ -46,6 +47,10 @@
     writing-mode: vertical-rl !important;
     text-orientation: upright !important;
 
+}
+
+.container {
+    max-width: 74.9em;
 }
 
 
