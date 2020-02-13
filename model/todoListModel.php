@@ -13,18 +13,23 @@
  */
 function readTodoListItems()
 {
-    return json_decode(file_get_contents("model/dataStorage/items.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/items.json"), true);
+}
+
+function getTodoListItems()
+{
+    return json_decode(file_get_contents("model/dataStorage/todos.json"), true);
 }
 
 /**
  * Retourne un item précis, identifié par son id
  * ...
  */
-function readTodoListItem($id)
+function readTodoListItem($id, $items)
 {
     $items = getTodoListItems();
     // TODO: coder la recherche de l'item demandé
-    return $item;
+    return $items;
 }
 
 /**
@@ -33,7 +38,7 @@ function readTodoListItem($id)
  */
 function updateTodoListItems($items)
 {
-    file_put_contents("model/dataStorage/items.json",json_encode($items));
+    file_put_contents("model/dataStorage/items.json", json_encode($items));
 }
 
 /**
@@ -41,7 +46,7 @@ function updateTodoListItems($items)
  * Le paramètre $item est un item complet (donc un tableau associatif)
  * ...
  */
-function updateTodoListItem($item)
+function updateTodoListItem($items)
 {
     $items = getTodoListItems();
     // TODO: retrouver l'item donnée en paramètre et le modifier dans le tableau $items
@@ -52,11 +57,16 @@ function updateTodoListItem($item)
  * Détruit un item précis, identifié par son id
  * ...
  */
-function destroyTodoListItem($id)
+function destroyTodoListItem($id, $items)
 {
     $items = getTodoListItems();
     // TODO: coder la recherche de l'item demandé et sa destruction dans le tableau
     saveTodoListItem($items);
+}
+
+function saveTodoListItem($item)
+{
+    file_put_contents("model/dataStorage/todos.json", json_encode($item));
 }
 
 /**
@@ -67,10 +77,18 @@ function destroyTodoListItem($id)
  */
 function createTodoListItem($item)
 {
+    $id = null;
     $items = getTodoListItems();
-    // TODO: trouver un id libre pour le nouvel id et ajouter le nouvel item dans le tableau
+    // trouver l'id de la dernière tâche
+    foreach ($items as $oneitem) {
+        $id = $oneitem["id"];
+    }
+    $id++; // prendre l'id suivante
+// enregistrer un nouvel id pour le nouvelle item
+    $item['id'] = $id;
+    $items[] = $item;
     saveTodoListItem($items);
-    return ($item); // Pour que l'appelant connaisse l'id qui a été donné
+    return ($id); // Pour que l'appelant connaisse l'id qui a été donné
 }
 
 
