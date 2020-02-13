@@ -1,12 +1,9 @@
 [
   {
-    "username": "test",
-    "password": "123",
-    "admin": true
-  },
-  {
-    "username": "toto",
-    "password": "123",
-    "admin": false
+    "username": "samueluser",
+    "fullname": "Samuel",
+    "password": "$2y$10$ffTpLfADcTGnhBzKBlFAy.QKd7A5lHaq5NH2KeKwL1FGoQDc5T6Yy",
+    "admin": false,
+    "date-inscription": "2020-02-13"
   }
 ]

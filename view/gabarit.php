@@ -46,9 +46,11 @@
             <a href="index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
             <?php if(isset($_SESSION["user"])){?>
             <a href='index.php?action=disconnect' class="btn btn-primary m-1 pull-right">Disconnect</a>
-            <p> Welcome <?php echo $_SESSION["user"][0]?></p>
+            <p>Welcome <strong><?php echo $_SESSION["user"][1]?></strong></p>
             <?php } else { ?>
                 <a href="?action=tryLogin" class="btn btn-primary m-1 pull-right">Login</a>
+                <a href="?action=createAccount" class="btn btn-primary m-1 pull-right">Créer un Compte</a>
+
             <?php } ?>
 
 

@@ -7,7 +7,11 @@ var_dump($_SESSION);
 if(isset($_POST["username"]) && isset($_POST["password"]))
 {
     $username = $_POST["username"];
+    $fullname = $_POST["fullname"];
     $password = $_POST["password"];
+    $password2 = $_POST["password2"];
+    $admin = $_POST ["admin"];
+
 }
 
 // Include all controllers
@@ -35,6 +39,9 @@ switch ($action)
         break;
     case 'tryLogin':
         tryLogin($username,$password);
+        break;
+    case 'createAccount':
+        createAccount($username,$fullname,$password,$password2,$admin);
         break;
     case 'disconnect':
         diconnect();
