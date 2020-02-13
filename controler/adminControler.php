@@ -58,4 +58,8 @@ function addUser($username,$fullname,$hash,$admin)
     $listUsers[] = $newUser;
     file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
 }
+function crew()
+{
+    require_once 'view/crew.php';
+}
 ?>
