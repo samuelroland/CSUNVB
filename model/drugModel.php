@@ -40,7 +40,7 @@ function getADrug($id)
 
 function saveDrugs($items)
 {
-    file_put_contents("model/dataStorage/items.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
+    file_put_contents("../model/dataStorage/drugs.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
 }
 
 /**
@@ -51,16 +51,13 @@ function saveDrugs($items)
 
 function updateADrug($item)
 {
-    $item = [
-        "day" => "mon",
-        "numero" => 12345,
-        "vehicule" => 35,
-        "value" => 4
-    ];
-    $items = getAllDrugs();
-    // TODO: retrouver l'item donnée en paramètre et le modifier dans le tableau $items
 
-    saveDrugItem($items);
+    $items = getAllDrugs();
+    $drug = getADrug($item["id"]);
+    $drug[$item["day"]][$item["numero"]][$item["vehicule"]] = $item["value"];
+    $items[$item["id"]] = $drug;
+
+    saveDrugs($items);
 }
 
 /**

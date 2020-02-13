@@ -22,6 +22,14 @@ for ($test; $test < count($weekDays);$test++){
     }
 }*/
 
-var_dump($drugs["morphinesamples"]["1"]);
+$drug = [
+    "id" => 12,
+    "day" => "mon",
+    "numero" => "BY45677",
+    "vehicule" => 31,
+    "value" => 8
+];
+
+updateADrug($drug);
 
 ?>
