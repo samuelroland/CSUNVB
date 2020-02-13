@@ -13,13 +13,27 @@ $title = "CSU-NVB - Stupéfiants";
 <br>
 <h3>Jours de la semaine 51</h3>
 <div id="divJoursSemaine" class="">
-    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">1.02</button></a>
-    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">2.02</button></a>
-    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">3.02</button></a>
-    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">4.02</button></a>
-    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">5.02</button></a>
-    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">6.02</button></a>
-    <a href="/?action=drugs&day=1" class="jourSemaine"><button class="jourSemaine">7.02</button></a>
+    <a href="/?action=drugs&day=1" class="jourSemaine">
+        <button class="jourSemaine">Lundi</button>
+    </a>
+    <a href="/?action=drugs&day=1" class="jourSemaine">
+        <button class="jourSemaine">Mardi</button>
+    </a>
+    <a href="/?action=drugs&day=1" class="jourSemaine">
+        <button class="jourSemaine">Mercredi</button>
+    </a>
+    <a href="/?action=drugs&day=1" class="jourSemaine">
+        <button class="jourSemaine">Jeudi</button>
+    </a>
+    <a href="/?action=drugs&day=1" class="jourSemaine">
+        <button class="jourSemaine">Vendredi</button>
+    </a>
+    <a href="/?action=drugs&day=1" class="jourSemaine">
+        <button class="jourSemaine">Samedi</button>
+    </a>
+    <a href="/?action=drugs&day=1" class="jourSemaine">
+        <button class="jourSemaine">Dimanche</button>
+    </a>
 </div>
 <br>
 
@@ -27,7 +41,8 @@ $title = "CSU-NVB - Stupéfiants";
 <table class="table table-striped table-bordered">
     <thead>
     <tr>
-        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png" alt="stups logo" class="imgheadertable"></th>
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
+                                                                    alt="stups logo" class="imgheadertable"></th>
         <th rowspan="2" class="txtvertical">Pharmacie</th>
         <th colspan="8">Numéros des véhicules</th>
     </tr>
@@ -41,11 +56,10 @@ $title = "CSU-NVB - Stupéfiants";
         <th>09</th>
         <th>35</th>
     </tr>
-
     </thead>
     <tbody>
     <tr>
-        <td colspan="2"><strong>Morphine N</strong></td>
+        <td colspan="2" class=""><strong>Morphine N</strong></td>
         <td></td>
         <td>3</td>
         <td>7</td>
@@ -57,7 +71,7 @@ $title = "CSU-NVB - Stupéfiants";
         <td></td>
     </tr>
     <tr>
-        <td colspan="2">12345</td>
+        <td colspan="2" class="">12345</td>
         <td>4</td>
         <td>3</td>
         <td>7</td>
@@ -69,7 +83,7 @@ $title = "CSU-NVB - Stupéfiants";
         <td>13</td>
     </tr>
     <tr>
-        <td colspan="2">13664</td>
+        <td colspan="2" class="">13664</td>
         <td>4</td>
         <td>3</td>
         <td>7</td>
@@ -89,7 +103,8 @@ $title = "CSU-NVB - Stupéfiants";
 <table class="table table-striped table-bordered">
     <thead>
     <tr>
-        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png" alt="stups logo" class="imgheadertable"></th>
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
+                                                                    alt="stups logo" class="imgheadertable"></th>
         <th rowspan="2" class="txtvertical">Pharmacie</th>
         <th colspan="8">Numéros des véhicules</th>
     </tr>
@@ -150,7 +165,8 @@ $title = "CSU-NVB - Stupéfiants";
 <table class="table table-striped table-bordered">
     <thead>
     <tr>
-        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png" alt="stups logo" class="imgheadertable"></th>
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
+                                                                    alt="stups logo" class="imgheadertable"></th>
         <th rowspan="2" class="txtvertical">Pharmacie</th>
         <th colspan="8">Numéros des véhicules</th>
     </tr>
