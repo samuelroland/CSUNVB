@@ -34,6 +34,7 @@
     padding: 3px;
 }
 .hour {
+    overflow: visible; !important;
     background-color: rgb(182, 255, 188);
     padding: 4px;
     margin: 2px;
