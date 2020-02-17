@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "week": 2008,
+    "state": "closed",
+    "base_id": 1
+  },
+  {
+    "id": 2,
+    "week": 2009,
+    "state": "closed",
+    "base_id": 1
+  },
+  {
+    "id": 3,
+    "week": 2010,
+    "state": "closed",
+    "base_id": 1
+  },
+  {
+    "id": 4,
+    "week": 2011,
+    "state": "closed",
+    "base_id": 1
+  },
+  {
+    "id": 5,
+    "week": 2008,
+    "state": "closed",
+    "base_id": 2
+  },
+  {
+    "id": 6,
+    "week": 2009,
+    "state": "closed",
+    "base_id": 2
+  },
+  {
+    "id": 7,
+    "week": 2010,
+    "state": "closed",
+    "base_id": 2
+  },
+  {
+    "id": 8,
+    "week": 2011,
+    "state": "closed",
+    "base_id": 2
+  },
+  {
+    "id": 9,
+    "week": 2008,
+    "state": "closed",
+    "base_id": 3
+  },
+  {
+    "id": 10,
+    "week": 2009,
+    "state": "closed",
+    "base_id": 3
+  },
+  {
+    "id": 11,
+    "week": 2011,
+    "state": "closed",
+    "base_id": 3
+  },
+  {
+    "id": 12,
+    "week": 2008,
+    "state": "closed",
+    "base_id": 4
+  },
+  {
+    "id": 13,
+    "week": 2009,
+    "state": "closed",
+    "base_id": 4
+  },
+  {
+    "id": 14,
+    "week": 2010,
+    "state": "closed",
+    "base_id": 4
+  },
+  {
+    "id": 15,
+    "week": 2011,
+    "state": "closed",
+    "base_id": 4
+  },
+  {
+    "id": 16,
+    "week": 2010,
+    "state": "closed",
+    "base_id": 5
+  },
+  {
+    "id": 17,
+    "week": 2011,
+    "state": "closed",
+    "base_id": 5
+  },
+  {
+    "id": 18,
+    "week": 2012,
+    "state": "open",
+    "base_id": 1
+  },
+  {
+    "id": 19,
+    "week": 2012,
+    "state": "open",
+    "base_id": 2
+  },
+  {
+    "id": 20,
+    "week": 2012,
+    "state": "open",
+    "base_id": 3
+  },
+  {
+    "id": 21,
+    "week": 2012,
+    "state": "open",
+    "base_id": 4
+  },
+  {
+    "id": 22,
+    "week": 2012,
+    "state": "open",
+    "base_id": 5
+  }
+]
