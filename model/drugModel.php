@@ -15,11 +15,11 @@ function getAllDrugs()
 
     return $goodArray; //Retourne le tableau indexé avec ses id
 }
-/*
+
 /**
  * Retourne un item précis, identifié par son id
  * ...
- /
+ */
 
 function getADrug($id)
 {

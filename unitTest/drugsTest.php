@@ -12,10 +12,21 @@ print "Fonction de récupération des drogues : ";
 $allDrugs = getAllDrugs();
 
 if (count($allDrugs) == 3){
-    print "ok\n";
+    print "OK\n";
 }
 else{
     print "Pas OK\n";
+}
+
+print "Fonction de récupération d'une drogues : ";
+
+$drug = getADrug(2);
+
+if ($drug["name"] == "Fentanyl"){
+    print "OK\n";
+}
+else{
+    print "Pas OK";
 }
 
 ?>
