@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "type": 0,
+    "daything": 1,
+    "description": "Commande mat et commande pharma.",
+    "display_order": null
+  },
+  {
+    "id": 2,
+    "type": 0,
+    "daything": 1,
+    "description": "Rangement mat",
+    "display_order": null
+  },
+  {
+    "id": 3,
+    "type": 0,
+    "daything": 1,
+    "description": "Contrôle niveau véhicule",
+    "display_order": null
+  },
+  {
+    "id": 4,
+    "type": 1,
+    "daything": 1,
+    "description": "Désinfection + Inventaire hebdo Nova ....",
+    "display_order": null
+  },
+  {
+    "id": 5,
+    "type": 0,
+    "daything": 1,
+    "description": "Tâches selon nécessité",
+    "display_order": null
+  },
+  {
+    "id": 6,
+    "type": 0,
+    "daything": 1,
+    "description": "Envoi feuille STUP hebdo à gt pharmacie",
+    "display_order": null
+  },
+  {
+    "id": 7,
+    "type": 0,
+    "daything": 1,
+    "description": "Fax 144 Transmission",
+    "display_order": null
+  },
+  {
+    "id": 8,
+    "type": 0,
+    "daything": 0,
+    "description": "Commande O2",
+    "display_order": null
+  },
+  {
+    "id": 9,
+    "type": 0,
+    "daything": 1,
+    "description": "Check Ambulance et Communication",
+    "display_order": null
+  },
+  {
+    "id": 10,
+    "type": 0,
+    "daything": 1,
+    "description": "Contrôle stupéfiants + Date perf. Chaudes",
+    "display_order": null
+  },
+  {
+    "id": 11,
+    "type": 0,
+    "daything": 1,
+    "description": "Check bibliothèque",
+    "display_order": null
+  },
+  {
+    "id": 12,
+    "type": 0,
+    "daything": 1,
+    "description": "Changer Bac chariot de nettoyage",
+    "display_order": null
+  },
+  {
+    "id": 13,
+    "type": 0,
+    "daything": 1,
+    "description": "Nettoyage centrale et garage",
+    "display_order": null
+  },
+  {
+    "id": 14,
+    "type": 0,
+    "daything": 1,
+    "description": "Tâches spécifique",
+    "display_order": null
+  },
+  {
+    "id": 15,
+    "type": 0,
+    "daything": 1,
+    "description": "Formation",
+    "display_order": null
+  },
+  {
+    "id": 16,
+    "type": 0,
+    "daything": 1,
+    "description": "Remise locaux ambulances ",
+    "display_order": null
+  },
+  {
+    "id": 17,
+    "type": 0,
+    "daything": 0,
+    "description": "Check de nuit ",
+    "display_order": null
+  },
+  {
+    "id": 18,
+    "type": 1,
+    "daything": 0,
+    "description": "Contrôle stupéfiants Nova .... (Morphine X4, Fentanyl X6)",
+    "display_order": null
+  },
+  {
+    "id": 19,
+    "type": 0,
+    "daything": 0,
+    "description": "Tâches spécifique nuit",
+    "display_order": null
+  },
+  {
+    "id": 20,
+    "type": 0,
+    "daything": 0,
+    "description": "Remise locaux Transmission",
+    "display_order": null
+  }
+]
