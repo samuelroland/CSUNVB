@@ -16,16 +16,16 @@ function init() {
 
 
     function taskedit() {
-        table = div.children
+        div = div.children;
         for (nbrow = 0; nbrow < div.children.length; nbrow++) {
-            row = div.children[nbrow]
+            row = div.children[nbrow];
 
             for (nbcol = 0; nbcol < row.children.length; nbcol++) {
-                div = row.children[nbcol]
+                div = row.children[nbcol];
                 inp = document.createElement('input')
-                inp.type = 'text'
+                inp.type = 'text';
                 inp.value = div.innerText;
-                div.innerText = ''
+                div.innerText = '';
 
                 div.appendChild(inp)
 
