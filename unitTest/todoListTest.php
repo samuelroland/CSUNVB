@@ -6,10 +6,8 @@
 */
 require 'model/todoListModel.php';
 
-// $item = ["id" => $id, "date" => $date, "base" => $base, "nightjob" => $nightjob, "description" => $description, "acknowledged_by" => $aknowledged_by, "type" => $type, "value" => $value];
-$item = ["id" => 4, "date" => 2,2,23, "base" => 'Payerne', "nightjob" => '1', "description" => 'Samuel est trop fort et en plus il est gentil et defois il est pas sympa',
-    "acknowledged_by" => null, "type" => 3, "value" => 13];
-createTodoListItem($item);
-
+// $item = ["id" => $id, "week" => $week, "state" => $state, "base_id" => $base_id];
+$task = ["id" => 23, "week" => 2013, "state" => "closeed", "base_id" => 2];
+createTodoListItem($task);
 
 ?>
