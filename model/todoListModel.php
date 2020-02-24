@@ -16,29 +16,29 @@ function readTodoListItems()
     return json_decode(file_get_contents("model/dataStorage/items.json"), true);
 }
 
-function getTodoListItems()
+function getTodoListTasks()
 {
-    return json_decode(file_get_contents("model/dataStorage/todos.json"), true);
+    return json_decode(file_get_contents("model/dataStorage/todosheets.json"), true);
 }
 
 /**
  * Retourne un item précis, identifié par son id
  * ...
  */
-function readTodoListItem($id, $items)
+function readTodoListItem($id, $tasks)
 {
-    $items = getTodoListItems();
+    $tasks = getTodoListTasks();
     // TODO: coder la recherche de l'item demandé
-    return $items;
+    return $tasks;
 }
 
 /**
  * Sauve l'ensemble des items dans le fichier json
  * ...
  */
-function updateTodoListItems($items)
+function updateTodoListItems($tasks)
 {
-    file_put_contents("model/dataStorage/items.json", json_encode($items));
+    file_put_contents("model/dataStorage/items.json", json_encode($tasks));
 }
 
 /**
@@ -46,27 +46,28 @@ function updateTodoListItems($items)
  * Le paramètre $item est un item complet (donc un tableau associatif)
  * ...
  */
-function updateTodoListItem($items)
+function updateTodoListItem($tasks)
 {
-    $items = getTodoListItems();
+    $items = getTodoListTasks();
     // TODO: retrouver l'item donnée en paramètre et le modifier dans le tableau $items
-    saveTodoListItem($items);
+    saveTodoListItem($tasks);
 }
 
 /**
  * Détruit un item précis, identifié par son id
  * ...
  */
-function destroyTodoListItem($id, $items)
+function destroyTodoListItem($tasks)
 {
-    $items = getTodoListItems();
+    $tasks = getTodoListTasks();
     // TODO: coder la recherche de l'item demandé et sa destruction dans le tableau
-    saveTodoListItem($items);
+    unset($task);
+    saveTodoListItem($tasks);
 }
 
-function saveTodoListItem($item)
+function saveTodoListItem($task)
 {
-    file_put_contents("model/dataStorage/todos.json", json_encode($item));
+    file_put_contents("model/dataStorage/todosheets.json", json_encode($task));
 }
 
 /**
@@ -75,19 +76,19 @@ function saveTodoListItem($item)
  * puisque le modèle ne l'a pas encore traité
  * ...
  */
-function createTodoListItem($item)
+function createTodoListItem($task)
 {
     $id = null;
-    $items = getTodoListItems();
+    $tasks = getTodoListTasks();
     // trouver l'id de la dernière tâche
-    foreach ($items as $oneitem) {
-        $id = $oneitem["id"];
+    foreach ($tasks as $onetask) {
+        $id = $onetask["id"];
     }
     $id++; // prendre l'id suivante
 // enregistrer un nouvel id pour le nouvelle item
-    $item['id'] = $id;
-    $items[] = $item;
-    saveTodoListItem($items);
+    $task['id'] = $id;
+    $tasks[] = $task;
+    saveTodoListItem($tasks);
     return ($id); // Pour que l'appelant connaisse l'id qui a été donné
 }
 

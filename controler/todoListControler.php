@@ -12,7 +12,7 @@ function todoListHomePage()
     require_once 'view/todoListHome.php';
 }
 
-function addNewToDo($items)
+function addNewToDo($tasks)
 {
     // if (isset($_POST["user"]) && isset($_POST["password"]) != "" && $_POST["user"] != "" && $_POST["password"] != "") {
 

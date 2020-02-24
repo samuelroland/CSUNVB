@@ -1,0 +1,547 @@
+[
+  {
+    "id": 21,
+    "batch_id": 3,
+    "stupsheet_id": 1
+  },
+  {
+    "id": 87,
+    "batch_id": 10,
+    "stupsheet_id": 1
+  },
+  {
+    "id": 109,
+    "batch_id": 11,
+    "stupsheet_id": 1
+  },
+  {
+    "id": 43,
+    "batch_id": 13,
+    "stupsheet_id": 1
+  },
+  {
+    "id": 66,
+    "batch_id": 2,
+    "stupsheet_id": 2
+  },
+  {
+    "id": 44,
+    "batch_id": 11,
+    "stupsheet_id": 2
+  },
+  {
+    "id": 22,
+    "batch_id": 13,
+    "stupsheet_id": 2
+  },
+  {
+    "id": 110,
+    "batch_id": 16,
+    "stupsheet_id": 2
+  },
+  {
+    "id": 89,
+    "batch_id": 3,
+    "stupsheet_id": 3
+  },
+  {
+    "id": 67,
+    "batch_id": 6,
+    "stupsheet_id": 3
+  },
+  {
+    "id": 23,
+    "batch_id": 11,
+    "stupsheet_id": 3
+  },
+  {
+    "id": 1,
+    "batch_id": 12,
+    "stupsheet_id": 3
+  },
+  {
+    "id": 45,
+    "batch_id": 14,
+    "stupsheet_id": 3
+  },
+  {
+    "id": 2,
+    "batch_id": 5,
+    "stupsheet_id": 4
+  },
+  {
+    "id": 112,
+    "batch_id": 9,
+    "stupsheet_id": 4
+  },
+  {
+    "id": 24,
+    "batch_id": 12,
+    "stupsheet_id": 4
+  },
+  {
+    "id": 46,
+    "batch_id": 15,
+    "stupsheet_id": 4
+  },
+  {
+    "id": 47,
+    "batch_id": 6,
+    "stupsheet_id": 5
+  },
+  {
+    "id": 25,
+    "batch_id": 7,
+    "stupsheet_id": 5
+  },
+  {
+    "id": 69,
+    "batch_id": 13,
+    "stupsheet_id": 5
+  },
+  {
+    "id": 3,
+    "batch_id": 14,
+    "stupsheet_id": 5
+  },
+  {
+    "id": 114,
+    "batch_id": 2,
+    "stupsheet_id": 6
+  },
+  {
+    "id": 26,
+    "batch_id": 3,
+    "stupsheet_id": 6
+  },
+  {
+    "id": 48,
+    "batch_id": 7,
+    "stupsheet_id": 6
+  },
+  {
+    "id": 92,
+    "batch_id": 11,
+    "stupsheet_id": 6
+  },
+  {
+    "id": 70,
+    "batch_id": 13,
+    "stupsheet_id": 6
+  },
+  {
+    "id": 4,
+    "batch_id": 16,
+    "stupsheet_id": 6
+  },
+  {
+    "id": 27,
+    "batch_id": 3,
+    "stupsheet_id": 7
+  },
+  {
+    "id": 115,
+    "batch_id": 4,
+    "stupsheet_id": 7
+  },
+  {
+    "id": 5,
+    "batch_id": 8,
+    "stupsheet_id": 7
+  },
+  {
+    "id": 49,
+    "batch_id": 11,
+    "stupsheet_id": 7
+  },
+  {
+    "id": 71,
+    "batch_id": 12,
+    "stupsheet_id": 7
+  },
+  {
+    "id": 93,
+    "batch_id": 14,
+    "stupsheet_id": 7
+  },
+  {
+    "id": 50,
+    "batch_id": 2,
+    "stupsheet_id": 8
+  },
+  {
+    "id": 94,
+    "batch_id": 3,
+    "stupsheet_id": 8
+  },
+  {
+    "id": 116,
+    "batch_id": 4,
+    "stupsheet_id": 8
+  },
+  {
+    "id": 72,
+    "batch_id": 6,
+    "stupsheet_id": 8
+  },
+  {
+    "id": 28,
+    "batch_id": 7,
+    "stupsheet_id": 8
+  },
+  {
+    "id": 6,
+    "batch_id": 9,
+    "stupsheet_id": 8
+  },
+  {
+    "id": 51,
+    "batch_id": 3,
+    "stupsheet_id": 9
+  },
+  {
+    "id": 29,
+    "batch_id": 6,
+    "stupsheet_id": 9
+  },
+  {
+    "id": 73,
+    "batch_id": 7,
+    "stupsheet_id": 9
+  },
+  {
+    "id": 95,
+    "batch_id": 8,
+    "stupsheet_id": 9
+  },
+  {
+    "id": 7,
+    "batch_id": 11,
+    "stupsheet_id": 9
+  },
+  {
+    "id": 117,
+    "batch_id": 16,
+    "stupsheet_id": 9
+  },
+  {
+    "id": 52,
+    "batch_id": 2,
+    "stupsheet_id": 10
+  },
+  {
+    "id": 96,
+    "batch_id": 5,
+    "stupsheet_id": 10
+  },
+  {
+    "id": 118,
+    "batch_id": 6,
+    "stupsheet_id": 10
+  },
+  {
+    "id": 8,
+    "batch_id": 10,
+    "stupsheet_id": 10
+  },
+  {
+    "id": 119,
+    "batch_id": 2,
+    "stupsheet_id": 11
+  },
+  {
+    "id": 9,
+    "batch_id": 4,
+    "stupsheet_id": 11
+  },
+  {
+    "id": 31,
+    "batch_id": 9,
+    "stupsheet_id": 11
+  },
+  {
+    "id": 97,
+    "batch_id": 15,
+    "stupsheet_id": 11
+  },
+  {
+    "id": 10,
+    "batch_id": 4,
+    "stupsheet_id": 12
+  },
+  {
+    "id": 32,
+    "batch_id": 6,
+    "stupsheet_id": 12
+  },
+  {
+    "id": 120,
+    "batch_id": 8,
+    "stupsheet_id": 12
+  },
+  {
+    "id": 76,
+    "batch_id": 12,
+    "stupsheet_id": 12
+  },
+  {
+    "id": 54,
+    "batch_id": 13,
+    "stupsheet_id": 12
+  },
+  {
+    "id": 11,
+    "batch_id": 3,
+    "stupsheet_id": 13
+  },
+  {
+    "id": 33,
+    "batch_id": 5,
+    "stupsheet_id": 13
+  },
+  {
+    "id": 77,
+    "batch_id": 7,
+    "stupsheet_id": 13
+  },
+  {
+    "id": 55,
+    "batch_id": 8,
+    "stupsheet_id": 13
+  },
+  {
+    "id": 99,
+    "batch_id": 9,
+    "stupsheet_id": 13
+  },
+  {
+    "id": 12,
+    "batch_id": 3,
+    "stupsheet_id": 14
+  },
+  {
+    "id": 78,
+    "batch_id": 6,
+    "stupsheet_id": 14
+  },
+  {
+    "id": 34,
+    "batch_id": 7,
+    "stupsheet_id": 14
+  },
+  {
+    "id": 100,
+    "batch_id": 9,
+    "stupsheet_id": 14
+  },
+  {
+    "id": 79,
+    "batch_id": 5,
+    "stupsheet_id": 15
+  },
+  {
+    "id": 123,
+    "batch_id": 8,
+    "stupsheet_id": 15
+  },
+  {
+    "id": 13,
+    "batch_id": 13,
+    "stupsheet_id": 15
+  },
+  {
+    "id": 57,
+    "batch_id": 15,
+    "stupsheet_id": 15
+  },
+  {
+    "id": 35,
+    "batch_id": 16,
+    "stupsheet_id": 15
+  },
+  {
+    "id": 36,
+    "batch_id": 4,
+    "stupsheet_id": 16
+  },
+  {
+    "id": 14,
+    "batch_id": 6,
+    "stupsheet_id": 16
+  },
+  {
+    "id": 102,
+    "batch_id": 9,
+    "stupsheet_id": 16
+  },
+  {
+    "id": 80,
+    "batch_id": 11,
+    "stupsheet_id": 16
+  },
+  {
+    "id": 58,
+    "batch_id": 13,
+    "stupsheet_id": 16
+  },
+  {
+    "id": 124,
+    "batch_id": 16,
+    "stupsheet_id": 16
+  },
+  {
+    "id": 81,
+    "batch_id": 2,
+    "stupsheet_id": 17
+  },
+  {
+    "id": 125,
+    "batch_id": 3,
+    "stupsheet_id": 17
+  },
+  {
+    "id": 103,
+    "batch_id": 4,
+    "stupsheet_id": 17
+  },
+  {
+    "id": 15,
+    "batch_id": 7,
+    "stupsheet_id": 17
+  },
+  {
+    "id": 37,
+    "batch_id": 11,
+    "stupsheet_id": 17
+  },
+  {
+    "id": 59,
+    "batch_id": 13,
+    "stupsheet_id": 17
+  },
+  {
+    "id": 16,
+    "batch_id": 4,
+    "stupsheet_id": 18
+  },
+  {
+    "id": 82,
+    "batch_id": 6,
+    "stupsheet_id": 18
+  },
+  {
+    "id": 60,
+    "batch_id": 10,
+    "stupsheet_id": 18
+  },
+  {
+    "id": 104,
+    "batch_id": 11,
+    "stupsheet_id": 18
+  },
+  {
+    "id": 38,
+    "batch_id": 15,
+    "stupsheet_id": 18
+  },
+  {
+    "id": 105,
+    "batch_id": 3,
+    "stupsheet_id": 19
+  },
+  {
+    "id": 83,
+    "batch_id": 8,
+    "stupsheet_id": 19
+  },
+  {
+    "id": 61,
+    "batch_id": 9,
+    "stupsheet_id": 19
+  },
+  {
+    "id": 17,
+    "batch_id": 11,
+    "stupsheet_id": 19
+  },
+  {
+    "id": 39,
+    "batch_id": 14,
+    "stupsheet_id": 19
+  },
+  {
+    "id": 18,
+    "batch_id": 2,
+    "stupsheet_id": 20
+  },
+  {
+    "id": 84,
+    "batch_id": 4,
+    "stupsheet_id": 20
+  },
+  {
+    "id": 40,
+    "batch_id": 9,
+    "stupsheet_id": 20
+  },
+  {
+    "id": 106,
+    "batch_id": 10,
+    "stupsheet_id": 20
+  },
+  {
+    "id": 62,
+    "batch_id": 12,
+    "stupsheet_id": 20
+  },
+  {
+    "id": 128,
+    "batch_id": 15,
+    "stupsheet_id": 20
+  },
+  {
+    "id": 19,
+    "batch_id": 4,
+    "stupsheet_id": 21
+  },
+  {
+    "id": 41,
+    "batch_id": 6,
+    "stupsheet_id": 21
+  },
+  {
+    "id": 63,
+    "batch_id": 7,
+    "stupsheet_id": 21
+  },
+  {
+    "id": 129,
+    "batch_id": 9,
+    "stupsheet_id": 21
+  },
+  {
+    "id": 107,
+    "batch_id": 15,
+    "stupsheet_id": 21
+  },
+  {
+    "id": 42,
+    "batch_id": 5,
+    "stupsheet_id": 22
+  },
+  {
+    "id": 64,
+    "batch_id": 8,
+    "stupsheet_id": 22
+  },
+  {
+    "id": 108,
+    "batch_id": 10,
+    "stupsheet_id": 22
+  },
+  {
+    "id": 20,
+    "batch_id": 16,
+    "stupsheet_id": 22
+  }
+]

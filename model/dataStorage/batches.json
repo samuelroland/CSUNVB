@@ -1,0 +1,92 @@
+[
+  {
+    "id": 2,
+    "state": "used",
+    "number": "123123",
+    "drug_id": 1
+  },
+  {
+    "id": 3,
+    "state": "new",
+    "number": "654654",
+    "drug_id": 1
+  },
+  {
+    "id": 4,
+    "state": "new",
+    "number": "545654",
+    "drug_id": 1
+  },
+  {
+    "id": 5,
+    "state": "inuse",
+    "number": "231654",
+    "drug_id": 1
+  },
+  {
+    "id": 6,
+    "state": "inuse",
+    "number": "879645",
+    "drug_id": 1
+  },
+  {
+    "id": 7,
+    "state": "used",
+    "number": "231288",
+    "drug_id": 2
+  },
+  {
+    "id": 8,
+    "state": "used",
+    "number": "231355",
+    "drug_id": 2
+  },
+  {
+    "id": 9,
+    "state": "inuse",
+    "number": "213546",
+    "drug_id": 2
+  },
+  {
+    "id": 10,
+    "state": "new",
+    "number": "465465",
+    "drug_id": 2
+  },
+  {
+    "id": 11,
+    "state": "new",
+    "number": "213548",
+    "drug_id": 2
+  },
+  {
+    "id": 12,
+    "state": "new",
+    "number": "222222",
+    "drug_id": 2
+  },
+  {
+    "id": 13,
+    "state": "used",
+    "number": "555555",
+    "drug_id": 3
+  },
+  {
+    "id": 14,
+    "state": "inuse",
+    "number": "465465",
+    "drug_id": 3
+  },
+  {
+    "id": 15,
+    "state": "inuse",
+    "number": "213215",
+    "drug_id": 3
+  },
+  {
+    "id": 16,
+    "state": "new",
+    "number": "789555",
+    "drug_id": 3
+  }
+]
