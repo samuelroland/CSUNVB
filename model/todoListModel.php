@@ -25,11 +25,12 @@ function getTodoListTasks()
  * Retourne un item précis, identifié par son id
  * ...
  */
-function readTodoListItem($id, $tasks)
+function readTodoListItem($id, $task)
 {
     $tasks = getTodoListTasks();
     // TODO: coder la recherche de l'item demandé
-    return $tasks;
+    $tasks[$task]['id'] = $id;
+    return $task;
 }
 
 /**
@@ -57,11 +58,16 @@ function updateTodoListItem($tasks)
  * Détruit un item précis, identifié par son id
  * ...
  */
-function destroyTodoListItem($tasks)
+function destroyTodoListItem($id)
 {
     $tasks = getTodoListTasks();
     // TODO: coder la recherche de l'item demandé et sa destruction dans le tableau
-    unset($task);
+    foreach ($tasks as $id => $onetask)
+    {
+        if($id == $onetask['id']){
+            unset($tasks[$id]);
+        }
+    }
     saveTodoListItem($tasks);
 }
 

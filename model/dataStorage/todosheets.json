@@ -130,5 +130,17 @@
     "week": 2012,
     "state": "open",
     "base_id": 5
+  },
+  {
+    "id": 23,
+    "week": 2013,
+    "state": "closed",
+    "base_id": 2
+  },
+  {
+    "id": 24,
+    "week": 2013,
+    "state": "closed",
+    "base_id": 2
   }
 ]
