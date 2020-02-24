@@ -15,11 +15,11 @@ function getAllDrugs()
 
     return $goodArray; //Retourne le tableau indexé avec ses id
 }
-
+/*
 /**
  * Retourne un item précis, identifié par son id
  * ...
- */
+ /
 
 function getADrug($id)
 {
@@ -36,7 +36,7 @@ function getADrug($id)
 /**
  * Sauve l'ensemble des items dans le fichier json
  * ...
- */
+ /
 
 function saveDrugs($items)
 {
@@ -47,7 +47,7 @@ function saveDrugs($items)
  * Modifie un item précis
  * Le paramètre $item est un item complet (donc un tableau associatif)
  * ...
- */
+ /
 
 function updateADrug($item)
 {
@@ -59,7 +59,7 @@ function updateADrug($item)
 
     saveDrugs($items);
 }
-
+*/
 /**
  * Ajoute un nouvel item
  * Le paramètre $item est un item complet (donc un tableau associatif), sauf que la valeur de son id n'est pas valable
