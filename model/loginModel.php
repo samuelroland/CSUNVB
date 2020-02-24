@@ -15,12 +15,24 @@ function getUser($name)
     $listUsers = getListUsers();
     foreach ($listUsers as $User)
     {
-        if ($User['username'] == $name)
+        if ($User['initials'] == $name)
         {
             return $User;
         }
     }
     $_SESSION['erreur'] = true;
     return '';
+}
+function verifyID($id)
+{
+    $listUsers = getListUsers();
+    foreach ($listUsers as $User)
+    {
+        if ($User['id'] == $id)
+        {
+            return "";
+        }
+    }
+    return "clear";
 }
 ?>

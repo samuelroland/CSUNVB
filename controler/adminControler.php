@@ -12,9 +12,9 @@ function adminHomePage()
 {
     require_once 'view/adminHome.php';
 }
-function createAccount($username,$fullname,$password,$password2,$admin)
+function createAccount($initials,$firstname,$lastname,$password,$password2,$admin)
 {
-    if ($username != "")
+    if ($initials != "")
     {
         // if the password is entered correctly
         if ($password == $password2)
@@ -22,9 +22,9 @@ function createAccount($username,$fullname,$password,$password2,$admin)
             $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
 
             // Verify if the username already exists
-            if ( getUser($username) != '')
+            if ( getUser($initials) != '')
             {
-                $_SESSION['erreur'] = true;
+                $_SESSION['erreur'] = 2;
                 require_once 'view/createaccount.php';
             }else
                 {
@@ -35,25 +35,40 @@ function createAccount($username,$fullname,$password,$password2,$admin)
                         {
                             $admin = false;
                         }
-                    addUser($username,$fullname,$hash,$admin);
-                    tryLogin($username,$password);
+                    addUser($initials,$firstname,$lastname,$hash,$admin);
+                    tryLogin($initials,$password);
                 }
-        }
+        }else
+            {
+                $_SESSION['erreur'] = 1;
+                require_once 'view/createaccount.php';
+            }
     }else
         {
             require_once 'view/createaccount.php';
         }
 
 }
-function addUser($username,$fullname,$hash,$admin)
+function addUser($initials,$firstname,$lastname,$hash,$admin)
 {
     $listUsers = getListUsers();
+    $id = count($listUsers);
+    var_dump($id);
+    $idDisponible = verifyID($id);
+    While ($idDisponible == '')
+    {
+        $id += 1;
+        $idDisponible = verifyID($id);
+    }
+
+
     $newUser = [
-        'username' => $username,
-        'fullname' => $fullname,
+        'id' => $id,
+        'initials' => $initials,
+        'firstname' => $firstname,
+        'lastname' => $lastname,
         'password' => $hash,
         'admin' => $admin,
-        'date-inscription' => date("Y-m-d", time()),
     ];
     $listUsers[] = $newUser;
     file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));

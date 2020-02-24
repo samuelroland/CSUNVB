@@ -12,11 +12,15 @@ $title = "CSU-NVB - createAccount";
 <form action ="?action=createAccount" method="post">
     <h1 class="text-center"><strong>Créer un compte</strong></h1>
     <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" class="form-control" placeholder="Entrez un nom d'utilisateur" required/><br>
 
-        <label for="fullname">Nom Complet</label>
-        <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Entrez votre nom complet" required/><br>
+        <label for="initials">Initiales (max. 3 caractères)</label>
+        <input type="text" id="initials" name="initials" class="form-control" placeholder="Entrez vos initiales" maxlength="3" required/><br>
+
+        <label for="firstname">Prénom</label>
+        <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Entrez votre prénom" required/><br>
+
+        <label for="lastname">Nom</label>
+        <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Entrez votre nom" required/><br>
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" class="form-control" placeholder="Entrez un mot de passe" required/><br>
@@ -29,6 +33,21 @@ $title = "CSU-NVB - createAccount";
         <input type = "checkbox" id="admin" name="admin" class="form-check-input"/>
         <label for="admin" class="form-check-label">Admin</label><br><br>
     </div>
+
+    <?php
+    if(isset($_SESSION['erreur'])){
+        if ($_SESSION['erreur'] = 1)
+        {
+            echo "<br><p class='alert-warning'>Les mots de passe introduits ne se correspondent pas</p>";
+        }
+        if ($_SESSION["erreur"] = 2)
+        {
+            echo "<br><p class='alert-warning'>Les initiales introduites sont déjà existantes</p>";
+        }
+
+        unset($_SESSION['erreur']);
+    }
+    ?>
 
     <button type="submit" id="btnCreate" class="btn btn-primary">Créer</button>
 

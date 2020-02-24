@@ -4,10 +4,11 @@ session_start();
 var_dump($_SESSION);
 
 // Login token if exists
-if(isset($_POST["username"]) && isset($_POST["password"]))
+if(isset($_POST["initials"]) && isset($_POST["password"]))
 {
-    $username = $_POST["username"];
-    $fullname = $_POST["fullname"];
+    $initials = $_POST["initials"];
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
     $password = $_POST["password"];
     $password2 = $_POST["password2"];
     $admin = $_POST ["admin"];
@@ -41,10 +42,10 @@ switch ($action)
         drugHomePage();
         break;
     case 'tryLogin':
-        tryLogin($username,$password);
+        tryLogin($initials,$password);
         break;
     case 'createAccount':
-        createAccount($username,$fullname,$password,$password2,$admin);
+        createAccount($initials,$firstname,$lastname,$password,$password2,$admin);
         break;
     case 'disconnect':
         diconnect();
