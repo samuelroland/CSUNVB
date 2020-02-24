@@ -27,7 +27,7 @@ $taches =['Reparer','titi','toto','tete'];
     <div class="day">
 
         <div class="dayheader">Lundi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Trasmission</div>
+        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
         <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
         <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
         <div class="hour" title="Your text description">Check bibliothèque</div>
@@ -39,7 +39,7 @@ $taches =['Reparer','titi','toto','tete'];
     </div>
     <div class="day">
         <div class="dayheader">Mardi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Trasmission</div>
+        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
         <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
         <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
         <div class="hour" title="Your text description">Check bibliothèque</div>
@@ -51,7 +51,7 @@ $taches =['Reparer','titi','toto','tete'];
     </div>
     <div class="day">
         <div class="dayheader">Mercredi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Trasmission</div>
+        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
         <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
         <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
         <div class="hour" title="Your text description">Check bibliothèque</div>
@@ -63,7 +63,7 @@ $taches =['Reparer','titi','toto','tete'];
     </div>
     <div class="day">
         <div class="dayheader">Jeudi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Trasmission</div>
+        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
         <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
         <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
         <div class="hour" title="Your text description">Check bibliothèque</div>
@@ -77,7 +77,7 @@ $taches =['Reparer','titi','toto','tete'];
     </div>
     <div class="day">
         <div class="dayheader">Vendredi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Trasmission</div>
+        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
         <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
         <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
         <div class="hour" title="Your text description">Check bibliothèque</div>
@@ -92,7 +92,7 @@ $taches =['Reparer','titi','toto','tete'];
     </div>
     <div class="day">
         <div class="dayheader">Samedi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Trasmission</div>
+        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
         <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
         <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
         <div class="hour" title="Your text description">Check bibliothèque</div>
@@ -105,7 +105,7 @@ $taches =['Reparer','titi','toto','tete'];
     </div>
     <div class="day">
         <div class="dayheader">Dimanche</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Trasmission</div>
+        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
         <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
         <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
         <div class="hour" title="Your text description">Check bibliothèque</div>
@@ -129,8 +129,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Contrôle supédfiants ambulances
         *Morphine X4 *Sintenyl X6 NOVA°_______</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
+        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
 
 
     </div>
@@ -140,8 +139,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Contrôle supédfiants ambulances
             *Morphine X4 *Sintenyl X6 NOVA°_______</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
+        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
 
 
     </div>
@@ -151,8 +149,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Contrôle supédfiants ambulances
             *Morphine X4 *Sintenyl X6 NOVA°_______</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
+        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
 
 
 
@@ -163,8 +160,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Contrôle supédfiants ambulances
             *Morphine X4 *Sintenyl X6 NOVA°_______</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
+        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
 
 
 
@@ -176,8 +172,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Contrôle supédfiants ambulances
             *Morphine X4 *Sintenyl X6 NOVA°_______</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
+        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
 
     </div>
     <div class="day">
@@ -186,8 +181,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Contrôle supédfiants ambulances
             *Morphine X4 *Sintenyl X6 NOVA°_______</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
+        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
 
 
 
@@ -197,9 +191,8 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Check de nuit</div>
         <div class="hour" title="Your text description">Contrôle supédfiants ambulances
             *Morphine X4 *Sintenyl X6 NOVA°_______</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
+        <div class="hour" title="Your text description">Commande O2</div>
+        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
 
     </div>
 </div>
