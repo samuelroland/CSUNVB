@@ -38,7 +38,7 @@ $title = "CSU-NVB - createAccount";
     <div class="form-check-inline">
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="department" value="1"/>La Vallée-de-Joux
+                <input type="radio" class="form-check-input" name="department" value="1" required/>La Vallée-de-Joux
             </label>
         </div>
         <div class="form-check">
