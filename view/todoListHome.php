@@ -2,7 +2,9 @@
 ob_start();
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
-$taches =['Reparer','titi','toto','tete'];
+$taches =['Fax 144 Transmission','Check Ambulance et Comunication','Contrôle des stupéfiants','Check bibliothèque','Changer le bac de nettoyage','Nettoyage centrale et garage','Check bibliothèque','tâche spécifique','Formation','Remise locaux ambulances'];
+$tachesnuit =['Check de nuit','Contrôle supédfiants ambulances
+        *Morphine X4 *Sintenyl X6 NOVA°_______','tâche spécifique','Remise locaux Trasmission']
 ?>
 <div class="">
     <h1>Tâches hebdomadaires</h1>
@@ -17,185 +19,40 @@ $taches =['Reparer','titi','toto','tete'];
         <button class="btn btn-info" id="cmdedit" >Ajouter une tache</button>
         <button class="btn btn-info" >Modifier une tache</button>
         <button class="btn btn-info" >Supprimer une tache</button>
-
     </th>
     </div>
 </table>
 
 <div class="week" id="calendar">
     <div class="horizontal"> <span style="font-weight: bold">  JOURNÉE</span> </div>
-    <div class="day">
 
-        <div class="dayheader">Lundi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
-        <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
-        <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
-        <div class="hour" title="Your text description">Check bibliothèque</div>
-        <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
-        <div class="hour" style="height:160px" title="Your text description">Nettoyage centrale et garage</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
-    </div>
-    <div class="day">
-        <div class="dayheader">Mardi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
-        <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
-        <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
-        <div class="hour" title="Your text description">Check bibliothèque</div>
-        <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
-        <div  style="height:130px" class="hour" title="Your text description">tâche spécifique</div>
-        <div style="height: 100px" class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
-
-    </div>
-    <div class="day">
-        <div class="dayheader">Mercredi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
-        <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
-        <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
-        <div class="hour" title="Your text description">Check bibliothèque</div>
-        <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
-        <div class="hour" style="height:160px" title="Your text description">Désinfection inventaire hebdo NOVA N°:_________</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
-    </div>
-    <div class="day">
-        <div class="dayheader">Jeudi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
-        <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
-        <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
-        <div class="hour" title="Your text description">Check bibliothèque</div>
-        <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
-        <div  style="height:55px" class="hour" title="Your text description">Commande mat et commande pharma.</div>
-        <div class="hour" style="height:102px" title="Your text description">Désinfection inventaire hebdo NOVA N°:_________</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
-
-    </div>
-    <div class="day">
-        <div class="dayheader">Vendredi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
-        <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
-        <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
-        <div class="hour" title="Your text description">Check bibliothèque</div>
-        <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
-        <div  style="height:45px" class="hour" title="Your text description">Rangement mat</div>
-        <div  style="height:45px" class="hour" title="Your text description">Contrôle véhicule</div>
-        <div class="hour" style="height:64px" title="Your text description">Nettoyage centrale et garage</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
-
-    </div>
-    <div class="day">
-        <div class="dayheader">Samedi</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
-        <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
-        <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
-        <div class="hour" title="Your text description">Check bibliothèque</div>
-        <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
-        <div class="hour" style="height:160px" title="Your text description">Tâches selon necessité</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
-
-    </div>
-    <div class="day">
-        <div class="dayheader">Dimanche</div>
-        <div class="hour" style="height:50px" title="Faire le fax 144">Fax 144 Transmission</div>
-        <div class="hour" style="height:50px" title="Controler les communication et si les ambulances sont prtes a partir">Check Ambulance et Comunication</div>
-        <div class="hour" style="height:100px" title="Your text description">Contrôle des stupéfiants</div>
-        <div class="hour" title="Your text description">Check bibliothèque</div>
-        <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
-        <div class="hour"  style="height:55px" title="Your text description">Envoi feuille STUP hebdo</div>
-        <div class="hour" style="height:102px" title="Your text description">Tâches selon necessité</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Formation</div>
-        <div class="hour" title="Your text description">Remise locaux ambulances</div>
+        <?php
+        foreach ($jours as $jour) {
+            echo "<div class='day'><div class='dayheader'>$jour</div>";
+            foreach ($taches as $tache) {
+                echo "<div class='hour'>$tache</div>";
+            }
+        echo "</div>";
+        }
+        ?>
 
     </div>
 
 
 
-</div>
+
 <div class="week">
     <div class="horizontal nuitcolor"> <span style="font-weight: bold">NUIT</span> </div>
-    <div class="day">
+    <?php
+    foreach ($jours as $jour) {
+        echo "<div class='day'><div class=''></div>";
+        foreach ($tachesnuit as $tache) {
+            echo "<div class='hour'>$tache</div>";
+        }
+        echo "</div>";
+    }
+    ?>
 
-        <div class="hour" title="Your text description">Check de nuit</div>
-        <div class="hour" title="Your text description">Contrôle supédfiants ambulances
-        *Morphine X4 *Sintenyl X6 NOVA°_______</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
-
-
-    </div>
-    <div class="day">
-
-        <div class="hour" title="Your text description">Check de nuit</div>
-        <div class="hour" title="Your text description">Contrôle supédfiants ambulances
-            *Morphine X4 *Sintenyl X6 NOVA°_______</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
-
-
-    </div>
-    <div class="day">
-
-        <div class="hour" title="Your text description">Check de nuit</div>
-        <div class="hour" title="Your text description">Contrôle supédfiants ambulances
-            *Morphine X4 *Sintenyl X6 NOVA°_______</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
-
-
-
-    </div>
-    <div class="day">
-
-        <div class="hour" title="Your text description">Check de nuit</div>
-        <div class="hour" title="Your text description">Contrôle supédfiants ambulances
-            *Morphine X4 *Sintenyl X6 NOVA°_______</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
-
-
-
-    </div>
-    <div class="day">
-
-
-        <div class="hour" title="Your text description">Check de nuit</div>
-        <div class="hour" title="Your text description">Contrôle supédfiants ambulances
-            *Morphine X4 *Sintenyl X6 NOVA°_______</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
-
-    </div>
-    <div class="day">
-
-        <div class="hour" title="Your text description">Check de nuit</div>
-        <div class="hour" title="Your text description">Contrôle supédfiants ambulances
-            *Morphine X4 *Sintenyl X6 NOVA°_______</div>
-        <div class="hour" title="Your text description">tâche spécifique</div>
-        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
-
-
-
-    </div>
-    <div class="day">
-
-        <div class="hour" title="Your text description">Check de nuit</div>
-        <div class="hour" title="Your text description">Contrôle supédfiants ambulances
-            *Morphine X4 *Sintenyl X6 NOVA°_______</div>
-        <div class="hour" title="Your text description">Commande O2</div>
-        <div class="hour" title="Your text description">Remise locaux Trasmission</div>
-
-    </div>
-</div>
 
 
 </div>
