@@ -18,15 +18,16 @@ $users = readAdminItems();
         echo "<tr><td>" . $user['id'] . "</td><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] . "</td>"; ?>
 
         <?php if ($user['admin'] == true) {
-            $user["admin"] = "oui";
-            echo "</td><td><a href=\"?action=tryLogin\" class=\"btn btn-primary m-1 pull-right\"style=\"bt-align: center\" >" . $user['admin'] . "</a></td> </tr>";
+
+            echo "</td><td><a href='?action=ChangeAdminState&idPerson=".$user['id']. "' class='btn btn-primary m-1 pull-right'style='bt-align: center' >Oui</a></td> </tr>";
 
         } else {
-            $user["admin"] = "non";
-            echo "</td><td><a href=\"?action=tryLogin\" class=\"btn btn-secondary m-1 pull-right\"style=\"bt-align: center\" >" . $user['admin'] . "</a></td> </tr>";
+
+            echo "</td><td><a href='?action=ChangeAdminState&idPerson=".$user['id']. "' class='btn btn-secondary m-1 pull-right'style='bt-align: center'  >Non</a></td> </tr>";
         }
 
-        
+
+
     }
     ?>
 

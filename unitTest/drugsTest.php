@@ -26,7 +26,29 @@ if ($drug["name"] == "Fentanyl"){
     print "OK\n";
 }
 else{
-    print "Pas OK";
+    print "Pas OK\n";
+}
+
+print "Fonction de ajout d'une drogues : ";
+
+addADrug("test");
+
+$drugs = getAllDrugs();
+
+$test = false;
+
+foreach ($drugs as $drug){
+    if ($drug["name"] == "test"){
+        $test = true;
+        break;
+    }
+}
+
+if($test == true){
+    print "OK\n";
+}
+else{
+    print "Pas OK\n";
 }
 
 ?>

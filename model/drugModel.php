@@ -6,6 +6,7 @@
  */
 function getAllDrugs()
 {
+    //$goodArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"), true); //Prend les éléments d'un fichier Json
     $badArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"), true); //Prend les éléments d'un fichier Json
 
     //Ajoute une id aux différantes parties du tableau
@@ -36,7 +37,7 @@ function getADrug($id)
 /**
  * Sauve l'ensemble des items dans le fichier json
  * ...
- /
+ */
 
 function saveDrugs($items)
 {
@@ -65,14 +66,26 @@ function updateADrug($item)
  * Le paramètre $item est un item complet (donc un tableau associatif), sauf que la valeur de son id n'est pas valable
  * puisque le modèle ne l'a pas encore traité
  * ...
- *
- * function createDrugItem($item)
- * {
- * $items = getDrugItems();
- * // TODO: trouver un id libre pour le nouvel id et ajouter le nouvel item dans le tableau
- * saveDrugItem($items);
- * return ($item); // Pour que l'appelant connaisse l'id qui a été donné
- * }
  */
+  function addADrug($newDrug)
+  {
+      $items = getAllDrugs();
+      $test = 0;
+      foreach ($items as $item){
+          if ($item["id"] > $test){
+            $test = $item["id"];
+          }
+      }
+
+      $id = $test + 1;
+      $items[] = [
+          "id" => $id,
+          "name" => $newDrug
+      ];
+
+      saveDrugs($items);
+      //return ($item); // Pour que l'appelant connaisse l'id qui a été donné
+  }
+
 
 ?>

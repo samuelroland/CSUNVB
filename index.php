@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-var_dump($_SESSION);
 
 // Login token if exists
 if(isset($_POST["initials"]) && isset($_POST["password"]))
@@ -12,6 +11,7 @@ if(isset($_POST["initials"]) && isset($_POST["password"]))
     $password = $_POST["password"];
     $password2 = $_POST["password2"];
     $admin = $_POST ["admin"];
+    $department = $_POST["department"];
 
 }
 
@@ -45,7 +45,7 @@ switch ($action)
         tryLogin($initials,$password);
         break;
     case 'createAccount':
-        createAccount($initials,$firstname,$lastname,$password,$password2,$admin);
+        createAccount($initials,$firstname,$lastname,$password,$password2,$admin,$department);
         break;
     case 'disconnect':
         diconnect();

@@ -806,5 +806,14 @@
     "lastname": "Meili",
     "password": "$2y$10$9XzG8qMI6AAlGxiw3irLpeybHheAWaueOZ4KxncUCUzMARq.E6oTm",
     "admin": true
+  },
+  {
+    "id": 102,
+    "initials": "TOT",
+    "firstname": "Test",
+    "lastname": "toto",
+    "password": "$2y$10$EDDpZY662.DWnHicEl6p\/.gS7K2WIcxF\/rDqDOxZnH0Mp3iMlgzVa",
+    "admin": true,
+    "department": "4"
   }
 ]
