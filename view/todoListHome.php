@@ -69,7 +69,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Check bibliothèque</div>
         <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
         <div  style="height:55px" class="hour" title="Your text description">Commande mat et commande pharma.</div>
-        <div class="hour" style="height:105px" title="Your text description">Désinfection inventaire hebdo NOVA N°:_________</div>
+        <div class="hour" style="height:102px" title="Your text description">Désinfection inventaire hebdo NOVA N°:_________</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
         <div class="hour" title="Your text description">Formation</div>
         <div class="hour" title="Your text description">Remise locaux ambulances</div>
@@ -84,7 +84,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
         <div  style="height:45px" class="hour" title="Your text description">Rangement mat</div>
         <div  style="height:45px" class="hour" title="Your text description">Contrôle véhicule</div>
-        <div class="hour" style="height:70px" title="Your text description">Nettoyage centrale et garage</div>
+        <div class="hour" style="height:64px" title="Your text description">Nettoyage centrale et garage</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
         <div class="hour" title="Your text description">Formation</div>
         <div class="hour" title="Your text description">Remise locaux ambulances</div>
@@ -111,7 +111,7 @@ $taches =['Reparer','titi','toto','tete'];
         <div class="hour" title="Your text description">Check bibliothèque</div>
         <div  style="height:55px" class="hour" title="Your text description">Changer le bac de nettoyage</div>
         <div class="hour"  style="height:55px" title="Your text description">Envoi feuille STUP hebdo</div>
-        <div class="hour" style="height:105px" title="Your text description">Tâches selon necessité</div>
+        <div class="hour" style="height:102px" title="Your text description">Tâches selon necessité</div>
         <div class="hour" title="Your text description">tâche spécifique</div>
         <div class="hour" title="Your text description">Formation</div>
         <div class="hour" title="Your text description">Remise locaux ambulances</div>
