@@ -798,5 +798,13 @@
     "password": "$2y$10$i0cgyQlhtTl4Gp1eHX1GK.37umWwI9mqWsXHqTQLjFWIyt5e7J6nS",
     "firstname": "Michelle",
     "admin": false
+  },
+  {
+    "id": 101,
+    "initials": "Tst",
+    "firstname": "DMI",
+    "lastname": "Meili",
+    "password": "$2y$10$9XzG8qMI6AAlGxiw3irLpeybHheAWaueOZ4KxncUCUzMARq.E6oTm",
+    "admin": true
   }
 ]

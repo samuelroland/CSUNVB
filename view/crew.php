@@ -6,32 +6,27 @@ $users = readAdminItems();
 <table class="table table-bordered" style="text-align: center">
 
     <tr>
-        <th>Nom d'utilisateur</th>
-        <th>Nom complet</th>
-        <th>Status</th>
+        <th>ID</th>
+        <th>Initials</th>
+        <th>Prénom</th>
+        <th>Nom</th>
         <th>Admin</th>
-
-
     </tr>
 
     <?php
     foreach ($users as $user) {
-        echo "<tr><td>" . $user['username'] . "</td><td>" . $user['name'] . "</td>"; ?>
+        echo "<tr><td>" . $user['id'] . "</td><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] . "</td>"; ?>
 
         <?php if ($user['admin'] == true) {
             $user["admin"] = "oui";
-            $_GET['checkbox'] == true;
+            echo "</td><td><a href=\"?action=tryLogin\" class=\"btn btn-primary m-1 pull-right\"style=\"bt-align: center\" >" . $user['admin'] . "</a></td> </tr>";
+
         } else {
             $user["admin"] = "non";
-            $_GET['checkbox'] == false;
-        }
-        echo "<td>" . $user['status'] . "</td><td><a href=\"?action=tryLogin\" class=\"btn btn-primary m-1 pull-right\"style=\"bt-align: center\" >" . $user['admin'] . "</a></td> </tr>";
-        if ($_GET['checkbox'] == true) {
-            $user['admin'] = true;
-        } else {
-            $user['admin'] = false;
+            echo "</td><td><a href=\"?action=tryLogin\" class=\"btn btn-secondary m-1 pull-right\"style=\"bt-align: center\" >" . $user['admin'] . "</a></td> </tr>";
         }
 
+        
     }
     ?>
 
