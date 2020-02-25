@@ -12,10 +12,11 @@ function adminHomePage()
 {
     require_once 'view/adminHome.php';
 }
-function createAccount($initials,$firstname,$lastname,$password,$password2,$admin)
+function createAccount($initials,$firstname,$lastname,$password,$password2,$admin,$department)
 {
     if ($initials != "")
     {
+
         // if the password is entered correctly
         if ($password == $password2)
         {
@@ -35,7 +36,7 @@ function createAccount($initials,$firstname,$lastname,$password,$password2,$admi
                         {
                             $admin = false;
                         }
-                    addUser($initials,$firstname,$lastname,$hash,$admin);
+                    addUser($initials,$firstname,$lastname,$hash,$admin,$department);
                     tryLogin($initials,$password);
                 }
         }else
@@ -49,7 +50,7 @@ function createAccount($initials,$firstname,$lastname,$password,$password2,$admi
         }
 
 }
-function addUser($initials,$firstname,$lastname,$hash,$admin)
+function addUser($initials,$firstname,$lastname,$hash,$admin,$department)
 {
     $listUsers = getListUsers();
     $id = count($listUsers);
@@ -69,6 +70,7 @@ function addUser($initials,$firstname,$lastname,$hash,$admin)
         'lastname' => $lastname,
         'password' => $hash,
         'admin' => $admin,
+        'department' => $department,
     ];
     $listUsers[] = $newUser;
     file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
