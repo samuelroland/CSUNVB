@@ -48,19 +48,18 @@ function saveDrugs($items)
  * Modifie un item précis
  * Le paramètre $item est un item complet (donc un tableau associatif)
  * ...
- /
+ */
 
-function updateADrug($item)
+function updateADrug($drugToUpdate)
 {
 
     $items = getAllDrugs();
-    $drug = getADrug($item["id"]);
-    $drug[$item["day"]][$item["numero"]][$item["vehicule"]] = $item["value"];
-    $items[$item["id"]] = $drug;
+
+    $items[$drugToUpdate["id"]] = $drugToUpdate;
 
     saveDrugs($items);
 }
-*/
+
 /**
  * Ajoute un nouvel item
  * Le paramètre $item est un item complet (donc un tableau associatif), sauf que la valeur de son id n'est pas valable
@@ -86,6 +85,7 @@ function updateADrug($item)
       saveDrugs($items);
       //return ($item); // Pour que l'appelant connaisse l'id qui a été donné
   }
+
 
 
 ?>
