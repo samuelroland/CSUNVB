@@ -48,13 +48,7 @@
             <?php if(isset($_SESSION["user"])){?>
             <a href='index.php?action=disconnect' class="btn btn-primary m-1 pull-right">Disconnect</a>
             <p>Welcome <strong><?php echo $_SESSION["user"][1]?></strong></p>
-            <?php } else { ?>
-                <a href="?action=tryLogin" class="btn btn-primary m-1 pull-right">Login</a>
-                <a href="?action=createAccount" class="btn btn-primary m-1 pull-right">Créer un Compte</a>
-
-            <?php } ?>
-
-
+            <?php }?>
         </div>
     </header>
 
