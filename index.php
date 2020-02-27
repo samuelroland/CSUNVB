@@ -59,6 +59,9 @@ switch ($action)
     case 'update':
         updatenewtodo();
         break;
+    case 'ChangeAdminState':
+        ChangeAdminState($admin);
+        break;
     default: // unknown action
         require_once 'view/home.php';
         break;

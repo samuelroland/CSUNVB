@@ -3,6 +3,7 @@ ob_start();
 $title = "CSU-NVB - Secouriste";
 $users = readAdminItems();
 ?><h1 style="text-align: center">Secouriste</h1>
+<a href="?action=createAccount" class="btn btn-primary m-1 pull-right">Créer un Compte</a>
 <table class="table table-bordered" style="text-align: center">
 
     <tr>
