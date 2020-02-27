@@ -51,4 +51,37 @@ else{
     print "Pas OK\n";
 }
 
+print "Fonction de modification d'une drogues : ";
+
+$drugToUpdate = [
+    "id" => 2,
+    "name" => "test1"
+];
+
+updateADrug($drugToUpdate);
+
+$drugs = getAllDrugs();
+
+$test = false;
+
+if ($drugs["2"]["name"] == "test1"){
+    print "OK\n";
+}
+else{
+    print "Pas OK\n";
+}
+
+print "Fonction de supression d'une drogues : ";
+
+delADrug();
+
+$drugs = getAllDrugs();
+
+if (!isset($drugs[4])){
+    print "OK\n";
+}
+else{
+    print "Pas OK\n";
+}
+
 ?>

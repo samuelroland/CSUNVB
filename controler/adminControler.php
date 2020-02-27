@@ -7,57 +7,51 @@
 
 require_once 'model/adminModel.php';
 require_once 'model/loginModel.php';
+$users = readAdminItems();
 
 function adminHomePage()
 {
     require_once 'view/adminHome.php';
 }
-function createAccount($initials,$firstname,$lastname,$password,$password2,$admin,$department)
+
+function createAccount($initials, $firstname, $lastname, $password, $password2, $admin, $department)
 {
-    if ($initials != "")
-    {
+    if ($initials != "") {
 
         // if the password is entered correctly
-        if ($password == $password2)
-        {
+        if ($password == $password2) {
             $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
 
             // Verify if the username already exists
-            if ( getUser($initials) != '')
-            {
+            if (getUser($initials) != '') {
                 $_SESSION['erreur'] = 2;
                 require_once 'view/createaccount.php';
-            }else
-                {
-                    if ($admin == "on" )
-                    {
-                        $admin = true;
-                    }else
-                        {
-                            $admin = false;
-                        }
-                    addUser($initials,$firstname,$lastname,$hash,$admin,$department);
-                    tryLogin($initials,$password);
+            } else {
+                if ($admin == "on") {
+                    $admin = true;
+                } else {
+                    $admin = false;
                 }
-        }else
-            {
-                $_SESSION['erreur'] = 1;
-                require_once 'view/createaccount.php';
+                addUser($initials, $firstname, $lastname, $hash, $admin, $department);
+                tryLogin($initials, $password);
             }
-    }else
-        {
+        } else {
+            $_SESSION['erreur'] = 1;
             require_once 'view/createaccount.php';
         }
+    } else {
+        require_once 'view/createaccount.php';
+    }
 
 }
-function addUser($initials,$firstname,$lastname,$hash,$admin,$department)
+
+function addUser($initials, $firstname, $lastname, $hash, $admin, $department)
 {
     $listUsers = getListUsers();
     $id = count($listUsers);
     var_dump($id);
     $idDisponible = verifyID($id);
-    While ($idDisponible == '')
-    {
+    While ($idDisponible == '') {
         $id += 1;
         $idDisponible = verifyID($id);
     }
@@ -75,8 +69,20 @@ function addUser($initials,$firstname,$lastname,$hash,$admin,$department)
     $listUsers[] = $newUser;
     file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
 }
+
 function crew()
 {
+    require_once 'view/crew.php';
+}
+
+function ChangeAdminState($users){
+foreach ($users as $user) {
+    if ($user['admin']==false){
+        $user['admin']=true;
+    }else{
+        $user['admin']=false;
+    }
+        }
     require_once 'view/crew.php';
 }
 ?>
