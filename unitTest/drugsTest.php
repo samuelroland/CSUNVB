@@ -71,4 +71,17 @@ else{
     print "Pas OK\n";
 }
 
+print "Fonction de supression d'une drogues : ";
+
+delADrug();
+
+$drugs = getAllDrugs();
+
+if (!isset($drugs[4])){
+    print "OK\n";
+}
+else{
+    print "Pas OK\n";
+}
+
 ?>
