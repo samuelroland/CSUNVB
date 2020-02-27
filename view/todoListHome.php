@@ -28,6 +28,7 @@ $tachesnuit =['Check de nuit','Contrôle supédfiants ambulances *Morphine X4 *S
         <?php
         foreach ($jours as $jour) {
             echo "<div class='day'><div class='dayheader'>$jour</div>";
+            echo  date("Y/m/d");
             foreach ($taches as $tache) {
                 echo "<div class='hour'>$tache</div>";
             }
@@ -48,7 +49,7 @@ $tachesnuit =['Check de nuit','Contrôle supédfiants ambulances *Morphine X4 *S
         echo "</div>";
     }
     ?>
-    
+
 </div>
 
 
