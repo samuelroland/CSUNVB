@@ -6,9 +6,9 @@
 */
 require 'model/todoListModel.php';
 
-// $item = ["id" => $id, "week" => $week, "state" => $state, "base_id" => $base_id];
+// $task = ["id" => $id, "week" => $week, "state" => $state, "base_id" => $base_id];
 $task = ["id" => 23, "week" => 2013, "state" => "closed", "base_id" => 2];
-createTodoListItem($task);
+createTodoListTask($task);
 
 /*if() {
     echo"OK";
@@ -19,6 +19,6 @@ else{
 
 $id = $task['id'];
 $id = 5;
-destroyTodoListItem($id);
+destroyTodoListTask($id);
 
 ?>

@@ -21,68 +21,63 @@ function getTodoListTasks()
     return json_decode(file_get_contents("model/dataStorage/todosheets.json"), true);
 }
 
-/**
- * Retourne un item précis, identifié par son id
- * ...
- */
-function readTodoListItem($id, $task)
+/** Permet de retourner une tâche précise identifié par son id */
+function readTodoListTaskById($id)
 {
     $tasks = getTodoListTasks();
     // TODO: coder la recherche de l'item demandé
-    $tasks[$task]['id'] = $id;
-    return $task;
+    foreach($tasks as $task)
+    {
+        if($id == $task['id']){
+            return $task;
+        }
+    }
+    return null;
 }
 
-/**
- * Sauve l'ensemble des items dans le fichier json
- * ...
- */
-function updateTodoListItems($tasks)
+/** Permet de sauver l'ensemble des tâches dans le fichier json */
+function updateTodoListTasks($tasks)
 {
     file_put_contents("model/dataStorage/items.json", json_encode($tasks));
 }
 
-/**
+/** Permet de modifier une tâche précise
  * Modifie un item précis
  * Le paramètre $item est un item complet (donc un tableau associatif)
- * ...
  */
-function updateTodoListItem($tasks)
+function updateTodoListTask($tasks)
 {
     $items = getTodoListTasks();
     // TODO: retrouver l'item donnée en paramètre et le modifier dans le tableau $items
-    saveTodoListItem($tasks);
+    saveTodoListTask($tasks);
 }
 
-/**
- * Détruit un item précis, identifié par son id
- * ...
- */
-function destroyTodoListItem($id)
+/** Permet de supprimer une tâche identifié par son id, parmi la liste */
+function destroyTodoListTask($id)
 {
     $tasks = getTodoListTasks();
     // TODO: coder la recherche de l'item demandé et sa destruction dans le tableau
+    // recherche d'une tâche demandé et la suppression dans le tableau
     foreach ($tasks as $id => $onetask)
     {
         if($id == $onetask['id']){
             unset($tasks[$id]);
         }
     }
-    saveTodoListItem($tasks);
+    saveTodoListTask($tasks);
 }
 
-function saveTodoListItem($task)
+function saveTodoListTask($task)
 {
     file_put_contents("model/dataStorage/todosheets.json", json_encode($task));
 }
 
-/**
+/** Permet d'ajouter une nouvelle tâche avec un id unique
  * Ajoute un nouvel item
  * Le paramètre $item est un item complet (donc un tableau associatif), sauf que la valeur de son id n'est pas valable
  * puisque le modèle ne l'a pas encore traité
- * ...
  */
-function createTodoListItem($task)
+function createTodoListTask($task)
 {
     $id = null;
     $tasks = getTodoListTasks();
@@ -94,7 +89,7 @@ function createTodoListItem($task)
 // enregistrer un nouvel id pour le nouvelle item
     $task['id'] = $id;
     $tasks[] = $task;
-    saveTodoListItem($tasks);
+    saveTodoListTask($tasks);
     return ($id); // Pour que l'appelant connaisse l'id qui a été donné
 }
 

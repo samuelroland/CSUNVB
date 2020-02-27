@@ -3,8 +3,7 @@ ob_start();
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
 $taches =['Fax 144 Transmission','Check Ambulance et Comunication','Contrôle des stupéfiants','Check bibliothèque','Changer le bac de nettoyage','Nettoyage centrale et garage','Check bibliothèque','tâche spécifique','Formation','Remise locaux ambulances'];
-$tachesnuit =['Check de nuit','Contrôle supédfiants ambulances
-        *Morphine X4 *Sintenyl X6 NOVA°_______','tâche spécifique','Remise locaux Trasmission']
+$tachesnuit =['Check de nuit','Contrôle supédfiants ambulances *Morphine X4 *Sintenyl X6 NOVA°_______','tâche spécifique','Remise locaux Trasmission']
 ?>
 <div class="">
     <h1>Tâches hebdomadaires</h1>
@@ -38,23 +37,18 @@ $tachesnuit =['Check de nuit','Contrôle supédfiants ambulances
 
     </div>
 
-
-
-
 <div class="week">
     <div class="horizontal nuitcolor"> <span style="font-weight: bold">NUIT</span> </div>
     <?php
     foreach ($jours as $jour) {
-        echo "<div class='day'><div class=''></div>";
+        echo "<div class='day'>";
         foreach ($tachesnuit as $tache) {
             echo "<div class='hour'>$tache</div>";
         }
         echo "</div>";
     }
     ?>
-
-
-
+    
 </div>
 
 
