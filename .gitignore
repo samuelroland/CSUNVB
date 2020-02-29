@@ -6,3 +6,7 @@ node_modules/
 
 # Doc
 CSU Documents/
+
+#ngrok app and exe files
+ngrok.exe
+*.exe
