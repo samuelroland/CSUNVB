@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "text": "Radios",
+    "guard_sections_id": 1
+  },
+  {
+    "id": 2,
+    "text": "Détecteurs CO",
+    "guard_sections_id": 1
+  },
+  {
+    "id": 3,
+    "text": "Téléphones",
+    "guard_sections_id": 1
+  },
+  {
+    "id": 4,
+    "text": "Gt info avisé",
+    "guard_sections_id": 1
+  },
+  {
+    "id": 5,
+    "text": "Annonce 144",
+    "guard_sections_id": 1
+  },
+  {
+    "id": 6,
+    "text": "Plein essence",
+    "guard_sections_id": 2
+  },
+  {
+    "id": 7,
+    "text": "Opérationnel",
+    "guard_sections_id": 2
+  },
+  {
+    "id": 8,
+    "text": "Rdv garage",
+    "guard_sections_id": 2
+  },
+  {
+    "id": 9,
+    "text": "Gt vhc avisé",
+    "guard_sections_id": 2
+  },
+  {
+    "id": 10,
+    "text": "50chf présents",
+    "guard_sections_id": 2
+  },
+  {
+    "id": 11,
+    "text": "Problèmes d’interventions hors véhicules",
+    "guard_sections_id": 2
+  },
+  {
+    "id": 12,
+    "text": "Info trafic consulté",
+    "guard_sections_id": 3
+  },
+  {
+    "id": 13,
+    "text": "Report des infos trafic sur plan de secteur",
+    "guard_sections_id": 3
+  },
+  {
+    "id": 14,
+    "text": "Accueil étudiant ou stagiaire",
+    "guard_sections_id": 3
+  },
+  {
+    "id": 15,
+    "text": "Lecture journal de bord ",
+    "guard_sections_id": 3
+  },
+  {
+    "id": 16,
+    "text": "Problème et responsable Gt avisé",
+    "guard_sections_id": 3
+  },
+  {
+    "id": 17,
+    "text": "Centrale propre",
+    "guard_sections_id": 4
+  },
+  {
+    "id": 18,
+    "text": "Tâches du jour effectuées",
+    "guard_sections_id": 4
+  },
+  {
+    "id": 19,
+    "text": "Dimanche ",
+    "guard_sections_id": 4
+  }
+]
