@@ -15,11 +15,19 @@ $tachesnuit =['Check de nuit','Contrôle supédfiants ambulances *Morphine X4 *S
 <table class=" table table-striped">
     <div class="navbar nav-pills">
     <th>Semaine <?php echo $semaine; ?>
-        <button class="btn btn-info" >></button>
-        <button class="btn btn-info" >Ajouter une tache</button>
-        <button class="btn btn-info" >Modifier une tache</button>
-        <button class="btn btn-info" >Supprimer une tache</button>
+        <button class="btn btn-info"  >></button>
+        <?php
+        if ($_SESSION['user']['admin'] == true)
+        {
+            echo "<button class='btn btn-info'>Ajouter une tache</button>
+        <button class='btn btn-info' >Modifier une tache</button>
+        <button class='btn btn-info' >Supprimer une tache</button>";
+        }else{
 
+        }
+
+
+?>
 
     </th>
     </div>
