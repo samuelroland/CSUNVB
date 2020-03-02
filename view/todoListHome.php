@@ -1,5 +1,6 @@
 <?php
 ob_start();
+$date = date('d/m/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
 $taches =['Fax 144 Transmission','Check Ambulance et Comunication','Contrôle des stupéfiants','Check bibliothèque','Changer le bac de nettoyage','Nettoyage centrale et garage','Check bibliothèque','tâche spécifique','Formation','Remise locaux ambulances'];
@@ -15,9 +16,7 @@ $tachesnuit =['Check de nuit','Contrôle supédfiants ambulances *Morphine X4 *S
     <div class="navbar nav-pills">
     <th>Semaine 1
         <button class="btn btn-info" >></button>
-        <button class="btn btn-info" id="cmdedit" >Ajouter une tache</button>
-        <button class="btn btn-info" >Modifier une tache</button>
-        <button class="btn btn-info" >Supprimer une tache</button>
+
     </th>
     </div>
 </table>
@@ -28,7 +27,7 @@ $tachesnuit =['Check de nuit','Contrôle supédfiants ambulances *Morphine X4 *S
         <?php
         foreach ($jours as $jour) {
             echo "<div class='day'><div class='dayheader'>$jour</div>";
-            echo  date("Y/m/d");
+            echo "<div class='dayheader'>$date</div>";
             foreach ($taches as $tache) {
                 echo "<div class='hour'>$tache</div>";
             }
