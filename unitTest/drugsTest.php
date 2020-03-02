@@ -73,7 +73,7 @@ else{
 
 print "Fonction de supression d'une drogues : ";
 
-delADrug();
+delADrug(4);
 
 $drugs = getAllDrugs();
 
