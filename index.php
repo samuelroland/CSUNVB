@@ -23,7 +23,8 @@ require "controler/drugControler.php";
 require "controler/loginControler.php";
 
 $action = $_GET['action'];
-
+$adminchange = $_GET['idPerson'];
+var_dump($adminchange);
 switch ($action)
 {
     case 'admin':
@@ -60,7 +61,7 @@ switch ($action)
         updatenewtodo();
         break;
     case 'ChangeAdminState':
-        ChangeAdminState($admin);
+        ChangeAdminState($users,$adminchange);
         break;
     default: // unknown action
         require_once 'view/home.php';
