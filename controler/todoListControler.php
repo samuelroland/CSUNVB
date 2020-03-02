@@ -9,7 +9,14 @@ require 'model/todoListModel.php';
 
 function todoListHomePage()
 {
-    require_once 'view/todoListHome.php';
+
+
+        require_once 'view/todoHomePage.php';
+
+}
+
+function todoListDetailedWeek(){
+    require_once 'view/todoListHome.php.php';
 }
 
 function addNewToDo($tasks)

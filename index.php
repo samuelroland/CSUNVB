@@ -62,6 +62,10 @@ switch ($action)
     case 'ChangeAdminState':
         ChangeAdminState($admin);
         break;
+    case 'displayWeek':
+        todoListDetailedWeek();
+        break;
+
     default: // unknown action
         require_once 'view/home.php';
         break;
