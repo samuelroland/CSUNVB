@@ -86,7 +86,7 @@ function ChangeAdminState($users, $id)
             }
         }
     }
-    $listUsers = $users
+    $listUsers = $users;
     require_once 'view/crew.php';
 }
 
