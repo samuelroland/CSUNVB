@@ -16,7 +16,7 @@ function todoListHomePage()
 }
 
 function todoListDetailedWeek(){
-    require_once 'view/todoListHome.php.php';
+    require_once 'view/todoListHome.php';
 }
 
 function addNewToDo($tasks)
