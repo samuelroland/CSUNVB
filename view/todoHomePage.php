@@ -23,13 +23,13 @@ ob_start();
     </div>
 </table>
 
-<div>
+<div class="col-md-14">
     <?php
     for ($i = 1; $i < 52; $i++) {
-        echo "<div ><a href='?action=todolisthome' ><button class='btn btn-info'>Semaine n° $i</button></a></div>";
+        echo "<a href='?action=todolisthome&semaine=$i' ><button class='btn btn-info btncont'>Semaine n° $i</button></a>";
     }
     ?>
-</div >
+</div>
 
 
 <?php
