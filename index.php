@@ -3,8 +3,7 @@
 session_start();
 
 // Login token if exists
-if(isset($_POST["initials"]) && isset($_POST["password"]))
-{
+if (isset($_POST["initials"]) && isset($_POST["password"])) {
     $initials = $_POST["initials"];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
@@ -25,8 +24,7 @@ require "controler/loginControler.php";
 $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
 var_dump($adminchange);
-switch ($action)
-{
+switch ($action) {
     case 'admin':
         adminHomePage();
         break;
@@ -43,10 +41,10 @@ switch ($action)
         drugHomePage();
         break;
     case 'tryLogin':
-        tryLogin($initials,$password);
+        tryLogin($initials, $password);
         break;
     case 'createAccount':
-        createAccount($initials,$firstname,$lastname,$password,$password2,$admin,$department);
+        createAccount($initials, $firstname, $lastname, $password, $password2, $admin, $department);
         break;
     case 'disconnect':
         diconnect();
@@ -61,20 +59,18 @@ switch ($action)
         updatenewtodo();
         break;
     case 'ChangeAdminState':
-        ChangeAdminState($users,$adminchange);
+        ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
         todoListDetailedWeek();
         break;
 
     default: // unknown action
-        if(isset($_SESSION['user']))
-        {
+        if (isset($_SESSION['user'])) {
             require_once 'view/home.php';
-        }else
-            {
-                require_once 'view/login.php';
-            }
+        } else {
+            require_once 'view/login.php';
+        }
         break;
 }
 ?>

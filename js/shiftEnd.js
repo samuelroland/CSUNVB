@@ -5,3 +5,8 @@
  * Auteur: X. Carrel
  * Date: Février 2020
  **/
+document.addEventListener("DOMContentLoaded", init)
+function init() { //fontion init pour initialiser les fonctions au moment du chargement de la page
+
+
+}
