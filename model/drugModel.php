@@ -86,6 +86,15 @@ function updateADrug($drugToUpdate)
       //return ($item); // Pour que l'appelant connaisse l'id qui a été donné
   }
 
+  function delADrug($id)
+  {
+    $items = getAllDrugs();
+
+    unset($items[$id]);
+
+    saveDrugs($items);
+  }
+
 
 
 ?>
