@@ -63,12 +63,18 @@ switch ($action)
     case 'ChangeAdminState':
         ChangeAdminState($users,$adminchange);
         break;
-    case 'displayWeek':
+    case 'todolisthome':
         todoListDetailedWeek();
         break;
 
     default: // unknown action
-        require_once 'view/home.php';
+        if(isset($_SESSION['user']))
+        {
+            require_once 'view/home.php';
+        }else
+            {
+                require_once 'view/login.php';
+            }
         break;
 }
 ?>

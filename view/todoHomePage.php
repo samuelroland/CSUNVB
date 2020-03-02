@@ -18,7 +18,7 @@ ob_start();
 </table>
 <div class="navbar nav-pills">
 
-    <button class="btn btn-info" action="index.php?action=displayWeek" >Semaine 1</button>
+    <a href="?action=todolisthome" ><button class="btn btn-info">Semaine 1</button></a>
 
 </div>
 
