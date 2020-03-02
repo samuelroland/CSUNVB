@@ -21,4 +21,6 @@ $id = $task['id'];
 $id = 5;
 destroyTodoListTask($id);
 
+$task = ["id" => 6, "week" => 2020, "state" => "closed", "base_id" => 5];
+updateTodoListTask($task);
 ?>

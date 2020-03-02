@@ -34,34 +34,6 @@ $title = "CSU-NVB - createAccount";
         <label for="admin" class="form-check-label">Admin</label><br><br>
     </div>
 
-    <p>Sélectionnez votre département</p>
-    <div class="form-check-inline">
-        <div class="form-check">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="department" value="1" required/>La Vallée-de-Joux
-            </label>
-        </div>
-        <div class="form-check">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="department" value="2"/>Payerne
-            </label>
-        </div>
-        <div class="form-check">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="department" value ="3"/>Saint-Loup
-            </label>
-        </div>
-        <div class="form-check">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="department" value="4"/>Sainte-Croix
-            </label>
-        </div>
-        <div class="form-check">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="department" value="5"/>Yverdon
-            </label>
-        </div>
-    </div><br><br>
 
     <?php
     if(isset($_SESSION['erreur'])){
