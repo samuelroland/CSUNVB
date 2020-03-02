@@ -7,7 +7,7 @@ $title = "CSU-NVB - login";
 
         <form action="index.php?action=tryLogin" method="POST" class="form-group text-center">
             <h1 class="">Connexion</h1>
-            <img src="/assets/images/login.png" class="center"/><br>
+            <img src="/assets/images/login.png" class="center w-25"/><br>
             <label><b>Initials</b></label>
             <input type="text" placeholder="Entrer vos initiales" name="initials" required>
             <br>
