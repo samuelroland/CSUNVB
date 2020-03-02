@@ -1,5 +1,4 @@
 <?php
-
 ob_start();
 $date = date('d/m/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
@@ -15,7 +14,7 @@ $tachesnuit =['Check de nuit','Contrôle supédfiants ambulances *Morphine X4 *S
 </div>
 <table class=" table table-striped">
     <div class="navbar nav-pills">
-    <th>Semaine 1
+    <th>Semaine <?php echo $semaine; ?>
         <button class="btn btn-info" >></button>
 
     </th>
