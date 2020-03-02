@@ -10,7 +10,7 @@ require 'model/todoListModel.php';
 $task = ["id" => 23, "week" => 2013, "state" => "closed", "base_id" => 2];
 createTodoListTask($task);
 
-/*if() {
+/*if(readTodoListTaskById($id) ) {
     echo"OK";
 }
 else{
