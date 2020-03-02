@@ -38,7 +38,7 @@ function login()
 }
 function diconnect(){
     session_unset();
-    require_once "view/home.php";
+    require_once "view/login.php";
 }
 function adminTrue($UserVef)
 {

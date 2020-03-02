@@ -12,7 +12,36 @@ $title = "CSU-NVB - login";
             <input type="text" placeholder="Entrer vos initiales" name="initials" required>
             <br>
             <label><b>Mot de passe</b></label>
-            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" required><br>
+
+            <p>Sélectionnez votre département</p>
+            <div class="form-check-inline">
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="department" value="1" required/>La Vallée-de-Joux
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="department" value="2"/>Payerne
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="department" value ="3"/>Saint-Loup
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="department" value="4"/>Sainte-Croix
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="department" value="5"/>Yverdon
+                    </label>
+                </div>
+            </div><br><br>
 
             <?php
             if(isset($_SESSION['erreur'])){
