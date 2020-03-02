@@ -75,14 +75,19 @@ function crew()
     require_once 'view/crew.php';
 }
 
-function ChangeAdminState($users){
-foreach ($users as $user) {
-    if ($user['admin']==false){
-        $user['admin']=true;
-    }else{
-        $user['admin']=false;
-    }
+function ChangeAdminState($users, $id)
+{
+    foreach ($users as $user) {
+        if ($users['id'] == $id) {
+            if ($user['admin'] == false) {
+                $user['admin'] = true;
+            } else {
+                $user['admin'] = false;
+            }
         }
+    }
+    $listUsers = $users
     require_once 'view/crew.php';
 }
+
 ?>

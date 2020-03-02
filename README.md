@@ -35,10 +35,10 @@ Pour les admins, un accès à la page d’administration est proposé.
 ### Nouveau secouriste
 Les visiteurs du site ne peuvent pas s'inscrire sur le site. Lorsqu'un(e) nouveau(lle) secouriste rejoint le CSU:
 
-- L'administrateur crée la personne et lui attribue un mot de passe qu'il choisit. La personne est enregistrée avec un status de 'nouveau'
+- L'administrateur crée la personne et lui attribue un mot de passe qu'il choisit. Ce mot de passe est marqué 'expiré'
 - L'administrateur communique les initiales et le mot de passe à la personne
-- Quand la personne va se connecter sur le site, ce dernier reconnaît le status de 'nouveau' et redirige vers la page d'activation
-- La personne définit son mot de passe personnel et passe au status d'actif
+- Quand la personne se connecte sur le site, ce dernier reconnaît que le mot de passe utilisé est expiré et redirige l'utilisateur vers la page de changement de mot de passe
+- La personne définit son mot de passe personnel
 
 ### Administrateurs
 Les admins donnent ou retirent le droit d’administrer à un autre utilisateur (mais jamais à soi-même)
