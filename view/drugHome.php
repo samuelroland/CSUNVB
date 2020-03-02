@@ -8,9 +8,8 @@ $title = "CSU-NVB - Stupéfiants";
 <!-- Tableau -->
 
 <h3>Contrôle des stupéfiants Hebdomadaire</h3>
-<h3>Semaine N 51</h3>
-
-
+<button class="btn btn-info" ><</button><h3>Semaine N 51</h3><button class="btn btn-info" >></button>
+<h3>Sur le site de Ste-Croix</h3>
 
 <!-- Morphine -->
 <table class="table table-striped table-bordered col-1 aligncenter">
