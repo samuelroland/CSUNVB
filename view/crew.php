@@ -7,7 +7,7 @@ $users = readAdminItems();
 <table class="table table-bordered" style="text-align: center">
 
     <tr>
-        <th>ID</th>
+
         <th>Initials</th>
         <th>Prénom</th>
         <th>Nom</th>
@@ -16,7 +16,7 @@ $users = readAdminItems();
 
     <?php
     foreach ($users as $user) {
-        echo "<tr><td>" . $user['id'] . "</td><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] . "</td>"; ?>
+        echo "<tr><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] . "</td>"; ?>
 
         <?php if ($user['admin'] == true) {
 
