@@ -8,16 +8,32 @@ require 'model/todoListModel.php';
 
 // $task = ["id" => $id, "week" => $week, "state" => $state, "base_id" => $base_id];
 $task = ["id" => 23, "week" => 2013, "state" => "closed", "base_id" => 2];
-createTodoListTask($task);
+$id = [$onetask['id']];
 
-/*if(readTodoListTaskById($id) ) {
-    echo"OK";
+
+if (readTodoListTaskById($id)) {
+    if ($tasks = $task + 1) {
+        createTodoListTask($task);
+        echo "OK";
+    }
+    else {
+        echo "NO";
+    }
 }
-else{
-    echo"NO";
-}*/
 
-$id = $task['id'];
+if (readTodoListTaskById($id)) {
+    if ($tasks = $task + 1) {
+        createTodoListTask($task);
+        echo "OK";
+    }
+    else {
+        echo "NO";
+    }
+}
+
+
+// if($task)
+
 $id = 5;
 destroyTodoListTask($id);
 
