@@ -4,7 +4,9 @@ $date = date('d/m/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 $taches = ['Fax 144 Transmission', 'Check Ambulance et Comunication', 'Contrôle des stupéfiants', 'Check bibliothèque', 'Changer le bac de nettoyage', 'Nettoyage centrale et garage', 'Check bibliothèque', 'tâche spécifique', 'Formation', 'Remise locaux ambulances'];
-$tachesnuit = ['Check de nuit', 'Contrôle supédfiants ambulances *Morphine X4 *Sintenyl X6 NOVA°_______', 'tâche spécifique', 'Remise locaux Trasmission']
+$tachesnuit = ['Check de nuit', 'Contrôle supédfiants ambulances *Morphine X4 *Sintenyl X6 NOVA°_______', 'tâche spécifique', 'Remise locaux Trasmission'];
+      $prev = ($semaine -1);
+$next = ($semaine +1);
 
 ?>
 <div class="">
@@ -23,12 +25,11 @@ $tachesnuit = ['Check de nuit', 'Contrôle supédfiants ambulances *Morphine X4 
             }
             ?>Semaine <?php echo $semaine; ?>
             <?php
-            $prev = strtotime('-1 week', $semaine);
-            $next = strtotime('+1 week', $semaine);
+
 
             ?>
 
-            <button class="btn btn-info"><a href="?ym=<?= $prev; ?>">></a></button>
+            <button class="btn btn-info"><a href="?ym=<?= $next; ?>">></a></button>
             <?php
             if ($_SESSION['user']['admin'] == true) {
                 echo "<button class='btn btn-info'>Ajouter une tache</button>
