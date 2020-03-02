@@ -22,13 +22,14 @@ ob_start();
         </th>
     </div>
 </table>
-<div class="navbar nav-pills">
+
+<div>
     <?php
     for ($i = 1; $i < 52; $i++) {
-        echo "<div><a href='?action=todolisthome' ><button class='btn btn-info'>Semaine n° $i</button></a></div>";
+        echo "<div ><a href='?action=todolisthome' ><button class='btn btn-info'>Semaine n° $i</button></a></div>";
     }
     ?>
-</div>
+</div >
 
 
 <?php
