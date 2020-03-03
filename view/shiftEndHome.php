@@ -5,9 +5,14 @@ $title = "CSU-NVB - Remise de garde";
 <script src="js/shiftEnd.js"></script>
 <div class="row m-2">
     <h1>Remises de garde</h1>
-</div>
+
+
+
+
+<?php
+/*</div>
 <a class="btn btn-outline-primary m-1 pull-right'style='bt-align: center"
-   href="?action=listShiftEnd">La Vallée-de-Joux</a>
+   href="?action=listShiftEnd" id="btValDeJoux">La Vallée-de-Joux</a>
 <a class="btn btn-outline-primary m-1 pull-right'style='bt-align: center"
    href="?action=listShiftEnd">Payerne</a>
 <a class="btn btn-outline-primary m-1 pull-right'style='bt-align: center"
@@ -29,8 +34,8 @@ $title = "CSU-NVB - Remise de garde";
         </tr>
         <tr>
             <td>Radios</td>
-            <td><input type="checkbox">OK</td>
-            <td><input type="checkbox">OK</td>
+            <td onclick="f_check_rd_J"><input type="checkbox" id="check_rd_J">OK</td>
+            <td onclick="f_check_rd_J"><input type="checkbox" id="check_rd_N">OK</td>
             <td><textarea cols=100% rows="1"></textarea> </td>
         </tr>
         <tr>
@@ -60,8 +65,8 @@ $title = "CSU-NVB - Remise de garde";
 
 
     </table>
-</div>
-<?php
+</div>*/
+
 $content = ob_get_clean();
 require "gabarit.php";
 ?>

@@ -9,14 +9,15 @@ require_once 'model/loginModel.php';
 
 
 
-function tryLogin($initials,$password)
+function tryLogin($initials,$password,$departement)
 {
     if ($initials != "")
     {
         $UserLog = getUser($initials);
+        $Baselog = getBase($departement);
         if ($UserLog != '') {
             if (password_verify($password,$UserLog['password'])) {
-                $_SESSION['user'] = [$UserLog['initials'],$UserLog['firstname'],$UserLog['admin']];
+                $_SESSION['user'] = [$UserLog['initials'],$UserLog['firstname'],$UserLog['admin'],$Baselog];
                 require_once 'view/home.php';
             }
             else {

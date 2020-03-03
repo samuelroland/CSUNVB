@@ -7,15 +7,20 @@
 
 require 'model/todoListModel.php';
 
+
+
+
 function todoListHomePage()
 {
 
 
-        require_once 'view/todoHomePage.php';
+
+    require_once 'view/todoHomePage.php';
 
 }
 
 function todoListDetailedWeek($semaine){
+    $tasks = getTodoListTasks();
     require_once 'view/todoListHome.php';
 }
 

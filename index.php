@@ -15,17 +15,15 @@ if (isset($_POST["initials"]) && isset($_POST["password"])) {
     $department = $_POST["department"];
 
 }
-
 // Include all controllers
 require "controler/adminControler.php";
 require "controler/shiftEndControler.php";
 require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
-
+var_dump($_SESSION);
 $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
-var_dump($adminchange);
 switch ($action) {
     case 'admin':
         adminHomePage();
@@ -43,7 +41,7 @@ switch ($action) {
         drugHomePage();
         break;
     case 'tryLogin':
-        tryLogin($initials, $password);
+        tryLogin($initials, $password,$department);
         break;
     case 'createAccount':
         createAccount($initials, $firstname, $lastname, $password, $password2, $admin, $department);
