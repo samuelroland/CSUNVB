@@ -9,12 +9,12 @@ require_once 'model/drugModel.php';
 
 function drugdetails()
 {
-    require_once 'view/drugDetails.php';
+    require_once 'view/drugsDetails.php';
 }
 
 function drugHomePage($week, $base)
 {
-    require_once 'view/drugHome.php';
+    require_once 'view/drugsHome.php';
 }
 
 ?>
