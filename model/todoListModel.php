@@ -15,15 +15,16 @@ function getTodoListTasks()
 /** Permet de retourner une tâche précise identifié par son id */
 function readTodoListTaskById($id)
 {
-
-
-    $tasks = getTodoListTasks();
+    foreach ($tasks = $onetask) {
+        $tasks[$onetask['id']] = $onetask;
+    }
+    /*$tasks = getTodoListTasks();
     foreach($tasks as $task)
     {
         if($id == $task['id']){
             return $task;
         }
-    }
+    }*/
     return null;
 }
 
