@@ -16,7 +16,6 @@ function getTodoListTasks()
 function readTodoListTaskById($id)
 {
     $tasks = getTodoListTasks();
-    // TODO: coder la recherche de l'item demandé
     foreach($tasks as $task)
     {
         if($id == $task['id']){
@@ -77,7 +76,7 @@ function createTodoListTask($task)
         $id = $onetask["id"];
     }
     $id++; // prendre l'id suivante
-// enregistrer un nouvel id pour la nouvelle tâche
+    // enregistrer un nouvel id pour la nouvelle tâche
     $task['id'] = $id;
     $tasks[] = $task; // insérer la nouvelle tâche à la fin de la liste
     saveTodoListTask($tasks);
