@@ -35,4 +35,19 @@ function verifyID($id)
     }
     return "clear";
 }
+function getListBases()
+{
+    return json_decode(file_get_contents("model/dataStorage/bases.json"),true);
+}
+function getBase($departement)
+{
+    $listBases = getListBases();
+    foreach ($listBases as $base)
+    {
+        if ($base['id'] == $departement)
+        {
+            return $base;
+        }
+    }
+}
 ?>

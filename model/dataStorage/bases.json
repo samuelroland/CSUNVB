@@ -1,10 +1,10 @@
 [
   {
-    "id": 5,
+    "id": 1,
     "name": "La Vallée-de-Joux"
   },
   {
-    "id": 4,
+    "id": 2,
     "name": "Payerne"
   },
   {
@@ -12,11 +12,11 @@
     "name": "Saint-Loup"
   },
   {
-    "id": 2,
+    "id": 4,
     "name": "Ste-Croix"
   },
   {
-    "id": 1,
+    "id": 5,
     "name": "Yverdon"
   }
 ]
