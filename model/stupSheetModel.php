@@ -6,8 +6,8 @@
 */
 
 function getAllSheets(){
-    //$goodArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"), true); //Prend les éléments d'un fichier Json
-    $badArray = json_decode(file_get_contents("../model/dataStorage/stupSheets.json"), true); //Prend les éléments d'un fichier Json
+    //$goodArray = json_decode(file_get_contents("../model/dataStorage/Sheets.json"), true); //Prend les éléments d'un fichier Json
+    $badArray = json_decode(file_get_contents("../model/dataStorage/stupsheets.json"), true); //Prend les éléments d'un fichier Json
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
@@ -15,6 +15,74 @@ function getAllSheets(){
     }
 
     return $goodArray; //Retourne le tableau indexé avec ses id
+}
+
+function getASheet($week){
+    $sheets = getAllSheets(); //Récupère les Drogues
+
+    foreach ($sheets as $sheet) {
+        if ($sheet["week"] == $week){
+            return $sheet;
+        }
+    }
+}
+
+function saveSheets($items)
+{
+    file_put_contents("../model/dataStorage/stupsheets.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
+}
+
+/**
+ * Modifie un item précis
+ * Le paramètre $item est un item complet (donc un tableau associatif)
+ * ...
+ */
+
+function updateASheet($SheetToUpdate)
+{
+
+    $items = getAllSheets();
+
+    foreach ($items as $item){
+        if ($item["id"] == $SheetToUpdate["id"]){
+            $items[$SheetToUpdate] = $item;
+        }
+    }
+
+    saveSheets($items);
+}
+
+/**
+ * Ajoute un nouvel item
+ * Le paramètre $item est un item complet (donc un tableau associatif), sauf que la valeur de son id n'est pas valable
+ * puisque le modèle ne l'a pas encore traité
+ * ...
+ */
+function addASheet($newSheet)
+{
+    $items = getAllSheets();
+    $test = 0;
+    foreach ($items as $item){
+        if ($item["id"] > $test){
+            $test = $item["id"];
+        }
+    }
+
+    $id = $test + 1;
+    $newSheet =  array_merge( ["id" => $id], $newSheet);
+    $items[] = $newSheet;
+
+    saveSheets($items);
+    //return ($item); // Pour que l'appelant connaisse l'id qui a été donné
+}
+
+function delASheet($id)
+{
+    $items = getAllSheets();
+
+    unset($items[$id]);
+
+    saveSheets($items);
 }
 
 ?>

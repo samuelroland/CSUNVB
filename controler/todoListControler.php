@@ -21,6 +21,8 @@ function todoListHomePage()
 
 function todoListDetailedWeek($semaine){
     $tasks = getTodoListTasks();
+    $daytask = getTodoListTasks();
+    $nightask = getTodoListTasks();
     require_once 'view/todoListHome.php';
 }
 
