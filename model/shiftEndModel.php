@@ -12,7 +12,7 @@
  */
 function readShiftEndItems()
 {
-    return json_decode(file_get_contents("model/dataStorage/items.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/guardsheets.json"),true);
 }
 
 /**
