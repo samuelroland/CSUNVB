@@ -9,12 +9,14 @@
 /** Retourne la liste des tâches */
 function getTodoListTasks()
 {
-    return json_decode(file_get_contents("model/dataStorage/todosheets.json"), true);
+    return json_decode(file_get_contents("model/dataStorage/todothings.json"), true);
 }
 
 /** Permet de retourner une tâche précise identifié par son id */
 function readTodoListTaskById($id)
 {
+
+
     $tasks = getTodoListTasks();
     // TODO: coder la recherche de l'item demandé
     foreach($tasks as $task)
