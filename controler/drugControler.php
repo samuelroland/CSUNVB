@@ -7,8 +7,14 @@
 
 require_once 'model/drugModel.php';
 
-function drugHomePage()
+function drugdetails()
+{
+    require_once 'view/drugDetails.php';
+}
+
+function drugHomePage($week, $base)
 {
     require_once 'view/drugHome.php';
 }
+
 ?>

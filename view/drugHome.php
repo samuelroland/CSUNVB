@@ -605,7 +605,6 @@ $title = "CSU-NVB - Stupéfiants";
 </table>
 
 
-</table>
 
 
 <?php

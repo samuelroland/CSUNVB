@@ -37,11 +37,14 @@ switch ($action) {
     case 'todolist':
         todoListHomePage();
         break;
-    case 'drugs':
-        drugHomePage();
+    case 'drughome':
+        drugHomePage($week, $base); // //liste des semaines et des bases pour choisir la feuille de stups
+        break;
+    case "detaildrug":
+        drugdetails(); //page détails d'une feuille de stups avec tableaux
         break;
     case 'tryLogin':
-        tryLogin($initials, $password,$department);
+        tryLogin($initials, $password, $department);
         break;
     case 'createAccount':
         createAccount($initials, $firstname, $lastname, $password, $password2, $admin, $department);
