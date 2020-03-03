@@ -7,6 +7,14 @@
  **/
 document.addEventListener("DOMContentLoaded", init)
 function init() { //fontion init pour initialiser les fonctions au moment du chargement de la page
+    check_rd_J.addEventListener("click",check_rd_J_click);
+    btValDeJoux.addEventListener("click",btValDeJouxClick);
+}
+function check_rd_J_click(){
+    check_rd_N.checked=false;
 
+}
+function f_check_rd_J() {
+    check_rd_J.checked=true;
 
 }
