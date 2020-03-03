@@ -10,19 +10,19 @@ require_once "../model/stupSheetModel.php";
 print "Fonction de récupération des feuilles : ";
 
 $allSheets = getAllSheets();
-var_dump( $allSheets);
-/*if (count($allSheets) == 22){
+
+if (count($allSheets) == 22){
     print "OK\n";
 }
 else{
     print "Pas OK\n";
-}*/
+}
 
-/*print "Fonction de récupération d'une feuille : ";
+print "Fonction de récupération d'une feuille : ";
 
-$sheet = getASheet(2);
+$sheet = getASheet(2009);
 
-if ($sheet["week"] == 2009){
+if ($sheet["id"] == 2){
     print "OK\n";
 }
 else{
@@ -31,16 +31,20 @@ else{
 
 print "Fonction de ajout d'une feulle : ";
 
+$sheetToUpdate = [
+    "week"=> 6,
+    "state"=> "closed",
+    "base_id" => 1
+];
 
+addASheet($sheetToUpdate);
 
-addASheet("test");
-
-$sheet = getAllSheet();
+$sheets = getAllSheets();
 
 $test = false;
 
 foreach ($sheets as $sheet){
-    if ($sheet == "test"){
+    if ($sheet["week"] == 6){
         $test = true;
         break;
     }
@@ -52,21 +56,21 @@ if($test == true){
 else{
     print "Pas OK\n";
 }
-
-print "Fonction de modification d'une drogues : ";
+/*
+print "Fonction de modification d'une feuille : ";
 
 $sheetToUpdate = [
-    "id" => 2,
-    "name" => "test1"
+    "id" => 1,
+    "week"=> 4,
 ];
 
 updateASheet($sheetToUpdate);
 
-$drugs = getAllSheet();
+$Sheets = getAllSheet();
 
 $test = false;
 
-if ($sheet["2"]["name"] == "test1"){
+if ($sheet["1"]["week"] == 4){
     print "OK\n";
 }
 else{
@@ -77,13 +81,13 @@ print "Fonction de supression d'une drogues : ";
 
 delASheet(4);
 
-$sheet = getAllDrugs();
+$sheet = getAllSheets();
 
 if (!isset($sheet[4])){
     print "OK\n";
 }
 else{
     print "Pas OK\n";
-}*/
-
+}
+*/
 ?>
