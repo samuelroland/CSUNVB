@@ -72,7 +72,6 @@ require_once 'controler/todoListControler.php';
     <?php
     foreach ($jours as $jour) {
         echo "<div class='day'>";
-        
         foreach($tasks as $task)
         {
             ?><div class='hour'><?= $task['description'];?></div><?php
