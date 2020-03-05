@@ -2,7 +2,7 @@
 ob_start();
 $title = "CSU-NVB - login";
 ?>
-    <div id="container" >
+    <div id="container">
         <!-- zone de connexion -->
 
         <form action="index.php?action=tryLogin" method="POST" class="form-group text-center">
@@ -18,7 +18,8 @@ $title = "CSU-NVB - login";
             <div class="form-check-inline">
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="department" value="1" required/>La Vallée-de-Joux
+                        <input type="radio" class="form-check-input" name="department" value="1" required/>La
+                        Vallée-de-Joux
                     </label>
                 </div>
                 <div class="form-check">
@@ -28,7 +29,7 @@ $title = "CSU-NVB - login";
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="department" value ="3"/>Saint-Loup
+                        <input type="radio" class="form-check-input" name="department" value="3"/>Saint-Loup
                     </label>
                 </div>
                 <div class="form-check">
@@ -41,16 +42,17 @@ $title = "CSU-NVB - login";
                         <input type="radio" class="form-check-input" name="department" value="5"/>Yverdon
                     </label>
                 </div>
-            </div><br><br>
+            </div>
+            <br><br>
 
             <?php
-            if(isset($_SESSION['erreur'])){
+            if (isset($_SESSION['erreur'])) {
                 echo "<br><p class='alert-warning'>Les données introduites sont incorrects</p>";
                 unset($_SESSION['erreur']);
             }
             ?>
             <br>
-            <input type="submit" id='submit' value='Connexion' >
+            <input type="submit" id='submit' value='Connexion'>
             <br>
         </form>
     </div>

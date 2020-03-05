@@ -5,3 +5,11 @@
  * Auteur: X. Carrel
  * Date: Février 2020
  **/
+
+$(document).ready(function () {
+    $("label").on("click", function(lbl){
+        console.log(lbl)
+        numwek=  $(lbl.target).data("weeknb");
+        week.value = numwek
+    })
+})
