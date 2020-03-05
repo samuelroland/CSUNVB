@@ -5,7 +5,7 @@
   Date : 02.03.2020
 */
 
-require_once "../model/stupSheetModel.php";
+require_once "model/stupSheetModel.php";
 
 print "Fonction de récupération des feuilles : ";
 
