@@ -38,14 +38,15 @@ function saveSheets($items)
  * ...
  */
 
-function updateASheet($SheetToUpdate)
+function updateASheet($sheetToUpdate)
 {
 
     $items = getAllSheets();
 
     foreach ($items as $item){
-        if ($item["id"] == $SheetToUpdate["id"]){
-            $items[$SheetToUpdate] = $item;
+        if ($item["id"] == $sheetToUpdate["id"]){
+            $item = array_merge($item, $sheetToUpdate);
+            $items[$item["id"]] = $item;
         }
     }
 
