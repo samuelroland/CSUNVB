@@ -6,8 +6,7 @@
  */
 function getAllDrugs()
 {
-    //$goodArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"), true); //Prend les éléments d'un fichier Json
-    $badArray = json_decode(file_get_contents("../model/dataStorage/drugs.json"), true); //Prend les éléments d'un fichier Json
+    $badArray = json_decode(file_get_contents("model/dataStorage/drugs.json"), true); //Prend les éléments d'un fichier Json
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
@@ -41,7 +40,7 @@ function getADrug($id)
 
 function saveDrugs($items)
 {
-    file_put_contents("../model/dataStorage/drugs.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
+    file_put_contents("model/dataStorage/drugs.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
 }
 
 /**
@@ -83,7 +82,6 @@ function updateADrug($drugToUpdate)
       ];
 
       saveDrugs($items);
-      //return ($item); // Pour que l'appelant connaisse l'id qui a été donné
   }
 
   function delADrug($id)

@@ -5,7 +5,7 @@
   Date : 02.03.2020
 */
 
-require_once "../model/stupSheetModel.php";
+require_once "model/stupSheetModel.php";
 
 print "Fonction de récupération des feuilles : ";
 
@@ -56,7 +56,7 @@ if($test == true){
 else{
     print "Pas OK\n";
 }
-/*
+
 print "Fonction de modification d'une feuille : ";
 
 $sheetToUpdate = [
@@ -66,18 +66,18 @@ $sheetToUpdate = [
 
 updateASheet($sheetToUpdate);
 
-$Sheets = getAllSheet();
+$sheets = getAllSheets();
 
 $test = false;
 
-if ($sheet["1"]["week"] == 4){
+if ($sheets["1"]["week"] == 4){
     print "OK\n";
 }
 else{
     print "Pas OK\n";
 }
 
-print "Fonction de supression d'une drogues : ";
+print "Fonction de supression d'une feuille : ";
 
 delASheet(4);
 
@@ -89,5 +89,5 @@ if (!isset($sheet[4])){
 else{
     print "Pas OK\n";
 }
-*/
+
 ?>

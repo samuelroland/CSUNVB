@@ -8,20 +8,18 @@
 require 'model/todoListModel.php';
 
 
-
-
 function todoListHomePage()
 {
-
 
 
     require_once 'view/todoHomePage.php';
 
 }
 
-function todoListDetailedWeek($semaine){
+function todoListDetailedWeek($semaine)
+{
     $tasks = getTodoListTasks();
-    $daything = getTodoListTasks();
+    $daythings = getTodoListTasks();
     $nightask = getTodoListTasks();
     require_once 'view/todoListHome.php';
 }
@@ -34,11 +32,14 @@ function addNewToDo($tasks)
     require_once 'view/todoListHome.php';
 }
 
-function deleteNewToDo() {
+function deleteNewToDo()
+{
 
 }
 
-function updateNewToDo() {
+function updateNewToDo()
+{
 
 }
+
 ?>

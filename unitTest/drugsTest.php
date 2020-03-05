@@ -5,7 +5,7 @@
   Date : 04.02.2020
 */
 
-require_once "../model/drugModel.php";
+require_once "model/drugModel.php";
 
 print "Fonction de récupération des drogues : ";
 

@@ -3,6 +3,7 @@
 session_start();
 
 $semaine = $_GET['semaine'];
+$daythings = $_GET['daything'];
 
 // Login token if exists
 if (isset($_POST["initials"]) && isset($_POST["password"])) {
@@ -65,7 +66,7 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($semaine);
+        todoListDetailedWeek($semaine,$daythings,$task);
         break;
 
     default: // unknown action
