@@ -23,9 +23,8 @@ function readTodoListTaskById($id)
         if ($id == $task['id']) {
             return $task;
         }
-
-        return null;
     }
+    return null;
 }
 
 /** Permet de sauver l'ensemble des tâches dans le fichier json */

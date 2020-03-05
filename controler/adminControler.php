@@ -14,7 +14,7 @@ function adminHomePage()
     require_once 'view/adminHome.php';
 }
 
-function createAccount($initials, $firstname, $lastname, $password, $password2, $admin, $department)
+function createAccount($initials, $firstname, $lastname, $password, $password2, $admin)
 {
     if ($initials != "") {
 
@@ -32,8 +32,8 @@ function createAccount($initials, $firstname, $lastname, $password, $password2, 
                 } else {
                     $admin = false;
                 }
-                addUser($initials, $firstname, $lastname, $hash, $admin, $department);
-                tryLogin($initials, $password);
+                addUser($initials, $firstname, $lastname, $hash, $admin);
+                crew();
             }
         } else {
             $_SESSION['erreur'] = 1;
@@ -45,7 +45,7 @@ function createAccount($initials, $firstname, $lastname, $password, $password2, 
 
 }
 
-function addUser($initials, $firstname, $lastname, $hash, $admin, $department)
+function addUser($initials, $firstname, $lastname, $hash, $admin)
 {
     $listUsers = getListUsers();
     $id = count($listUsers);
@@ -64,7 +64,6 @@ function addUser($initials, $firstname, $lastname, $hash, $admin, $department)
         'lastname' => $lastname,
         'password' => $hash,
         'admin' => $admin,
-        'department' => $department,
     ];
     $listUsers[] = $newUser;
     file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
@@ -78,7 +77,7 @@ function crew()
 function ChangeAdminState($users, $id)
 {
     foreach ($users as $user) {
-        if ($users['id'] == $id) {
+        if ($user['id'] == $id) {
             if ($user['admin'] == false) {
                 $user['admin'] = true;
             } else {
