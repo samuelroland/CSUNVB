@@ -3,8 +3,8 @@ ob_start();
 $date = date('d/m/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-      $prev = ($semaine -1);
-$next = ($semaine +1);
+$prev = ($semaine - 1);
+$next = ($semaine + 1);
 require_once 'controler/todoListControler.php';
 ?>
 <div class="">
@@ -33,8 +33,7 @@ require_once 'controler/todoListControler.php';
                 echo "<button class='btn btn-info'>Ajouter une tache</button>";
                 echo "<button class='btn btn-info' >Modifier une tache</button>";
                 echo "<button class='btn btn-info' >Supprimer une tache</button>";
-            } else
-                {
+            } else {
 
             }
 
@@ -52,30 +51,33 @@ require_once 'controler/todoListControler.php';
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
         echo "<div class='dayheader'>$date</div>";
-            foreach($tasks as $task)
-            {
-                while ($daything == 1) {
+        foreach ($tasks as $task) {
+            if ($task['daything'] == 1) {
                 ?>
                 <div class='hour'><?= $task['description']; ?></div><?php
 
+            } else {
+
             }
-            }
+        }
 
         echo "</div>";
     }
     ?>
 
 </div>
-
 <div class="week">
     <div class="horizontal nuitcolor"><span style="font-weight: bold">NUIT</span></div>
     <?php
     foreach ($jours as $jour) {
         echo "<div class='day'>";
-        foreach($tasks as $task)
-        {
-            ?><div class='hour'><?= $task['description'];?></div><?php
+        foreach ($tasks as $task) {
 
+            if ($task['daything'] == 0) {
+                ?>
+                <div class='hour'><?= $task['description']; ?></div><?php
+
+            }
 
         }
         echo "</div>";

@@ -18,17 +18,12 @@ function readTodoListTaskById($id)
     /* foreach ($tasks = $onetask) {
          $tasks[$onetask['id']] = $onetask;
      }*/
-    $daything = getTodoListTasks();
     $tasks = getTodoListTasks();
     foreach ($tasks as $task) {
         if ($id == $task['id']) {
             return $task;
         }
-        {
-            if ($id == $daything['daything']) {
-                return $daything;
-            }
-        }
+
         return null;
     }
 }
@@ -44,10 +39,9 @@ function updateTodoListTask($newtask)
 {
     $tasks = getTodoListTasks();
     // parcourt le tableau de tâches
-    foreach ($tasks as $id => $onetask)
-    {
+    foreach ($tasks as $id => $onetask) {
         // Ecrase l'ancienne tâche par celle modifiée
-        if($newtask['id'] == $onetask['id']){
+        if ($newtask['id'] == $onetask['id']) {
             $tasks[$id] = $newtask;
         }
     }
@@ -59,9 +53,8 @@ function destroyTodoListTask($id)
 {
     $tasks = getTodoListTasks();
     // recherche d'une tâche demandé et la suppression dans le tableau
-    foreach ($tasks as $id => $onetask)
-    {
-        if($id == $onetask['id']){
+    foreach ($tasks as $id => $onetask) {
+        if ($id == $onetask['id']) {
             unset($tasks[$id]);
         }
     }
