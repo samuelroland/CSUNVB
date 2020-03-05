@@ -16,13 +16,17 @@ function getTodoListTasks()
 function readTodoListTaskById($id)
 {
 
-
+    $daything= getTodoListTasks();
     $tasks = getTodoListTasks();
     foreach($tasks as $task)
     {
         if($id == $task['id']){
             return $task;
         }
+        if($id == $daything['daything']){
+            return $daything;
+        }
+
     }
     return null;
 }
