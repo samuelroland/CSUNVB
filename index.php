@@ -65,7 +65,7 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($semaine);
+        todoListDetailedWeek($semaine,$task,$daything);
         break;
 
     default: // unknown action

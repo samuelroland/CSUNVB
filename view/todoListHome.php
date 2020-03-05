@@ -3,8 +3,6 @@ ob_start();
 $date = date('d/m/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$taches = ['Fax 144 Transmission', 'Check Ambulance et Comunication', 'Contrôle des stupéfiants', 'Check bibliothèque', 'Changer le bac de nettoyage', 'Nettoyage centrale et garage', 'Check bibliothèque', 'tâche spécifique', 'Formation', 'Remise locaux ambulances'];
-$tachesnuit = ['Check de nuit', 'Contrôle supédfiants ambulances *Morphine X4 *Sintenyl X6 NOVA°_______', 'tâche spécifique', 'Remise locaux Trasmission'];
       $prev = ($semaine -1);
 $next = ($semaine +1);
 require_once 'controler/todoListControler.php';
@@ -56,9 +54,11 @@ require_once 'controler/todoListControler.php';
         echo "<div class='dayheader'>$date</div>";
             foreach($tasks as $task)
             {
-              ?><div class='hour'><?= $task['description'];?></div><?php
+                while ($daything == 1) {
+                ?>
+                <div class='hour'><?= $task['description']; ?></div><?php
 
-
+            }
             }
 
         echo "</div>";

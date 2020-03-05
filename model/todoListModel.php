@@ -68,10 +68,10 @@ function destroyTodoListTask($id)
     saveTodoListTask($tasks);
 }
 
-/** Enregistre la liste des tâches dans le todosheets.json */
+/** Enregistre la liste des tâches dans le todothings.json */
 function saveTodoListTask($tasks)
 {
-    file_put_contents("model/dataStorage/todosheets.json", json_encode($tasks));
+    file_put_contents("model/dataStorage/todothings.json", json_encode($tasks));
 }
 
 /** Permet d'ajouter une nouvelle tâche avec un id unique */
