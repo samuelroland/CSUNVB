@@ -18,14 +18,19 @@ function readTodoListTaskById($id)
     /* foreach ($tasks = $onetask) {
          $tasks[$onetask['id']] = $onetask;
      }*/
-     $tasks = getTodoListTasks();
-     foreach($tasks as $task)
-     {
-         if($id == $task['id']){
-             return $task;
-         }
-     }
-    return null;
+    $daything = getTodoListTasks();
+    $tasks = getTodoListTasks();
+    foreach ($tasks as $task) {
+        if ($id == $task['id']) {
+            return $task;
+        }
+        {
+            if ($id == $daything['daything']) {
+                return $daything;
+            }
+        }
+        return null;
+    }
 }
 
 /** Permet de sauver l'ensemble des tâches dans le fichier json */
