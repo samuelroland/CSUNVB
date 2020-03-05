@@ -6,10 +6,18 @@
 */
 require 'model/todoListModel.php';
 
+/*{
+    "id": 1,
+    "type": 0,
+    "daything": 1,
+    "description": "Commande mat et commande pharma.",
+    "display_order": null
+  },*/
 
-echo"Test read: ";
-$tasktest = readTodoListTaskById(7);
-if($tasktest['id'] == 7 && $tasktest['week'] == 2010 && $tasktest['state'] == "closed" && $tasktest['base_id'] == 2) {
+
+/*echo"Test read: ";
+$tasktestread = readTodoListTaskById(7);
+if($tasktestread['id'] == 7 && $tasktestread['type'] == 0 && $tasktestread['daything'] == 1 && $tasktestread['description'] == "Fax 144 Transmission" && $tasktestread['display_order'] == null) {
     echo" OK\n";
 }
 else{
@@ -18,8 +26,8 @@ else{
 
 
 echo"Test create: ";
-// $task = ["id" => $id, "week" => $week, "state" => $state, "base_id" => $base_id];
-$task = ["id" => null, "week" => 2013, "state" => "closed", "base_id" => 2];
+// $task = ["id" => $id, "type" => $type, "daything" => $daything, "description" => $description, "display_order": null];
+$task = ["id" => null, "type" => 1, "daything" => 1, "description" => "C'est un test", "display_order" => null];
 $idgiven = createTodoListTask($task);
 $tasks = getTodoListTasks();
 $counttasks = count($tasks);
@@ -30,14 +38,15 @@ if(readTodoListTaskById($id) != null) {
 }
 else {
     echo"BUG\n";
-}
+}*/
 
 
-/*echo"Test delete: ";
-$id = [$onetask['id']];
+echo"Test delete: ";
+$tasktestdelete = readTodoListTaskById($id);
 $id = 5;
 destroyTodoListTask($id);
-// if(readTodoListTaskById($id) = ) {
+if($tasktestdelete = null) {
+    var_dump($tasktestdelete);
     echo" OK\n";
 }
 else{
@@ -45,10 +54,11 @@ else{
 }
 
 
-echo"Test upgrade: ";
-$task = ["id" => 6, "week" => 2020, "state" => "closed", "base_id" => 5];
+/*echo"Test upgrade: ";
+$tasktestupdate = readTodoListTaskById(6);
+$task = ["id" => 6, "type" => 1, "daything" => 1, "description" => "Test upgrade", "display_order" => null];
 updateTodoListTask($task);
-if() {
+if($tasktestupdate['id'] == 6 && $tasktestupdate['type'] == 1 && $tasktestupdate['daything'] == 1 && $tasktestupdate['description'] == "Test upgrade" && $tasktestupdate['display_order'] == null) {
     echo" OK\n";
 }
 else{
