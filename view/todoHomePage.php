@@ -13,7 +13,7 @@ ob_start();
         <th>
             <select class="custom-select" id="Sites">
                 <option value="3">Saint-Loup</option>
-                <option value="4">Payerne</option>
+                <option value="4" >Payerne</option>
                 <option value="1">Yverdon</option>
                 <option value="5">La Valée-de-Joux</option>
                 <option value="2">Saite-Croix</option>

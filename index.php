@@ -47,7 +47,7 @@ switch ($action) {
         tryLogin($initials, $password, $department);
         break;
     case 'createAccount':
-        createAccount($initials, $firstname, $lastname, $password, $password2, $admin, $department);
+        createAccount($initials, $firstname, $lastname, $password, $password2, $admin);
         break;
     case 'disconnect':
         diconnect();
