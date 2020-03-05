@@ -3,6 +3,7 @@
 session_start();
 
 $semaine = $_GET['semaine'];
+$daythings = $_GET['daything'];
 
 // Login token if exists
 if (isset($_POST["initials"]) && isset($_POST["password"])) {
@@ -47,7 +48,7 @@ switch ($action) {
         tryLogin($initials, $password, $department);
         break;
     case 'createAccount':
-        createAccount($initials, $firstname, $lastname, $password, $password2, $admin, $department);
+        createAccount($initials, $firstname, $lastname, $password, $password2, $admin);
         break;
     case 'disconnect':
         diconnect();
@@ -65,7 +66,7 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($semaine);
+        todoListDetailedWeek($semaine,$daythings,$task);
         break;
 
     default: // unknown action

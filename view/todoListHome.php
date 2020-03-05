@@ -3,10 +3,8 @@ ob_start();
 $date = date('d/m/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$taches = ['Fax 144 Transmission', 'Check Ambulance et Comunication', 'Contrôle des stupéfiants', 'Check bibliothèque', 'Changer le bac de nettoyage', 'Nettoyage centrale et garage', 'Check bibliothèque', 'tâche spécifique', 'Formation', 'Remise locaux ambulances'];
-$tachesnuit = ['Check de nuit', 'Contrôle supédfiants ambulances *Morphine X4 *Sintenyl X6 NOVA°_______', 'tâche spécifique', 'Remise locaux Trasmission'];
-      $prev = ($semaine -1);
-$next = ($semaine +1);
+$prev = ($semaine - 1);
+$next = ($semaine + 1);
 require_once 'controler/todoListControler.php';
 ?>
 <div class="">
@@ -21,7 +19,7 @@ require_once 'controler/todoListControler.php';
             if ($semaine == 1) {
 
             } else {
-                echo "<button class='btn btn-info'  > <a href='?ym=<?= $prev; ?>'><</a></button>";
+                echo "<button class='btn btn-info btnmenu' > <a href='?ym=<?= $prev; ?>'><</a></button>";
             }
             ?>Semaine <?php echo $semaine; ?>
             <?php
@@ -29,15 +27,12 @@ require_once 'controler/todoListControler.php';
 
             ?>
 
-            <button class="btn btn-info"><a href="?ym=<?= $next; ?>">></a></button>
+            <button class="btn btn-info btnmenu"><a href="?ym=<?= $next; ?>">></a></button>
             <?php
-            if ($_SESSION['user']['admin'] == true) {
-                echo "<button class='btn btn-info'>Ajouter une tache</button>";
-                echo "<button class='btn btn-info' >Modifier une tache</button>";
-                echo "<button class='btn btn-info' >Supprimer une tache</button>";
-            } else
-                {
-
+            if ($_SESSION['user'][2] == true) {
+                echo "<button class='btn btn-info btnmenu'>Ajouter une tache</button>";
+                echo "<button class='btn btn-info btnmenu' >Modifier une tache</button>";
+                echo "<button class='btn btn-info btnmenu' >Supprimer une tache</button>";
             }
 
 
@@ -54,28 +49,32 @@ require_once 'controler/todoListControler.php';
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
         echo "<div class='dayheader'>$date</div>";
-            foreach($tasks as $task)
-            {
-              ?><div class='hour'><?= $task['description'];?></div><?php
+        foreach ($tasks as $task) {
+            if ($task['daything'] == 1) {
+                ?>
+                <div class='hour'><?= $task['description']; ?></div><?php
 
 
             }
+        }
+            echo "</div>";
+        }
 
-        echo "</div>";
-    }
     ?>
 
 </div>
-
 <div class="week">
     <div class="horizontal nuitcolor"><span style="font-weight: bold">NUIT</span></div>
     <?php
     foreach ($jours as $jour) {
         echo "<div class='day'>";
-        foreach($tasks as $task)
-        {
-            ?><div class='hour'><?= $task['description'];?></div><?php
+        foreach ($tasks as $task) {
 
+            if ($task['daything'] == 0) {
+                ?>
+                <div class='hour'><?= $task['description']; ?></div><?php
+
+            }
 
         }
         echo "</div>";
