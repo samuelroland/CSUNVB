@@ -19,7 +19,7 @@ require_once 'controler/todoListControler.php';
             if ($semaine == 1) {
 
             } else {
-                echo "<button class='btn btn-info'  > <a href='?ym=<?= $prev; ?>'><</a></button>";
+                echo "<button class='btn btn-info btnmenu' > <a href='?ym=<?= $prev; ?>'><</a></button>";
             }
             ?>Semaine <?php echo $semaine; ?>
             <?php
@@ -27,14 +27,12 @@ require_once 'controler/todoListControler.php';
 
             ?>
 
-            <button class="btn btn-info"><a href="?ym=<?= $next; ?>">></a></button>
+            <button class="btn btn-info btnmenu"><a href="?ym=<?= $next; ?>">></a></button>
             <?php
-            if ($_SESSION['user']['admin'] == true) {
-                echo "<button class='btn btn-info'>Ajouter une tache</button>";
-                echo "<button class='btn btn-info' >Modifier une tache</button>";
-                echo "<button class='btn btn-info' >Supprimer une tache</button>";
-            } else {
-
+            if ($_SESSION['user'][2] == true) {
+                echo "<button class='btn btn-info btnmenu'>Ajouter une tache</button>";
+                echo "<button class='btn btn-info btnmenu' >Modifier une tache</button>";
+                echo "<button class='btn btn-info btnmenu' >Supprimer une tache</button>";
             }
 
 
@@ -56,13 +54,12 @@ require_once 'controler/todoListControler.php';
                 ?>
                 <div class='hour'><?= $task['description']; ?></div><?php
 
-            } else {
 
             }
         }
+            echo "</div>";
+        }
 
-        echo "</div>";
-    }
     ?>
 
 </div>

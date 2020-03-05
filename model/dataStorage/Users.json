@@ -800,20 +800,12 @@
     "admin": false
   },
   {
-    "id": 101,
-    "initials": "tst",
-    "firstname": "DMI",
-    "lastname": "Meili",
-    "password": "$2y$10$9XzG8qMI6AAlGxiw3irLpeybHheAWaueOZ4KxncUCUzMARq.E6oTm",
-    "admin": true
-  },
-  {
-    "id": 102,
-    "initials": "TOT",
-    "firstname": "Test",
-    "lastname": "toto",
-    "password": "$2y$10$EDDpZY662.DWnHicEl6p\/.gS7K2WIcxF\/rDqDOxZnH0Mp3iMlgzVa",
+    "id": 103,
+    "initials": "rot",
+    "firstname": "root",
+    "lastname": "root",
+    "password": "$2y$10$y1hQIAi8VYUaD8Bm2cow3OZ2ooxpJ40yDLwgHDzTjtaTZWJLKd\/JG",
     "admin": true,
-    "department": "4"
   }
+
 ]
