@@ -11,4 +11,7 @@ function shiftEndHomePage()
 {
     require_once 'view/shiftEndHome.php';
 }
+function shiftEndListPage(){
+    require_once 'view/shiftEndList.php';
+}
 ?>

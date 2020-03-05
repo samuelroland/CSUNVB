@@ -6,8 +6,7 @@
 */
 
 function getAllSheets(){
-    //$goodArray = json_decode(file_get_contents("../model/dataStorage/Sheets.json"), true); //Prend les éléments d'un fichier Json
-    $badArray = json_decode(file_get_contents("../model/dataStorage/stupsheets.json"), true); //Prend les éléments d'un fichier Json
+    $badArray = json_decode(file_get_contents("model/dataStorage/stupsheets.json"), true); //Prend les éléments d'un fichier Json
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
@@ -29,7 +28,7 @@ function getASheet($week){
 
 function saveSheets($items)
 {
-    file_put_contents("../model/dataStorage/stupsheets.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
+    file_put_contents("model/dataStorage/stupsheets.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
 }
 
 /**
@@ -38,14 +37,15 @@ function saveSheets($items)
  * ...
  */
 
-function updateASheet($SheetToUpdate)
+function updateASheet($sheetToUpdate)
 {
 
     $items = getAllSheets();
 
     foreach ($items as $item){
-        if ($item["id"] == $SheetToUpdate["id"]){
-            $items[$SheetToUpdate] = $item;
+        if ($item["id"] == $sheetToUpdate["id"]){
+            $item = array_merge($item, $sheetToUpdate);
+            $items[$item["id"]] = $item;
         }
     }
 
@@ -73,7 +73,6 @@ function addASheet($newSheet)
     $items[] = $newSheet;
 
     saveSheets($items);
-    //return ($item); // Pour que l'appelant connaisse l'id qui a été donné
 }
 
 function delASheet($id)

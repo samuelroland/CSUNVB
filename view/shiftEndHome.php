@@ -8,14 +8,33 @@ $guardsheets = readShiftEndItems();
     <h1>Remises de garde</h1>
 
     <?php
-   foreach ($guardsheets as $guardsheet){
-       if($guardsheet['base_id'] == $_SESSION['user'][3]['id'])
-       {
-           echo $guardsheet['date'];
-           echo $guardsheet['state'];
-           echo $guardsheet['base_id'];
-       }
-   }
+    foreach ($guardsheets as $guardsheet) {
+        if ($guardsheet['base_id'] == $_SESSION['user'][3]['id']) {
+
+            ?>
+            <table class="table table-bordered" style="text-align: center">
+                <tr>
+                    <td>date</td>
+                    <td>état</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><?= $guardsheet['date']; ?></td>
+                    <td><?php if ($guardsheet['state'] == "open") {
+                            ?><?= "ouvert" ?>
+                            <?php
+                        }else{
+                            ?><?='fermé'?><?php
+                        } ?></td>
+                    <td><a href='?action=shiftEndList' class='btn btn-primary m-1 ' style='bt-align: center'>Ouvrir</a>
+                    </td>
+                </tr>
+            </table>
+
+
+            <?php
+        }
+    }
     ?>
 
 

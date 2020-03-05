@@ -6,37 +6,62 @@
 */
 require 'model/todoListModel.php';
 
-// $task = ["id" => $id, "week" => $week, "state" => $state, "base_id" => $base_id];
-$task = ["id" => 23, "week" => 2013, "state" => "closed", "base_id" => 2];
-$id = [$onetask['id']];
+/*{
+    "id": 1,
+    "type": 0,
+    "daything": 1,
+    "description": "Commande mat et commande pharma.",
+    "display_order": null
+  },*/
 
 
-if (readTodoListTaskById($id)) {
-    if ($tasks = $task + 1) {
-        createTodoListTask($task);
-        echo "OK";
-    }
-    else {
-        echo "NO";
-    }
+/*echo"Test read: ";
+$tasktestread = readTodoListTaskById(7);
+if($tasktestread['id'] == 7 && $tasktestread['type'] == 0 && $tasktestread['daything'] == 1 && $tasktestread['description'] == "Fax 144 Transmission" && $tasktestread['display_order'] == null) {
+    echo" OK\n";
 }
-
-if (readTodoListTaskById($id)) {
-    if ($tasks = $task + 1) {
-        createTodoListTask($task);
-        echo "OK";
-    }
-    else {
-        echo "NO";
-    }
+else{
+    echo"BUG\n";
 }
 
 
-// if($task)
+echo"Test create: ";
+// $task = ["id" => $id, "type" => $type, "daything" => $daything, "description" => $description, "display_order": null];
+$task = ["id" => null, "type" => 1, "daything" => 1, "description" => "C'est un test", "display_order" => null];
+$idgiven = createTodoListTask($task);
+$tasks = getTodoListTasks();
+$counttasks = count($tasks);
+$id = $idgiven;
+if(readTodoListTaskById($id) != null) {
+    echo " OK\n";
+    $counttasks = count($tasks);
+}
+else {
+    echo"BUG\n";
+}*/
 
+
+echo"Test delete: ";
+$tasktestdelete = readTodoListTaskById($id);
 $id = 5;
 destroyTodoListTask($id);
+if($tasktestdelete = null) {
+    var_dump($tasktestdelete);
+    echo" OK\n";
+}
+else{
+    echo"BUG\n";
+}
 
-$task = ["id" => 6, "week" => 2020, "state" => "closed", "base_id" => 5];
+
+/*echo"Test upgrade: ";
+$tasktestupdate = readTodoListTaskById(6);
+$task = ["id" => 6, "type" => 1, "daything" => 1, "description" => "Test upgrade", "display_order" => null];
 updateTodoListTask($task);
+if($tasktestupdate['id'] == 6 && $tasktestupdate['type'] == 1 && $tasktestupdate['daything'] == 1 && $tasktestupdate['description'] == "Test upgrade" && $tasktestupdate['display_order'] == null) {
+    echo" OK\n";
+}
+else{
+    echo"BUG\n";
+}*/
 ?>

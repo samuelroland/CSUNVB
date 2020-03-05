@@ -1,8 +1,11 @@
 <?php
 ob_start();
 $title = "CSU-NVB - Secouriste";
+
+require_once 'model/adminModel.php';
 $users = readAdminItems();
-?><h1 style="text-align: center">Secouriste</h1>
+?>
+<h1 style="text-align: center">Secouriste</h1>
 <a href="?action=createAccount" class="btn btn-primary m-1 pull-right">Créer un Compte</a>
 <table class="table table-bordered" style="text-align: center">
 
@@ -20,15 +23,12 @@ $users = readAdminItems();
 
         <?php if ($user['admin'] == true) {
 
-            echo "</td><td><a href='?action=ChangeAdminState&idPerson=".$user['id']. "' class='btn btn-primary m-1 pull-right'style='bt-align: center' >Oui</a></td> </tr>";
+            echo "</td><td><a href='?action=ChangeAdminState&idPerson=".$user['id']. "' class='btn btn-primary m-1 pull-right'>Oui</a></td></tr>";
 
         } else {
 
-            echo "</td><td><a href='?action=ChangeAdminState&idPerson=".$user['id']. "' class='btn btn-secondary m-1 pull-right'style='bt-align: center'  >Non</a></td> </tr>";
+            echo "</td><td><a href='?action=ChangeAdminState&idPerson=".$user['id']. "' class='btn btn-secondary m-1 pull-right'>Non</a></td></tr>";
         }
-
-
-
     }
     ?>
 
@@ -36,11 +36,6 @@ $users = readAdminItems();
 </table>
 
 <?php
-foreach ($users as $user)
-    ?>
-
-
-    <?php
 $content = ob_get_clean();
 require "gabarit.php";
 ?>

@@ -15,12 +15,12 @@ function getTodoListTasks()
 /** Permet de retourner une tâche précise identifié par son id */
 function readTodoListTaskById($id)
 {
-
-
+    /* foreach ($tasks = $onetask) {
+         $tasks[$onetask['id']] = $onetask;
+     }*/
     $tasks = getTodoListTasks();
-    foreach($tasks as $task)
-    {
-        if($id == $task['id']){
+    foreach ($tasks as $task) {
+        if ($id == $task['id']) {
             return $task;
         }
     }
@@ -38,10 +38,9 @@ function updateTodoListTask($newtask)
 {
     $tasks = getTodoListTasks();
     // parcourt le tableau de tâches
-    foreach ($tasks as $id => $onetask)
-    {
+    foreach ($tasks as $id => $onetask) {
         // Ecrase l'ancienne tâche par celle modifiée
-        if($newtask['id'] == $onetask['id']){
+        if ($newtask['id'] == $onetask['id']) {
             $tasks[$id] = $newtask;
         }
     }
@@ -53,19 +52,18 @@ function destroyTodoListTask($id)
 {
     $tasks = getTodoListTasks();
     // recherche d'une tâche demandé et la suppression dans le tableau
-    foreach ($tasks as $id => $onetask)
-    {
-        if($id == $onetask['id']){
+    foreach ($tasks as $id => $onetask) {
+        if ($id == $onetask['id']) {
             unset($tasks[$id]);
         }
     }
     saveTodoListTask($tasks);
 }
 
-/** Enregistre la liste des tâches dans le todosheets.json */
+/** Enregistre la liste des tâches dans le todothings.json */
 function saveTodoListTask($tasks)
 {
-    file_put_contents("model/dataStorage/todosheets.json", json_encode($tasks));
+    file_put_contents("model/dataStorage/todothings.json", json_encode($tasks));
 }
 
 /** Permet d'ajouter une nouvelle tâche avec un id unique */
