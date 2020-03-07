@@ -35,6 +35,9 @@ switch ($action) {
     case 'shiftend':
         shiftEndHomePage();
         break;
+        case 'shiftEndList';
+        shiftEndListPage();
+        break;
     case 'todolist':
         todoListHomePage();
         break;

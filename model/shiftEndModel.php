@@ -13,6 +13,13 @@
 function readShiftEndItems()
 {
     return json_decode(file_get_contents("model/dataStorage/guardsheets.json"),true);
+
+}
+function readShiftEndGuardSection(){
+    return json_decode(file_get_contents("model/dataStorage/guardsections.json"),true);
+}
+function readShiftEndGuardLines(){
+    return json_decode(file_get_contents("model/dataStorage/guardlines.json"),true);
 }
 
 /**

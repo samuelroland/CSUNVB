@@ -2,6 +2,7 @@
 ob_start();
 $title = "CSU-NVB - Remise de garde";
 $guardsheets = readShiftEndItems();
+
 ?>
 <script src="js/shiftEnd.js"></script>
 <div class="row m-2">
