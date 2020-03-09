@@ -16,6 +16,9 @@ if (isset($_POST["initials"]) && isset($_POST["password"])) {
     $department = $_POST["department"];
 
 }
+// Include all models
+require "model/basesModel.php";
+
 // Include all controllers
 require "controler/adminControler.php";
 require "controler/shiftEndControler.php";
