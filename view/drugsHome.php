@@ -7,24 +7,28 @@ $title = "CSU-NVB - Liste Stupéfiants";
             <div class="navbar nav-pills">
                 <th>
                     <select class="custom-select" id="Sites" name="base">
-                        <option value="3">Saint-Loup</option>
-                        <option value="4">Payerne</option>
-                        <option value="1">Yverdon</option>
-                        <option value="5">La Vallée-de-Joux</option>
-                        <option value="2">Sainte-Croix</option>
+                        <?php
+                        foreach ($bases as $onebase) {
+                            if ($onebase['id'] == $_SESSION['user'][3]['id']) { //si la base est celle de la session
+                                echo "<option value=\"" . $onebase['id'] . "\" selected>{$onebase['name']}</option>";   //la selectionner par défaut
+                            } else {
+                                echo "<option value=\"" . $onebase['id'] . "\">{$onebase['name']}</option>";
+                            }
+                        }
+                        ?>
                     </select>
                 </th>
             </div>
 
         </table>
         <input type="hidden" name="action" value="detaildrug">
-        
+
         <div class="col-md-14">
-                <?php
-                for ($i = 1; $i < 53; $i++) {
-                    echo " <label data-weeknb='$i' class='btn btn-info btncont'> Semaine n° $i</label>";
-                }
-                ?>
+            <?php
+            for ($i = 1; $i < 53; $i++) {
+                echo " <label data-weeknb='$i' class='btn btn-info btncont'> Semaine n° $i</label>";
+            }
+            ?>
         </div>
         <br>
         <input hidden type="number" name="week" id="week">
