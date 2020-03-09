@@ -15,9 +15,14 @@ function getTodoListTasks()
 /** Permet de retourner une tâche précise identifié par son id */
 function readTodoListTaskById($id)
 {
-    /* foreach ($tasks = $onetask) {
+     /*foreach ($tasks = $onetask) {
          $tasks[$onetask['id']] = $onetask;
-     }*/
+     }
+
+    foreach ($todoItems as $item){
+        $todoItems[$item['id']] = $item;
+    }*/
+
     $tasks = getTodoListTasks();
     foreach ($tasks as $task) {
         if ($id == $task['id']) {
@@ -52,9 +57,9 @@ function destroyTodoListTask($id)
 {
     $tasks = getTodoListTasks();
     // recherche d'une tâche demandé et la suppression dans le tableau
-    foreach ($tasks as $id => $onetask) {
+    foreach ($tasks as $i => $onetask) {
         if ($id == $onetask['id']) {
-            unset($tasks[$id]);
+            unset($tasks[$i]);
         }
     }
     saveTodoListTask($tasks);
