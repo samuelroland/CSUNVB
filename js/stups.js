@@ -9,7 +9,8 @@
 $(document).ready(function () {
     $("label").on("click", function(lbl){
         console.log(lbl)
-        numwek=  $(lbl.target).data("weeknb");
+        numwek = $(lbl.target).data("weeknb");
         week.value = numwek
+        document.getElementById("weekForm").submit();
     })
 })

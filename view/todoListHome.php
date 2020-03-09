@@ -21,13 +21,20 @@ require_once 'controler/todoListControler.php';
             } else {
                 echo "<button class='btn btn-info btnmenu' > <a href='?ym=<?= $prev; ?>'><</a></button>";
             }
+
             ?>Semaine <?php echo $semaine; ?>
             <?php
 
 
             ?>
+            <?php
+            if ($semaine != 52){
 
-            <button class="btn btn-info btnmenu"><a href="?ym=<?= $next; ?>">></a></button>
+
+            echo "<button class='btn btn-info btnmenu'><a href='?ym=<?= $next; ?>'>></a></button>";
+             }
+
+            ?>
             <?php
             if ($_SESSION['user'][2] == true) {
                 echo "<button class='btn btn-info btnmenu'>Ajouter une tache</button>";

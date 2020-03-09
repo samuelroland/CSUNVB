@@ -2,7 +2,7 @@
 ob_start();
 $title = "CSU-NVB - Liste Stupéfiants";
 ?>
-    <form action="/?action=detaildrug" method="GET">
+    <form id="weekForm" action="/?action=detaildrug" method="GET">
         <table class=" table table-striped">
             <div class="navbar nav-pills">
                 <th>
@@ -27,8 +27,7 @@ $title = "CSU-NVB - Liste Stupéfiants";
                 ?>
         </div>
         <br>
-        <input type="number" name="week" id="week">
-        <input type="submit" value="Aller" class="btn btn-success">
+        <input hidden type="number" name="week" id="week">
     </form>
 
 <?php
