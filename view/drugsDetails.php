@@ -1,6 +1,7 @@
 <?php
 ob_start();
 $title = "CSU-NVB - Stupéfiants";
+$base = $bases[$_GET["base"]];
 ?>
 <div class="row m-2">
     <h1>Stupéfiants</h1>
@@ -8,8 +9,8 @@ $title = "CSU-NVB - Stupéfiants";
 <!-- Tableau -->
 
 <h3>Contrôle des stupéfiants Hebdomadaire</h3>
-<button class="btn btn-info" ><</button><h3>Semaine N 51</h3><button class="btn btn-info" >></button>
-<h3>Sur le site de Ste-Croix</h3>
+<button class="btn btn-info" ><</button><h3>Semaine N <?= $_GET["week"]; ?></h3><button class="btn btn-info" >></button>
+<h3>Sur le site de <?= $base["name"]; ?></h3>
 
 <!-- Morphine -->
 <table class="table table-striped table-bordered col-1 aligncenter">

@@ -17,7 +17,7 @@ function tryLogin($initials,$password,$departement)
         $Baselog = getBase($departement);
         if ($UserLog != '') {
             if (password_verify($password,$UserLog['password'])) {
-                $_SESSION['user'] = [$UserLog['initials'],$UserLog['firstname'],$UserLog['admin'],$Baselog];
+                $_SESSION['user'] = [$UserLog['id'],$UserLog['firstname'],$UserLog['admin'],$Baselog];
                 require_once 'view/home.php';
             }
             else {

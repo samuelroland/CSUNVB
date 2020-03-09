@@ -13,7 +13,7 @@ $guardsheets = readShiftEndItems();
         if ($guardsheet['base_id'] == $_SESSION['user'][3]['id']) {
 
             ?>
-            <table class="table table-bordered" style="text-align: center">
+            <table class="table table-bordered " style="text-align: center">
                 <tr>
                     <td>date</td>
                     <td>état</td>
@@ -27,7 +27,7 @@ $guardsheets = readShiftEndItems();
                         }else{
                             ?><?='fermé'?><?php
                         } ?></td>
-                    <td><a href='?action=shiftEndList' class='btn btn-primary m-1 ' style='bt-align: center'>Ouvrir</a>
+                    <td><a href='?action=shiftEndList&sheetid=<?=$guardsheet['id'];?>' class='btn btn-primary m-1 ' style='bt-align: center'>Vue détaillée</a>
                     </td>
                 </tr>
             </table>
