@@ -19,16 +19,19 @@ $users = readAdminItems();
 
     <?php
     foreach ($users as $user) {
-        echo "<tr><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] . "</td>"; ?>
+        echo "<tr><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] . "</td>";
+        if ($user['id'] != $_SESSION['user'][0]) {
+            if ($user['admin'] == true) {
 
-        <?php if ($user['admin'] == true) {
+                echo "</td><td><a href='?action=ChangeAdminState&idPerson=" . $user['id'] . "' class='btn btn-primary m-1 pull-right'>Oui</a></td></tr>";
+            } else {
 
-            echo "</td><td><a href='?action=ChangeAdminState&idPerson=".$user['id']. "' class='btn btn-primary m-1 pull-right'>Oui</a></td></tr>";
-
-        } else {
-
-            echo "</td><td><a href='?action=ChangeAdminState&idPerson=".$user['id']. "' class='btn btn-secondary m-1 pull-right'>Non</a></td></tr>";
-        }
+                echo "</td><td><a href='?action=ChangeAdminState&idPerson=" . $user['id'] . "' class='btn btn-secondary m-1 pull-right'>Non</a></td></tr>";
+            }
+        }else
+            {
+                echo "</td><td>Ceci est votre utilisateur</td></tr>";
+            }
     }
     ?>
 
