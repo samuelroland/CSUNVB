@@ -14,3 +14,4 @@ $(document).ready(function () {
         document.getElementById("weekForm").submit();
     })
 })
+
