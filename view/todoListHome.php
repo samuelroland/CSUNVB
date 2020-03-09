@@ -1,10 +1,12 @@
 <?php
 ob_start();
-$date = date('d/m/Y');
+$date = date('d/M/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 $prev = ($semaine - 1);
 $next = ($semaine + 1);
+
+
 require_once 'controler/todoListControler.php';
 ?>
 <div class="">
@@ -55,7 +57,7 @@ require_once 'controler/todoListControler.php';
     <?php
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
-        echo "<div class='dayheader'>$date</div>";
+        echo "<div class='dayheader'></div>";
         foreach ($tasks as $task) {
             if ($task['daything'] == 1) {
                 ?>

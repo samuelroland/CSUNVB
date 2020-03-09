@@ -15,9 +15,7 @@ function getTodoListTasks()
 /** Permet de retourner une tâche précise identifié par son id */
 function readTodoListTaskById($id)
 {
-    /* foreach ($tasks = $onetask) {
-         $tasks[$onetask['id']] = $onetask;
-     }*/
+
     $tasks = getTodoListTasks();
     foreach ($tasks as $task) {
         if ($id == $task['id']) {
@@ -25,6 +23,10 @@ function readTodoListTaskById($id)
         }
     }
     return null;
+
+    /* foreach ($tasks = $onetask) {
+     $tasks[$onetask['id']] = $onetask;
+ }*/
 }
 
 /** Permet de sauver l'ensemble des tâches dans le fichier json */
