@@ -76,16 +76,20 @@ function crew()
 
 function ChangeAdminState($users, $id)
 {
-    foreach ($users as $user) {
-        if ($user['id'] == $id) {
-            if ($user['admin'] == false) {
-                $user['admin'] = true;
+    //foreach ($users as $user) {
+      for ($i=0; $i<count($users); $i++){
+        if ($users[$i]['id'] == $id) {
+            if ($users[$i]['admin'] == false) {
+                $users[$i]['admin'] = true;
             } else {
-                $user['admin'] = false;
+                $users[$i]['admin'] = false;
             }
         }
     }
     $listUsers = $users;
+
+      file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
+
     require_once 'view/crew.php';
 }
 
