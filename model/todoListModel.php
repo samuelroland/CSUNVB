@@ -19,6 +19,13 @@ function readTodoListTaskById($id)
     foreach ($tasks as $onetask) {
         $tasks[$onetask['id']] = $onetask;
     }
+
+    foreach ($tasks as $task) {
+        if ($id == $task['id']) {
+            return $task;
+        }
+    }
+    return null;
 }
 
 /** Permet de modifier une tâche précise */
