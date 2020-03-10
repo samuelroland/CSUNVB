@@ -24,7 +24,7 @@ function drugdetails()
 function drugHomePage($week, $base)
 {
     $bases = getAllBases();
-
+    $stupsheets = getAllSheets();
     require_once 'view/drugsHome.php';
 }
 

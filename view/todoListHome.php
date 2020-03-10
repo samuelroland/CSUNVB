@@ -3,12 +3,24 @@ ob_start();
 $date = date('d/M/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$prev = ($semaine - 1);
-$next = ($semaine + 1);
+
+
+
+$semplus = $semaine +1;
+$semmoins = $semaine -1;
+
+?>
+
+
+
+
+<?php
 
 
 require_once 'controler/todoListControler.php';
 ?>
+
+
 <div class="">
     <h1>Tâches hebdomadaires</h1>
 
@@ -21,7 +33,7 @@ require_once 'controler/todoListControler.php';
             if ($semaine == 1) {
 
             } else {
-                echo "<button class='btn btn-info btnmenu' > <a href='?ym=<?= $prev; ?>'><</a></button>";
+                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&semaine=$semmoins'><</a></button>";
             }
 
             ?>Semaine <?php echo $semaine; ?>
@@ -30,11 +42,11 @@ require_once 'controler/todoListControler.php';
 
             ?>
             <?php
-            if ($semaine != 52){
+            if ($semaine != 52) {
 
 
-            echo "<button class='btn btn-info btnmenu'><a href='?ym=<?= $next; ?>'>></a></button>";
-             }
+                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&semaine=$semplus'>></a></button>";
+            }
 
             ?>
             <?php
@@ -57,7 +69,7 @@ require_once 'controler/todoListControler.php';
     <?php
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
-        echo "<div class='dayheader'></div>";
+
         foreach ($tasks as $task) {
             if ($task['daything'] == 1) {
                 ?>
@@ -66,8 +78,8 @@ require_once 'controler/todoListControler.php';
 
             }
         }
-            echo "</div>";
-        }
+        echo "</div>";
+    }
 
     ?>
 

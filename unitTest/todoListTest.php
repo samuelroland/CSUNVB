@@ -6,16 +6,7 @@
 */
 require 'model/todoListModel.php';
 
-/*{
-    "id": 1,
-    "type": 0,
-    "daything": 1,
-    "description": "Commande mat et commande pharma.",
-    "display_order": null
-  },*/
-
-
-/*echo"Test read: ";
+echo"Test read: ";
 $tasktestread = readTodoListTaskById(7);
 if($tasktestread['id'] == 7 && $tasktestread['type'] == 0 && $tasktestread['daything'] == 1 && $tasktestread['description'] == "Fax 144 Transmission" && $tasktestread['display_order'] == null) {
     echo" OK\n";
@@ -38,23 +29,25 @@ if(readTodoListTaskById($id) != null) {
 }
 else {
     echo"BUG\n";
-}*/
+}
 
-
-echo"Test delete: ";
-$tasktestdelete = readTodoListTaskById($id);
+// compte delete recompte
+echo "Test delete: ";
+$tasks = getTodoListTasks();
+$counttasksbefore = count($tasks);
 $id = 5;
 destroyTodoListTask($id);
-if($tasktestdelete = null) {
-    var_dump($tasktestdelete);
-    echo" OK\n";
-}
-else{
-    echo"BUG\n";
+$tasktestdelete = readTodoListTaskById($id);
+$counttasksbafter = count($tasks);
+
+if ($tasktestdelete == null) {
+    echo " OK\n";
+} else {
+    echo "BUG\n";
 }
 
 
-/*echo"Test upgrade: ";
+echo"Test update: ";
 $tasktestupdate = readTodoListTaskById(6);
 $task = ["id" => 6, "type" => 1, "daything" => 1, "description" => "Test upgrade", "display_order" => null];
 updateTodoListTask($task);
@@ -63,5 +56,6 @@ if($tasktestupdate['id'] == 6 && $tasktestupdate['type'] == 1 && $tasktestupdate
 }
 else{
     echo"BUG\n";
-}*/
+}
+
 ?>
