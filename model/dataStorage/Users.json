@@ -806,5 +806,14 @@
     "lastname": "root",
     "password": "$2y$10$y1hQIAi8VYUaD8Bm2cow3OZ2ooxpJ40yDLwgHDzTjtaTZWJLKd\/JG",
     "admin": true
+  },
+  {
+    "id": 101,
+    "initials": "aaa",
+    "firstname": "TripleA",
+    "lastname": "AAA",
+    "password": "$2y$10$meOY2uIIvuA14RuoXFlHiOcLDIwpYIvabfVhrRVV9NPLmvWow6\/gy",
+    "admin": false,
+    "firstLogin": true
   }
 ]

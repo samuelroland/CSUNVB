@@ -9,13 +9,13 @@ function getListUsers()
 {
     return json_decode(file_get_contents("model/dataStorage/Users.json"),true);
 }
-function getUser($name)
+function getUser($initials)
 {
 
     $listUsers = getListUsers();
     foreach ($listUsers as $User)
     {
-        if ($User['initials'] == $name)
+        if ($User['initials'] == $initials)
         {
             return $User;
         }
@@ -49,5 +49,6 @@ function getBase($departement)
             return $base;
         }
     }
+    return "";
 }
 ?>

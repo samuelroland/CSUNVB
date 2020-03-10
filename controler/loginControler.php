@@ -17,8 +17,15 @@ function tryLogin($initials,$password,$departement)
         $Baselog = getBase($departement);
         if ($UserLog != '') {
             if (password_verify($password,$UserLog['password'])) {
-                $_SESSION['user'] = [$UserLog['id'],$UserLog['firstname'],$UserLog['admin'],$Baselog];
-                require_once 'view/home.php';
+                $_SESSION['user'] = [$UserLog['id'],$UserLog['firstname'],$UserLog['admin'],$Baselog,$UserLog['firstLogin']];
+                if ($_SESSION['user'][4] == 'true')
+                {
+                    require_once 'view/firstLogin.php';
+                }else
+                    {
+                        require_once 'view/home.php';
+                    }
+
             }
             else {
                 $_SESSION['erreur'] = true;
@@ -51,6 +58,26 @@ function adminTrue($UserVef)
         echo "</div>";
     }
 
+}
+function changePassword()
+{
+    $listUsers = getListUsers();
+
+    //foreach ($users as $user) {
+    for ($i=0; $i<count($listUsers); $i++){
+        if ($listUsers[$i]['id'] == $_SESSION['user'][0]) {
+            if ($listUsers[$i][''] == false) {
+                $users[$i]['admin'] = true;
+            } else {
+                $users[$i]['admin'] = false;
+            }
+        }
+    }
+    $listUsers = $users;
+
+    file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
+
+    require_once 'view/crew.php';
 }
 
 ?>
