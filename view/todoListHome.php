@@ -3,18 +3,13 @@ ob_start();
 $date = date('d/M/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+$semplus = $semaine + 1;
+$semmoins = $semaine - 1;
+
+$semplus = $semaine + 1;
+$semmoins = $semaine - 1;
 
 
-
-
-$dt = new DateTime;
-if (isset($_GET['year']) && isset($_GET['week'])) {
-    $dt->setISODate($_GET['year'], $_GET['week']);
-} else {
-    $dt->setISODate($dt->format('o'));
-}
-$year = $dt->format('o');
-$week = $dt->format('W');
 ?>
 
 
@@ -23,18 +18,8 @@ $week = $dt->format('W');
 <?php
 
 
-
 require_once 'controler/todoListControler.php';
 ?>
-
-
-
-
-
-
-
-
-
 
 
 <div class="">
@@ -49,7 +34,7 @@ require_once 'controler/todoListControler.php';
             if ($semaine == 1) {
 
             } else {
-                echo "<button class='btn btn-info btnmenu' > <a href='?ym=<?= $prev; ?>'><</a></button>";
+                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&semaine=$semmoins'><</a></button>";
             }
 
             ?>Semaine <?php echo $semaine; ?>
@@ -58,11 +43,11 @@ require_once 'controler/todoListControler.php';
 
             ?>
             <?php
-            if ($semaine != 52){
+            if ($semaine != 52) {
 
 
-            echo "<button class='btn btn-info btnmenu'><a href='?ym=<?= $next; ?>'>></a></button>";
-             }
+                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&semaine=$semplus'>></a></button>";
+            }
 
             ?>
             <?php
@@ -85,8 +70,7 @@ require_once 'controler/todoListControler.php';
     <?php
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
-        echo $dt->format('d M Y') . "\n";
-        $dt->modify('+1 day');
+            echo "<div class='dayheader'>$date</div>";
         foreach ($tasks as $task) {
             if ($task['daything'] == 1) {
                 ?>
@@ -95,9 +79,12 @@ require_once 'controler/todoListControler.php';
 
             }
         }
-            echo "</div>";
-        }
+        echo "</div>";
+    }
+    for ($i=1;$i>7;$i++){
+    echo "<div class='dayheader'>$date</div>";
 
+}
     ?>
 
 </div>

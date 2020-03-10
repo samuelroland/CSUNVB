@@ -15,24 +15,17 @@ function getTodoListTasks()
 /** Permet de retourner une tâche précise identifié par son id */
 function readTodoListTaskById($id)
 {
-
     $tasks = getTodoListTasks();
+    foreach ($tasks as $onetask) {
+        $tasks[$onetask['id']] = $onetask;
+    }
+
     foreach ($tasks as $task) {
         if ($id == $task['id']) {
             return $task;
         }
     }
     return null;
-
-    /* foreach ($tasks = $onetask) {
-     $tasks[$onetask['id']] = $onetask;
- }*/
-}
-
-/** Permet de sauver l'ensemble des tâches dans le fichier json */
-function updateTodoListTasks($tasks)
-{
-    file_put_contents("model/dataStorage/items.json", json_encode($tasks));
 }
 
 /** Permet de modifier une tâche précise */
@@ -54,9 +47,9 @@ function destroyTodoListTask($id)
 {
     $tasks = getTodoListTasks();
     // recherche d'une tâche demandé et la suppression dans le tableau
-    foreach ($tasks as $id => $onetask) {
+    foreach ($tasks as $i => $onetask) {
         if ($id == $onetask['id']) {
-            unset($tasks[$id]);
+            unset($tasks[$i]);
         }
     }
     saveTodoListTask($tasks);

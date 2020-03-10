@@ -90,4 +90,11 @@ else{
     print "Pas OK\n";
 }
 
+print "Affiche (2 pour l'affichage) après la fonction d'ajout du numéro de l'ambulance dans la stupSheet_use_nova : ";
+
+require_once "model/novasModel.php";
+
+var_dump(getSheetUseNova()[1]);
+var_dump(getSheetUseNova()[2]);
+
 ?>
