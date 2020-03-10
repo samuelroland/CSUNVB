@@ -5,7 +5,7 @@
     "lastname": "Doe",
     "password": "$2y$10$ZplHbYimTZ5P1fQqYiFRwOOfxeivt.gFUvsm9v1cRR.ko72ApkY8y",
     "firstname": "John",
-    "admin": true
+    "admin": false
   },
   {
     "id": 2,
@@ -807,5 +807,4 @@
     "password": "$2y$10$y1hQIAi8VYUaD8Bm2cow3OZ2ooxpJ40yDLwgHDzTjtaTZWJLKd\/JG",
     "admin": true
   }
-
 ]
