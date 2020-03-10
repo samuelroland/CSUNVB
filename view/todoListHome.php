@@ -5,6 +5,10 @@ $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 
 
+
+$semplus = $semaine +1;
+$semmoins = $semaine -1;
+
 ?>
 
 
@@ -29,7 +33,7 @@ require_once 'controler/todoListControler.php';
             if ($semaine == 1) {
 
             } else {
-                echo "<button class='btn btn-info btnmenu' > <a href='?ym=<?= $prev; ?>'><</a></button>";
+                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&semaine=$semmoins'><</a></button>";
             }
 
             ?>Semaine <?php echo $semaine; ?>
@@ -41,7 +45,7 @@ require_once 'controler/todoListControler.php';
             if ($semaine != 52) {
 
 
-                echo "<button class='btn btn-info btnmenu'><a href='?ym=<?= $next; ?>'>></a></button>";
+                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&semaine=$semplus'>></a></button>";
             }
 
             ?>
