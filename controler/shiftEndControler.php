@@ -9,9 +9,15 @@ require_once 'model/shiftEndModel.php';
 
 function shiftEndHomePage()
 {
+    $guardsheets = readShiftEndItems();
+    $guardusenovas = readGuardUseNovas();
+    $novas = readNovas();
     require_once 'view/shiftEndHome.php';
 }
-function shiftEndListPage(){
+function shiftEndListPage($sheetid){
+    $guardsections = readShiftEndGuardSection();
+    $guardlines = readShiftEndGuardLines();
+    $guardsheets = readShiftEndItems();
     require_once 'view/shiftEndList.php';
 }
 ?>

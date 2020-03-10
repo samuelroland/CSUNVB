@@ -6,6 +6,7 @@ $semaine = $_GET['semaine'];
 $daythings = $_GET['daything'];
 $sheetid = $_GET['sheetid'];
 
+
 // Login token if exists
 if (isset($_POST["initials"]) && isset($_POST["password"])) {
     $initials = $_POST["initials"];
