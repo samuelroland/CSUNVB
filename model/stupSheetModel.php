@@ -84,4 +84,16 @@ function delASheet($id)
     saveSheets($items);
 }
 
+function getSheetUseNova(){
+    $novas = getAllNovas();
+    $uses = json_decode(file_get_contents("model/dataStorage/stupSheet_use_nova.json"), true);
+
+    foreach ($uses as $key => $use) {
+        $nova_id = $use["nova_id"];
+        $nova = $novas[$nova_id]["number"];
+        $uses[$key]["nova"] = $nova;
+    }
+    return $uses;
+}
+
 ?>
