@@ -25,14 +25,15 @@ $title = "CSU-NVB - Liste Stupéfiants";
 
         <div class="col-md-14">
             <?php
+            $indexelementinrun = 0;
             foreach ($bases as $base) {   //pour toutes les bases
 
                 if ($base['id'] == $_SESSION['user'][3]['id']) {
-                    echo "<div class='divSemaines' id='divBase" . $base['id'] . "' style='border: 1px black dashed'>Site de " . $base['name'];
+                    echo "<div class='divSemaines' id='divBase" . $indexelementinrun . "' style='border: 1px black dashed'>Site de " . $base['name'];
                 } else {
-                    echo "<div class='divSemaines d-none' id='divBase" . $base['id'] . "' style='border: 1px black dashed'>Site de " . $base['name'];
+                    echo "<div class='divSemaines d-none' id='divBase" . $indexelementinrun . "' style='border: 1px black dashed'>Site de " . $base['name'];
                 }
-
+                $indexelementinrun++;
                 foreach ($stupsheets as $onesheet) {    //parcourt toutes les feuilles de stups
                     $numweek = substr($onesheet['week'], 2);
                     if ($onesheet['base_id'] == $base['id']) {  //si la feuille correspond à la base en cours
