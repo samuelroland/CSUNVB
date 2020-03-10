@@ -5,16 +5,6 @@ $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 
 
-
-
-$dt = new DateTime;
-if (isset($_GET['year']) && isset($_GET['week'])) {
-    $dt->setISODate($_GET['year'], $_GET['week']);
-} else {
-    $dt->setISODate($dt->format('o'));
-}
-$year = $dt->format('o');
-$week = $dt->format('W');
 ?>
 
 
@@ -23,18 +13,8 @@ $week = $dt->format('W');
 <?php
 
 
-
 require_once 'controler/todoListControler.php';
 ?>
-
-
-
-
-
-
-
-
-
 
 
 <div class="">
@@ -58,11 +38,11 @@ require_once 'controler/todoListControler.php';
 
             ?>
             <?php
-            if ($semaine != 52){
+            if ($semaine != 52) {
 
 
-            echo "<button class='btn btn-info btnmenu'><a href='?ym=<?= $next; ?>'>></a></button>";
-             }
+                echo "<button class='btn btn-info btnmenu'><a href='?ym=<?= $next; ?>'>></a></button>";
+            }
 
             ?>
             <?php
@@ -85,8 +65,7 @@ require_once 'controler/todoListControler.php';
     <?php
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
-        echo $dt->format('d M Y') . "\n";
-        $dt->modify('+1 day');
+
         foreach ($tasks as $task) {
             if ($task['daything'] == 1) {
                 ?>
@@ -95,8 +74,8 @@ require_once 'controler/todoListControler.php';
 
             }
         }
-            echo "</div>";
-        }
+        echo "</div>";
+    }
 
     ?>
 
