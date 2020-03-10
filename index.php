@@ -27,6 +27,7 @@ require "controler/shiftEndControler.php";
 require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
+
 var_dump($_SESSION);
 $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
@@ -76,11 +77,18 @@ switch ($action) {
     case 'todolisthome':
         todoListDetailedWeek($semaine,$daythings,$task);
         break;
+    case 'changePassord':
+        changePassword($password,$password2);
+        break;
 
     default: // unknown action
-        if (isset($_SESSION['user'])) {
+        if (isset($_SESSION['user']) && $_SESSION['user'][4] != true) {
             require_once 'view/home.php';
-        } else {
+        }elseif ($_SESSION['user'][4] == true)
+        {
+            require_once 'view/firstLogin.php';
+        }
+        else {
             require_once 'view/login.php';
         }
         break;

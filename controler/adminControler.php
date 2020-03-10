@@ -49,7 +49,6 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
 {
     $listUsers = getListUsers();
     $id = count($listUsers);
-    var_dump($id);
     $idDisponible = verifyID($id);
     While ($idDisponible == '') {
         $id += 1;
@@ -64,6 +63,7 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
         'lastname' => $lastname,
         'password' => $hash,
         'admin' => $admin,
+        'firstLogin' => true,
     ];
     $listUsers[] = $newUser;
     file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
