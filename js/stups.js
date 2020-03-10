@@ -7,11 +7,31 @@
  **/
 
 $(document).ready(function () {
-    $("label").on("click", function(lbl){
+    $("label").on("click", function (lbl) {
         console.log(lbl)
         numwek = $(lbl.target).data("weeknb");
         week.value = numwek
         document.getElementById("weekForm").submit();
     })
 })
+
+document.addEventListener("DOMContentLoaded", init)
+
+function init() {
+    document.getElementById("Sites").addEventListener("change", changestupssheets)
+}
+
+function changestupssheets() {
+    baseid = Sites.selectedIndex
+
+    bloctodisplay = document.getElementById("divBase" + baseid)
+
+    //Cacher tous les blocs
+    for (i = 0; i < Sites.options.length; i++) {
+        document.getElementById("divBase" + i).classList.add("d-none")
+    }
+
+    //Afficher le bloc du site
+    bloctodisplay.classList.remove("d-none")
+}
 
