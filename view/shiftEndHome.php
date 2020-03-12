@@ -9,6 +9,7 @@ $title = "CSU-NVB - Remise de garde";
     <h1>Remises de garde</h1>
 
     <?php
+   
     foreach ($guardsheets as $guardsheet) {
 
         if ($guardsheet['base_id'] == $_SESSION['user'][3]['id']) {
@@ -26,24 +27,28 @@ $title = "CSU-NVB - Remise de garde";
                     <td><?php if ($guardsheet['state'] == "open") {
                             ?><?= "ouvert" ?>
                             <?php
-                        }else{
-                            ?><?='fermé'?><?php
+                        } else {
+                            ?><?= 'fermé' ?><?php
                         } ?></td>
-                    <td><?php foreach ($guardusenovas as $guardusenova)
-                    {
-                        if($guardsheet['id'] == $guardusenova['guardsheet_id']){?>
-                            <?php foreach($novas as $nova) {
-                                if($nova['id']==$guardusenova['nova_id']){?>
-                                <?= $nova['number']//afficher numéro véhicule?>
 
-                                <?php }
+                    <td><?php foreach ($guardusenovas as $guardusenova) {
+                            echo var_dump($guardusenova['nova_id']);
+                            if ($guardsheet['id'] == $guardusenova['guardsheet_id']) {
+
+                                foreach ($novas as $nova) {
+                                    if ( $guardusenova['nova_id'] == $nova['id'] ) {
+                                         ?>
+                                        <?= $nova['number'] //afficher numéro véhicule  ?>
+
+                                    <?php }
+                                }
                             }
-                            }
 
-                    }?>
+                        } ?>
 
-        } </td>
-                    <td><a href='?action=shiftEndList&sheetid=<?=$guardsheet['id'];?>' class='btn btn-primary m-1 ' style='bt-align: center'>Vue détaillée</a>
+                    </td>
+                    <td><a href='?action=shiftEndList&sheetid=<?= $guardsheet['id']; ?>' class='btn btn-primary m-1 '
+                           style='bt-align: center'>Vue détaillée</a>
                     </td>
                 </tr>
             </table>
