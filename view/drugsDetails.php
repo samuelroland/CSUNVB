@@ -9,7 +9,8 @@ $base = $bases[$_GET["base"]];
 <!-- Tableau -->
 
 <h3>Contrôle des stupéfiants Hebdomadaire</h3>
-<button class="btn btn-info" ><</button><h3>Semaine N <?= $_GET["week"]; ?> - Feuille fermée</h3><button class="btn btn-info" >></button>
+<button class="btn btn-info"><</button><h3>Semaine N <?= $_GET["week"]; ?> - Feuille fermée</h3>
+<button class="btn btn-info">></button>
 <h3>Sur le site de <?= $base["name"]; ?></h3>
 
 <!-- Morphine -->
@@ -27,7 +28,7 @@ $base = $bases[$_GET["base"]];
     </tr>
     <tr>
         <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
-                                                                            alt="stups logo" class="imgheadertable"></th>
+                                                                    alt="stups logo" class="imgheadertable"></th>
         <th rowspan="2" class="txtvertical">Pharmacie</th>
         <th colspan="3">Véhicules</th>
         <th rowspan="2" class="txtvertical">Pharmacie</th>
@@ -604,8 +605,6 @@ $base = $bases[$_GET["base"]];
     </tbody>
 
 </table>
-
-
 
 
 <?php
