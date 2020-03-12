@@ -21,12 +21,7 @@ function readShiftEndGuardSection(){
 function readShiftEndGuardLines(){
     return json_decode(file_get_contents("model/dataStorage/guardlines.json"),true);
 }
-function readGuardUseNovas(){
-    return json_decode(file_get_contents("model/dataStorage/guard_use_novas.json"),true);
-}
-function readNovas(){
-    return json_decode(file_get_contents("model/dataStorage/novas.json"),true);
-}
+
 
 /**
  * Retourne un item précis, identifié par son id

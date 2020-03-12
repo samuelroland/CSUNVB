@@ -6,7 +6,7 @@
 */
 
 function getAllNovas(){
-    $badArray = json_decode(file_get_contents("model/dataStorage/Novas.json"), true); //Prend les éléments d'un fichier Json
+    $badArray = json_decode(file_get_contents("model/dataStorage/novas.json"), true); //Prend les éléments d'un fichier Json
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
@@ -17,7 +17,7 @@ function getAllNovas(){
 }
 
 function getANova($number){
-    $novas = getAllNovas(); //Récupère les Drogues
+    $novas = getAllNovas(); //Récupère les Vehicules
 
     foreach ($novas as $nova) {
         if ($nova["number"] == $number){
@@ -25,10 +25,13 @@ function getANova($number){
         }
     }
 }
+function readGuardUseNovas(){
+    return json_decode(file_get_contents("model/dataStorage/guard_use_novas.json"),true);
+}
 
 function saveNovas($items)
 {
-    file_put_contents("model/dataStorage/Novas.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
+    file_put_contents("model/dataStorage/novas.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
 }
 
 /**
