@@ -28,9 +28,22 @@
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
-
 }
 
-.aligncenter{
+.aligncenter {
     text-align: center;
+}
+
+.bg-grey {
+    background-color: #aaaaaa;
+}
+
+.bg-lightgreen {
+    background-color: #7bee18;
+}
+
+.imgtaskclose {
+    height: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
