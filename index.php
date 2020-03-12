@@ -76,7 +76,7 @@ switch ($action) {
     case 'todolisthome':
         todoListDetailedWeek($semaine,$daythings,$task);
         break;
-    case 'changePassord':
+    case 'changePassword':
         changePassword($password,$password2);
         break;
 
