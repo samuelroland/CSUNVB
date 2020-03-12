@@ -101,9 +101,9 @@ function changePasswordUsers($initials, $password, $password2)
         for ($i = 0; $i < count($listUsers); $i++) {
             if ($listUsers[$i]['id'] == $UserLog['id']) {
                 if ($password == $password2) {
-                    $UserLog['firstLogin'] = true;
+                    $listUsers[$i]['firstLogin'] = true;
                     $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
-                    $UserLog['password'] = $hash;
+                    $listUsers[$i]['password'] = $hash;
                 }
             }
         }
