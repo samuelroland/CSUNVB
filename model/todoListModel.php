@@ -6,6 +6,8 @@
  * Version: 1.0
  * */
 
+/** ------------------TASK---------------------- */
+
 /** Retourne la liste des tâches */
 function getTodoListTasks()
 {
@@ -77,7 +79,9 @@ function createTodoListTask($task)
     return ($id); // Pour que l'appelant connaisse l'id qui a été donné
 }
 
-/** Retourne la liste des tâches */
+/** ------------------WEEK---------------------- */
+
+/** Retourne la liste des semaines */
 function getTodoListWeeks()
 {
     $weeks = json_decode(file_get_contents("model/dataStorage/todosheets.json"), true);
@@ -87,7 +91,7 @@ function getTodoListWeeks()
     return $weeksbyid;
 }
 
-/** Permet de retourner une tâche précise identifié par son id */
+/** Permet de retourner une semaine précise identifié par son id */
 function readTodoListWeekById($id) {
     $weeks = getTodoListWeeks();
     if (isset($weeks[$id])) {
@@ -97,13 +101,13 @@ function readTodoListWeekById($id) {
     }
 }
 
-/** Permet de modifier une tâche précise */
+/** Permet de modifier une semaine précise */
 function updateTodoListWeek($newweek)
 {
     $weeks = getTodoListWeeks();
-    // parcourt le tableau de tâches
+    // parcourt le tableau de semaine
     foreach ($weeks as $id => $oneweek) {
-        // Ecrase l'ancienne tâche par celle modifiée
+        // Ecrase l'ancienne semaine par celle modifiée
         if ($newweek['id'] == $oneweek['id']) {
             $weeks[$id] = $newweek;
         }
@@ -111,11 +115,11 @@ function updateTodoListWeek($newweek)
     saveTodoListWeek($weeks);
 }
 
-/** Permet de supprimer une tâche identifié par son id, parmi la liste */
+/** Permet de supprimer une semaine identifié par son id, parmi la liste */
 function destroyTodoListWeek($id)
 {
     $weeks = getTodoListWeeks();
-    // recherche d'une tâche demandé et la suppression dans le tableau
+    // recherche d'une semaine demandé et la suppression dans le tableau
     foreach ($weeks as $i => $oneweek) {
         if ($id == $oneweek['id']) {
             unset($weeks[$i]);
@@ -124,13 +128,13 @@ function destroyTodoListWeek($id)
     saveTodoListWeek($weeks);
 }
 
-/** Enregistre la liste des tâches dans le todothings.json */
+/** Enregistre la liste des semaines dans le todosheets.json */
 function saveTodoListWeek($weeks)
 {
     file_put_contents("model/dataStorage/todosheets.json", json_encode($weeks));
 }
 
-/** Permet d'ajouter une nouvelle tâche avec un id unique */
+/** Permet d'ajouter une nouvelle semaine avec un id unique */
 function createTodoListWeek($week)
 {
     $id = null;
@@ -140,9 +144,9 @@ function createTodoListWeek($week)
         $id = $oneweek["id"];
     }
     $id++; // prendre l'id suivante
-    // enregistrer un nouvel id pour la nouvelle tâche
+    // enregistrer un nouvel id pour la nouvelle semaine
     $weeks['id'] = $id;
-    $weeks[] = $week; // insérer la nouvelle tâche à la fin de la liste
+    $weeks[] = $week; // insérer la nouvelle semaine à la fin de la liste
     saveTodoListWeek($weeks);
     return ($id); // Pour que l'appelant connaisse l'id qui a été donné
 }

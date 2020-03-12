@@ -12,7 +12,7 @@ function getAllSheets(){
     foreach ($badArray as $p) {
         $goodArray[$p["id"]] = $p;
     }
-
+    
     return $goodArray; //Retourne le tableau indexé avec ses id
 }
 
