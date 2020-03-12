@@ -12,6 +12,21 @@ function getAllSheets(){
     foreach ($badArray as $p) {
         $goodArray[$p["id"]] = $p;
     }
+    require "model/novasModel.php";
+    $uses = getSheetUseNova();
+
+    foreach ($goodArray as $key => $array){
+        $array["nova"] = null;
+        foreach ($uses as $use){
+            if ($array["id"] == $use["stupsheet_id"]){
+                $array["nova"] = array_merge($use["nova"],$array["nova"]);
+            }
+        }
+        $goodArray[$key]["nova"] = $array["nova"];
+    }
+
+    var_dump($goodArray);
+
 
     return $goodArray; //Retourne le tableau indexé avec ses id
 }

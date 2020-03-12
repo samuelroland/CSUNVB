@@ -12,7 +12,7 @@ $title = "CSU-NVB - login";
     <div id="container">
         <!-- zone de connexion -->
 
-        <form action="index.php?action=tryLogin" method="POST" class="form-group text-center">
+        <form action="index.php?action=change" method="POST" class="form-group text-center">
             <h1 class="">Changement de votre mot de passe initial</h1>
             <br>
             <img src="/assets/images/login.png" class="center w-25"/><br>
