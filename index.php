@@ -28,7 +28,6 @@ require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
 
-var_dump($_SESSION);
 $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
 switch ($action) {
