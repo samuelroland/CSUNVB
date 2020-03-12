@@ -1,13 +1,12 @@
 <?php
 /**
- * Title: firstLogin.php
+ * Title: changePassword.php
  * Author: LPO
- * Date: 10.03.2020
+ * Date: 12.03.2020
  */
 
-
 ob_start();
-$title = "CSU-NVB - firstLogin";
+$title = "CSU-NVB - changePassword";
 ?>
     <div id="container">
         <!-- zone de connexion -->
@@ -17,6 +16,10 @@ $title = "CSU-NVB - firstLogin";
             <br>
             <img src="/assets/images/login.png" class="center w-25"/><br>
             <h2>Welcome <?=$_SESSION['user'][1]?></h2>
+
+            <input type="text" placeholder="Entrer vos initiales" name="initials" required>
+            <br>
+
             <label><b>Nouveau mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" required><br>
 
@@ -41,4 +44,6 @@ $title = "CSU-NVB - firstLogin";
 <?php
 $content = ob_get_clean();
 require "gabarit.php";
+?>
+
 ?>

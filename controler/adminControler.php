@@ -77,7 +77,7 @@ function crew()
 function ChangeAdminState($users, $id)
 {
     //foreach ($users as $user) {
-      for ($i=0; $i<count($users); $i++){
+    for ($i = 0; $i < count($users); $i++) {
         if ($users[$i]['id'] == $id) {
             if ($users[$i]['admin'] == false) {
                 $users[$i]['admin'] = true;
@@ -88,9 +88,34 @@ function ChangeAdminState($users, $id)
     }
     $listUsers = $users;
 
-      file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
+    file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
 
     require_once 'view/crew.php';
+}
+
+function changePasswordUsers($initials, $password, $password2)
+{
+    if ($initials != "") {
+        $listUsers = getListUsers();
+        $UserLog = getUser($initials);
+        for ($i = 0; $i < count($listUsers); $i++) {
+            if ($listUsers[$i]['id'] == $UserLog['id']) {
+                if ($password == $password2) {
+                    $UserLog['firstLogin'] = true;
+                    $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+                    $UserLog['password'] = $hash;
+                }
+            }
+        }
+
+        $newListUsers = $listUsers;
+
+        file_put_contents("model/dataStorage/Users.json", json_encode($newListUsers));
+
+        require_once 'view/crew.php';
+    } else {
+        require_once "view/changePassword.php";
+    }
 }
 
 ?>

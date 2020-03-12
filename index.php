@@ -8,7 +8,7 @@ $sheetid = $_GET['sheetid'];
 
 
 // Login token if exists
-if (isset($_POST["initials"]) && isset($_POST["password"])) {
+if (isset($_POST["initials"]) || isset($_POST["password"])) {
     $initials = $_POST["initials"];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
@@ -16,7 +16,6 @@ if (isset($_POST["initials"]) && isset($_POST["password"])) {
     $password2 = $_POST["password2"];
     $admin = $_POST ["admin"];
     $department = $_POST["department"];
-
 }
 // Include all models
 require "model/basesModel.php";
@@ -78,6 +77,9 @@ switch ($action) {
         break;
     case 'changePassword':
         changePassword($password,$password2);
+        break;
+    case 'changePasswordUser':
+        changePasswordUsers($initials,$password,$password2);
         break;
 
     default: // unknown action

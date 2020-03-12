@@ -7,6 +7,7 @@ $users = readAdminItems();
 ?>
 <h1 style="text-align: center">Secouriste</h1>
 <a href="?action=createAccount" class="btn btn-primary m-1 pull-right">Créer un Compte</a>
+<a href="?action=changePasswordUser" class="btn btn-primary m-1 pull-right">Changer un mot de passe</a>
 <table class="table table-bordered" style="text-align: center">
 
     <tr>

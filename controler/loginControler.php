@@ -59,25 +59,27 @@ function adminTrue($UserVef)
     }
 
 }
-function changePassword()
+function changePassword($password,$password2)
 {
     $listUsers = getListUsers();
 
     //foreach ($users as $user) {
     for ($i=0; $i<count($listUsers); $i++){
         if ($listUsers[$i]['id'] == $_SESSION['user'][0]) {
-            if ($listUsers[$i][''] == false) {
-                $users[$i]['admin'] = true;
-            } else {
-                $users[$i]['admin'] = false;
+            if($password == $password2)
+            {
+                $listUsers[$i]['firstLogin'] = false;
+                $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+                $listUsers[$i]['password'] = $hash;
             }
+
+
         }
     }
-    $listUsers = $users;
+    $newListUsers = $listUsers;
 
-    file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
+    file_put_contents("model/dataStorage/Users.json", json_encode($newListUsers));
 
     require_once 'view/crew.php';
 }
-
 ?>

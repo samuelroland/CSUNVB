@@ -804,16 +804,17 @@
     "initials": "rot",
     "firstname": "root",
     "lastname": "root",
-    "password": "$2y$10$y1hQIAi8VYUaD8Bm2cow3OZ2ooxpJ40yDLwgHDzTjtaTZWJLKd\/JG",
-    "admin": true
+    "password": "$2y$10$CQ34Fk1WRvJnwP0esmB0UO79H7BxDrJWf0XYjw\/IHXilXYEgBkk8K",
+    "admin": true,
+    "firstLogin": false
   },
   {
     "id": 101,
     "initials": "aaa",
-    "firstname": "TripleA",
-    "lastname": "AAA",
-    "password": "$2y$10$meOY2uIIvuA14RuoXFlHiOcLDIwpYIvabfVhrRVV9NPLmvWow6\/gy",
+    "firstname": "abc",
+    "lastname": "abc",
+    "password": "$2y$10$ee\/iWif5uaI.HGmvuph\/ouZH.iKXwh9Bboe5HWkegZ.thxa5Qug32",
     "admin": false,
-    "firstLogin": true
+    "firstLogin": false
   }
 ]
