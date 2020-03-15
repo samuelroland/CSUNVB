@@ -11,13 +11,13 @@ $title = "CSU-NVB - changePassword";
     <div id="container">
         <!-- zone de connexion -->
 
-        <form action="index.php?action=changePassword" method="POST" class="form-group text-center">
-            <h1 class="">Changement de votre mot de passe initial</h1>
+        <form action="index.php?action=changePasswordUser" method="POST" class="form-group text-center">
+            <h1 class="">Changement d'un mot de passe</h1>
             <br>
             <img src="/assets/images/login.png" class="center w-25"/><br>
-            <h2>Welcome <?=$_SESSION['user'][1]?></h2>
 
-            <input type="text" placeholder="Entrer vos initiales" name="initials" required>
+            <label><b>Initiales</b></label>
+            <input type="text" placeholder="Entrer ses initiales" name="initials" required>
             <br>
 
             <label><b>Nouveau mot de passe</b></label>

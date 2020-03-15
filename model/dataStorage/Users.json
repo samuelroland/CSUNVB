@@ -3,9 +3,10 @@
     "id": 1,
     "initials": "JDE",
     "lastname": "Doe",
-    "password": "$2y$10$ZplHbYimTZ5P1fQqYiFRwOOfxeivt.gFUvsm9v1cRR.ko72ApkY8y",
+    "password": "$2y$10$\/T8YtayEIo82Ec12gZCoz.xkEcLXgrwHK9KCOn92g6s1EOtrhKI7u",
     "firstname": "John",
-    "admin": true
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 2,
@@ -804,17 +805,8 @@
     "initials": "rot",
     "firstname": "root",
     "lastname": "root",
-    "password": "$2y$10$CQ34Fk1WRvJnwP0esmB0UO79H7BxDrJWf0XYjw\/IHXilXYEgBkk8K",
+    "password": "$2y$10$aS0pC7lfqZC5YUTrH6ieHeRjTzHLgp5yEBCW7plwpra9bo6U4cAPO",
     "admin": true,
-    "firstLogin": false
-  },
-  {
-    "id": 101,
-    "initials": "aaa",
-    "firstname": "abc",
-    "lastname": "abc",
-    "password": "$2y$10$ee\/iWif5uaI.HGmvuph\/ouZH.iKXwh9Bboe5HWkegZ.thxa5Qug32",
-    "admin": false,
     "firstLogin": false
   }
 ]

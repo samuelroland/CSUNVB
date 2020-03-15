@@ -7,7 +7,7 @@
 
 function getListUsers()
 {
-    return json_decode(file_get_contents("model/dataStorage/Users.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/users.json"),true);
 }
 function getUser($initials)
 {

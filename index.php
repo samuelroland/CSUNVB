@@ -5,7 +5,8 @@ session_start();
 $semaine = $_GET['semaine'];
 $daythings = $_GET['daything'];
 $sheetid = $_GET['sheetid'];
-
+$action = $_GET['action'];
+$adminchange = $_GET['idPerson'];
 
 // Login token if exists
 if (isset($_POST["initials"]) || isset($_POST["password"])) {
@@ -27,8 +28,10 @@ require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
 
-$action = $_GET['action'];
-$adminchange = $_GET['idPerson'];
+if (isset($_SESSION['user']) == false && $action != "tryLogin")
+{
+    $action = "error";
+}
 switch ($action) {
     case 'admin':
         adminHomePage();

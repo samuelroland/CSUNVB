@@ -66,7 +66,7 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
         'firstLogin' => true,
     ];
     $listUsers[] = $newUser;
-    file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
+    file_put_contents("model/dataStorage/users.json", json_encode($listUsers));
 }
 
 function crew()
@@ -88,7 +88,7 @@ function ChangeAdminState($users, $id)
     }
     $listUsers = $users;
 
-    file_put_contents("model/dataStorage/Users.json", json_encode($listUsers));
+    file_put_contents("model/dataStorage/users.json", json_encode($listUsers));
 
     require_once 'view/crew.php';
 }
@@ -98,21 +98,21 @@ function changePasswordUsers($initials, $password, $password2)
     if ($initials != "") {
         $listUsers = getListUsers();
         $UserLog = getUser($initials);
-        for ($i = 0; $i < count($listUsers); $i++) {
-            if ($listUsers[$i]['id'] == $UserLog['id']) {
-                if ($password == $password2) {
+        if ($UserLog != "" && $password == $password2) {
+            for ($i = 0; $i < count($listUsers); $i++) {
+                if ($listUsers[$i]['id'] == $UserLog['id']) {
                     $listUsers[$i]['firstLogin'] = true;
                     $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
                     $listUsers[$i]['password'] = $hash;
                 }
             }
+            $newListUsers = $listUsers;
+            file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
+            require_once 'view/crew.php';
+        } else {
+            $_SESSION['erreur'] = true;
+            require_once 'view/changePassword.php';
         }
-
-        $newListUsers = $listUsers;
-
-        file_put_contents("model/dataStorage/Users.json", json_encode($newListUsers));
-
-        require_once 'view/crew.php';
     } else {
         require_once "view/changePassword.php";
     }
