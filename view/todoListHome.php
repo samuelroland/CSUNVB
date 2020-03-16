@@ -6,8 +6,9 @@ $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche
 $queryYear = $_GET ['year'];
 $queryMonth = $_GET ['month'];
 $now = time();
-$semplus = $week + 1;
-$semmoins = $week - 1;
+$semplus = $numweek + 1;
+$semmoins = $numweek - 1;
+
 
 
 
@@ -24,29 +25,30 @@ require_once 'controler/todoListControler.php';
 ?>
 
 
-<div class="">
-    <h1>Tâches hebdomadaires</h1>
+        <div class="">
+            <h1>Tâches hebdomadaires</h1>
 
-    <script src="js/todoList.js"></script>
+            <script src="js/todoList.js"></script>
 
-</div>
-<table class=" table table-striped">
-    <div class="navbar nav-pills">
+        </div>
+        <table class=" table table-striped">
+            <div class="navbar nav-pills">
         <th>  <?php
-            if ($week == 1) {
+            if ($numweek == 1) {
 
             } else {
-                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&semaine=$semmoins'><</a></button>";
+                var_dump($numweek);
+                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&week=$semmoins'><</a></button>";
             }
 
-            ?>Semaine <?php echo $week; ?>
+            ?>Semaine <?php echo $numweek; ?>
             <?php
 
 
             ?>
             <?php
-            if ($week != 52) {
-                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&semaine=$semplus'>></a></button>";
+            if ($numweek != 52) {
+                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&week=$semplus'>></a></button>";
             }
 
             ?>

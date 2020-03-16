@@ -16,7 +16,7 @@ function todoListHomePage()
 
 }
 
-function todoListDetailedWeek($semaine)
+function todoListDetailedWeek($numweek)
 {
     $tasks = getTodoListTasks();
     $daythings = getTodoListTasks();
