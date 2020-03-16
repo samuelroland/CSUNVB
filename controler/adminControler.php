@@ -118,4 +118,11 @@ function changePasswordUsers($initials, $password, $password2)
     }
 }
 
+function bases()
+{
+    $listBases = getBases();
+    require_once 'view/bases.php';
+
+}
+
 ?>

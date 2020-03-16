@@ -14,7 +14,8 @@
     "lastname": "Sampson",
     "password": "$2y$10$SX\/gkps4g6rTwMpu5fSqeexdio10Z0ZkP912mO3kyVoshqW6HD\/RW",
     "firstname": "Joseph",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 3,
@@ -22,7 +23,8 @@
     "lastname": "Compton",
     "password": "$2y$10$zcR7EZ4s4W4qpuWywd0oTOzFGJ..ja\/Ev53HjqYSN6Kpp44pAEoty",
     "firstname": "Sheila",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 4,
@@ -30,7 +32,8 @@
     "lastname": "Rush",
     "password": "$2y$10$aAyhXLKF.BwUstquUHBi7.Lj9Zbv7iUXfBfDVM4VJDtjBGQbNrAQ.",
     "firstname": "Karly",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 5,
@@ -38,7 +41,8 @@
     "lastname": "Ryan",
     "password": "$2y$10$zJJgmAQYBl18XKvhhy1hg.TUPezSjzaKVxjjd1qxcd4UB8AG7bqHy",
     "firstname": "Orli",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 6,
@@ -46,7 +50,8 @@
     "lastname": "Stanley",
     "password": "$2y$10$8NGiiFMTRSFtDCAXVSPPAekPXQLyF4nBVDQOh2DR9161ykmsAwDei",
     "firstname": "Kiayada",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 7,
@@ -54,7 +59,8 @@
     "lastname": "Vang",
     "password": "$2y$10$X0n6SXY9saZbwRq1DmeRludWmC3Qsa932UCUyAPAQ2hT9xrSwzU1a",
     "firstname": "Amaya",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 8,
@@ -62,7 +68,8 @@
     "lastname": "Vaughan",
     "password": "$2y$10$rS2olHKZaTb7E.2H8w7bvuYMqFKJ9TDVOxxChN\/DNFZkBWpQLldx.",
     "firstname": "Thane",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 9,
@@ -70,7 +77,8 @@
     "lastname": "Huff",
     "password": "$2y$10$zesdDjxZ1dU2HRSercgZj.CIxldRn6ej6cYoiJqq9s\/IWesaa0MTO",
     "firstname": "Asher",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 10,
@@ -78,7 +86,8 @@
     "lastname": "Garrett",
     "password": "$2y$10$fVt70g9hpczjQWOlCCw.runvKPaEm.0XjHYwmhERy\/hcJBfD\/.qGW",
     "firstname": "Zenaida",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 11,
@@ -86,7 +95,8 @@
     "lastname": "Brewer",
     "password": "$2y$10$Gax.bJO4.n6rlJ11g6jr5OkFe54rtM2tPx17cOMYYmtCZ0JbxXHs2",
     "firstname": "Yuli",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 12,
@@ -94,7 +104,8 @@
     "lastname": "Floyd",
     "password": "$2y$10$.mZtDG33.MKqrNrANpsgle3GUKu989MrNkZn9W18PN9D34AsQONgS",
     "firstname": "Natalie",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 13,
@@ -102,7 +113,8 @@
     "lastname": "Alvarez",
     "password": "$2y$10$V2w3HPSpvuK5W\/.XVrxxgu\/Zo78.nfWHwJj17wwYn1Vc1mj4hI0ae",
     "firstname": "Aquila",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 14,
@@ -110,7 +122,8 @@
     "lastname": "Kemp",
     "password": "$2y$10$98.FP\/Z1H4mDlewrIeyMCeBdjrJFajfta6wRFzaKe8mXxu8bme1B.",
     "firstname": "Tamara",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 15,
@@ -118,7 +131,8 @@
     "lastname": "Watkins",
     "password": "$2y$10$okndE69OEIwdGuFn2rXi1eAjEwalK5GcztIyByYi6v2UJOABXn1J2",
     "firstname": "Ariel",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 16,
@@ -126,7 +140,8 @@
     "lastname": "Cook",
     "password": "$2y$10$xJPb1dqZMsbApQygX4N0Ceap9l4.tO2f.PJ19GIMVCc5VYAiq3dJi",
     "firstname": "Adrienne",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 17,
@@ -134,7 +149,8 @@
     "lastname": "Rivas",
     "password": "$2y$10$ZkJ.GSMgApv6pC\/BJpMkpOpSOmBalQkj7\/lWDgzjF\/veunuH53riS",
     "firstname": "Josiah",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 18,
@@ -142,7 +158,8 @@
     "lastname": "Kramer",
     "password": "$2y$10$7ZA5tAYZ6G00BDtuunh9RuCIw0b\/vXr8Kr8MlCVnowAD\/XKFNwYwS",
     "firstname": "Reuben",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 19,
@@ -150,7 +167,8 @@
     "lastname": "Ochoa",
     "password": "$2y$10$6W.hSCVJtZIeL3lDAexTT.9dlMyRz1HAqkjVQnnL3VJT2OG\/VenOm",
     "firstname": "Raja",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 20,
@@ -158,7 +176,8 @@
     "lastname": "Whitley",
     "password": "$2y$10$zF577gKAgzCeirBOs4NI5OV9Mnb5HG86Zeyu6burAk\/Pj6EiB\/nua",
     "firstname": "Jerome",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 21,
@@ -166,7 +185,8 @@
     "lastname": "Ford",
     "password": "$2y$10$C5OazZJqbSQncLMS1hfXdOGAsh8o4amDemjgxiQUIIhWCGIvKlm1S",
     "firstname": "Hiroko",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 22,
@@ -174,7 +194,8 @@
     "lastname": "Rollins",
     "password": "$2y$10$ugjh4gA.f14pP2\/5XKlYL.qJrX2o02NJLyjbsEdfDeea.o2nSELOK",
     "firstname": "Carson",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 23,
@@ -182,7 +203,8 @@
     "lastname": "Jensen",
     "password": "$2y$10$apLpXs7tmxnbk4DYCQJpJ.eq4hN00kqhU4f4p8nxUfgs9RlNY9UzC",
     "firstname": "Amena",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 24,
@@ -190,7 +212,8 @@
     "lastname": "Webb",
     "password": "$2y$10$4yD7ADiIB2BiFlKRCwYPI.vhGlsx4OXATe.NC8ZiU1eOZ8tZAnHCS",
     "firstname": "Quail",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 25,
@@ -198,7 +221,8 @@
     "lastname": "Gamble",
     "password": "$2y$10$WbDps015Ae6kuG2g9mUkb.5L7Yume5SSNW\/9Jwfzgkmo\/W0adH6cy",
     "firstname": "Malachi",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 26,
@@ -206,7 +230,8 @@
     "lastname": "Kemp",
     "password": "$2y$10$diCZ3jwZO8Aq\/gTGQG4W7u3juo.uHVMbJ8yVB9leB3I\/0Hk1P8t4S",
     "firstname": "Caleb",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 27,
@@ -214,7 +239,8 @@
     "lastname": "Rosario",
     "password": "$2y$10$4ccAcqq5iJQ7VHvTYCiOJ.RNYlU5.ssk25VCCNfcgP\/w36vZU0pPq",
     "firstname": "Kellie",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 28,
@@ -222,7 +248,8 @@
     "lastname": "Hewitt",
     "password": "$2y$10$8PBDqlTWtjJWQrKnqZaKZu6tctBfAPSW2M4r7UX\/MNTGT479pchSG",
     "firstname": "Rebekah",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 29,
@@ -230,7 +257,8 @@
     "lastname": "Roberts",
     "password": "$2y$10$bIb.z06hV8S7vz31IftUheYtyuhTLEB7gk7HD\/BpR4ONwh1RuWCRO",
     "firstname": "Silas",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 30,
@@ -238,7 +266,8 @@
     "lastname": "Fields",
     "password": "$2y$10$rAz\/cCYEU9ncRfxoE5RMEODls.QURqDSAKEcZK8wKj9Huq.ugscwG",
     "firstname": "Tarik",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 31,
@@ -246,7 +275,8 @@
     "lastname": "Perkins",
     "password": "$2y$10$\/J3WpQ2rhylkmLDVrrv5E.RWCxHt5v.KyJWS6sChmNWR\/CuqtYvSS",
     "firstname": "Shad",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 32,
@@ -254,7 +284,8 @@
     "lastname": "Juarez",
     "password": "$2y$10$tBzN\/a8PGkC.u4qaSxiwH.mySh7RQnVZytWW1KXPWrRj\/fQsKZERe",
     "firstname": "Jaquelyn",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 33,
@@ -262,7 +293,8 @@
     "lastname": "Schultz",
     "password": "$2y$10$VM0DeS9eJ\/qCmz4eimpzru\/HdcYW8T9BNIrhLlpdEsFes\/imEacsG",
     "firstname": "Hyacinth",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 34,
@@ -270,7 +302,8 @@
     "lastname": "Atkins",
     "password": "$2y$10$Lk9Xxhnw59cED\/C8qClRM.2KmRfPxqt2YzXeAWoTh1\/OLT1o5NIJu",
     "firstname": "Shaine",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 35,
@@ -278,7 +311,8 @@
     "lastname": "Pickett",
     "password": "$2y$10$9CniI20tbwgqL7mQID8iYusEojR3l33.IhzhSa.iVOkkXDGJuscoK",
     "firstname": "Brian",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 36,
@@ -286,7 +320,8 @@
     "lastname": "Norris",
     "password": "$2y$10$2bJQYqfaJYe6LecT9CIdMueBt7N8RL\/cDB96fF4BX6LxE74YbbP7W",
     "firstname": "Sara",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 37,
@@ -294,7 +329,8 @@
     "lastname": "Peterson",
     "password": "$2y$10$Yhiax67wIHUGrNMfmtg.nu9Os4ktRaSFQ5xIJw.C38W9LMNhFSj\/6",
     "firstname": "Howard",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 38,
@@ -302,7 +338,8 @@
     "lastname": "Mccall",
     "password": "$2y$10$lZXRR8ltWU.VXO7zHOvluOgjHHc5Bf\/iAWXlfaB25Jf.5veCS1.Mm",
     "firstname": "Melinda",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 39,
@@ -310,7 +347,8 @@
     "lastname": "Joseph",
     "password": "$2y$10$4A3L78s4mYdUKZjCS9x.1OkV1gTHWtDWng7oeaIJSV24IUknEWKtK",
     "firstname": "Kylie",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 40,
@@ -318,7 +356,8 @@
     "lastname": "Hayes",
     "password": "$2y$10$AMMXRhVryglam83PjAQGzuuitKzmoR1vfCMXVGwq2A5XvwRCv9Xwm",
     "firstname": "Ezra",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 41,
@@ -326,7 +365,8 @@
     "lastname": "Decker",
     "password": "$2y$10$.MCW1pgN2CQhgs2Zc\/oZIOTkIjZL8tB9IS4H4l7W\/Y6Hf9FBghSc.",
     "firstname": "Shannon",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 42,
@@ -334,7 +374,8 @@
     "lastname": "Vega",
     "password": "$2y$10$3tuc6jovcwWA3QxCikAocOATPFBNa5Kg4zmj98oQcwOLEH1ejRGue",
     "firstname": "Igor",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 43,
@@ -342,7 +383,8 @@
     "lastname": "Petersen",
     "password": "$2y$10$r0kJ\/nLFyWZ.5VLVZdOP.e0393LaMXavtQWJodizy4tsVlefeCj6e",
     "firstname": "Ruth",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 44,
@@ -350,7 +392,8 @@
     "lastname": "Price",
     "password": "$2y$10$jY5G1cf5gs9IkkxgpoHhiOoukgQsYr9G626pn2Zf0nKTF\/gegDSgy",
     "firstname": "Zena",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 45,
@@ -358,7 +401,8 @@
     "lastname": "Lambert",
     "password": "$2y$10$Ve0jcc9Gsmb2SvPHQWyrMuobbmyikhOR8q\/Vp5FpgRI221mj7OvDK",
     "firstname": "George",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 46,
@@ -366,7 +410,8 @@
     "lastname": "Cote",
     "password": "$2y$10$AOyGWTUNiKl84njr\/P4IOOM0vefIDhnyDkh6VYA1vIE9Q3fNrl03W",
     "firstname": "Anthony",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 47,
@@ -374,7 +419,8 @@
     "lastname": "Wilkerson",
     "password": "$2y$10$o83FB\/TI.65v7WUdam0DLe.5.JoqMcAZ6ogsAyGdhHOyruTpf7bMC",
     "firstname": "Lee",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 48,
@@ -382,7 +428,8 @@
     "lastname": "Martin",
     "password": "$2y$10$gIvlJ5ibB2hnesbRlPt8qOVzPp3U5P\/P6lkoTAfCj7P8avXrFZT6G",
     "firstname": "Ishmael",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 49,
@@ -390,7 +437,8 @@
     "lastname": "Frye",
     "password": "$2y$10$xSmdd2pBFk5gwszEpewFsOduaAFzLGuhob2jh2zYyEFAm\/kmYpjnm",
     "firstname": "Wallace",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 50,
@@ -398,7 +446,8 @@
     "lastname": "Alvarado",
     "password": "$2y$10$PmmkiJujHW0H8e8Sh.ok.ueQEjI5UcILFhiuBhvuExePVgcY\/02K6",
     "firstname": "Gillian",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 51,
@@ -406,7 +455,8 @@
     "lastname": "Schmidt",
     "password": "$2y$10$MDC2\/q8B6eL8np7Wph6L4u9S6ypDZOPPIpY8Q0hNfzzXTyuRHSzbS",
     "firstname": "Simone",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 52,
@@ -414,7 +464,8 @@
     "lastname": "Richmond",
     "password": "$2y$10$cwRlr6QRuIEEbJlTQsRJA.oHmRl6v0B67dDaHJZhsAuAIYrEbRd5e",
     "firstname": "Evangeline",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 53,
@@ -422,7 +473,8 @@
     "lastname": "Kidd",
     "password": "$2y$10$uWny\/AdVGGEev18Qc4wp3u9LMvxq23qB5p4G4UeAP6oFCeZHFVkt.",
     "firstname": "Maia",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 54,
@@ -430,7 +482,8 @@
     "lastname": "Hayden",
     "password": "$2y$10$4wBfMr4mA3DMta4NvWzyjusVXQpyJPD5bF19ItcDCu6lX8HAYKZDO",
     "firstname": "Cyrus",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 55,
@@ -438,7 +491,8 @@
     "lastname": "Fry",
     "password": "$2y$10$IeKe1uGU5tSB6WU.5frSZOkF\/6PMiUEwC8wZr3baS4XxdE5GtiUOa",
     "firstname": "Irene",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 56,
@@ -446,7 +500,8 @@
     "lastname": "Mullins",
     "password": "$2y$10$0Z2byOZ.sSgq.Kjy7EuQnOmp1BW63B2AaQjDhAhKP4uJSRbhBL4xG",
     "firstname": "Josephine",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 57,
@@ -454,7 +509,8 @@
     "lastname": "Landry",
     "password": "$2y$10$BqF60sdanDURxwAWCGUGU.ppM0\/A0mCN\/n1d4CNdUo4OEJPmKmaHK",
     "firstname": "Dakota",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 58,
@@ -462,7 +518,8 @@
     "lastname": "Estrada",
     "password": "$2y$10$oIyjrg8L2rvSfdjxGyvGuehCm41hQwjrMuBVdoHiRRKwF.1ZpTbNy",
     "firstname": "Emily",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 59,
@@ -470,7 +527,8 @@
     "lastname": "Mejia",
     "password": "$2y$10$PsZs9oR66G9OnC568T2PIeN57kvoK2F0\/jac\/o2OYt9g.ZvNiFze2",
     "firstname": "Lucy",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 60,
@@ -478,7 +536,8 @@
     "lastname": "Buck",
     "password": "$2y$10$uUe5BMbt\/MGmHXsdDZp.eeoNCVF8Kprsj0JTcgJRMiv5OPLb8J22q",
     "firstname": "Flavia",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 61,
@@ -486,7 +545,8 @@
     "lastname": "Malone",
     "password": "$2y$10$w\/7IWLmMWuXArrry4sIVy.c3ZHB5B4X4hFCkNCRmQloxPJihWJARa",
     "firstname": "Shana",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 62,
@@ -494,7 +554,8 @@
     "lastname": "Ramirez",
     "password": "$2y$10$WLt9neBd.mZ\/RcGk.vNd9OBhWOLswhw43Pfpq3bO45SH3mUq6ngjy",
     "firstname": "Logan",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 63,
@@ -502,7 +563,8 @@
     "lastname": "Ellison",
     "password": "$2y$10$Hd7N0l0yCfpdKVl9\/ndF6.bGruh60lELizQxIRuU7M.S.\/GJY735.",
     "firstname": "Louis",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 64,
@@ -510,7 +572,8 @@
     "lastname": "Cole",
     "password": "$2y$10$0\/9a7fIEtfgNCotN.5PJIeKC6af5ZLC7UUNlyjP\/NLfSd0dLIqhjS",
     "firstname": "Oleg",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 65,
@@ -518,7 +581,8 @@
     "lastname": "Wiley",
     "password": "$2y$10$oVK0cjHwcK2BZfVnWhm3KuFa5gcMs1EXUm.FxncQBxNjG1P8f8CI.",
     "firstname": "MacKensie",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 66,
@@ -526,7 +590,8 @@
     "lastname": "Gilmore",
     "password": "$2y$10$ct3jE.rXkDHZGP7eoShtBOa2gWXsvI10ardwxYf9.k2zJx34aTMJG",
     "firstname": "Jamalia",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 67,
@@ -534,7 +599,8 @@
     "lastname": "Steele",
     "password": "$2y$10$xg2Ppt7.EEPVAZDLqOa71uPJ.KLKkL7M7Nm\/a.WNVm17HAjgd934y",
     "firstname": "Isaac",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 68,
@@ -542,7 +608,8 @@
     "lastname": "Fuentes",
     "password": "$2y$10$qllmd1Q9e5GbjWNHaHZVeeRgoaL0azMvWYk07mXMNYRwfNgp1TXSm",
     "firstname": "Gisela",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 69,
@@ -550,7 +617,8 @@
     "lastname": "Fleming",
     "password": "$2y$10$Pueqezp5qHchKktAgzgDW.3cUeC\/KLTaUy3aOGV8.EKA4EHT1bthS",
     "firstname": "Ora",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 70,
@@ -558,7 +626,8 @@
     "lastname": "Nolan",
     "password": "$2y$10$O71mq3TU3xsvjLoKkJfV5eTzRgKePxW1I2Nye6igz8YUpy6HlPOqS",
     "firstname": "Raphael",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 71,
@@ -566,7 +635,8 @@
     "lastname": "Pena",
     "password": "$2y$10$vkdLj5K.DnqgntQjNWNlH.SLvNUyUdCRd3cwVdn7zwXg3jJnTvGp.",
     "firstname": "Emerald",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 72,
@@ -574,7 +644,8 @@
     "lastname": "Knapp",
     "password": "$2y$10$I2QindeSBOedfNqMYDlaHOo91VKtvr.7CVKbHMstKFAoUIsXv.DLy",
     "firstname": "Ingrid",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 73,
@@ -582,7 +653,8 @@
     "lastname": "Parsons",
     "password": "$2y$10$5ej6DaoQiBn6oAh8\/Ezn2.V4pwMz4Oz7bgE5iy78OKdMnmz3GeYHC",
     "firstname": "Gannon",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 74,
@@ -590,7 +662,8 @@
     "lastname": "Rios",
     "password": "$2y$10$HomJ6ZpRKwTiUIPY7Gifz.CxMRFYmDl3cqts2UQ\/XaZDJ3WEX3Efe",
     "firstname": "Amena",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 75,
@@ -598,7 +671,8 @@
     "lastname": "Herrera",
     "password": "$2y$10$ZtEpf5kvx0eyHoz0BRMV1.TN72S4JUQQfpDFakkgzOl512qwo.64i",
     "firstname": "Phillip",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 76,
@@ -606,7 +680,8 @@
     "lastname": "Bell",
     "password": "$2y$10$7LB032sREOZmRbubJCy70epgJvTQbkf.e4T6CWA1eXKedenuoiRba",
     "firstname": "Hyatt",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 77,
@@ -614,7 +689,8 @@
     "lastname": "Bishop",
     "password": "$2y$10$jbXZB8oa9JBF\/vUEIY6NDuwdB6fX47kRZfxj86xAt6dQftR73bWWW",
     "firstname": "Audrey",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 78,
@@ -622,7 +698,8 @@
     "lastname": "Ray",
     "password": "$2y$10$J7sJunAq7vR2OVTGA9b1RuuGFf8qnk0CnlP70XLq\/7DD7FD4IVY2K",
     "firstname": "Amir",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 79,
@@ -630,7 +707,8 @@
     "lastname": "Watts",
     "password": "$2y$10$70eiBh8vxQGO59\/0nEJFRurvK.Ne2epUOyeL7F7om5T27ECMYenlO",
     "firstname": "Michael",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 80,
@@ -638,7 +716,8 @@
     "lastname": "Holden",
     "password": "$2y$10$GUlDcl\/kq\/7itHRlBfWgxun0FjVZdvfB.2wYMoOXep7lsnJCkfEVi",
     "firstname": "Shana",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 81,
@@ -646,7 +725,8 @@
     "lastname": "Howard",
     "password": "$2y$10$.Er4j\/LDWv2qAkgj.b.fVutkekABlI9iNRxFdwldVaBsd3fM6DJ3a",
     "firstname": "Hayley",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 82,
@@ -654,7 +734,8 @@
     "lastname": "Tanner",
     "password": "$2y$10$dJ2z\/T9T0j4m7.ax814aGOZFAiLbsh5A9705rx.SLykv08pn2cPZm",
     "firstname": "Leonard",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 83,
@@ -662,7 +743,8 @@
     "lastname": "Mcclain",
     "password": "$2y$10$uqCwuAsX1R5o8\/fHV1aXa.77K.9trAaJXfAMK\/xnYtGgwZnfsLHgq",
     "firstname": "Basia",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 84,
@@ -670,7 +752,8 @@
     "lastname": "Silva",
     "password": "$2y$10$16CeTrB5J1TSxhJXrzBbFOxo1.i2j0kkU5DUIizhlzGEj93dpiNJu",
     "firstname": "Fiona",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 85,
@@ -678,7 +761,8 @@
     "lastname": "Forbes",
     "password": "$2y$10$mh5Vnfi9ZtA0ISk2Q2LuWOmsy8lpRi5PpS.sqDBivSqWv5Kq7FWT6",
     "firstname": "Plato",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 86,
@@ -686,7 +770,8 @@
     "lastname": "Carver",
     "password": "$2y$10$3ADilSGNdcoafPCd8kYxh.myumWkGCXUBfMbR02QN3rfbuLsOqKNe",
     "firstname": "Hilda",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 87,
@@ -694,7 +779,8 @@
     "lastname": "Levy",
     "password": "$2y$10$LTu4a6cBNL4sbDna4xuncOl6jkzwzSlT8z09WH8Gjp0Rnq\/VhKUQG",
     "firstname": "Irene",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 88,
@@ -702,7 +788,8 @@
     "lastname": "Hopper",
     "password": "$2y$10$ySIidTKWJZiZolsd..STUOjXr1q5T5\/NDtwQHLftySwksawt.WqEO",
     "firstname": "Odysseus",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 89,
@@ -710,7 +797,8 @@
     "lastname": "Burch",
     "password": "$2y$10$T3CynQist.JfbUrs1Rh4ReRAi6li.FacyK.pnAJDi0YdwUWJm7b2W",
     "firstname": "Libby",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 90,
@@ -718,7 +806,8 @@
     "lastname": "Cherry",
     "password": "$2y$10$O.pyKVmxlC3wFl5C3pQQYuFjDlmtk4wqSSeh0lk.yqOlbTiKHJ2t.",
     "firstname": "Ayanna",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 91,
@@ -726,7 +815,8 @@
     "lastname": "Ayers",
     "password": "$2y$10$347ai2zEPutummxdjy3aeOUXRq842EYnQUnj3D1kWDu.vj1.2DlSO",
     "firstname": "Lysandra",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 92,
@@ -734,7 +824,8 @@
     "lastname": "Rush",
     "password": "$2y$10$k1vzA4ilxwFsMxe1G6HEuOcKLEHzsL7hmv8i0aRUDv1fQ6cvicp7u",
     "firstname": "Wendy",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 93,
@@ -742,7 +833,8 @@
     "lastname": "Shepard",
     "password": "$2y$10$EvRocvnFg5h.VpJuY2hZUeeUuT1dsjrfEHms1fw.XL99GYVszSzyO",
     "firstname": "Alvin",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 94,
@@ -750,7 +842,8 @@
     "lastname": "Larsen",
     "password": "$2y$10$9XI9uBVilONg8TevtysPVOG70hDyXN6MlBS7joUOmt.m7D3ukcw9u",
     "firstname": "Donovan",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 95,
@@ -758,7 +851,8 @@
     "lastname": "Weber",
     "password": "$2y$10$QaYKqtIf6kpzRgyWN1IFB.a9mMFusyv1Nh5te4GXud7vqf2A.UgD2",
     "firstname": "Levi",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 96,
@@ -766,7 +860,8 @@
     "lastname": "Santiago",
     "password": "$2y$10$lc\/eUy5NxNt\/DQZ.8aQuDeNTcW.nhYixf\/TXzokc7v5Q4GOGSe1Fm",
     "firstname": "Hayley",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 97,
@@ -774,7 +869,8 @@
     "lastname": "Beard",
     "password": "$2y$10$.3XluT3N0y01rqyePDuX0u\/.ziugp4sK9l4WP\/DotISsmPgDSDBlG",
     "firstname": "Leslie",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 98,
@@ -782,7 +878,8 @@
     "lastname": "Case",
     "password": "$2y$10$.KuVnnQQlBUwFR80LNNuueExPomsqXN2HrqBK0Me4qjpW0UZg7WKS",
     "firstname": "Raya",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 99,
@@ -790,13 +887,14 @@
     "lastname": "Delgado",
     "password": "$2y$10$sOSeVa9dTrAxMZiRZb5heOU5V\/.7u9rgNvvK4aaD7TsHOVq0\/Rkje",
     "firstname": "Charles",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 100,
     "initials": "MCH",
     "lastname": "Cash",
-    "password": "$2y$10$RvlIAnK7MkPTeWhd02xfou8xvAo0evXzYtKMhfUM.4LVhkaon8gPC",
+    "password": "$2y$10$\/yA.4J.J.F24YrOSe5DN2ufv1h7xiLBrLA4rSPJboX8r65uwSQk7C",
     "firstname": "Michelle",
     "admin": false,
     "firstLogin": false

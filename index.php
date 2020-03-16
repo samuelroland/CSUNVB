@@ -63,7 +63,7 @@ switch ($action) {
         createAccount($initials, $firstname, $lastname, $password, $password2, $admin);
         break;
     case 'disconnect':
-        diconnect();
+        disconnect();
         break;
     case 'add':
         addNewToDo();
@@ -91,6 +91,9 @@ switch ($action) {
         break;
     case 'myaccount':
         moncompte();
+        break;
+    case 'bases':
+        bases();
         break;
     case 'help':
         require "controler/Help.php";

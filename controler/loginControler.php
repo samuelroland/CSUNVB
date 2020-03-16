@@ -40,7 +40,7 @@ function login()
     require_once 'view/login.php';
 }
 
-function diconnect()
+function disconnect()
 {
     session_unset();
     require_once "view/login.php";
@@ -76,7 +76,7 @@ function changePassword($password, $password2)
             file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
 
 
-            require_once 'view/home.php';
+            disconnect();
 
         } else {
             $_SESSION['erreur'] = true;
