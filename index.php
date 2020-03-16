@@ -85,7 +85,7 @@ switch ($action) {
         changePasswordUsers($initials,$password,$password2);
         break;
     case 'myaccount':
-        require_once 'view/myAccount.php';
+        moncompte();
         break;
 
     default: // unknown action

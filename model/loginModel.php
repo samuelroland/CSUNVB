@@ -9,13 +9,13 @@ function getListUsers()
 {
     return json_decode(file_get_contents("model/dataStorage/users.json"),true);
 }
-function getUser($initials)
+function getUser($iniOrId)
 {
 
     $listUsers = getListUsers();
     foreach ($listUsers as $User)
     {
-        if ($User['initials'] == $initials)
+        if ($User['initials'] == $iniOrId || $User['id'] == $iniOrId)
         {
             return $User;
         }

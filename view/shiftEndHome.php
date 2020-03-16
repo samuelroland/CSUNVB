@@ -32,7 +32,6 @@ $title = "CSU-NVB - Remise de garde";
                         } ?></td>
 
                     <td><?php foreach ($guardusenovas as $guardusenova) {
-                            echo var_dump($guardusenova['nova_id']);
                             if ($guardsheet['id'] == $guardusenova['guardsheet_id']) {
 
                                 foreach ($novas as $nova) {

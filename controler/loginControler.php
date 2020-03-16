@@ -84,6 +84,12 @@ function changePassword($password, $password2)
 
     }
 }
+function moncompte()
+{
+    $id = $_SESSION['user'][0];
+    $Userlog = getUser($id);
 
+    require_once 'view/myAccount.php';
+}
 
 ?>
