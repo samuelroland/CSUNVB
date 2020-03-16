@@ -11,7 +11,7 @@ require_once 'model/novasModel.php';
 require_once 'model/stupSheetModel.php';
 require_once 'model/batchesModel.php';
 
-function drugdetails()
+function drugdetails()  //détails d'une feuille de stups
 {
     $drugs = getAllDrugs();
     $bases = getAllBases();
@@ -21,7 +21,7 @@ function drugdetails()
     require 'view/drugsDetails.php';
 }
 
-function drugHomePage($week, $base)
+function drugHomePage() //page d'accueil du choix des feuilles de stups
 {
     $bases = getAllBases();
     $stupsheets = getAllSheets();

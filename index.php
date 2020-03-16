@@ -28,6 +28,7 @@ require "controler/shiftEndControler.php";
 require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
+require "controler/Help.php";
 
 var_dump($_SESSION);
 if (isset($_SESSION['user']) == false && $action != "tryLogin")
@@ -51,7 +52,7 @@ switch ($action) {
         todoListHomePage();
         break;
     case 'drughome':
-        drugHomePage($week, $base); // //liste des semaines et des bases pour choisir la feuille de stups
+        drugHomePage(); // //liste des semaines et des bases pour choisir la feuille de stups
         break;
     case "detaildrug":
         drugdetails(); //page détails d'une feuille de stups avec tableaux
