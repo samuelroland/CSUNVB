@@ -28,6 +28,7 @@ require "controler/shiftEndControler.php";
 require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
+require "controler/Help.php";
 
 if (isset($_SESSION['user']) == false && $action != "tryLogin")
 {
