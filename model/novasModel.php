@@ -26,7 +26,7 @@ function getANova($number){
     }
 }
 function readGuardUseNovas(){
-    return json_decode(file_get_contents("model/dataStorage/guard_use_novas.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/guard_use_nova.json"),true);
 }
 
 function saveNovas($items)
