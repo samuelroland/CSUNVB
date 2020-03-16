@@ -37,7 +37,6 @@ require_once 'controler/todoListControler.php';
             if ($numweek == 1) {
 
             } else {
-                var_dump($numweek);
                 echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&week=$semmoins'><</a></button>";
             }
 
