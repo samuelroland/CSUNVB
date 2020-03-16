@@ -13,7 +13,8 @@
     <link href="/css/drugs.css" rel="stylesheet">
 
     <!-- Icons -->
-    <link href="assets/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="assets/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet"
+          type="text/css"/>
     <link href="assets/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css"/>
 
     <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
@@ -45,10 +46,12 @@
         <div class="row banner">
             <img class="col-2" src="/assets/images/logo.png">
             <a href="index.php" class="col-10 text-center mt-5 text-decoration-none"><h1>CSU-NVB</h1></a>
-            <?php if(isset($_SESSION["user"])){?>
-            <a href='index.php?action=disconnect' class="btn btn-primary m-1 pull-right">Disconnect</a>
-            <p>Welcome <strong><?= $_SESSION["user"][1]?></strong>, vous êtes connecté à <strong><?= $_SESSION['user'][3]['name']?></strong></p>
-            <?php }?>
+            <?php if (isset($_SESSION["user"])) { ?>
+                <a href='index.php?action=disconnect' class="btn btn-primary m-1 pull-right">Disconnect</a>
+                <a href='index.php?action=myaccount' class="btn btn-primary m-1 pull-right">Mon compte</a>
+                <p>Welcome <strong><?= $_SESSION["user"][1] ?></strong>, vous êtes connecté à
+                    <strong><?= $_SESSION['user'][3]['name'] ?></strong></p>
+            <?php } ?>
         </div>
     </header>
 

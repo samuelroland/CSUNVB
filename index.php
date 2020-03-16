@@ -84,6 +84,9 @@ switch ($action) {
     case 'changePasswordUser':
         changePasswordUsers($initials,$password,$password2);
         break;
+    case 'myaccount':
+        require_once 'view/myAccount.php';
+        break;
 
     default: // unknown action
         if (isset($_SESSION['user']) && $_SESSION['user'][4] != true) {
