@@ -29,7 +29,7 @@ require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
 
-
+var_dump($_SESSION);
 if (isset($_SESSION['user']) == false && $action != "tryLogin")
 {
     $action = "error";
@@ -80,8 +80,11 @@ switch ($action) {
     case 'todolisthome':
         todoListDetailedWeek($semaine,$daythings,$task);
         break;
+    case 'verifymdp':
+        verifymdp($password,$password2,$confirmpsd);
+        break;
     case 'changePassword':
-        changePassword($password,$password2,$confirmpsd);
+        changePassword($password,$password2);
         break;
     case 'changePasswordUser':
         changePasswordUsers($initials,$password,$password2);

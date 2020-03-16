@@ -29,7 +29,7 @@ $title = "CSU-NVB - myAccount";
         </form>
         <br>
         <h3>Securité</h3><hr>
-        <a href="?action=changePersoPassword">Changer votre mot de passe</a>
+        <a href="?action=changePassword">Changer votre mot de passe</a>
 
 
     </div>

@@ -796,16 +796,17 @@
     "id": 100,
     "initials": "MCH",
     "lastname": "Cash",
-    "password": "$2y$10$i0cgyQlhtTl4Gp1eHX1GK.37umWwI9mqWsXHqTQLjFWIyt5e7J6nS",
+    "password": "$2y$10$RvlIAnK7MkPTeWhd02xfou8xvAo0evXzYtKMhfUM.4LVhkaon8gPC",
     "firstname": "Michelle",
-    "admin": false
+    "admin": false,
+    "firstLogin": false
   },
   {
     "id": 103,
     "initials": "rot",
     "firstname": "root",
     "lastname": "root",
-    "password": "$2y$10$aS0pC7lfqZC5YUTrH6ieHeRjTzHLgp5yEBCW7plwpra9bo6U4cAPO",
+    "password": "$2y$10$ALcPc\/m9COc\/FRCyC3tLfe9Aqt47LwMvFt1zBEiZPz9Z8NDcT0A4O",
     "admin": true,
     "firstLogin": false
   }

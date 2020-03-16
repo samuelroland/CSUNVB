@@ -57,17 +57,14 @@ function adminTrue($UserVef)
 
 }
 
-function changePassword($password, $password2,$confirmpsd)
+function changePassword($password, $password2)
 {
-    $id = $_SESSION['user'][0];
-    $UserLog = getUser($id);
-    if(password_verify($confirmpsd, $UserLog['password']))
-    {
+    if ($password != "") {
+
         $listUsers = getListUsers();
         if ($password == $password2) {
             for ($i = 0; $i < count($listUsers); $i++) {
                 if ($listUsers[$i]['id'] == $_SESSION['user'][0]) {
-
                     $_SESSION['user'][4] = false;
                     $listUsers[$i]['firstLogin'] = false;
                     $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
@@ -86,12 +83,12 @@ function changePassword($password, $password2,$confirmpsd)
             require_once 'view/firstLogin.php';
 
         }
-    }else{
-        $_SESSION['erreur'] = true;
+
+    } else {
         require_once 'view/changePassword.php';
     }
-
 }
+
 function moncompte()
 {
     $id = $_SESSION['user'][0];
@@ -100,4 +97,15 @@ function moncompte()
     require_once 'view/myAccount.php';
 }
 
+function verifymdp($password, $password2, $confirmpsd)
+{
+    $id = $_SESSION['user'][0];
+    $UserLog = getUser($id);
+    if (password_verify($confirmpsd, $UserLog['password'])) {
+        changePassword($password, $password2);
+    } else {
+        $_SESSION['erreur'] = true;
+        require_once 'view/changePassword.php';
+    }
+}
 ?>

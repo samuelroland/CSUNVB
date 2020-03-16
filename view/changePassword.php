@@ -11,13 +11,14 @@ $title = "CSU-NVB - changePassword";
     <div id="container">
         <!-- zone de connexion -->
 
-        <form action="index.php?action=changePasswordUser" method="POST" class="form-group text-center">
+        <form action="index.php?action=<?php if($_SESSION['user'][2] == true)echo "changePasswordUser";else{echo "verifymdp";}?>" method="POST" class="form-group text-center">
             <h1 class="">Changement d'un mot de passe</h1>
             <br>
             <img src="/assets/images/login.png" class="center w-25"/><br>
 
-            <?php if($_SESSION['user'][3] == true)
+            <?php if($_SESSION['user'][2] == true)
             {?>
+
                 <label><b>Initiales</b></label>
                 <input type="text" placeholder="Entrer ses initiales" name="initials" required>
                 <br>
@@ -26,7 +27,7 @@ $title = "CSU-NVB - changePassword";
                     <label><b>Votre mot de passe actuel</b></label>
                     <input type="password" placeholder="Entrer votre mot de passe actuel" name="confirmpsd" required>
                     <br>
-            <?=}?>
+            <?php } ?>
 
             <label><b>Nouveau mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" required><br>
@@ -52,6 +53,4 @@ $title = "CSU-NVB - changePassword";
 <?php
 $content = ob_get_clean();
 require "gabarit.php";
-?>
-
 ?>
