@@ -10,3 +10,6 @@ CSU Documents/
 #ngrok app and exe files
 ngrok.exe
 *.exe
+
+#MacOS
+.DS_Store
