@@ -9,8 +9,8 @@ $base = $bases[$_GET["base"]];
 <!-- Tableau -->
 
 <h3>Contrôle des stupéfiants Hebdomadaire</h3>
-<button class="btn btn-info"><</button><h3>Semaine N <?= $_GET["week"]; ?> - Feuille fermée</h3>
-<button class="btn btn-info">></button>
+<a href="?base=<?= $_GET["base"] ?>&action=detaildrug&week=<?= $_GET["week"]-1 ?>"><button class="btn btn-info"><</button></a><h3>Semaine N <?= $_GET["week"]; ?> - Feuille fermée</h3>
+<a href="?base=<?= $_GET["base"] ?>&action=detaildrug&week=<?= $_GET["week"]+1 ?>"><button class="btn btn-info">></button></a></button>
 <h3>Sur le site de <?= $base["name"]; ?></h3>
 
 <!-- Morphine -->
