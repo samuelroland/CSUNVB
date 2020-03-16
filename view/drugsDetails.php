@@ -2,6 +2,7 @@
 ob_start();
 $title = "CSU-NVB - Stupéfiants";
 $base = $bases[$_GET["base"]];
+$week = getASheet($_GET["week"] + 2000)
 ?>
 <div class="row m-2">
     <h1>Stupéfiants</h1>
@@ -17,7 +18,11 @@ $base = $bases[$_GET["base"]];
     </a>
 <?php } ?>
 
-<h3>Semaine N <?= $_GET["week"]; ?> - Feuille fermée</h3>
+<h3>Semaine N <?= $_GET["week"]; ?> - Feuille <?php if ($week["state"] == "open") {
+        echo "ouverte";
+    } else {
+        echo "fermée";
+    } ?></h3>
 <?php if (changeWeekUp($_GET["base"], $_GET["week"]) == null) { ?>
     <button class="btn btn-info disabled">></button>
 <?php } else { ?>
