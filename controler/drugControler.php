@@ -63,7 +63,7 @@ function changeWeekUp($base, $weekNumber)
         }
     }
 
-    if ($afterWeek == null) {
+    if ($afterWeek == 10000000) {
         return null;
     } else {
         return $afterWeek - 2000;
