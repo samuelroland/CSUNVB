@@ -1,13 +1,15 @@
 <?php
 
-function SelectSheet ($mode) {
+function SelectSheets ($mode) {
     switch ($mode) {
         case "Stups":
             require"model\stupSheetModel.php";
-            $sheet = getAllSheets();
+            $sheets = getAllSheets();
+            $action = "detaildrug";
         case "Todo":
-            require"model\todoListModel.php";
-            $sheet = getTodoListWeeks();
+            require"model/todoListModel.php";
+            $sheets = getTodoListWeeks();
+            $action = "todolisthome";
     }
 }
 

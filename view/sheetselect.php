@@ -14,7 +14,7 @@
                 </select>
             </th>
         </table>
-        <input type="hidden" name="action" value="detaildrug">
+        <input type="hidden" name="action=<?$action?>:" value="detaildrug">
         <p id="divListFeuilles">Feuilles de la base de <strong><?= $_SESSION['user'][3]['name'] ?></strong></p>
         <div class="col-md-14">
             <?php
