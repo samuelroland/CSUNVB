@@ -18,7 +18,7 @@ function drugdetails()
     $novas = getAllNovas();
     $stupsheets = getAllSheets();
     $batches = getAllBatches();
-    require'view/drugsDetails.php';
+    require 'view/drugsDetails.php';
 }
 
 function drugHomePage($week, $base)
@@ -26,6 +26,49 @@ function drugHomePage($week, $base)
     $bases = getAllBases();
     $stupsheets = getAllSheets();
     require_once 'view/drugsHome.php';
+}
+
+function changeWeekDown($base, $weekNumber)
+{
+    $weeks = getAllSheets();
+    $weekNumber += 2000;
+
+    $beforWeek = null;
+    foreach ($weeks as $week) {
+        if ($week["base_id"] == $base && $week["week"] < $weekNumber) {
+            if ($week["week"] > $beforWeek) {
+                $beforWeek = $week["week"];
+            }
+        }
+    }
+
+    if ($beforWeek == null) {
+        return $beforWeek;
+    } else {
+        return $beforWeek - 2000;
+    }
+}
+
+function changeWeekUp($base, $weekNumber)
+{
+    $weeks = getAllSheets();
+    $weekNumber += 2000;
+
+    $afterWeek = 10000000;
+    foreach ($weeks as $week) {
+        if ($week["base_id"] == $base && $week["week"] > $weekNumber) {
+            if ($week["week"] < $afterWeek) {
+                $afterWeek = $week["week"];
+            }
+        }
+    }
+
+    if ($afterWeek == 10000000) {
+        return null;
+    } else {
+        return $afterWeek - 2000;
+    }
+
 }
 
 ?>

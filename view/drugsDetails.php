@@ -9,9 +9,23 @@ $base = $bases[$_GET["base"]];
 <!-- Tableau -->
 
 <h3>Contrôle des stupéfiants Hebdomadaire</h3>
-<a href="?base=<?= $_GET["base"] ?>&action=detaildrug&week=<?= $_GET["week"]-1 ?>"><button class="btn btn-info"><</button></a><h3>Semaine N <?= $_GET["week"]; ?> - Feuille fermée</h3>
-<a href="?base=<?= $_GET["base"] ?>&action=detaildrug&week=<?= $_GET["week"]+1 ?>"><button class="btn btn-info">></button></a></button>
-<h3>Sur le site de <?= $base["name"]; ?></h3>
+<?php if (changeWeekDown($_GET["base"], $_GET["week"]) == null) { ?>
+    <button class="btn btn-info disabled"><</button>
+<?php } else { ?>
+    <a href="?base=<?= $_GET["base"] ?>&action=detaildrug&week=<?= changeWeekDown($_GET["base"], $_GET["week"]) ?>">
+        <button class="btn btn-info"><</button>
+    </a>
+<?php } ?>
+
+<h3>Semaine N <?= $_GET["week"]; ?> - Feuille fermée</h3>
+<?php if (changeWeekUp($_GET["base"], $_GET["week"]) == null) { ?>
+    <button class="btn btn-info disabled">></button>
+<?php } else { ?>
+    <a href="?base=<?= $_GET["base"] ?>&action=detaildrug&week=<?= changeWeekUp($_GET["base"], $_GET["week"]) ?>">
+        <button class="btn btn-info">></button>
+    </a>
+<?php } ?>
+
 
 <!-- Morphine -->
 <table class="table table-striped table-bordered col-1 aligncenter">
