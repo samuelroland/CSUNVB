@@ -3,6 +3,9 @@ ob_start();
 $date = date('d/M/Y');
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+$queryYear = $_GET ['year'];
+$queryMonth = $_GET ['month'];
+$now = time();
 $semplus = $semaine + 1;
 $semmoins = $semaine - 1;
 
@@ -44,13 +47,12 @@ require_once 'controler/todoListControler.php';
             ?>
             <?php
             if ($semaine != 52) {
-
-
                 echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&semaine=$semplus'>></a></button>";
             }
 
             ?>
             <?php
+            // Seulement les admins peuvent voir les boutons
             if ($_SESSION['user'][2] == true) {
                 echo "<button class='btn btn-info btnmenu'>Ajouter une tache</button>";
                 echo "<button class='btn btn-info btnmenu' >Modifier une tache</button>";
@@ -68,9 +70,31 @@ require_once 'controler/todoListControler.php';
     <div class="horizontal"><span style="font-weight: bold">  JOURNÉE</span></div>
 
     <?php
+    // Affichage des jours de la semaine et des jours du mois
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
             echo "<div class='dayheader'>$date</div>";
+            // Trouver le jour de la semaine d'une date donné
+        $firstDay = date("N", strtotime($queryYear-$queryMonth-01));
+        $lastDayLastMonth = date("t", strtotime("-1 month", strtotime("$queryYear-$queryMonth-01"))); // 31
+        $monthDate = "2019-$queryMonth-01";
+        // Combien y-a-t'il de jours de la semaine dans un mois 28-31
+        $nbDays = date("t", strtotime($monthDate));
+        $dates = date("d");
+
+        // date numéro de semaine
+        $queryDate = date("W");
+
+
+        // test tout les jours de l'année' date en cours date W
+        foreach ($dates as $date) {
+            if($queryDate = 13) {
+                return $queryDate;
+            } else{
+                return null;
+            }
+        }
+        var_dump($queryDate);
         foreach ($tasks as $task) {
             if ($task['daything'] == 1) {
                 ?>
@@ -83,7 +107,6 @@ require_once 'controler/todoListControler.php';
     }
     for ($i=1;$i>7;$i++){
     echo "<div class='dayheader'>$date</div>";
-
 }
     ?>
 
