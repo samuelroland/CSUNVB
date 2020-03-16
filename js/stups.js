@@ -22,6 +22,9 @@ function init() {
 }
 
 function changestupssheets() {
+    //Changer le texte "Feuilles de la base xx" avec la base sélectionnée au dessus:
+    divListFeuilles.innerHTML = "Feuilles de la base de <strong>" + Sites.options[Sites.selectedIndex].text + "</strong>";
+
     baseid = Sites.selectedIndex
 
     bloctodisplay = document.getElementById("divBase" + baseid)

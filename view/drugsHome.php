@@ -3,7 +3,6 @@ ob_start();
 $title = "CSU-NVB - Liste Stupéfiants";
 ?>
     <h1>Feuilles de stupéfiants</h1>
-    <h2>Choix de la base et de la feuille</h2><br>
     <p>Choix de la base</p>
     <form id="weekForm" action="/?action=detaildrug" method="GET">
         <table class=" table table-striped">
@@ -22,7 +21,7 @@ $title = "CSU-NVB - Liste Stupéfiants";
             </th>
         </table>
         <input type="hidden" name="action" value="detaildrug">
-        <p>Feuilles de la base choisie</p>
+        <p id="divListFeuilles">Feuilles de la base de <strong><?= $_SESSION['user'][3]['name'] ?></strong></p>
         <div class="col-md-14">
             <?php
             $indexelementinrun = 0;
