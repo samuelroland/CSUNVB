@@ -36,6 +36,7 @@
     <script src="js/shiftEnd.js"></script>
     <script src="js/stups.js"></script>
     <script src="js/todoList.js"></script>
+    <script src="js/SheetSelect.js"></script>
 
 </head>
 <body>
