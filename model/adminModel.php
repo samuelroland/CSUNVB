@@ -71,4 +71,8 @@ function createAdminItem($item)
     saveAdminItem($items);
     return ($item); // Pour que l'appelant connaisse l'id qui a été donné
 }
+function getBases()
+{
+    return json_decode(file_get_contents("model/dataStorage/bases.json"),true);
+}
 ?>
