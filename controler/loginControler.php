@@ -88,7 +88,7 @@ function changePassword($password, $password2,$confirmpsd)
         }
     }else{
         $_SESSION['erreur'] = true;
-        require_once 
+        require_once 'view/changePassword.php';
     }
 
 }

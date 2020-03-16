@@ -28,7 +28,7 @@ require "controler/shiftEndControler.php";
 require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
-require "controler/Help.php";
+
 
 if (isset($_SESSION['user']) == false && $action != "tryLogin")
 {
@@ -88,6 +88,9 @@ switch ($action) {
         break;
     case 'myaccount':
         moncompte();
+        break;
+    case 'help':
+        require "controler/Help.php";
         break;
 
     default: // unknown action
