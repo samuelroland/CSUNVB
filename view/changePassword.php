@@ -16,9 +16,17 @@ $title = "CSU-NVB - changePassword";
             <br>
             <img src="/assets/images/login.png" class="center w-25"/><br>
 
-            <label><b>Initiales</b></label>
-            <input type="text" placeholder="Entrer ses initiales" name="initials" required>
-            <br>
+            <?php if($_SESSION['user'][3] == true)
+            {?>
+                <label><b>Initiales</b></label>
+                <input type="text" placeholder="Entrer ses initiales" name="initials" required>
+                <br>
+            <?php } else
+                {?>
+                    <label><b>Votre mot de passe actuel</b></label>
+                    <input type="password" placeholder="Entrer votre mot de passe actuel" name="confirmpsd" required>
+                    <br>
+            <?=}?>
 
             <label><b>Nouveau mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" required><br>

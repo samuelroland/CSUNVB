@@ -17,6 +17,7 @@ if (isset($_POST["initials"]) || isset($_POST["password"])) {
     $password2 = $_POST["password2"];
     $admin = $_POST ["admin"];
     $department = $_POST["department"];
+    $confirmpsd = $_POST["confirmpsd"];
 }
 // Include all models
 require "model/basesModel.php";
@@ -79,7 +80,7 @@ switch ($action) {
         todoListDetailedWeek($semaine,$daythings,$task);
         break;
     case 'changePassword':
-        changePassword($password,$password2);
+        changePassword($password,$password2,$confirmpsd);
         break;
     case 'changePasswordUser':
         changePasswordUsers($initials,$password,$password2);

@@ -57,32 +57,40 @@ function adminTrue($UserVef)
 
 }
 
-function changePassword($password, $password2)
+function changePassword($password, $password2,$confirmpsd)
 {
-    $listUsers = getListUsers();
-    if ($password == $password2) {
-        //foreach ($users as $user) {
-        for ($i = 0; $i < count($listUsers); $i++) {
-            if ($listUsers[$i]['id'] == $_SESSION['user'][0]) {
+    $id = $_SESSION['user'][0];
+    $UserLog = getUser($id);
+    if(password_verify($confirmpsd, $UserLog['password']))
+    {
+        $listUsers = getListUsers();
+        if ($password == $password2) {
+            for ($i = 0; $i < count($listUsers); $i++) {
+                if ($listUsers[$i]['id'] == $_SESSION['user'][0]) {
 
-                $_SESSION['user'][4] = false;
-                $listUsers[$i]['firstLogin'] = false;
-                $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
-                $listUsers[$i]['password'] = $hash;
+                    $_SESSION['user'][4] = false;
+                    $listUsers[$i]['firstLogin'] = false;
+                    $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+                    $listUsers[$i]['password'] = $hash;
+                }
             }
+            $newListUsers = $listUsers;
+
+            file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
+
+
+            require_once 'view/home.php';
+
+        } else {
+            $_SESSION['erreur'] = true;
+            require_once 'view/firstLogin.php';
+
         }
-        $newListUsers = $listUsers;
-
-        file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
-
-
-        require_once 'view/home.php';
-
-    } else {
+    }else{
         $_SESSION['erreur'] = true;
-        require_once 'view/firstLogin.php';
-
+        require_once 
     }
+
 }
 function moncompte()
 {
