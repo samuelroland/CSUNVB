@@ -6,32 +6,35 @@
  * Date: Février 2020
  **/
 
-document.addEventListener("DOMContentLoaded", init);
+$(document).ready(function () {
+    $("label").on("click", function (lbl) {
+        console.log(lbl)
+        numwek = $(lbl.target).data("weeknb");
+        week.value = numwek
+        document.getElementById("weekForm").submit();
+    })
+})
 
+document.addEventListener("DOMContentLoaded", init)
 
 function init() {
-
-    cmdedit.addEventListener("click", taskedit);
-    cmdsave.addEventListener("click", tasksave);
-
-
-    function taskedit() {
-        div = div.children;
-        for (nbrow = 0; nbrow < div.children.length; nbrow++) {
-            row = div.children[nbrow];
-
-            for (nbcol = 0; nbcol < row.children.length; nbcol++) {
-                div = row.children[nbcol];
-                inp = document.createElement('input')
-                inp.type = 'text';
-                inp.value = div.innerText;
-                div.innerText = '';
-
-                div.appendChild(inp)
-
-
-            }
-
-        }
-    }
+    document.getElementById("Sites").addEventListener("change", changestupssheets)
 }
+
+function changestupssheets() {
+    //Changer le texte "Feuilles de la base xx" avec la base sélectionnée au dessus:
+    divListFeuilles.innerHTML = "Feuilles de la base de <strong>" + Sites.options[Sites.selectedIndex].text + "</strong>";
+
+    baseid = Sites.selectedIndex
+
+    bloctodisplay = document.getElementById("divBase" + baseid)
+
+    //Cacher tous les blocs
+    for (i = 0; i < Sites.options.length; i++) {
+        document.getElementById("divBase" + i).classList.add("d-none")
+    }
+
+    //Afficher le bloc du site
+    bloctodisplay.classList.remove("d-none")
+}
+
