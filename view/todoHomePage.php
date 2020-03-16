@@ -1,43 +1,14 @@
 <?php
 ob_start();
-
+$title = "CSU-NVB - Tâches hebdomadaires";
 ?>
-<div class="">
-    <h1>Tâches hebdomadaires de la base
-        <?php if($_SESSION['user'][3]['id'] == 3) echo 'Saint-Loup';?>
-        <?php if($_SESSION['user'][3]['id'] == 2) echo 'Payerne';?>
-        <?php if($_SESSION['user'][3]['id'] == 5) echo 'Yverdon';?>
-        <?php if($_SESSION['user'][3]['id'] == 1) echo 'La Valée-de-Joux';?>
-        <?php if($_SESSION['user'][3]['id'] == 4) echo 'Saite-Croix';?>
-
-    <script src="js/todoList.js"></script>
-
-</div>
-<table class=" table table-striped">
-    <div class="navbar nav-pills">
-        <th>
-            <select class="custom-select" id="Sites">
-                <option value="3"<?php if($_SESSION['user'][3]['id'] == 3) echo 'selected="selected"';?>>Saint-Loup</option>
-                <option value="4"<?php if($_SESSION['user'][3]['id'] == 2) echo 'selected="selected"';?>>Payerne</option>
-                <option value="1"<?php if($_SESSION['user'][3]['id'] == 5) echo 'selected="selected"';?>>Yverdon</option>
-                <option value="5"<?php if($_SESSION['user'][3]['id'] == 1) echo 'selected="selected"';?>>La Valée-de-Joux</option>
-                <option value="2"<?php if($_SESSION['user'][3]['id'] == 4) echo 'selected="selected"';?>>Saite-Croix</option>
-            </select>
-        </th>
-    </div>
-</table>
-
-<div class="col-md-14">
-    <?php
-    for ($i = 1; $i < 53; $i++) {
-        echo "<a href='?action=todolisthome&semaine=$i' ><button class='btn btn-info btncont'>Semaine n° $i</button></a>";
-    }
-    ?>
-</div>
+    <h1>Feuilles de Tâches hebdomadaires</h1>
 
 
+<?php SelectSheets("Todo"); //générer la vue de la sélection des feuilles
+?>
 
 <?php
 $content = ob_get_clean();
-require "gabarit.php";
+require "view/gabarit.php";
 ?>

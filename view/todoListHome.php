@@ -6,11 +6,10 @@ $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche
 $queryYear = $_GET ['year'];
 $queryMonth = $_GET ['month'];
 $now = time();
-$semplus = $semaine + 1;
-$semmoins = $semaine - 1;
+$semplus = $week + 1;
+$semmoins = $week - 1;
 
-$semplus = $semaine + 1;
-$semmoins = $semaine - 1;
+
 
 
 ?>
@@ -34,19 +33,19 @@ require_once 'controler/todoListControler.php';
 <table class=" table table-striped">
     <div class="navbar nav-pills">
         <th>  <?php
-            if ($semaine == 1) {
+            if ($week == 1) {
 
             } else {
                 echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&semaine=$semmoins'><</a></button>";
             }
 
-            ?>Semaine <?php echo $semaine; ?>
+            ?>Semaine <?php echo $week; ?>
             <?php
 
 
             ?>
             <?php
-            if ($semaine != 52) {
+            if ($week != 52) {
                 echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&semaine=$semplus'>></a></button>";
             }
 
