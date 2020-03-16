@@ -8,6 +8,12 @@ $title = "CSU-NVB - Remise de garde";
 <div class="row m-2">
     <h1>Remises de garde</h1>
 
+    <table class="table table-bordered " style="text-align: center">
+
+            <th>Date</th>
+            <th>État</th>
+            <th>Véhicule</th>
+            <th></th>
     <?php
    
     foreach ($guardsheets as $guardsheet) {
@@ -15,13 +21,7 @@ $title = "CSU-NVB - Remise de garde";
         if ($guardsheet['base_id'] == $_SESSION['user'][3]['id']) {
 
             ?>
-            <table class="table table-bordered " style="text-align: center">
-                <tr>
-                    <td>Date</td>
-                    <td>État</td>
-                    <td>Véhicule</td>
-                    <td></td>
-                </tr>
+
                 <tr>
                     <td><?= $guardsheet['date']; ?></td>
                     <td><?php if ($guardsheet['state'] == "open") {
@@ -50,13 +50,11 @@ $title = "CSU-NVB - Remise de garde";
                            style='bt-align: center'>Vue détaillée</a>
                     </td>
                 </tr>
-            </table>
-
 
             <?php
         }
     }
-    ?>
+    ?></table>
 
 
 
