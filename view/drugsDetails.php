@@ -71,28 +71,21 @@ $week = getASheet($_GET["week"] + 2000)
         <th rowspan="2" class="txtvertical">Pharmacie</th>
     </tr>
     <tr>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-
+        <?php
+        for ($i = 0; $i < 7; $i++) {
+            foreach ($week["novas"] as $nova) {
+                echo "<th>$nova</th>";
+            }
+            switch (count($week["novas"])) {
+                case 1 :
+                    echo "<th></th>";
+                    echo "<th></th>";
+                    break;
+                case 2 :
+                    echo "<th></th>";
+                    break;
+            }
+        } ?>
     </tr>
     </thead>
     <tbody>
