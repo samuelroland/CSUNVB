@@ -101,4 +101,6 @@ if (isset($sheets[2]["novas"])) {
     print "Pas OK\n";
 }
 
+var_dump($sheets);
+
 ?>
