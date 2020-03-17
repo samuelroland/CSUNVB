@@ -102,4 +102,16 @@ function getSheetUseNova(){
     return $uses;
 }
 
+function getSheetUseBatch(){
+    $batches = getAllBatches();
+    $uses = json_decode(file_get_contents("model/dataStorage/stupSheet_use_batch.json"), true);
+
+    foreach ($uses as $key => $use) {
+        $batch_id = $use["batch_id"];
+        $batch = $batches[$batch_id]["number"];
+        $uses[$key]["batch"] = $batch;
+    }
+    return $uses;
+}
+
 ?>

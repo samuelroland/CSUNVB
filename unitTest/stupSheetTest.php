@@ -7,6 +7,7 @@
 
 require_once "model/stupSheetModel.php";
 require_once "model/novasModel.php";
+require_once "model/batchesModel.php";
 
 print "Fonction de récupération des feuilles : ";
 
@@ -100,6 +101,11 @@ if (isset($sheets[2]["novas"])) {
 } else {
     print "Pas OK\n";
 }
+
+print "Affiche (2 pour l'affichage) après la fonction d'ajout du numéro de l'ambulance dans la stupSheet_use_batch : ";
+
+var_dump(getSheetUseBatch()[21]);
+var_dump(getSheetUseBatch()[87]);
 
 var_dump($sheets);
 
