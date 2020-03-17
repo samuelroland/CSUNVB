@@ -6,22 +6,19 @@ $title = "CSU-NVB - Remise de garde";
 ?>
 <script src="js/shiftEnd.js"></script>
 <div class="row m-2">
-    <h1>Remises de garde</h1>
+    <h1>Remises de garde pour : <?=$_SESSION['user'][3]['name']?></h1>
+    <table class="table table-bordered " style="text-align: center">
+
+            <th>Date</th>
+            <th>État</th>
+            <th>Véhicule</th>
+            <th></th>
 
     <?php
-   
     foreach ($guardsheets as $guardsheet) {
-
         if ($guardsheet['base_id'] == $_SESSION['user'][3]['id']) {
-
             ?>
-            <table class="table table-bordered " style="text-align: center">
-                <tr>
-                    <td>Date</td>
-                    <td>État</td>
-                    <td>Véhicule</td>
-                    <td></td>
-                </tr>
+
                 <tr>
                     <td><?= $guardsheet['date']; ?></td>
                     <td><?php if ($guardsheet['state'] == "open") {
@@ -37,7 +34,7 @@ $title = "CSU-NVB - Remise de garde";
                                 foreach ($novas as $nova) {
                                     if ( $guardusenova['nova_id'] == $nova['id'] ) {
                                          ?>
-                                        <?= $nova['number'] //afficher numéro véhicule  ?>
+                                        <?= $nova['number'] //afficher numéro véhicule  ?>/
 
                                     <?php }
                                 }
@@ -50,13 +47,13 @@ $title = "CSU-NVB - Remise de garde";
                            style='bt-align: center'>Vue détaillée</a>
                     </td>
                 </tr>
-            </table>
+
 
 
             <?php
         }
     }
-    ?>
+    ?></table>
 
 
 
