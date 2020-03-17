@@ -2,7 +2,7 @@
 
 session_start();
 
-$semaine = $_GET['semaine'];
+$numweek = $_GET['week'];
 $daythings = $_GET['daything'];
 $sheetid = $_GET['sheetid'];
 $action = $_GET['action'];
@@ -17,6 +17,7 @@ if (isset($_POST["initials"]) || isset($_POST["password"])) {
     $password2 = $_POST["password2"];
     $admin = $_POST ["admin"];
     $department = $_POST["department"];
+    $confirmpsd = $_POST["confirmpsd"];
 }
 // Include all models
 require "model/basesModel.php";
@@ -27,7 +28,9 @@ require "controler/shiftEndControler.php";
 require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
+require "controler/Help.php";
 
+var_dump($_SESSION);
 if (isset($_SESSION['user']) == false && $action != "tryLogin")
 {
     $action = "error";
@@ -49,7 +52,7 @@ switch ($action) {
         todoListHomePage();
         break;
     case 'drughome':
-        drugHomePage($week, $base); // //liste des semaines et des bases pour choisir la feuille de stups
+        drugHomePage(); // //liste des semaines et des bases pour choisir la feuille de stups
         break;
     case "detaildrug":
         drugdetails(); //page détails d'une feuille de stups avec tableaux
@@ -61,7 +64,7 @@ switch ($action) {
         createAccount($initials, $firstname, $lastname, $password, $password2, $admin);
         break;
     case 'disconnect':
-        diconnect();
+        disconnect();
         break;
     case 'add':
         addNewToDo();
@@ -76,7 +79,10 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($semaine,$daythings,$task);
+        todoListDetailedWeek($numweek,$daythings,$task);
+        break;
+    case 'verifymdp':
+        verifymdp($password,$password2,$confirmpsd);
         break;
     case 'changePassword':
         changePassword($password,$password2);
@@ -86,6 +92,12 @@ switch ($action) {
         break;
     case 'myaccount':
         moncompte();
+        break;
+    case 'bases':
+        bases();
+        break;
+    case 'help':
+        require "controler/Help.php";
         break;
 
     default: // unknown action

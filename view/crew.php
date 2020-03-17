@@ -15,12 +15,20 @@ $users = readAdminItems();
         <th>Initials</th>
         <th>Prénom</th>
         <th>Nom</th>
+        <th>Status</th>
         <th>Admin</th>
     </tr>
 
     <?php
     foreach ($users as $user) {
-        echo "<tr><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] . "</td>";
+        echo "<tr><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] ."</td>";
+        if ($user['firstLogin'] == true)
+        {
+            echo "<td>Premier login à faire</td>";
+        }else
+        {
+            echo "<td>Utilisateur valide</td>";
+        }
         if ($user['id'] != $_SESSION['user'][0]) {
             if ($user['admin'] == true) {
 
@@ -31,7 +39,7 @@ $users = readAdminItems();
             }
         }else
             {
-                echo "</td><td>Ceci est votre utilisateur</td></tr>";
+                echo "<td>Ceci est votre utilisateur</td></tr>";
             }
     }
     ?>

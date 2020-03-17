@@ -40,7 +40,7 @@ function login()
     require_once 'view/login.php';
 }
 
-function diconnect()
+function disconnect()
 {
     session_unset();
     require_once "view/login.php";
@@ -59,31 +59,36 @@ function adminTrue($UserVef)
 
 function changePassword($password, $password2)
 {
-    $listUsers = getListUsers();
-    if ($password == $password2) {
-        //foreach ($users as $user) {
-        for ($i = 0; $i < count($listUsers); $i++) {
-            if ($listUsers[$i]['id'] == $_SESSION['user'][0]) {
+    if ($password != "") {
 
-                $_SESSION['user'][4] = false;
-                $listUsers[$i]['firstLogin'] = false;
-                $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
-                $listUsers[$i]['password'] = $hash;
+        $listUsers = getListUsers();
+        if ($password == $password2) {
+            for ($i = 0; $i < count($listUsers); $i++) {
+                if ($listUsers[$i]['id'] == $_SESSION['user'][0]) {
+                    $_SESSION['user'][4] = false;
+                    $listUsers[$i]['firstLogin'] = false;
+                    $hash = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+                    $listUsers[$i]['password'] = $hash;
+                }
             }
+            $newListUsers = $listUsers;
+
+            file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
+
+
+            disconnect();
+
+        } else {
+            $_SESSION['erreur'] = true;
+            require_once 'view/firstLogin.php';
+
         }
-        $newListUsers = $listUsers;
-
-        file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
-
-
-        require_once 'view/home.php';
 
     } else {
-        $_SESSION['erreur'] = true;
-        require_once 'view/firstLogin.php';
-
+        require_once 'view/changePassword.php';
     }
 }
+
 function moncompte()
 {
     $id = $_SESSION['user'][0];
@@ -92,4 +97,15 @@ function moncompte()
     require_once 'view/myAccount.php';
 }
 
+function verifymdp($password, $password2, $confirmpsd)
+{
+    $id = $_SESSION['user'][0];
+    $UserLog = getUser($id);
+    if (password_verify($confirmpsd, $UserLog['password'])) {
+        changePassword($password, $password2);
+    } else {
+        $_SESSION['erreur'] = true;
+        require_once 'view/changePassword.php';
+    }
+}
 ?>

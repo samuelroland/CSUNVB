@@ -7,12 +7,18 @@
 
 function getAllSheets(){
     $badArray = json_decode(file_get_contents("model/dataStorage/stupsheets.json"), true); //Prend les éléments d'un fichier Json
+    $novas = getSheetUseNova();
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
+        foreach ($novas as $key => $nova){
+            if ($nova["stupsheet_id"] == $p["id"]){
+                $p["novas"][$key] = $nova["nova"];
+            }
+        }
         $goodArray[$p["id"]] = $p;
     }
-    
+
     return $goodArray; //Retourne le tableau indexé avec ses id
 }
 
