@@ -32,7 +32,7 @@ $week = getASheet($_GET["week"] + 2000)
 <?php } ?>
 
 
-<!-- Morphine -->
+<?php foreach ($drugs as $drug) { ?>
 <table class="table table-striped table-bordered col-1 aligncenter">
     <thead>
     <tr>
@@ -71,8 +71,7 @@ $week = getASheet($_GET["week"] + 2000)
         <th rowspan="2" class="txtvertical">Pharmacie</th>
     </tr>
     <tr>
-        <?php
-        for ($i = 0; $i < 7; $i++) {
+        <?php for ($i = 0; $i < 7; $i++) {
             foreach ($week["novas"] as $nova) {
                 echo "<th>$nova</th>";
             }
@@ -90,7 +89,7 @@ $week = getASheet($_GET["week"] + 2000)
     </thead>
     <tbody>
     <tr>
-        <td colspan="2" class=""><strong>Morphine N</strong></td>
+        <td colspan="2" class=""><strong><?= $drug["name"] ?></strong></td>
         <td>X</td>
         <td>3-3</td>
         <td>7-7</td>
@@ -134,492 +133,60 @@ $week = getASheet($_GET["week"] + 2000)
         <td>X</td>
 
     </tr>
-    <tr>
-        <td colspan="2" class="">12345</td>
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
+    <?php foreach ($batches as $batch) {
+        if ($batch["drug"] == $drug["name"]) { ?>
+            <tr>
+                <td colspan="2" class=""><?= $batch["number"] ?></td>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
 
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
 
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
 
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
 
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
 
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
 
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
 
-    </tr>
-    <tr>
-        <td colspan="2" class="">13664</td>
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-    </tr>
+            </tr>
+        <?php }
+    } ?>
     </tbody>
 
 </table>
 
-
-<!-- Fentanyl -->
-<table class="table table-striped table-bordered col-1 aligncenter">
-    <thead>
-    <tr>
-        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
-                                                                    alt="stups logo" class="imgheadertable"></th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-    </tr>
-    <tr>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td colspan="2" class=""><strong>Fentanyl N</strong></td>
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-    </tr>
-    <tr>
-        <td colspan="2" class="">12345</td>
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-    </tr>
-    <tr>
-        <td colspan="2" class="">13664</td>
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-    </tr>
-    </tbody>
-
-</table>
-
-<!-- Temesta -->
-<table class="table table-striped table-bordered col-1 aligncenter">
-    <thead>
-    <tr>
-        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
-                                                                    alt="stups logo" class="imgheadertable"></th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-        <th colspan="3">Véhicules</th>
-        <th rowspan="2" class="txtvertical">Pharmacie</th>
-    </tr>
-    <tr>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-        <th>35</th>
-        <th>45</th>
-        <th>12</th>
-
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td colspan="2" class=""><strong>Temesta N</strong></td>
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-        <td>X</td>
-        <td>3-3</td>
-        <td>7-7</td>
-        <td>3-3</td>
-        <td>X</td>
-
-    </tr>
-    <tr>
-        <td colspan="2" class="">12345</td>
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-        <td>3</td>
-
-    </tr>
-    <tr>
-        <td colspan="2" class="">13664</td>
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-        <td>4</td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-        <td>2</td>
-
-    </tr>
-    </tbody>
-
-</table>
-
-
-<?php
+<?php }
 $content = ob_get_clean();
 require "gabarit.php";
 ?>
