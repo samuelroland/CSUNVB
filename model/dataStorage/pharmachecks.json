@@ -1,0 +1,38 @@
+{
+  "1": {
+    "id": 1,
+    "date": "2020-03-09",
+    "start": 6,
+    "end": 5,
+    "batch_id": 2,
+    "user_id": 1,
+    "stupsheet_id": 11
+  },
+  "2": {
+    "id": 2,
+    "date": "2020-03-09",
+    "start": 8,
+    "end": 8,
+    "batch_id": 4,
+    "user_id": 1,
+    "stupsheet_id": 11
+  },
+  "3": {
+    "id": 3,
+    "date": "2020-03-09",
+    "start": 6,
+    "end": 6,
+    "batch_id": 9,
+    "user_id": 1,
+    "stupsheet_id": 11
+  },
+  "4": {
+    "id": 4,
+    "date": "2020-03-09",
+    "start": 4,
+    "end": 2,
+    "batch_id": 15,
+    "user_id": 1,
+    "stupsheet_id": 11
+  }
+}
