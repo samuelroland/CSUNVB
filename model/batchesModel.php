@@ -5,22 +5,31 @@
   Date : 05.03.2020
 */
 
-function getAllBatches(){
+function getAllBatches()
+{
     $badArray = json_decode(file_get_contents("model/dataStorage/batches.json"), true); //Prend les éléments d'un fichier Json
+
+    $drugs = getAllDrugs();
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
+        foreach ($drugs as $drug) {
+            if ($p["drug_id"] == $drug["id"]) {
+                $p["drug"] = $drug["name"];
+            }
+        }
         $goodArray[$p["id"]] = $p;
     }
 
     return $goodArray; //Retourne le tableau indexé avec ses id
 }
 
-function getABatche($number){
+function getABatche($number)
+{
     $batches = getAllBatches(); //Récupère les Drogues
 
     foreach ($batches as $batche) {
-        if ($batche["number"] == $number){
+        if ($batche["number"] == $number) {
             return $batche;
         }
     }
@@ -42,8 +51,8 @@ function updateABatche($batcheToUpdate)
 
     $items = getAllbatches();
 
-    foreach ($items as $item){
-        if ($item["id"] == $batcheToUpdate["id"]){
+    foreach ($items as $item) {
+        if ($item["id"] == $batcheToUpdate["id"]) {
             $item = array_merge($item, $batcheToUpdate);
             $items[$item["id"]] = $item;
         }
@@ -62,14 +71,14 @@ function addAbatche($newBatche)
 {
     $items = getAllbatches();
     $test = 0;
-    foreach ($items as $item){
-        if ($item["id"] > $test){
+    foreach ($items as $item) {
+        if ($item["id"] > $test) {
             $test = $item["id"];
         }
     }
 
     $id = $test + 1;
-    $newBatche =  array_merge( ["id" => $id], $newBatche);
+    $newBatche = array_merge(["id" => $id], $newBatche);
     $items[] = $newBatche;
 
     savebatches($items);
