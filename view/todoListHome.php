@@ -10,9 +10,6 @@ $semplus = $numweek + 1;
 $semmoins = $numweek - 1;
 
 
-
-
-
 ?>
 
 
@@ -25,14 +22,14 @@ require_once 'controler/todoListControler.php';
 ?>
 
 
-        <div class="">
-            <h1>Tâches hebdomadaires de la base Selectionée</h1>
+<div class="">
+    <h1>Tâches hebdomadaires de la base Selectionée</h1>
 
-            <script src="js/todoList.js"></script>
+    <script src="js/todoList.js"></script>
 
-        </div>
-        <table class=" table table-striped">
-            <div class="navbar nav-pills">
+</div>
+<table class=" table table-striped">
+    <div class="navbar nav-pills">
         <th>  <?php
             if ($numweek == 1) {
 
@@ -67,7 +64,8 @@ require_once 'controler/todoListControler.php';
 </table>
 
 <div class="week" id="calendar">
-    <    <div class="horizontal"><span style="font-weight: bold">  JOURNÉE</span></div>
+    <
+    <div class="horizontal"><span style="font-weight: bold">  JOURNÉE</span></div>
     <?php
 
     $dt = new DateTime;
@@ -84,7 +82,9 @@ require_once 'controler/todoListControler.php';
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
         do {
-            echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>\n";
+            var_dump($week);
+
+            echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>";
             $dt->modify('+1 day');
         } while ($week == $dt->format('w'));
 
@@ -100,7 +100,6 @@ require_once 'controler/todoListControler.php';
 
      // date numéro de semaine
      $queryDate = date("W");
-
 
      // test tout les jours de l'année' date en cours date W
      foreach ($dates as $date) {
@@ -122,9 +121,9 @@ require_once 'controler/todoListControler.php';
         }
         echo "</div>";
     }
-    for ($i=1;$i>7;$i++){
-    echo "<div class='dayheader'>$date</div>";
-}
+    for ($i = 1; $i > 7; $i++) {
+        echo "<div class='dayheader'>$date</div>";
+    }
     ?>
 
 </div>
