@@ -89,10 +89,13 @@ function changePassword($password, $password2)
     }
 }
 
-function moncompte()
+function moncompte($option,$firstname,$lastname)
 {
-    $id = $_SESSION['user'][0];
-    $Userlog = getUser($id);
+    if ($option == 3)
+    {
+        modifierUser($firstname,$lastname);
+    }
+    $Userlog = getUser($_SESSION['user'][0]);
 
     require_once 'view/myAccount.php';
 }
@@ -108,4 +111,18 @@ function verifymdp($password, $password2, $confirmpsd)
         require_once 'view/changePassword.php';
     }
 }
+
+function modifierUser($firstname, $lastname)
+{
+    $listUsers = getListUsers();
+    for ($i = 0; $i < count($listUsers); $i++) {
+        if ($listUsers[$i]['id'] == $_SESSION['user'][0]) {
+            $listUsers[$i]['firstname'] = $firstname;
+            $listUsers[$i]['lastname'] = $lastname;
+        }
+    }
+    $newListUsers = $listUsers;
+    file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
+}
+
 ?>

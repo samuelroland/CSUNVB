@@ -7,9 +7,10 @@ $daythings = $_GET['daything'];
 $sheetid = $_GET['sheetid'];
 $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
+$option = $_GET['option'];
 
 // Login token if exists
-if (isset($_POST["initials"]) || isset($_POST["password"])) {
+if (isset($_POST["initials"]) || isset($_POST["password"]) || isset($_POST["firstname"])) {
     $initials = $_POST["initials"];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
@@ -89,7 +90,7 @@ switch ($action) {
         changePasswordUsers($initials, $password, $password2);
         break;
     case 'myaccount':
-        moncompte();
+        moncompte($option,$firstname,$lastname);
         break;
     case 'bases':
         bases();
