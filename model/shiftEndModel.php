@@ -21,6 +21,9 @@ function readShiftEndGuardSection(){
 function readShiftEndGuardLines(){
     return json_decode(file_get_contents("model/dataStorage/guardlines.json"),true);
 }
+function readCrews(){
+    return json_decode(file_get_contents("model/dataStorage/crews.json"),true);
+}
 
 
 /**

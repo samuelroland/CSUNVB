@@ -12,6 +12,8 @@ function shiftEndHomePage()
     $guardsheets = readShiftEndItems();
     $guardusenovas = readGuardUseNovas();
     $novas = getAllNovas();
+    $crews = readCrews();
+
     require_once 'view/shiftEndHome.php';
 }
 function shiftEndListPage($sheetid){
