@@ -30,9 +30,7 @@ require "controler/drugControler.php";
 require "controler/loginControler.php";
 require "controler/Help.php";
 
-var_dump($_SESSION);
-if (isset($_SESSION['user']) == false && $action != "tryLogin")
-{
+if (isset($_SESSION['user']) == false && $action != "tryLogin") {
     $action = "error";
 }
 switch ($action) {
@@ -45,7 +43,7 @@ switch ($action) {
     case 'shiftend':
         shiftEndHomePage();
         break;
-        case 'shiftEndList';
+    case 'shiftEndList';
         shiftEndListPage($sheetid);
         break;
     case 'todolist':
@@ -79,16 +77,16 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($numweek,$daythings,$task);
+        todoListDetailedWeek($numweek, $daythings, $task);
         break;
     case 'verifymdp':
-        verifymdp($password,$password2,$confirmpsd);
+        verifymdp($password, $password2, $confirmpsd);
         break;
     case 'changePassword':
-        changePassword($password,$password2);
+        changePassword($password, $password2);
         break;
     case 'changePasswordUser':
-        changePasswordUsers($initials,$password,$password2);
+        changePasswordUsers($initials, $password, $password2);
         break;
     case 'myaccount':
         moncompte();
@@ -103,11 +101,9 @@ switch ($action) {
     default: // unknown action
         if (isset($_SESSION['user']) && $_SESSION['user'][4] != true) {
             require_once 'view/home.php';
-        }elseif ($_SESSION['user'][4] == true)
-        {
+        } elseif ($_SESSION['user'][4] == true) {
             require_once 'view/firstLogin.php';
-        }
-        else {
+        } else {
             require_once 'view/login.php';
         }
         break;
