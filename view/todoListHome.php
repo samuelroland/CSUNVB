@@ -67,34 +67,51 @@ require_once 'controler/todoListControler.php';
 </table>
 
 <div class="week" id="calendar">
-    <div class="horizontal"><span style="font-weight: bold">  JOURNÉE</span></div>
+    <    <div class="horizontal"><span style="font-weight: bold">  JOURNÉE</span></div>
+    <?php
 
+    $dt = new DateTime;
+    if (isset($_GET['year']) && isset($_GET['week'])) {
+        $dt->setISODate($_GET['year'], $_GET['week']);
+    } else {
+        $dt->setISODate($dt->format('o'), $dt->format('W'));
+    }
+    $year = $dt->format('o');
+    $week = $dt->format('W');
+    ?>
     <?php
     // Affichage des jours de la semaine et des jours du mois
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
-            echo "<div class='dayheader'>$date</div>";
-            // Trouver le jour de la semaine d'une date donné
-        $firstDay = date("N", strtotime($queryYear-$queryMonth-01));
-        $lastDayLastMonth = date("t", strtotime("-1 month", strtotime("$queryYear-$queryMonth-01"))); // 31
-        $monthDate = "2019-$queryMonth-01";
-        // Combien y-a-t'il de jours de la semaine dans un mois 28-31
-        $nbDays = date("t", strtotime($monthDate));
-        $dates = date("d");
-
-        // date numéro de semaine
-        $queryDate = date("W");
+        do {
+            echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>\n";
+            $dt->modify('+1 day');
+        } while ($week == $dt->format('w'));
 
 
-        // test tout les jours de l'année' date en cours date W
-        foreach ($dates as $date) {
-            if($queryDate = 13) {
-                return $queryDate;
-            } else{
-                return null;
-            }
-        }
-        var_dump($queryDate);
+        /* echo "<div class='dayheader'>$date</div>";
+         // Trouver le jour de la semaine d'une date donné
+     $firstDay = date("N", strtotime($queryYear-$queryMonth-01));
+     $lastDayLastMonth = date("t", strtotime("-1 month", strtotime("$queryYear-$queryMonth-01"))); // 31
+     $monthDate = "2019-$queryMonth-01";
+     // Combien y-a-t'il de jours de la semaine dans un mois 28-31
+     $nbDays = date("t", strtotime($monthDate));
+     $dates = date("d");
+
+     // date numéro de semaine
+     $queryDate = date("W");
+
+
+     // test tout les jours de l'année' date en cours date W
+     foreach ($dates as $date) {
+         if($queryDate = 13) {
+             return $queryDate;
+         } else{
+             return null;
+         }
+     }
+     var_dump($queryDate);
+     */
         foreach ($tasks as $task) {
             if ($task['daything'] == 1) {
                 ?>
@@ -113,7 +130,9 @@ require_once 'controler/todoListControler.php';
 </div>
 <div class="week">
     <div class="horizontal nuitcolor"><span style="font-weight: bold">NUIT</span></div>
+
     <?php
+    //Code PHP qui fait la nuit
     foreach ($jours as $jour) {
         echo "<div class='day'>";
         foreach ($tasks as $task) {
