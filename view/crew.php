@@ -24,10 +24,10 @@ $users = readAdminItems();
         echo "<tr><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] ."</td>";
         if ($user['firstLogin'] == true)
         {
-            echo "<td>Premier login à faire</td>";
+            echo "<td>Expiré</td>";
         }else
         {
-            echo "<td>Utilisateur valide</td>";
+            echo "<td>Valide</td>";
         }
         if ($user['id'] != $_SESSION['user'][0]) {
             if ($user['admin'] == true) {
