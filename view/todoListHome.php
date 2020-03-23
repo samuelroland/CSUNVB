@@ -20,7 +20,7 @@ require_once 'controler/todoListControler.php';
 
 
 <div class="">
-    <h1>Tâches hebdomadaires de la base Selectionée</h1>
+    <h1>Tâches hebdomadaires de la base Choisie</h1>
 
     <script src="js/todoList.js"></script>
 

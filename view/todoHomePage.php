@@ -2,7 +2,7 @@
 ob_start();
 $title = "CSU-NVB - Tâches hebdomadaires";
 ?>
-    <h1>Feuilles de Tâches hebdomadaires</h1>
+    <h1>Feuilles de Tâches hebdomadaires </h1>
 
 
 <?php SelectSheets("Todo"); //générer la vue de la sélection des feuilles
