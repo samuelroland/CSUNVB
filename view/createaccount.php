@@ -55,8 +55,11 @@ $title = "CSU-NVB - createAccount";
 </form>
 
 <?php
-
-$content = ob_get_clean();
-require_once ("gabarit.php");
-
+if ($_SESSION['user'][2] == true) {
+    $content = ob_get_clean();
+} else {
+    ob_get_clean();
+    $content = "Vous n'êtes pas admin !";
+}
+require "gabarit.php";
 ?>
