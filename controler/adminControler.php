@@ -131,7 +131,7 @@ function displayMeds()
 {
 
 }
-function displayAmbulances()
+function displayNovas()
 {
 
 }

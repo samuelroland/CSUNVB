@@ -99,8 +99,8 @@ switch ($action) {
     case 'help':
         require "controler/Help.php";
         break;
-    case 'viewAmbulances':
-        displayAmbulances();
+    case 'viewNovas':
+        displayNovas();
         break;
     case 'viewMeds':
         displayMeds();
