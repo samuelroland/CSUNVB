@@ -71,11 +71,13 @@ function changePassword($password, $password2)
                     $listUsers[$i]['password'] = $hash;
                 }
             }
+
             $newListUsers = $listUsers;
 
             file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
 
-
+            ?><script>alert("Le mot de passe a été changé !")</script>
+            <?php
             disconnect();
 
         } else {
