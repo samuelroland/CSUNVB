@@ -39,9 +39,9 @@ $title = "CSU-NVB - Remise de garde";
                                 foreach ($novas as $nova) {
                                     if ($guardusenova['nova_id'] == $nova['id'] && $guardusenova['day'] == 1) {
                                         ?>
-                                        Jour :<?= $nova['number'] //afficher numéro véhicule Jour       ?><br>
+                                        <span class="font-weight-bold">Jour : </span><?= $nova['number'] //afficher numéro véhicule Jour       ?><br>
                                     <?php } else if ($guardusenova['nova_id'] == $nova['id'] && $guardusenova['day'] == 0) { ?>
-                                        Nuit :<?= $nova['number'] //afficher numéro véhicule Nuit       ?>
+                                        <span class="font-weight-bold"> Nuit : </span><?= $nova['number'] //afficher numéro véhicule Nuit       ?>
                                         <?php
                                     }
                                 }
@@ -53,16 +53,26 @@ $title = "CSU-NVB - Remise de garde";
                             if ($guardsheet['id'] == $crew['guardsheet_id']) {
                                 foreach ($users as $user) {
                                     if ($crew['user_id'] == $user['id'] && ($crew['boss'] == 1 && $crew['day'] == 1)) {//affiche le responsable Jour/Nuit
-                                        ?>Jour : <?= $user['initials'] ?><br><?php
+                                        ?><span class="font-weight-bold">Jour : </span><?= $user['initials'] ?><br><?php
                                     } else if ($crew['user_id'] == $user['id'] && ($crew['boss'] == 1 && $crew['day'] == 0)) {
-                                        ?>Nuit : <?= $user['initials'] ?><?php
+                                        ?> <span class="font-weight-bold"> Nuit : </span><?= $user['initials'] ?><?php
                                     }
                                 }
                             }
                         } ?>
                     </td>
                     <td>
-
+                        <?php foreach ($crews as $crew) {
+                            if ($guardsheet['id'] == $crew['guardsheet_id']) {
+                                foreach ($users as $user) {
+                                    if ($crew['user_id'] == $user['id'] && ($crew['boss'] == 0 && $crew['day'] == 1)) {//affiche le responsable Jour/Nuit
+                                        ?><span class="font-weight-bold">Jour : </span><?= $user['initials'] ?><br><?php
+                                    } else if ($crew['user_id'] == $user['id'] && ($crew['boss'] == 0 && $crew['day'] == 0)) {
+                                        ?> <span class="font-weight-bold"> Nuit : </span><?= $user['initials'] ?><?php
+                                    }
+                                }
+                            }
+                        } ?>
                     </td>
                     <td><a href='?action=shiftEndList&sheetid=<?= $guardsheet['id']; ?>' class='btn btn-primary m-1 '
                            style='bt-align: center'>Vue détaillée</a>
