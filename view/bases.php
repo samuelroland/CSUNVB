@@ -31,6 +31,11 @@ $title = "CSU-NVB - Bases";
 </table>
 
 <?php
-$content = ob_get_clean();
+if ($_SESSION['user'][2] == true) {
+    $content = ob_get_clean();
+} else {
+    ob_get_clean();
+    $content = "Vous n'êtes pas admin !";
+}
 require "gabarit.php";
 ?>
