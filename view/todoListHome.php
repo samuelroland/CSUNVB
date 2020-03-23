@@ -43,7 +43,7 @@ require_once 'controler/todoListControler.php';
 
             ?>
             <?php
-            if ($numweek != 52) {
+            if ($numweek != 53) {
                 echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&week=$semplus'>></a></button>";
             }
 
