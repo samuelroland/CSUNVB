@@ -1,11 +1,8 @@
 <?php
 ob_start();
-$date = date('d/M/Y');
+
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$queryYear = $_GET ['year'];
-$queryMonth = $_GET ['month'];
-$now = time();
 $semplus = $numweek + 1;
 $semmoins = $numweek - 1;
 $weeknum = $numweek -12.3;
@@ -23,7 +20,7 @@ require_once 'controler/todoListControler.php';
 
 
 <div class="">
-    <h1>Tâches hebdomadaires de la base Selectionée</h1>
+    <h1>Tâches hebdomadaires de la base Choisie</h1>
 
     <script src="js/todoList.js"></script>
 
@@ -64,7 +61,7 @@ require_once 'controler/todoListControler.php';
 </table>
 
 <div class="week" id="calendar">
-    
+
     <div class="horizontal"><span style="font-weight: bold">JOURNÉE</span></div>
     <?php
 
