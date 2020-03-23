@@ -64,8 +64,8 @@ require_once 'controler/todoListControler.php';
 </table>
 
 <div class="week" id="calendar">
-    <
-    <div class="horizontal"><span style="font-weight: bold">  JOURNÉE</span></div>
+    
+    <div class="horizontal"><span style="font-weight: bold">JOURNÉE</span></div>
     <?php
 
     $dt = new DateTime;
@@ -86,7 +86,7 @@ require_once 'controler/todoListControler.php';
 
             echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>";
             $dt->modify('+1 day');
-        } while ($week == $dt->format('w'));
+        } while ($weeknum == $dt->format('w'));
 
 
         /* echo "<div class='dayheader'>$date</div>";
@@ -120,9 +120,6 @@ require_once 'controler/todoListControler.php';
             }
         }
         echo "</div>";
-    }
-    for ($i = 1; $i > 7; $i++) {
-        echo "<div class='dayheader'>$date</div>";
     }
     ?>
 
