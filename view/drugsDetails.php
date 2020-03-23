@@ -33,7 +33,7 @@ $week = getASheet($_GET["week"] + 2000)
 
 
 <?php foreach ($drugs as $drug) { ?>
-    <table class="table table-striped table-bordered col-1 aligncenter">
+    <table class=" table-striped table-bordered col-1 aligncenter">
         <thead>
         <tr>
             <th colspan="2"></th>
