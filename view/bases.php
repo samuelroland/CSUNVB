@@ -20,10 +20,6 @@ $title = "CSU-NVB - Bases";
     <?php
     foreach ($listBases as $base) {
         echo "<tr><td>" .$base['name'] . "</td></tr>";
-        if ($_SESSION['user'][3][1] == $base['id'])
-            {
-                echo "</td><td>Ceci est votre utilisateur</td></tr>";
-            }
     }
     ?>
 

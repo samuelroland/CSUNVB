@@ -133,6 +133,8 @@ function displayMeds()
 }
 function displayNovas()
 {
+    $listNovas = getNovas();
+    require_once 'view/novas.php';
 
 }
 ?>

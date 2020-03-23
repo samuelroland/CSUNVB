@@ -75,4 +75,8 @@ function getBases()
 {
     return json_decode(file_get_contents("model/dataStorage/bases.json"),true);
 }
+function getNovas(){
+    return json_decode(file_get_contents("model/dataStorage/novas.json"),true);
+}
+
 ?>
