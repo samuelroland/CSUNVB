@@ -8,7 +8,7 @@ $queryMonth = $_GET ['month'];
 $now = time();
 $semplus = $numweek + 1;
 $semmoins = $numweek - 1;
-
+$weeknum = $numweek -12.3;
 
 ?>
 
@@ -72,7 +72,7 @@ require_once 'controler/todoListControler.php';
     if (isset($_GET['year']) && isset($_GET['week'])) {
         $dt->setISODate($_GET['year'], $_GET['week']);
     } else {
-        $dt->setISODate($dt->format('o'), $dt->format('W'));
+        $dt->setISODate($dt->format('o'),$weeknum+$dt->format('W'));
     }
     $year = $dt->format('o');
     $week = $dt->format('W');
@@ -82,7 +82,7 @@ require_once 'controler/todoListControler.php';
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
         do {
-            var_dump($week);
+
 
             echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>";
             $dt->modify('+1 day');
