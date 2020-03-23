@@ -109,6 +109,8 @@ function changePasswordUsers($initials, $password, $password2)
             }
             $newListUsers = $listUsers;
             file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
+            ?><script>alert("Le mot de passe a été changé !")</script>
+            <?php
             require_once 'view/crew.php';
         } else {
             $_SESSION['erreur'] = true;
