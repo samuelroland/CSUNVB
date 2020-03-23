@@ -99,6 +99,12 @@ switch ($action) {
     case 'help':
         require "controler/Help.php";
         break;
+    case 'viewAmbulances':
+        displayAmbulances();
+        break;
+    case 'viewMeds':
+        displayMeds();
+        break;
 
     default: // unknown action
         if (isset($_SESSION['user']) && $_SESSION['user'][4] != true) {
