@@ -71,6 +71,7 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
 
 function crew()
 {
+
     require_once 'view/crew.php';
 }
 
