@@ -51,11 +51,10 @@ switch ($action) {
         todoListHomePage();
         break;
     case 'drughome':
-        drugHomePage(); // //liste des semaines et des bases pour choisir la feuille de stups
+        drugHomePage(); // choix des feuilles de stups avec un base et dans une liste de semaines.
         break;
     case "detaildrug":
-
-        drugdetails(); //page détails d'une feuille de stups avec tableaux
+        drugdetails($numweek); //page détails d'une feuille de stups avec tableaux
         break;
     case 'tryLogin':
         tryLogin($initials, $password, $department);

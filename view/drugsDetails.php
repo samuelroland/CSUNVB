@@ -2,7 +2,7 @@
 ob_start();
 $title = "CSU-NVB - Stupéfiants";
 $base = $bases[$_GET["base"]];
-$week = getASheet($_GET["week"] + 2000)
+$week = getASheet($_GET["week"] + 2000);
 ?>
 <div class="row m-2">
     <h1>Stupéfiants</h1>
@@ -10,6 +10,14 @@ $week = getASheet($_GET["week"] + 2000)
 <!-- Tableau -->
 
 <h3>Contrôle des stupéfiants Hebdomadaire</h3>
+
+<h3>Feuille semaine n <?= $_GET["week"]; ?> en 2020 - <?php if ($week["state"] == "open") {
+        echo "Ouverte";
+    } else {
+        echo "Fermée";
+    } ?></h3>
+
+<!-- Boutons de changement de semaines -->
 <?php if (changeWeekDown($_GET["base"], $_GET["week"]) == null) { ?>
     <button class="btn btn-info disabled"><</button>
 <?php } else { ?>
@@ -17,12 +25,7 @@ $week = getASheet($_GET["week"] + 2000)
         <button class="btn btn-info"><</button>
     </a>
 <?php } ?>
-
-<h3>Semaine N <?= $_GET["week"]; ?> - Feuille <?php if ($week["state"] == "open") {
-        echo "ouverte";
-    } else {
-        echo "fermée";
-    } ?></h3>
+<strong><?= $_GET["week"] ?></strong>
 <?php if (changeWeekUp($_GET["base"], $_GET["week"]) == null) { ?>
     <button class="btn btn-info disabled">></button>
 <?php } else { ?>
@@ -30,20 +33,20 @@ $week = getASheet($_GET["week"] + 2000)
         <button class="btn btn-info">></button>
     </a>
 <?php } ?>
-
+<br>
 
 <?php foreach ($drugs as $drug) { ?>
+    <br>
     <table class=" table-striped table-bordered col-1 aligncenter">
         <thead>
         <tr>
-            <th colspan="2"></th>
-            <th colspan="5">lundi 10 févr 20</th>
-            <th colspan="5">mardi 11 févr 20</th>
-            <th colspan="5">mercredi 12 févr 20</th>
-            <th colspan="5">jeudi 13 févr 20</th>
-            <th colspan="5">vendredi 14 févr 20</th>
-            <th colspan="5">samedi 15 févr 20</th>
-            <th colspan="5">dimanche 15 févr 20</th>
+            <th colspan="2"></th>   <!-- cellule vide haut gauche du tableau -->
+
+            <?php
+            foreach ($datesoftheweek as $onedate) {
+                echo "<th colspan='5'>" . date("j F Y", $onedate) . "</th>";
+            }
+            ?>
         </tr>
         <tr>
             <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
@@ -133,7 +136,8 @@ $week = getASheet($_GET["week"] + 2000)
             <td>X</td>
 
         </tr>
-        <?php foreach ($batches as $batch) {
+        <?php
+        foreach ($batches as $batch) {
         if ($batch["drug"] == $drug["name"]) { ?>
         <tr>
             <td colspan="2" class=""><?= $batch["number"] ?></td>
@@ -144,7 +148,10 @@ $week = getASheet($_GET["week"] + 2000)
                     <td></td>
                     <td></td>
                     <td><?= $check["end"] ?></td>
-                <?php } } } } ?>
+                <?php }
+            }
+            }
+            } ?>
         </tbody>
 
     </table>
