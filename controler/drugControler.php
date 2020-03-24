@@ -10,6 +10,7 @@ require_once 'model/basesModel.php';
 require_once 'model/novasModel.php';
 require_once 'model/stupSheetModel.php';
 require_once 'model/batchesModel.php';
+require_once 'model/pharmaCheksModel.php';
 
 function drugdetails()  //détails d'une feuille de stups
 {
@@ -18,6 +19,7 @@ function drugdetails()  //détails d'une feuille de stups
     $novas = getAllNovas();
     $stupsheets = getAllSheets();
     $batches = getAllBatches();
+    $checks = getAllCheks();
     require 'view/drugsDetails.php';
 }
 

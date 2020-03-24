@@ -1,17 +1,11 @@
 <?php
 ob_start();
-$date = date('d/M/Y');
+
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$queryYear = $_GET ['year'];
-$queryMonth = $_GET ['month'];
-$now = time();
 $semplus = $numweek + 1;
 $semmoins = $numweek - 1;
-
-
-
-
+$weeknum = $numweek -12.3;
 
 ?>
 
@@ -25,14 +19,14 @@ require_once 'controler/todoListControler.php';
 ?>
 
 
-        <div class="">
-            <h1>Tâches hebdomadaires de la base Selectionée</h1>
+<div class="">
+    <h1>Tâches hebdomadaires de la base Choisie</h1>
 
-            <script src="js/todoList.js"></script>
+    <script src="js/todoList.js"></script>
 
-        </div>
-        <table class=" table table-striped">
-            <div class="navbar nav-pills">
+</div>
+<table class=" table table-striped">
+    <div class="navbar nav-pills">
         <th>  <?php
             if ($numweek == 1) {
 
@@ -46,7 +40,7 @@ require_once 'controler/todoListControler.php';
 
             ?>
             <?php
-            if ($numweek != 52) {
+            if ($numweek != 53) {
                 echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&week=$semplus'>></a></button>";
             }
 
@@ -67,14 +61,15 @@ require_once 'controler/todoListControler.php';
 </table>
 
 <div class="week" id="calendar">
-    <    <div class="horizontal"><span style="font-weight: bold">  JOURNÉE</span></div>
+
+    <div class="horizontal"><span style="font-weight: bold">JOURNÉE</span></div>
     <?php
 
     $dt = new DateTime;
     if (isset($_GET['year']) && isset($_GET['week'])) {
         $dt->setISODate($_GET['year'], $_GET['week']);
     } else {
-        $dt->setISODate($dt->format('o'), $dt->format('W'));
+        $dt->setISODate($dt->format('o'),$weeknum+$dt->format('W'));
     }
     $year = $dt->format('o');
     $week = $dt->format('W');
@@ -84,9 +79,11 @@ require_once 'controler/todoListControler.php';
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
         do {
-            echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>\n";
+
+
+            echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>";
             $dt->modify('+1 day');
-        } while ($week == $dt->format('w'));
+        } while ($weeknum == $dt->format('w'));
 
 
         /* echo "<div class='dayheader'>$date</div>";
@@ -100,7 +97,6 @@ require_once 'controler/todoListControler.php';
 
      // date numéro de semaine
      $queryDate = date("W");
-
 
      // test tout les jours de l'année' date en cours date W
      foreach ($dates as $date) {
@@ -122,9 +118,6 @@ require_once 'controler/todoListControler.php';
         }
         echo "</div>";
     }
-    for ($i=1;$i>7;$i++){
-    echo "<div class='dayheader'>$date</div>";
-}
     ?>
 
 </div>

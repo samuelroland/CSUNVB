@@ -54,6 +54,7 @@ switch ($action) {
         drugHomePage(); // //liste des semaines et des bases pour choisir la feuille de stups
         break;
     case "detaildrug":
+
         drugdetails(); //page détails d'une feuille de stups avec tableaux
         break;
     case 'tryLogin':
@@ -97,6 +98,12 @@ switch ($action) {
         break;
     case 'help':
         require "controler/Help.php";
+        break;
+    case 'viewNovas':
+        displayNovas();
+        break;
+    case 'viewMeds':
+        displayMeds();
         break;
 
     default: // unknown action

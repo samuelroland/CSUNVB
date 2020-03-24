@@ -7,12 +7,13 @@
 
 require_once 'model/shiftEndModel.php';
 
-function shiftEndHomePage()
+function  shiftEndHomePage()
 {
     $guardsheets = readShiftEndItems();
     $guardusenovas = readGuardUseNovas();
     $novas = getAllNovas();
     $crews = readCrews();
+    $users = readAdminItems();
 
     require_once 'view/shiftEndHome.php';
 }

@@ -71,6 +71,7 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
 
 function crew()
 {
+
     require_once 'view/crew.php';
 }
 
@@ -108,6 +109,8 @@ function changePasswordUsers($initials, $password, $password2)
             }
             $newListUsers = $listUsers;
             file_put_contents("model/dataStorage/users.json", json_encode($newListUsers));
+            ?><script>alert("Le mot de passe a été changé !")</script>
+            <?php
             require_once 'view/crew.php';
         } else {
             $_SESSION['erreur'] = true;
@@ -124,5 +127,14 @@ function bases()
     require_once 'view/bases.php';
 
 }
+function displayMeds()
+{
 
+}
+function displayNovas()
+{
+    $listNovas = getNovas();
+    require_once 'view/novas.php';
+
+}
 ?>

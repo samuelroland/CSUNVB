@@ -24,10 +24,10 @@ $users = readAdminItems();
         echo "<tr><td>" . $user['initials'] . "</td><td>" . $user['firstname'] . "</td><td>" . $user['lastname'] ."</td>";
         if ($user['firstLogin'] == true)
         {
-            echo "<td>Premier login à faire</td>";
+            echo "<td>Expiré</td>";
         }else
         {
-            echo "<td>Utilisateur valide</td>";
+            echo "<td>Valide</td>";
         }
         if ($user['id'] != $_SESSION['user'][0]) {
             if ($user['admin'] == true) {
@@ -48,6 +48,11 @@ $users = readAdminItems();
 </table>
 
 <?php
-$content = ob_get_clean();
+if ($_SESSION['user'][2] == true) {
+    $content = ob_get_clean();
+} else {
+    ob_get_clean();
+    $content = "Vous n'êtes pas admin !";
+}
 require "gabarit.php";
 ?>
