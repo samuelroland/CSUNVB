@@ -3,7 +3,9 @@ Fichier: Page vue de la zone de sélection d'une feuille (stups par ex.)
 Auteur: Samuel Roland
 Date: 16.03.2020
 -->
+<?php
 
+?>
     <form id="weekForm" action="/" method="GET">
         <p>Choix de la base</p>
         <table class=" table table-striped">
@@ -34,12 +36,14 @@ Date: 16.03.2020
                 }
                 $indexelementinrun++; //élément suivant pour la prochaine itération
                 foreach ($sheets as $onesheet) {    //parcourt toutes les feuilles de la liste
+                    $week = $onesheet['week'];  //numéro de semaine format standard
                     $numweek = substr($onesheet['week'], 2);    //extraire le numéro de semaine
+                    $year = substr($onesheet['week'], 0, 2) + 2000;    //extraire l'année
                     if ($onesheet['base_id'] == $base['id']) {  //si la feuille correspond à la base en cours
                         if ($onesheet['state'] == "open") {
-                            echo "<label data-weeknb='$numweek' class='btn btn-info btncont bg-grey'> Semaine n° $numweek</label>";    //mettre en gris les taches ouvertes
+                            echo "<label data-weeknb='$week' class='btn btn-info btncont bg-grey'> Semaine n° $numweek en $year</label>";    //mettre en gris les taches ouvertes
                         } else {
-                            echo "<label data-weeknb='$numweek' class='btn btn-info btncont bg-lightgreen'> Semaine n° $numweek <img src='/assets/images/taskclose.png' alt='taskclose img' class='imgtaskclose'></label>";   //mettre en vert clair les taches fermées
+                            echo "<label data-weeknb='$week' class='btn btn-info btncont bg-lightgreen'> Semaine n° $numweek en $year<img src='/assets/images/taskclose.png' alt='taskclose img' class='imgtaskclose'></label>";   //mettre en vert clair les taches fermées
                         }
                     }
                 }

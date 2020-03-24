@@ -12,15 +12,22 @@ require_once 'model/stupSheetModel.php';
 require_once 'model/batchesModel.php';
 require_once 'model/pharmaCheksModel.php';
 
-function drugdetails($numweek)  //détails d'une feuille de stups
+function drugdetails($week, $base)  //détails d'une feuille de stups
 {
-    $datesoftheweek = getDatesOfAWeek($numweek);
+    //$week = par ex: 2012 donc semaine 12 de 2020
+    $numweek = substr($week, 2);    //extraire le numéro de la semaine uniquement.
+    $year = substr($week, 0, 2) + 2000;    //extraire l'année
+
+    $datesoftheweek = getDatesOfAWeek($numweek, $year);
     $drugs = getAllDrugs();
     $bases = getAllBases();
     $novas = getAllNovas();
     $stupsheets = getAllSheets();
     $batches = getAllBatches();
     $checks = getAllCheks();
+
+    $baseinfo = $bases[$base];
+    $weekinfo = getASheet($week);
     require 'view/drugsDetails.php';
 }
 
@@ -48,7 +55,7 @@ function changeWeekDown($base, $weekNumber)
     if ($beforWeek == null) {
         return $beforWeek;
     } else {
-        return $beforWeek - 2000;
+        return $beforWeek;
     }
 }
 
@@ -69,16 +76,16 @@ function changeWeekUp($base, $weekNumber)
     if ($afterWeek == 10000000) {
         return null;
     } else {
-        return $afterWeek - 2000;
+        return $afterWeek;
     }
 
 }
 
 //recevoir les dates d'une semaine avec le numéro de la semaine.
-function getDatesOfAWeek($weeknb)
+function getDatesOfAWeek($weeknb, $year)
 {
     //Tests de tous les jours de l'année demandée jusqu'à trouver la date du premier jour de la semaine demandée.
-    $datetest = strtotime("2020-01-01");    //on part du 1 janvier de l'année dans une date de test.
+    $datetest = strtotime("$year-01-01");    //on part du 1 janvier de l'année donnée pour la date de test.
     $dateinrun = null;
     if (empty($weeknb) == false) {  //ne pas executer si la semaine n'est pas donnée, sinon boucle infinie !
         while (empty($dateinrun) == true) {

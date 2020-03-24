@@ -1,35 +1,33 @@
 <?php
 ob_start();
 $title = "CSU-NVB - Stupéfiants";
-$base = $bases[$_GET["base"]];
-$week = getASheet($_GET["week"] + 2000);
 ?>
 <div class="row m-2">
     <h1>Stupéfiants</h1>
 </div>
 <!-- Tableau -->
 
-<h3>Contrôle des stupéfiants Hebdomadaire</h3>
+<h3>Contrôle quotidien des stupéfiants pour <?= $baseinfo['name'] ?></h3>
 
-<h3>Feuille semaine n <?= $_GET["week"]; ?> en 2020 - <?php if ($week["state"] == "open") {
+<h3>Feuille semaine n <?= $numweek ?> en <?= $year ?> - <?php if ($weekinfo["state"] == "open") {
         echo "Ouverte";
     } else {
         echo "Fermée";
     } ?></h3>
 
 <!-- Boutons de changement de semaines -->
-<?php if (changeWeekDown($_GET["base"], $_GET["week"]) == null) { ?>
+<?php if (changeWeekDown($base, $numweek) == null) { ?>
     <button class="btn btn-info disabled"><</button>
 <?php } else { ?>
-    <a href="?base=<?= $_GET["base"] ?>&action=detaildrug&week=<?= changeWeekDown($_GET["base"], $_GET["week"]) ?>">
+    <a href="?base=<?= $base ?>&action=detaildrug&week=<?= changeWeekDown($base, $numweek) ?>">
         <button class="btn btn-info"><</button>
     </a>
 <?php } ?>
-<strong><?= $_GET["week"] ?></strong>
-<?php if (changeWeekUp($_GET["base"], $_GET["week"]) == null) { ?>
+<strong><?= $numweek ?> en <?= $year ?></strong>
+<?php if (changeWeekUp($base, $numweek) == null) { ?>
     <button class="btn btn-info disabled">></button>
 <?php } else { ?>
-    <a href="?base=<?= $_GET["base"] ?>&action=detaildrug&week=<?= changeWeekUp($_GET["base"], $_GET["week"]) ?>">
+    <a href="?base=<?= $base ?>&action=detaildrug&week=<?= changeWeekUp($base, $numweek) ?>">
         <button class="btn btn-info">></button>
     </a>
 <?php } ?>
@@ -75,10 +73,10 @@ $week = getASheet($_GET["week"] + 2000);
         </tr>
         <tr>
             <?php for ($i = 0; $i < 7; $i++) {
-                foreach ($week["novas"] as $nova) {
+                foreach ($weekinfo["novas"] as $nova) {
                     echo "<th>$nova</th>";
                 }
-                switch (count($week["novas"])) {
+                switch (count($weekinfo["novas"])) {
                     case 1 :
                         echo "<th></th>";
                         echo "<th></th>";
@@ -137,7 +135,9 @@ $week = getASheet($_GET["week"] + 2000);
 
         </tr>
         <?php
-        foreach ($batches as $batch) {
+        foreach ($batches
+
+        as $batch) {
         if ($batch["drug"] == $drug["name"]) { ?>
         <tr>
             <td colspan="2" class=""><?= $batch["number"] ?></td>

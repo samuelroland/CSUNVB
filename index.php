@@ -2,7 +2,8 @@
 
 session_start();
 
-$numweek = $_GET['week'];
+$week = $_GET['week'];
+$base = $_GET['base'];
 $daythings = $_GET['daything'];
 $sheetid = $_GET['sheetid'];
 $action = $_GET['action'];
@@ -54,7 +55,7 @@ switch ($action) {
         drugHomePage(); // choix des feuilles de stups avec un base et dans une liste de semaines.
         break;
     case "detaildrug":
-        drugdetails($numweek); //page détails d'une feuille de stups avec tableaux
+        drugdetails($week, $base); //page détails d'une feuille de stups avec tableaux
         break;
     case 'tryLogin':
         tryLogin($initials, $password, $department);
@@ -90,7 +91,7 @@ switch ($action) {
         changePasswordUsers($initials, $password, $password2);
         break;
     case 'myaccount':
-        moncompte($option,$firstname,$lastname);
+        moncompte($option, $firstname, $lastname);
         break;
     case 'bases':
         bases();
