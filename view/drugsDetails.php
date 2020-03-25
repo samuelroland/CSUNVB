@@ -33,10 +33,9 @@ $title = "CSU-NVB - Stupéfiants";
 <?php } ?>
 <br>
 
-<?php foreach ($drugs as $drug) { ?>
-    <br>
+
     <table class=" table-striped table-bordered col-1 aligncenter">
-        <thead>
+       <thead>
         <tr>
             <th colspan="2"></th>   <!-- cellule vide haut gauche du tableau -->
 
@@ -88,10 +87,13 @@ $title = "CSU-NVB - Stupéfiants";
                     case 2 :
                         echo "<th></th>";
                         break;
+                    default:    //si il y en a 3 par exemple, ne rien afficher.
+                        break;
                 }
             } ?>
         </tr>
         </thead>
+        <?php foreach ($drugs as $i => $drug) { ?>
         <tbody>
         <tr>
             <td colspan="2" class=""><strong><?= $drug["name"] ?></strong></td>
@@ -139,9 +141,7 @@ $title = "CSU-NVB - Stupéfiants";
 
         </tr>
         <?php
-        foreach ($batches
-
-        as $batch) {
+        foreach ($batches as $batch) {
         if ($batch["drug"] == $drug["name"]) { ?>
         <tr>
             <td colspan="2" class=""><?= $batch["number"] ?></td>
@@ -158,9 +158,10 @@ $title = "CSU-NVB - Stupéfiants";
             } ?>
         </tbody>
 
-    </table>
 
 <?php }
+echo "</table>";
+
 $content = ob_get_clean();
 require "gabarit.php";
 ?>
