@@ -42,7 +42,11 @@ $title = "CSU-NVB - Stupéfiants";
 
             <?php
             foreach ($datesoftheweek as $onedate) {
-                echo "<th colspan='5'>" . date("j F Y", $onedate) . "</th>";
+                if (strcmp(date("Y-m-d", $onedate), date("Y-m-d")) == 0) {   //si la date est aujourdh'hui.
+                    echo "<th class='bg-info' colspan='5'><img src='assets/images/today.png' class='icontoday' alt='icone jour actuel'>" . date("j F Y", $onedate) . "</th>";
+                } else {
+                    echo "<th colspan='5'>" . date("j F Y", $onedate) . "</th>";
+                }
             }
             ?>
         </tr>
