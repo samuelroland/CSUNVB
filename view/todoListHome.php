@@ -21,6 +21,7 @@ require_once 'controler/todoListControler.php';
 
 <div class="">
     <h1>Tâches hebdomadaires de la base Choisie</h1>
+    <?php echo $basename; ?>
 
     <script src="js/todoList.js"></script>
 

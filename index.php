@@ -9,6 +9,7 @@ $sheetid = $_GET['sheetid'];
 $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
 $option = $_GET['option'];
+$basename = $_GET['base_id'];
 
 // Login token if exists
 if (isset($_POST["initials"]) || isset($_POST["password"]) || isset($_POST["firstname"])) {
@@ -79,7 +80,7 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($numweek, $daythings, $task);
+        todoListDetailedWeek($numweek, $daythings, $task, $basename);
         break;
     case 'verifymdp':
         verifymdp($password, $password2, $confirmpsd);
