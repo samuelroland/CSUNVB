@@ -16,12 +16,14 @@ $weeknum = $numweek -12.3;
 
 
 require_once 'controler/todoListControler.php';
+require_once 'controler/drugControler.php';
 ?>
 
 
 <div class="">
-    <h1>Tâches hebdomadaires de la base Choisie</h1>
-    <?php echo $basename; ?>
+    <h1>Tâches hebdomadaires de la base <?= $baseinfo['name'] ?></h1>
+
+
 
     <script src="js/todoList.js"></script>
 

@@ -6,7 +6,12 @@
  **/
 
 require 'model/todoListModel.php';
-
+require_once 'model/drugModel.php';
+require_once 'model/basesModel.php';
+require_once 'model/novasModel.php';
+require_once 'model/stupSheetModel.php';
+require_once 'model/batchesModel.php';
+require_once 'model/pharmaCheksModel.php';
 
 function todoListHomePage()
 {
@@ -16,11 +21,13 @@ function todoListHomePage()
 
 }
 
-function todoListDetailedWeek($numweek, $basename)
+function todoListDetailedWeek($numweek, $base)
 {
     $tasks = getTodoListTasks();
     $daythings = getTodoListTasks();
     $nightask = getTodoListTasks();
+    $bases = getAllBases();
+    $baseinfo = $bases[$base];
     require_once 'view/todoListHome.php';
 }
 

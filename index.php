@@ -80,7 +80,7 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($numweek, $daythings, $task, $basename);
+        todoListDetailedWeek($numweek,$base);
         break;
     case 'verifymdp':
         verifymdp($password, $password2, $confirmpsd);
