@@ -43,7 +43,7 @@ function readShiftEndItem($id)
  */
 function readShiftEndItemsForBase($id)
 {
-    $items = getShiftEndItems();
+    $items = readShiftEndItems();
     $bases = getAllBases();
     $res = [];
     foreach($items as $item)
