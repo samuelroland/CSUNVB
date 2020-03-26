@@ -23,16 +23,19 @@ function drugdetails($week, $base)  //détails d'une feuille de stups
     $drugs = getAllDrugs();
     $bases = getAllBases();
     $novas = getAllNovas();
-    $stupsheets = getAllSheets();
     $batches = getAllBatches();
-    $checks = getAllCheks();
+
 
     $baseinfo = $bases[$base];
-    $weekinfo = getASheet($week);
+    $weekinfo = getASheet($week, $base);
+    var_dump($weekinfo);
+    $sheetid = $weekinfo['id'];
+    $listofchecks = getAllChecksByASheetId($sheetid);
     require 'view/drugsDetails.php';
 }
 
-function logs(){
+function logs()
+{
     $logs = getAllLogs();
     require 'view/logs.php';
 }
@@ -113,5 +116,36 @@ function getDatesOfAWeek($weeknb, $year)
 
     return $datesoftheweek;
 }
+
+function getDatesOfAWeekBySheetId($sheetid)
+{
+    $thesheet = getASheetById($sheetid);
+
+    $year = substr($thesheet['week'], 0, 2) + 2000;
+    $weeknb = substr($thesheet['week'], 2);
+    //Tests de tous les jours de l'année demandée jusqu'à trouver la date du premier jour de la semaine demandée.
+    $datetest = strtotime("$year-01-01");    //on part du 1 janvier de l'année donnée pour la date de test.
+    $dateinrun = null;
+    if (empty($weeknb) == false) {  //ne pas executer si la semaine n'est pas donnée, sinon boucle infinie !
+        while (empty($dateinrun) == true) {
+            if (date("W", $datetest) == $weeknb) {  //si la semaine de cette date est la semaine recherchée donc $weeknb
+                $dateinrun = $datetest; //on enregistre cette date
+                break;  //on sort du while pour arrêter le processus de recherche.
+            } else {
+                $datetest = strtotime("+1 day", $datetest); //sinon on teste avec le jour suivant.
+            }
+        }
+    }
+
+    //Enregistrer les valeurs dans un tableau avec les numéros des jours comme index
+    for ($j = 1; $j <= 7; $j++) {
+        $datesoftheweek[$j] = $dateinrun;   //jour de 1 à 7.
+
+        $dateinrun = strtotime("+1 day", $dateinrun);   //Avancer d'un jour pour avoir la date du jour d'après
+    }
+
+    return $datesoftheweek;
+}
+
 
 ?>
