@@ -11,6 +11,7 @@ require_once 'model/novasModel.php';
 require_once 'model/stupSheetModel.php';
 require_once 'model/batchesModel.php';
 require_once 'model/pharmaCheksModel.php';
+require_once 'model/logsModel.php';
 
 function drugdetails($week, $base)  //détails d'une feuille de stups
 {
@@ -29,6 +30,11 @@ function drugdetails($week, $base)  //détails d'une feuille de stups
     $baseinfo = $bases[$base];
     $weekinfo = getASheet($week);
     require 'view/drugsDetails.php';
+}
+
+function logs(){
+    $logs = getAllLogs();
+    require 'view/logs.php';
 }
 
 function drugHomePage() //page d'accueil du choix des feuilles de stups

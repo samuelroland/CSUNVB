@@ -106,6 +106,9 @@ switch ($action) {
     case 'viewMeds':
         displayMeds();
         break;
+    case 'logs' :
+        logs();
+        break;
 
     default: // unknown action
         if (isset($_SESSION['user']) && $_SESSION['user'][4] != true) {
