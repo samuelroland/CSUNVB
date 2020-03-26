@@ -12,17 +12,23 @@
  */
 function readShiftEndItems()
 {
-    return json_decode(file_get_contents("model/dataStorage/guardsheets.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/guardsheets.json"), true);
 
 }
-function readShiftEndGuardSection(){
-    return json_decode(file_get_contents("model/dataStorage/guardsections.json"),true);
+
+function readShiftEndGuardSection()
+{
+    return json_decode(file_get_contents("model/dataStorage/guardsections.json"), true);
 }
-function readShiftEndGuardLines(){
-    return json_decode(file_get_contents("model/dataStorage/guardlines.json"),true);
+
+function readShiftEndGuardLines()
+{
+    return json_decode(file_get_contents("model/dataStorage/guardlines.json"), true);
 }
-function readCrews(){
-    return json_decode(file_get_contents("model/dataStorage/crews.json"),true);
+
+function readCrews()
+{
+    return json_decode(file_get_contents("model/dataStorage/crews.json"), true);
 }
 
 
@@ -45,15 +51,43 @@ function readShiftEndItemsForBase($id)
 {
     $items = readShiftEndItems();
     $bases = getAllBases();
+    $novas = getAllNovas();
+    $guardusenovas = readGuardUseNovas();
     $res = [];
-    foreach($items as $item)
-    {
+    foreach ($items as $item) {
         if ($item['base_id'] == $id) // c'est une feuille à retourner
         {
             $item['base'] = $bases[$id];
             $res[] = $item;
         }
+
     }
+    /*foreach ($guardusenovas as $guardusenova) {
+        foreach ($novas as $nova) {
+            if($nova['id']==$guardusenova['nova_id']){
+                $item =$nova['number'];
+                $res[] = $item;
+            }
+        }
+    }
+*/
+
+    /*foreach ($guardusenovas as $guardusenova) {
+    foreach ($novas as $nova) {
+        if ($nova['id'] == $guardusenova['nova_id']) {
+            if ($guardusenova['day'] == 1) {
+                $item['novaday'] = $nova['number'];
+                $res[] = $item;
+            } elseif ($guardusenova['day'] == 0) {
+                $item['novanight'] = $nova['number'];
+                $res[] = $item;
+            }
+        }
+    }
+}
+*/
+
+
     return $res;
 }
 
@@ -63,7 +97,7 @@ function readShiftEndItemsForBase($id)
  */
 function updateShiftEndItems($items)
 {
-    file_put_contents("model/dataStorage/items.json",json_encode($items));
+    file_put_contents("model/dataStorage/items.json", json_encode($items));
 }
 
 /**
