@@ -23,16 +23,16 @@ function createPharmaChecks()   //générer des données de pharmachecks
                 $daytoadd = -1 + $day;
                 $dateofcheck = strtotime("+$daytoadd day", $datesoftheweek[1]); //rajouter un certain nombre de jours à la première date de la semaine.
                 echo "Sheetid = " . $sheetid . " et dateofcheck = " . date("Y-m-d", $dateofcheck) . "   \n ";
-            //Générer et insérer les données
-            $checktobuild = [
-                "id" => $indexturn,
-                "date" => date("Y-m-d", $dateofcheck),
-                "start" => $start,
-                "end" => $end,
-                "batch_id" => $i,
-                "user_id" => rand(1, 50),
-                "stupsheet_id" => $sheetid
-            ];
+                //Générer et insérer les données
+                $checktobuild = [
+                    "id" => $indexturn,
+                    "date" => date("Y-m-d", $dateofcheck),
+                    "start" => $start,
+                    "end" => $end,
+                    "batch_id" => $i,
+                    "user_id" => rand(1, 50),
+                    "stupsheet_id" => $sheetid
+                ];
 
                 //enregistrer dans la liste de checks
                 $listChecks[$indexturn] = $checktobuild;
