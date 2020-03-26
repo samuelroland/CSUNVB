@@ -33,135 +33,103 @@ $title = "CSU-NVB - Stupéfiants";
 <?php } ?>
 <br>
 
+<br>
+<table class=" table-striped table-bordered col-1 aligncenter">
+    <thead>
+    <tr>
+        <th colspan="2"></th>   <!-- cellule vide haut gauche du tableau -->
 
-    <table class=" table-striped table-bordered col-1 aligncenter">
-       <thead>
-        <tr>
-            <th colspan="2"></th>   <!-- cellule vide haut gauche du tableau -->
-
-            <?php
-            foreach ($datesoftheweek as $onedate) {
-                if (strcmp(date("Y-m-d", $onedate), date("Y-m-d")) == 0) {   //si la date est aujourdh'hui.
-                    echo "<th class='bg-info' colspan='5'><img src='assets/images/today.png' class='icontoday' alt='icone jour actuel'>" . date("j F Y", $onedate) . "</th>";
-                } else {
-                    echo "<th colspan='5'>" . date("j F Y", $onedate) . "</th>";
-                }
+        <?php
+        foreach ($datesoftheweek as $onedate) {
+            if (strcmp(date("Y-m-d", $onedate), date("Y-m-d")) == 0) {   //si la date est aujourdh'hui.
+                echo "<th class='bg-info' colspan='5'><img src='assets/images/today.png' class='icontoday' alt='icone jour actuel'>" . date("j F Y", $onedate) . "</th>";
+            } else {
+                echo "<th colspan='5'>" . date("j F Y", $onedate) . "</th>";
             }
-            ?>
-        </tr>
-        <tr>
-            <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
-                                                                        alt="stups logo" class="imgheadertable"></th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th colspan="3">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th colspan="3">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th colspan="3">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th colspan="3">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th colspan="3">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th colspan="3">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-            <th colspan="3">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
-        </tr>
-        <tr>
-            <?php for ($i = 0; $i < 7; $i++) {
-                foreach ($weekinfo["novas"] as $nova) {
-                    echo "<th>$nova</th>";
-                }
-                switch (count($weekinfo["novas"])) {
-                    case 1 :
-                        echo "<th></th>";
-                        echo "<th></th>";
-                        break;
-                    case 2 :
-                        echo "<th></th>";
-                        break;
-                    default:    //si il y en a 3 par exemple, ne rien afficher.
-                        break;
-                }
-            } ?>
-        </tr>
-        </thead>
-        <?php foreach ($drugs as $i => $drug) { ?>
+        }
+        ?>
+    </tr>
+    <tr>
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
+                                                                    alt="stups logo" class="imgheadertable"></th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th colspan="3">Véhicules</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th colspan="3">Véhicules</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th colspan="3">Véhicules</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th colspan="3">Véhicules</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th colspan="3">Véhicules</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th colspan="3">Véhicules</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+        <th colspan="3">Véhicules</th>
+        <th rowspan="2" class="txtvertical">Pharmacie</th>
+    </tr>
+    <tr>
+        <?php for ($i = 0; $i < 7; $i++) {
+            foreach ($weekinfo["novas"] as $nova) {
+                echo "<th>$nova</th>";
+            }
+            switch (count($weekinfo["novas"])) {
+                case 1 :
+                    echo "<th></th>";
+                    echo "<th></th>";
+                    break;
+                case 2 :
+                    echo "<th></th>";
+                    break;
+                default:    //si il y en a 3 par exemple, ne rien afficher.
+                    break;
+            }
+        } ?>
+    </tr>
+    </thead>
+    <?php foreach ($drugs as $i => $drug) { ?>
         <tbody>
         <tr>
             <td colspan="2" class=""><strong><?= $drug["name"] ?></strong></td>
-            <td>X</td>
-            <td>3-3</td>
-            <td>7-7</td>
-            <td>3-3</td>
-            <td>X</td>
-
-            <td>X</td>
-            <td>3-3</td>
-            <td>7-7</td>
-            <td>3-3</td>
-            <td>X</td>
-
-            <td>X</td>
-            <td>3-3</td>
-            <td>7-7</td>
-            <td>3-3</td>
-            <td>X</td>
-
-            <td>X</td>
-            <td>3-3</td>
-            <td>7-7</td>
-            <td>3-3</td>
-            <td>X</td>
-
-            <td>X</td>
-            <td>3-3</td>
-            <td>7-7</td>
-            <td>3-3</td>
-            <td>X</td>
-
-            <td>X</td>
-            <td>3-3</td>
-            <td>7-7</td>
-            <td>3-3</td>
-            <td>X</td>
-
-            <td>X</td>
-            <td>3-3</td>
-            <td>7-7</td>
-            <td>3-3</td>
-            <td>X</td>
-
+            <?php for ($f = 1; $f <= 7; $f++) { ?>
+                <td>X</td>
+                <td>13-13</td>
+                <td>17-17</td>
+                <td>13-13</td>
+                <td>X</td>
+            <?php } ?>
         </tr>
         <?php
-        foreach ($batches as $batch) {
+        foreach ($batches
+
+        as $batch) {  //pour chaque lot
         if ($batch["drug"] == $drug["name"]) { ?>
         <tr>
-            <td colspan="2" class=""><?= $batch["number"] ?></td>
-            <?php foreach ($checks as $check) {
-                if ($check["batch_id"] == $batch["id"]) { ?>
-                    <td><?= $check["start"] ?></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><?= $check["end"] ?></td>
-                <?php }
+            <td colspan="2" class=""><?= $batch["number"] . " id:" . $batch['id'] ?></td>
+            <?php foreach ($listofchecks as $check) { //pour chaque checks
+                foreach ($datesoftheweek as $day) {  //pour chaque jour de la semaine
+
+                    if ($check["batch_id"] == $batch["id"] && strtotime($check['date']) == $day) { ?>
+                        <td><?= $check["start"] ?></td>
+                        <td class="bg-info"><?= date("d M", strtotime($check["date"])) ?></td>
+                        <td class="bg-secondary"><?= "stupsheetid = " . $check['stupsheet_id'] ?></td>
+                        <td class="bg-grey"><?= $check["batch_id"] ?></td>
+                        <td><?= $check["end"] ?></td>
+                    <?php }
+                }
             }
             }
             } ?>
         </tbody>
+    <?php }
+    echo "</table><p>asjkldf</p><p>asdfjklsafjklsaj klésafjk safjklésa fjklsadf</p>";
 
-
-<?php }
-echo "</table>";
-
-$content = ob_get_clean();
-require "gabarit.php";
-?>
+    $content = ob_get_clean();
+    require "gabarit.php";
+    ?>
