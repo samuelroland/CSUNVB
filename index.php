@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$numweek = $_GET['week'];
+
 $week = $_GET['week'];
 $base = $_GET['base'];
 $daythings = $_GET['daything'];
@@ -80,7 +80,7 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($numweek,$base);
+        todoListDetailedWeek($week,$base);
         break;
     case 'verifymdp':
         verifymdp($password, $password2, $confirmpsd);

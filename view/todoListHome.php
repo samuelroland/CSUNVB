@@ -3,8 +3,8 @@ ob_start();
 
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$semplus = $numweek + 1;
-$semmoins = $numweek - 1;
+$semplus = $week + 1;
+$semmoins = $week - 1;
 $weeknum = $numweek -12.3;
 
 ?>
@@ -17,6 +17,7 @@ $weeknum = $numweek -12.3;
 
 require_once 'controler/todoListControler.php';
 require_once 'controler/drugControler.php';
+var_dump($numweek);
 ?>
 
 
@@ -34,7 +35,7 @@ require_once 'controler/drugControler.php';
             if ($numweek == 1) {
 
             } else {
-                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&week=$semmoins'><</a></button>";
+                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&base=$base&week=$semmoins'><</a></button>";
             }
 
             ?>Semaine <?php echo $numweek; ?>
@@ -44,7 +45,7 @@ require_once 'controler/drugControler.php';
             ?>
             <?php
             if ($numweek != 53) {
-                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&week=$semplus'>></a></button>";
+                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&base=$base&week=$semplus'>></a></button>";
             }
 
             ?>
