@@ -21,8 +21,12 @@ function todoListHomePage()
 
 }
 
-function todoListDetailedWeek($numweek, $base)
+function todoListDetailedWeek($week, $base)
 {
+    //$week = par ex: 2012 donc semaine 12 de 2020
+    $numweek = substr($week, 2);    //extraire le numéro de la semaine uniquement.
+    $year = substr($week, 0, 2) + 2000;    //extraire l'année
+
     $tasks = getTodoListTasks();
     $daythings = getTodoListTasks();
     $nightask = getTodoListTasks();

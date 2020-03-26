@@ -3,8 +3,8 @@ ob_start();
 
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$semplus = $numweek + 1;
-$semmoins = $numweek - 1;
+$semplus = $week + 1;
+$semmoins = $week - 1;
 $weeknum = $numweek -12.3;
 
 ?>
@@ -17,6 +17,7 @@ $weeknum = $numweek -12.3;
 
 require_once 'controler/todoListControler.php';
 require_once 'controler/drugControler.php';
+var_dump($numweek);
 ?>
 
 
