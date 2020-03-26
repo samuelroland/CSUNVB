@@ -35,7 +35,7 @@ var_dump($numweek);
             if ($numweek == 1) {
 
             } else {
-                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&week=$semmoins'><</a></button>";
+                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&base=$base&week=$semmoins'><</a></button>";
             }
 
             ?>Semaine <?php echo $numweek; ?>
@@ -45,7 +45,7 @@ var_dump($numweek);
             ?>
             <?php
             if ($numweek != 53) {
-                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&week=$semplus'>></a></button>";
+                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&base=$base&week=$semplus'>></a></button>";
             }
 
             ?>
