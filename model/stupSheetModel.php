@@ -35,9 +35,24 @@ function getASheet($week, $baseid)
 
     foreach ($sheets as $sheet) {
         if ($sheet["week"] == $week) {
+            if ($sheet['base_id'] == $baseid) {
+                return $sheet;
+            }
+        }
+    }
+    return null;
+}
+
+function getASheetById($id)
+{
+    $sheets = getAllSheets(); //Récupère les Drogues
+
+    foreach ($sheets as $sheet) {
+        if ($sheet["id"] == $id) {
             return $sheet;
         }
     }
+    return null;
 }
 
 function saveSheets($items)
