@@ -27,6 +27,19 @@ function getAChek($date, $batch_id)
                 return $chek;
         }
     }
+    return null;
+}
+
+function getAllChecksByASheetId($id)
+{
+    $checks = getAllCheks();
+    $listofchecks = null;   //liste de checks venant d'une feuille $id
+    foreach ($checks as $check) {
+        if ($check["stupsheet_id"] == $id) {
+            $listofchecks[] = $check;   //on enregistre au bout de la liste
+        }
+    }
+    return $listofchecks;
 }
 
 function saveCheks($items)
