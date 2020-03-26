@@ -9,7 +9,6 @@ $sheetid = $_GET['sheetid'];
 $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
 $option = $_GET['option'];
-$basename = $_GET['base_id'];
 
 // Login token if exists
 if (isset($_POST["initials"]) || isset($_POST["password"]) || isset($_POST["firstname"])) {
