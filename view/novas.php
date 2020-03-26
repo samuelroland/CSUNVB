@@ -18,7 +18,7 @@ $title = "CSU-NVB - Novas";
 
     <?php
     foreach ($listNovas as $nova) {
-        echo "<tr><a><td>Nova n°" .$nova['number'] . "</td></a></tr>";
+        ?><tr><td><a href='?action=novaHistoric&novaid=<?=$nova['id']?>'>Nova n°<?=$nova['number']?></a></td></tr><?php
     }
     ?>
 

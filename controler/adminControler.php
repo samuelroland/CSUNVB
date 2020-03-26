@@ -135,6 +135,9 @@ function displayNovas()
 {
     $listNovas = getNovas();
     require_once 'view/novas.php';
+}
+function novaHistoric($novaId)
+{
 
 }
 ?>

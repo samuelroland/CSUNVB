@@ -10,7 +10,7 @@ $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
 $option = $_GET['option'];
 $basename = $_GET['base_id'];
-
+$novaid = $_GET['novaid'];
 // Login token if exists
 if (isset($_POST["initials"]) || isset($_POST["password"]) || isset($_POST["firstname"])) {
     $initials = $_POST["initials"];
@@ -39,6 +39,9 @@ if (isset($_SESSION['user']) == false && $action != "tryLogin") {
 switch ($action) {
     case 'admin':
         adminHomePage();
+        break;
+    case 'novaHistoric':
+        novaHistoric($novaid);
         break;
     case 'crew':
         crew();
