@@ -20,7 +20,6 @@ $title = "CSU-NVB - Remise de garde";
 
         foreach ($guardsheets as $guardsheet) {
 
-            if ($guardsheet['base_id'] == $_SESSION['user'][3]['id']) {
 
                 ?>
 
@@ -33,20 +32,8 @@ $title = "CSU-NVB - Remise de garde";
                             ?><td class="table-danger"><?= 'fermé' ?></td><?php
                         } ?>
 
-                    <td><?php foreach ($guardusenovas as $guardusenova) {
-                            if ($guardsheet['id'] == $guardusenova['guardsheet_id']) {
-
-                                foreach ($novas as $nova) {
-                                    if ($guardusenova['nova_id'] == $nova['id'] && $guardusenova['day'] == 1) {
-                                        ?>
-                                        <span class="font-weight-bold">Jour : </span><?= $nova['number'] //afficher numéro véhicule Jour       ?><br>
-                                    <?php } else if ($guardusenova['nova_id'] == $nova['id'] && $guardusenova['day'] == 0) { ?>
-                                        <span class="font-weight-bold"> Nuit : </span><?= $nova['number'] //afficher numéro véhicule Nuit       ?>
-                                        <?php
-                                    }
-                                }
-                            }
-                        } ?>
+                    <td>
+                        <?= $guardsheet['novaday'] ?>
                     </td>
                     <td>
                         <?php foreach ($crews as $crew) {

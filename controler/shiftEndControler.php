@@ -7,9 +7,9 @@
 
 require_once 'model/shiftEndModel.php';
 
-function  shiftEndHomePage()
+function  shiftEndHomePage($base)
 {
-    $guardsheets = readShiftEndItems();
+    $guardsheets = readShiftEndItemsForBase($base);
     $guardusenovas = readGuardUseNovas();
     $novas = getAllNovas();
     $crews = readCrews();
