@@ -38,6 +38,26 @@ function readShiftEndItem($id)
 }
 
 /**
+ * Retourne les items pour une base précise, identifiée par son id
+ * ...
+ */
+function readShiftEndItemsForBase($id)
+{
+    $items = readShiftEndItems();
+    $bases = getAllBases();
+    $res = [];
+    foreach($items as $item)
+    {
+        if ($item['base_id'] == $id) // c'est une feuille à retourner
+        {
+            $item['base'] = $bases[$id];
+            $res[] = $item;
+        }
+    }
+    return $res;
+}
+
+/**
  * Sauve l'ensemble des items dans le fichier json
  * ...
  */

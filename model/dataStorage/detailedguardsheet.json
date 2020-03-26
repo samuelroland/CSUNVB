@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "date": "2020-02-17",
+    "state": "closed",
+    "base_id": 5,
+    "base": "Yverdon",
+    "novaday": "37",
+    "novanight": "22"
+  },
+  {
+    "id": 2,
+    "date": "2020-02-18",
+    "state": "closed",
+    "base_id": 5,
+    "base": "Yverdon",
+    "novaday": "37",
+    "novanight": "22"
+  }
+]
