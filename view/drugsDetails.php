@@ -112,16 +112,22 @@ $title = "CSU-NVB - Stupéfiants";
         if ($batch["drug"] == $drug["name"]) { ?>
         <tr>
             <td colspan="2" class=""><?= $batch["number"] . " id:" . $batch['id'] ?></td>
-            <?php foreach ($listofchecks as $check) { //pour chaque checks
-                foreach ($datesoftheweek as $day) {  //pour chaque jour de la semaine
-
-                    if ($check["batch_id"] == $batch["id"] && strtotime($check['date']) == $day) { ?>
-                        <td><?= $check["start"] ?></td>
+            <?php
+            foreach ($datesoftheweek as $day) {  //pour chaque jour de la semaine
+                $foundacheck = false;   //si on a trouvé un check pour le jour en cours. par défaut à faux
+                foreach ($listofchecks as $check) { //pour chaque check
+                    if ($check["batch_id"] == $batch["id"] && strtotime($check['date']) == $day) { //si c'est le bon batch et le jour en cours ?>
+                        <td><?= $check["start"] ?> Checkid = <?= $check["id"] ?></td>
                         <td class="bg-info"><?= date("d M", strtotime($check["date"])) ?></td>
                         <td class="bg-secondary"><?= "stupsheetid = " . $check['stupsheet_id'] ?></td>
                         <td class="bg-grey"><?= $check["batch_id"] ?></td>
                         <td><?= $check["end"] ?></td>
-                    <?php }
+                        <?php
+                        $foundacheck = true;    //donc on a trouvé.
+                    }
+                }
+                if ($foundacheck == false) {   //si on a pas trouvé de check parce qu'il est manquant ou pas encore créé
+                    echo "<td></td><td></td><td></td><td></td><td></td>";    //afficher 5 cases vides ne pas décaler les checks des jours suivants
                 }
             }
             }
