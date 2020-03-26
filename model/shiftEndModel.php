@@ -42,23 +42,36 @@ function readShiftEndItem($id)
     // TODO: coder la recherche de l'item demandé
     return $item;
 }
+function getShiftEndNova($shiftEndId,$dayNight){
+    $guardusenovas = readGuardUseNovas();
+    $novas = getAllNovas();
+    foreach ($guardusenovas as $guardusenova){
+        if($guardusenova['day']== $dayNight && $guardusenova['guardsheet_id']==$shiftEndId){
+            $day=$novas[$guardusenova['nova_id']];
+            return $day['number'];
+        }
+    }
+}
 
 /**
  * Retourne les items pour une base précise, identifiée par son id
  * ...
  */
+
 function readShiftEndItemsForBase($id)
 {
-    $items = readShiftEndItems();
+    $shiftEnds = readShiftEndItems();
     $bases = getAllBases();
-    $novas = getAllNovas();
-    $guardusenovas = readGuardUseNovas();
+
+
     $res = [];
-    foreach ($items as $item) {
-        if ($item['base_id'] == $id) // c'est une feuille à retourner
+    foreach ($shiftEnds as $shiftEnd) {
+        if ($shiftEnd['base_id'] == $id) // c'est une feuille à retourner
         {
-            $item['base'] = $bases[$id];
-            $res[] = $item;
+            $shiftEnd['base'] = $bases[$id];
+            $shiftEnd['novaday']= getShiftEndNova($shiftEnd['id'],1);
+            $shiftEnd['novanight']= getShiftEndNova($shiftEnd['id'],0);
+            $res[] = $shiftEnd;
         }
 
     }

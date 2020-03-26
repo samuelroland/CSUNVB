@@ -35,7 +35,8 @@ $title = "CSU-NVB - Remise de garde";
                 } ?>
 
                 <td>
-                    Jour : <?= $guardsheet['nova'] ?><br>
+                    Jour : <?= $guardsheet['novaday'] ?><br>
+                    Nuit : <?= $guardsheet['novanight'] ?><br>
 
                 </td>
                 <td>
