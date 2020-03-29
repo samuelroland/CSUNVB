@@ -5,6 +5,12 @@ function getAllLogs(){
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
+        $user = getAnUser($p["author_id"]);
+        $p["user"] = $user["initials"];
+
+        $week = getASheetById($p["item_id"]);
+        $p["week"] = $week["week"];
+
         $goodArray[$p["id"]] = $p;
     }
 

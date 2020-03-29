@@ -91,10 +91,22 @@ print "Fonction d'ajout des utilisateurs : ";
 
 $logs = getAllLogs();
 
-
 var_dump($logs[1]);
 
 if ($logs[1]["user"] == "NFD"){
+    print "OK\n";
+}
+else{
+    print "Pas OK\n";
+}
+
+print "Fonction d'ajout des semaines : ";
+
+$logs = getAllLogs();
+
+var_dump($logs[1]);
+
+if ($logs[1]["week"] == 2012){
     print "OK\n";
 }
 else{
