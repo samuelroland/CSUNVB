@@ -27,6 +27,17 @@ function getALog($id){
     }
 }
 
+function getLogsByItemId($itemId){
+    $logs = getAllLogs();
+
+    foreach ($logs as $key => $log){
+        if ($log["item_id"] != $itemId){
+            unset($logs[$key]);
+        }
+    }
+    return $logs;
+}
+
 function saveLogs($items)
 {
     file_put_contents("model/dataStorage/logs.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json

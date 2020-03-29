@@ -2,15 +2,18 @@
 
 require_once "model/logsModel.php";
 require_once "model/loginModel.php";
+require_once "model/stupSheetModel.php";
+require_once "model/novasModel.php";
+require_once "model/batchesModel.php";
+require_once "model/drugModel.php";
 
 print "Fonction de récupération des logs : ";
 
 $allLogs = getAllLogs();
 
-if (count($allLogs) == 2){
+if (count($allLogs) == 2) {
     print "OK\n";
-}
-else{
+} else {
     print "Pas OK\n";
 }
 
@@ -18,10 +21,9 @@ print "Fonction de récupération d'une log : ";
 
 $log = getALog(1);
 
-if ($log["id"] == 1){
+if ($log["id"] == 1) {
     print "OK\n";
-}
-else{
+} else {
     print "Pas OK\n";
 }
 
@@ -29,7 +31,7 @@ print "Fonction de ajout d'une log : ";
 
 $logToAdd = [
     "author_id" => 12,
-    "item_type" =>  1,
+    "item_type" => 1,
     "item_id" => 20,
     "text" => "Test"
 ];
@@ -40,17 +42,16 @@ $logs = getAllLogs();
 
 $test = false;
 
-foreach ($logs as $log){
-    if ($log["text"] == $logToAdd["text"]){
+foreach ($logs as $log) {
+    if ($log["text"] == $logToAdd["text"]) {
         $test = true;
         break;
     }
 }
 
-if($test == true){
+if ($test == true) {
     print "OK\n";
-}
-else{
+} else {
     print "Pas OK\n";
 }
 
@@ -58,7 +59,7 @@ print "Fonction de modification d'une log : ";
 
 $logToUpdate = [
     "id" => 1,
-    "text"=> "test",
+    "text" => "test",
 ];
 
 updateALog($logToUpdate);
@@ -67,10 +68,9 @@ $logs = getAllLogs();
 
 $test = false;
 
-if ($logs[1]["text"] == "test"){
+if ($logs[1]["text"] == "test") {
     print "OK\n";
-}
-else{
+} else {
     print "Pas OK\n";
 }
 
@@ -80,10 +80,9 @@ delALog(2);
 
 $logs = getAllLogs();
 
-if (!isset($logs[2])){
+if (!isset($logs[2])) {
     print "OK\n";
-}
-else{
+} else {
     print "Pas OK\n";
 }
 
@@ -91,12 +90,10 @@ print "Fonction d'ajout des utilisateurs : ";
 
 $logs = getAllLogs();
 
-var_dump($logs[1]);
 
-if ($logs[1]["user"] == "NFD"){
+if ($logs[1]["user"] == "NFD") {
     print "OK\n";
-}
-else{
+} else {
     print "Pas OK\n";
 }
 
@@ -104,12 +101,20 @@ print "Fonction d'ajout des semaines : ";
 
 $logs = getAllLogs();
 
-var_dump($logs[1]);
 
-if ($logs[1]["week"] == 2012){
+if ($logs[1]["week"] == 2012) {
     print "OK\n";
+} else {
+    print "Pas OK\n";
 }
-else{
+
+print "Fonction de recupérations de logs par l'id de leurs semaine : ";
+
+$logs = getLogsByItemId(20);
+
+if (count($logs) == 2) {
+    print "OK\n";
+} else {
     print "Pas OK\n";
 }
 
