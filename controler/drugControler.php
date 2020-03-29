@@ -34,9 +34,9 @@ function drugdetails($week, $base)  //détails d'une feuille de stups
     require 'view/drugsDetails.php';
 }
 
-function logs()
+function logs($weekId)
 {
-    $logs = getAllLogs();
+    $logs = getLogsByItemId($weekId);
     require 'view/logs.php';
 }
 
