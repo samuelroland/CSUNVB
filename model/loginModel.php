@@ -23,6 +23,17 @@ function getUser($iniOrId)
     $_SESSION['erreur'] = true;
     return '';
 }
+
+function getAnUser($id){
+    $users = getListUsers();
+
+    foreach ($users as $user){
+        if ($user["id"] == $id){
+            return $user;
+        }
+    }
+}
+
 function verifyID($id)
 {
     $listUsers = getListUsers();
