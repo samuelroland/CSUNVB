@@ -31,6 +31,9 @@ $title = "CSU-NVB - Stupéfiants";
         <button class="btn btn-info">></button>
     </a>
 <?php } ?>
+<a href="?action=logs&week=<?= $sheetid ?>">
+    <button class="btn btn-info">Journal</button>
+</a>
 <br>
 
 <br>
