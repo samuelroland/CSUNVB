@@ -1,6 +1,7 @@
 <?php
 
 require_once "model/logsModel.php";
+require_once "model/loginModel.php";
 
 print "Fonction de récupération des logs : ";
 
@@ -80,6 +81,20 @@ delALog(2);
 $logs = getAllLogs();
 
 if (!isset($logs[2])){
+    print "OK\n";
+}
+else{
+    print "Pas OK\n";
+}
+
+print "Fonction d'ajout des utilisateurs : ";
+
+$logs = getAllLogs();
+
+
+var_dump($logs[1]);
+
+if ($logs[1]["user"] == "NFD"){
     print "OK\n";
 }
 else{

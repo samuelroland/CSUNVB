@@ -70,4 +70,6 @@ function delALog($id)
     saveLogs($items);
 }
 
+
+
 ?>
