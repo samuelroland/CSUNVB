@@ -16,18 +16,18 @@ $title = "CSU-NVB - Stupéfiants";
     } ?></h3>
 
 <!-- Boutons de changement de semaines -->
-<?php if (changeWeekDown($base, $numweek) == null) { ?>
+<?php if (changeWeekDown($sheetid) == null) { ?>
     <button class="btn btn-info disabled"><</button>
 <?php } else { ?>
-    <a href="?base=<?= $base ?>&action=detaildrug&week=<?= changeWeekDown($base, $numweek) ?>">
+    <a href="?base=<?= $base ?>&action=detaildrug&week=<?= changeWeekDown($sheetid) ?>">
         <button class="btn btn-info"><</button>
     </a>
 <?php } ?>
 <strong><?= $numweek ?> en <?= $year ?></strong>
-<?php if (changeWeekUp($base, $numweek) == null) { ?>
+<?php if (changeWeekUp($sheetid) == null) { ?>
     <button class="btn btn-info disabled">></button>
 <?php } else { ?>
-    <a href="?base=<?= $base ?>&action=detaildrug&week=<?= changeWeekUp($base, $numweek) ?>">
+    <a href="?base=<?= $base ?>&action=detaildrug&week=<?= changeWeekUp($sheetid) ?>">
         <button class="btn btn-info">></button>
     </a>
 <?php } ?>
