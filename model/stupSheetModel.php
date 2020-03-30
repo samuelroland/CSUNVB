@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
+  Project :
   Date : 02.03.2020
 */
 
@@ -139,4 +139,18 @@ function getSheetUseBatch()
     return $uses;
 }
 
+function getBigSheet($weeknb)
+{
+    $result = [];
+    // Find date of first day: 2020-03-09
+    "Y-m-d H:i"
+    $restocks=getRestocks();
+    foreach ($restocks as $restock)
+    {
+        // if $restock[date] is in the sheet
+        $result[$restock['date as day']][$restock['nova_id']][$restock['batch_id']] = $restock['quantity'];
+    }
+    return $result;
+
+}
 ?>
