@@ -4,7 +4,7 @@ session_start();
 
 $getyear = $_GET['year'];
 $base = $_GET['base'];
-$daythings = $_GET['daything'];
+$daynight = $_GET['daything'];
 $sheetid = $_GET['sheetid'];
 $action = $_GET['action'];
 $adminchange = $_GET['idPerson'];
@@ -85,7 +85,7 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($sheetid,$base);
+        todoListDetailedWeek($sheetid, $base, $daynight);
         break;
     case 'verifymdp':
         verifymdp($password, $password2, $confirmpsd);
