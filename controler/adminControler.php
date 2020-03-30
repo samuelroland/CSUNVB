@@ -136,8 +136,10 @@ function displayNovas()
     $listNovas = getNovas();
     require_once 'view/novas.php';
 }
-function novaHistoric($novaId)
+function novaHistoric($novaid)
 {
+    $nova = getOneNova($novaid);
 
+    require_once "view/novaHistoric.php";
 }
 ?>
