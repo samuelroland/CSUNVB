@@ -5,7 +5,9 @@ $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 $semplus = $week + 1;
 $semmoins = $week - 1;
-$weeknum = $numweek -12.3;
+if ($weeknum = date('W')) {
+    $weeknum = $numweek - 13.1;
+}
 
 ?>
 
@@ -113,7 +115,7 @@ var_dump($numweek);
      var_dump($queryDate);
      */
         foreach ($tasks as $task) {
-            if ($task['daything'] == 1) {
+            if ($task['daything'] == 1 && $task['days']==true) {
                 ?>
                 <div class='hour'><?= $task['description']; ?></div><?php
 
@@ -134,10 +136,9 @@ var_dump($numweek);
         echo "<div class='day'>";
         foreach ($tasks as $task) {
 
-            if ($task['daything'] == 0) {
+            if ($task['daything'] == 0 && $task['days']==true) {
                 ?>
                 <div class='hour'><?= $task['description']; ?></div><?php
-
             }
 
         }
