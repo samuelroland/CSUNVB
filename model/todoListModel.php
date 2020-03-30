@@ -19,7 +19,7 @@ function getTodoListTasks()
 }
 
 
-function getTodoListTaskByDayOrNight($daynight)
+function getTodoListTaskByDay($dayOfWeek,$daynight)
 {
     // TODO Coder la récupération des tâches de nuit ou de jour en fonction du paramètre
 }
