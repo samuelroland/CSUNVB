@@ -41,9 +41,9 @@ Date: 16.03.2020
                 $year = substr($onesheet['week'], 0, 2) + 2000;    //extraire l'année
                 if ($onesheet['base_id'] == $base['id']) {  //si la feuille correspond à la base en cours
                     if ($onesheet['state'] == "open") {
-                        echo "<label data-sheetid='" . $onesheet['id'] . "' class='btn btn-info btncont bg-grey'> Semaine n° $numweek en $year</label>";    //mettre en gris les taches ouvertes
+                        echo "<label data-sheetid='" . $onesheet['id'] . "' class='btnsheet btnsheetopen'> Semaine n° $numweek en $year</label>";    //mettre en gris les taches ouvertes
                     } else {
-                        echo "<label data-sheetid='" . $onesheet['id'] . "' class='btn btn-info btncont bg-lightgreen'> Semaine n° $numweek en $year<img src='/assets/images/taskclose.png' alt='taskclose img' class='imgtaskclose'></label>";   //mettre en vert clair les taches fermées
+                        echo "<label data-sheetid='" . $onesheet['id'] . "' class='btnsheet btnsheetclose'> Semaine n° $numweek en $year<img src='/assets/images/taskclose.png' alt='taskclose img' class='imgtaskclose'></label>";   //mettre en vert clair les taches fermées
                     }
                 }
             }

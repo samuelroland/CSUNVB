@@ -26,6 +26,7 @@
     padding: 2px;
     margin: 2px;
 }
+
 .dayheader {
     background-color: #000000;
     color: white;
@@ -34,15 +35,17 @@
     font-weight: bold;
     padding: 3px;
 }
+
 .hour {
-    overflow: visible; !important;
+    overflow: visible;
+!important;
     background-color: rgb(182, 255, 188);
     padding: 4px;
     margin: 2px;
 
 }
 
-.horizontal{
+.horizontal {
     color: white;
     text-align: center !important;
     font-weight: bold;
@@ -55,18 +58,34 @@
     max-width: 74.9em;
 }
 
-.btncont
-{
+.btnsheet {
     max-width: 100px;
     padding: 4px;
     margin: 2px;
-
+    text-align: center;
+    height: 100px;
+    vertical-align: top;
+}
+.btnsheet:hover {
+    color: #fff;
+    background-color: #43b6e7;
+    border-color: #117a8b;
 }
 
-.btnmenu
-{
+.btnsheetclose {
+    color: #fff;
+    background-color: #0052e7;
+    border-color: #117a8b;
+}
+
+.btnsheetopen{
+    color: #fff;
+    background-color: #f8970e;
+    border-color: #117a8b;
+}
+
+.btnmenu {
     padding: 4px;
     margin: 2px;
-
 }
 
