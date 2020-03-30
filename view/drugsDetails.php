@@ -37,7 +37,7 @@ $title = "CSU-NVB - Stupéfiants";
 <br>
 
 <br>
-<table class=" table-striped table-bordered col-1 aligncenter">
+<table class="table-bordered col-1 aligncenter">
     <thead>
     <tr>
         <th colspan="2"></th>   <!-- cellule vide haut gauche du tableau -->
@@ -112,9 +112,22 @@ $title = "CSU-NVB - Stupéfiants";
         foreach ($batches
 
         as $batch) {  //pour chaque lot
-        if ($batch["drug_id"] == $drug["id"] && in_array($batch['number'], $stupsheet['batches'])) { ?>
-        <tr>
-            <td colspan="2" class=""><?= $batch["number"] . " id:" . $batch['id'] ?></td>
+        if ($batch["drug_id"] == $drug["id"] && in_array($batch['number'], $stupsheet['batches'])) {
+            switch ($batch['state']){
+                case "new":
+                    $CssClassForTheBatch = "bg-lightgreen";
+                    break;
+                case "inuse":
+                    $CssClassForTheBatch = "bg-lightblue";
+                    break;
+                case "used":
+                    $CssClassForTheBatch = "bg-violet";
+                    break;
+
+            }
+            ?>
+        <tr class="<?= $CssClassForTheBatch ?>">
+            <td colspan="2" class=""><?= $batch["number"] . " id:" . $batch['id'] ?> state=<?= $batch["state"]?></td>
             <?php
             foreach ($datesoftheweek as $day) {  //pour chaque jour de la semaine
                 $foundacheck = false;   //si on a trouvé un check pour le jour en cours. par défaut à faux
@@ -134,6 +147,7 @@ $title = "CSU-NVB - Stupéfiants";
                 }
             }
             }
+            echo "<tr>";
             } ?>
         </tbody>
     <?php }

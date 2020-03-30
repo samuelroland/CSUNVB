@@ -40,7 +40,15 @@
 }
 
 .bg-lightgreen {
-    background-color: #7bee18;
+    background-color: #20ee85;
+}
+
+.bg-lightblue {
+    background-color: #85cbee;
+}
+
+.bg-violet {
+    background-color: #eeab1f;
 }
 
 .imgtaskclose {
