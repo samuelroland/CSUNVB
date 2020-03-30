@@ -2,7 +2,7 @@
 
 session_start();
 
-$week = $_GET['week'];
+$getyear = $_GET['year'];
 $base = $_GET['base'];
 $daythings = $_GET['daything'];
 $sheetid = $_GET['sheetid'];
@@ -11,6 +11,7 @@ $adminchange = $_GET['idPerson'];
 $option = $_GET['option'];
 $basename = $_GET['base_id'];
 $novaid = $_GET['novaid'];
+
 // Login token if exists
 if (isset($_POST["initials"]) || isset($_POST["password"]) || isset($_POST["firstname"])) {
     $initials = $_POST["initials"];
@@ -60,7 +61,7 @@ switch ($action) {
         drugHomePage(); // choix des feuilles de stups avec un base et dans une liste de semaines.
         break;
     case "detaildrug":
-        drugdetails($week, $base); //page détails d'une feuille de stups avec tableaux
+        drugdetails($sheetid, $base); //page détails d'une feuille de stups avec tableaux
         break;
     case 'tryLogin':
         tryLogin($initials, $password, $department);
@@ -84,7 +85,7 @@ switch ($action) {
         ChangeAdminState($users, $adminchange);
         break;
     case 'todolisthome':
-        todoListDetailedWeek($week,$base);
+        todoListDetailedWeek($sheetid,$base);
         break;
     case 'verifymdp':
         verifymdp($password, $password2, $confirmpsd);

@@ -3,8 +3,8 @@ ob_start();
 
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$semplus = $week + 1;
-$semmoins = $week - 1;
+$semplus = $sheetid + 1;
+$semmoins = $sheetid - 1;
 $weeknum = $numweek -12.3;
 
 ?>
@@ -35,7 +35,7 @@ var_dump($numweek);
             if ($numweek == 1) {
 
             } else {
-                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&base=$base&week=$semmoins'><</a></button>";
+                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&base=$base&sheetid=$semmoins'><</a></button>";
             }
 
             ?>Semaine <?php echo $numweek; ?>
@@ -45,9 +45,8 @@ var_dump($numweek);
             ?>
             <?php
             if ($numweek != 53) {
-                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&base=$base&week=$semplus'>></a></button>";
+                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&base=$base&sheetid=$semplus'>></a></button>";
             }
-
             ?>
             <?php
             // Seulement les admins peuvent voir les boutons
@@ -70,21 +69,19 @@ var_dump($numweek);
     <?php
 
     $dt = new DateTime;
-    if (isset($_GET['year']) && isset($_GET['week'])) {
-        $dt->setISODate($_GET['year'], $_GET['week']);
+    if (isset($getyear) && isset($sheetid)) {
+        $dt->setISODate($getyear, $sheetid);
     } else {
         $dt->setISODate($dt->format('o'),$weeknum+$dt->format('W'));
     }
-    $year = $dt->format('o');
-    $week = $dt->format('W');
+    // $year = $dt->format('o');
+    // $week = $dt->format('W');
     ?>
     <?php
     // Affichage des jours de la semaine et des jours du mois
     foreach ($jours as $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
         do {
-
-
             echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>";
             $dt->modify('+1 day');
         } while ($weeknum == $dt->format('w'));
