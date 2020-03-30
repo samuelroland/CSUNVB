@@ -141,6 +141,7 @@ function getSheetUseBatch()
 
 function getBigSheet($weeknb)
 {
+    /*
     $result = [];
     // Find date of first day: 2020-03-09
     "Y-m-d H:i"
@@ -151,6 +152,6 @@ function getBigSheet($weeknb)
         $result[$restock['date as day']][$restock['nova_id']][$restock['batch_id']] = $restock['quantity'];
     }
     return $result;
-
+    */
 }
 ?>
