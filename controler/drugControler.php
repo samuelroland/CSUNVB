@@ -47,49 +47,6 @@ function drugHomePage() //page d'accueil du choix des feuilles de stups
     require_once 'view/drugsHome.php';
 }
 
-function changeWeekDown($base, $weekNumber)
-{
-    $weeks = getAllSheets();
-    $weekNumber += 2000;
-
-    $beforWeek = null;
-    foreach ($weeks as $week) {
-        if ($week["base_id"] == $base && $week["week"] < $weekNumber) {
-            if ($week["week"] > $beforWeek) {
-                $beforWeek = $week["week"];
-            }
-        }
-    }
-
-    if ($beforWeek == null) {
-        return $beforWeek;
-    } else {
-        return $beforWeek;
-    }
-}
-
-function changeWeekUp($base, $weekNumber)
-{
-    $weeks = getAllSheets();
-    $weekNumber += 2000;
-
-    $afterWeek = 10000000;
-    foreach ($weeks as $week) {
-        if ($week["base_id"] == $base && $week["week"] > $weekNumber) {
-            if ($week["week"] < $afterWeek) {
-                $afterWeek = $week["week"];
-            }
-        }
-    }
-
-    if ($afterWeek == 10000000) {
-        return null;
-    } else {
-        return $afterWeek;
-    }
-
-}
-
 //recevoir les dates d'une semaine avec le numéro de la semaine.
 function getDatesOfAWeek($weeknb, $year)
 {
