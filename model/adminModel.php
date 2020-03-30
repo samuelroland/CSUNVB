@@ -78,5 +78,22 @@ function getBases()
 function getNovas(){
     return json_decode(file_get_contents("model/dataStorage/novas.json"),true);
 }
+function getOneNova($novaid){
+    $listeNovas = getNovas();
 
+    foreach ($listeNovas as $n) {
+        if ($n['id'] == $novaid) {
+            return $n;
+        }
+    }
+    return "";
+}
+function getGardUseByNova()
+{
+    
+}
+function getGuardsheetsByNova()
+{
+
+}
 ?>

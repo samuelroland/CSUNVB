@@ -8,6 +8,7 @@
 ob_start();
 $title = "CSU-NVB - Novas Historic";
 ?>
+<h1 style="text-align: center">Historic pour la Nova n°<?=$nova['number']?></h1>
 
 
 

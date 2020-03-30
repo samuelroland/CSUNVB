@@ -19,16 +19,17 @@ function SelectSheets($mode)
     }
     require 'view/sheetselect.php';
 }
-function changeWeekDown($base, $weekNumber)
+function changeWeekDown($weekId)
 {
+    $weekNumber = getASheetById($weekId)["week"];
+    $base = getASheetById($weekId)["base_id"];
     $weeks = getAllSheets();
-    $weekNumber += 2000;
 
     $beforWeek = null;
     foreach ($weeks as $week) {
         if ($week["base_id"] == $base && $week["week"] < $weekNumber) {
             if ($week["week"] > $beforWeek) {
-                $beforWeek = $week["week"];
+                $beforWeek = $week["id"];
             }
         }
     }
@@ -40,16 +41,17 @@ function changeWeekDown($base, $weekNumber)
     }
 }
 
-function changeWeekUp($base, $weekNumber)
+function changeWeekUp($weekId)
 {
+    $weekNumber = getASheetById($weekId)["week"];
+    $base = getASheetById($weekId)["base_id"];
     $weeks = getAllSheets();
-    $weekNumber += 2000;
 
     $afterWeek = 10000000;
     foreach ($weeks as $week) {
         if ($week["base_id"] == $base && $week["week"] > $weekNumber) {
             if ($week["week"] < $afterWeek) {
-                $afterWeek = $week["week"];
+                $afterWeek = $week["id"];
             }
         }
     }
