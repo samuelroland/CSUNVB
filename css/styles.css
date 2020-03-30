@@ -66,6 +66,7 @@
     height: 100px;
     vertical-align: top;
 }
+
 .btnsheet:hover {
     color: #fff;
     background-color: #43b6e7;
@@ -78,7 +79,7 @@
     border-color: #117a8b;
 }
 
-.btnsheetopen{
+.btnsheetopen {
     color: #fff;
     background-color: #f8970e;
     border-color: #117a8b;
