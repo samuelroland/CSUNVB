@@ -13,30 +13,26 @@ require_once 'model/batchesModel.php';
 require_once 'model/pharmaCheksModel.php';
 require_once 'model/logsModel.php';
 
-function drugdetails($week, $base)  //détails d'une feuille de stups
+function drugdetails($sheetid)  //détails d'une feuille de stups
 {
-    //$week = par ex: 2012 donc semaine 12 de 2020
-    $numweek = substr($week, 2);    //extraire le numéro de la semaine uniquement.
-    $year = substr($week, 0, 2) + 2000;    //extraire l'année
-
-    $datesoftheweek = getDatesOfAWeek($numweek, $year);
+    $stupsheet = getASheetById($sheetid);   //prendre la feuille de stups demandée
+    $sheetid = $stupsheet['id'];
+    $numweek = substr($stupsheet['week'], 2);    //extraire le numéro de la semaine uniquement.
+    $year = substr($stupsheet['week'], 0, 2) + 2000;    //extraire l'année
+    var_dump($stupsheet);
+    $datesoftheweek = getDatesOfAWeekBySheetId($sheetid);
     $drugs = getAllDrugs();
-    $bases = getAllBases();
-    $novas = getAllNovas();
     $batches = getAllBatches();
 
-
-    $baseinfo = $bases[$base];
-    $weekinfo = getASheet($week, $base);
-    var_dump($weekinfo);
-    $sheetid = $weekinfo['id'];
+    $baseinfo = getABase($stupsheet['base_id']);
+    var_dump($baseinfo);
     $listofchecks = getAllChecksByASheetId($sheetid);
     require 'view/drugsDetails.php';
 }
 
-function logs($weekId)
+function logs($sheetid)
 {
-    $logs = getLogsByItemId($weekId);
+    $logs = getLogsByItemId($sheetid);
     require 'view/logs.php';
 }
 

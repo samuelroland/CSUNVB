@@ -9,7 +9,7 @@ $title = "CSU-NVB - Stupéfiants";
 
 <h3>Contrôle quotidien des stupéfiants pour <?= $baseinfo['name'] ?></h3>
 
-<h3>Feuille semaine n <?= $numweek ?> en <?= $year ?> - <?php if ($weekinfo["state"] == "open") {
+<h3>Feuille semaine n <?= $numweek ?> en <?= $year ?> - <?php if ($stupsheet["state"] == "open") {
         echo "Ouverte";
     } else {
         echo "Fermée";
@@ -19,7 +19,7 @@ $title = "CSU-NVB - Stupéfiants";
 <?php if (changeWeekDown($sheetid) == null) { ?>
     <button class="btn btn-info disabled"><</button>
 <?php } else { ?>
-    <a href="?base=<?= $base ?>&action=detaildrug&week=<?= changeWeekDown($sheetid) ?>">
+    <a href="?base=<?= $base ?>&action=detaildrug&sheetid=<?= changeWeekDown($sheetid) ?>">
         <button class="btn btn-info"><</button>
     </a>
 <?php } ?>
@@ -27,11 +27,11 @@ $title = "CSU-NVB - Stupéfiants";
 <?php if (changeWeekUp($sheetid) == null) { ?>
     <button class="btn btn-info disabled">></button>
 <?php } else { ?>
-    <a href="?base=<?= $base ?>&action=detaildrug&week=<?= changeWeekUp($sheetid) ?>">
+    <a href="?base=<?= $base ?>&action=detaildrug&sheetid=<?= changeWeekUp($sheetid) ?>">
         <button class="btn btn-info">></button>
     </a>
 <?php } ?>
-<a href="?action=logs&week=<?= $sheetid ?>">
+<a href="?action=logs&sheetid=<?= $sheetid ?>">
     <button class="btn btn-info">Journal</button>
 </a>
 <br>
@@ -79,10 +79,10 @@ $title = "CSU-NVB - Stupéfiants";
     </tr>
     <tr>
         <?php for ($i = 0; $i < 7; $i++) {
-            foreach ($weekinfo["novas"] as $nova) {
+            foreach ($stupsheet["novas"] as $nova) {
                 echo "<th>$nova</th>";
             }
-            switch (count($weekinfo["novas"])) {
+            switch (count($stupsheet["novas"])) {
                 case 1 :
                     echo "<th></th>";
                     echo "<th></th>";

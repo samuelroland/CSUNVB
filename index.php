@@ -61,7 +61,7 @@ switch ($action) {
         drugHomePage(); // choix des feuilles de stups avec un base et dans une liste de semaines.
         break;
     case "detaildrug":
-        drugdetails($sheetid, $base); //page détails d'une feuille de stups avec tableaux
+        drugdetails($sheetid); //page détails d'une feuille de stups avec tableaux
         break;
     case 'tryLogin':
         tryLogin($initials, $password, $department);
@@ -112,8 +112,7 @@ switch ($action) {
         displayMeds();
         break;
     case 'logs' :
-        $weekId = $_GET["week"];
-        logs($weekId);
+        logs($sheetid);
         break;
 
     default: // unknown action
