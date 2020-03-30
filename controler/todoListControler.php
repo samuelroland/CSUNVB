@@ -28,8 +28,8 @@ function todoListDetailedWeek($sheetid, $base)
     $year = substr($sheetid, 0, 2) + 2000;    // extraire l'année
 
     $tasks = getTodoListTasks();
-    $daythings = getTodoListTasks();
-    $nightask = getTodoListTasks();
+    $daytasks = getTodoListTaskByDayOrNight(1);
+    $nightasks = getTodoListTaskByDayOrNight(0);
     $bases = getAllBases();
     $baseinfo = $bases[$base];
     require_once 'view/todoListHome.php';
