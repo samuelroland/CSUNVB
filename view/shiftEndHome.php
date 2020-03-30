@@ -40,6 +40,8 @@ $title = "CSU-NVB - Remise de garde";
 
                 </td>
                 <td>
+                    <?php var_dump($guardsheet['bossday']);?><br>
+                    <?php var_dump($guardsheet['bossnight']);?><br>
                     <?php foreach ($crews as $crew) {
                         if ($guardsheet['id'] == $crew['guardsheet_id']) {
                             foreach ($users as $user) {
@@ -53,6 +55,8 @@ $title = "CSU-NVB - Remise de garde";
                     } ?>
                 </td>
                 <td>
+                    <?php var_dump($guardsheet['teamday']);?><br>
+                    <?php var_dump($guardsheet['teamnight']);?><br>
                     <?php foreach ($crews as $crew) {
                         if ($guardsheet['id'] == $crew['guardsheet_id']) {
                             foreach ($users as $user) {
