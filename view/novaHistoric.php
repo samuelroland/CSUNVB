@@ -8,9 +8,19 @@
 ob_start();
 $title = "CSU-NVB - Novas Historic";
 ?>
-<h1 style="text-align: center">Historic pour la Nova n°<?=$nova['number']?></h1>
-
-
+<h1 style="text-align: center">Historic pour la Nova n°<?= $nova['number'] ?></h1>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <?php foreach ($guardsheets as $gs){?>
+        <td><?=date("d-m-Y",strtotime("Y-m-d",$gs['date']))?></td>
+        <td></td>
+        <?php }?>
+    </tr>
+</table>
 
 
 <?php

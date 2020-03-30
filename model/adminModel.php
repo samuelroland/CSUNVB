@@ -79,21 +79,40 @@ function getNovas(){
     return json_decode(file_get_contents("model/dataStorage/novas.json"),true);
 }
 function getOneNova($novaid){
-    $listeNovas = getNovas();
+    $listNovas = getNovas();
 
-    foreach ($listeNovas as $n) {
+    foreach ($listNovas as $n) {
         if ($n['id'] == $novaid) {
             return $n;
         }
     }
     return "";
 }
-function getGardUseByNova()
+function getGardUseByNova($novaid)
 {
-    
-}
-function getGuardsheetsByNova()
-{
+    $AllGN = json_decode(file_get_contents("model/dataStorage/guard_use_nova.json"),true);
+    foreach ($AllGN as $GN)
+    {
+        if ($GN['nova_id'] == $novaid)
+        {
+            $listGn[] = $GN;
 
+        }
+    }
+    return $listGn;
+}
+function getGuardsheetsByNova($guardUnova)
+{
+    $listGuardsheets = json_decode(file_get_contents("model/dataStorage/guardsheets.json"),true);
+    foreach ($listGuardsheets as $guardsheet)
+    {
+        foreach ($guardUnova as $gn){
+            if ($guardsheet["id"] == $gn['guardsheet_id'])
+            {
+                $listSheets[] = $guardsheet;
+            }
+        }
+    }
+    return $listSheets;
 }
 ?>

@@ -139,7 +139,9 @@ function displayNovas()
 function novaHistoric($novaid)
 {
     $nova = getOneNova($novaid);
-
+    $gn = getGardUseByNova($novaid);
+    $guardsheets = getGuardsheetsByNova($gn);
+    var_dump($guardsheets);
     require_once "view/novaHistoric.php";
 }
 ?>
