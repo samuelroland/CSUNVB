@@ -26,7 +26,7 @@ function readShiftEndGuardLines()
     return json_decode(file_get_contents("model/dataStorage/guardlines.json"), true);
 }
 
-function readCrews()
+function getAllCrews()
 {
     return json_decode(file_get_contents("model/dataStorage/crews.json"), true);
 }
@@ -52,7 +52,16 @@ function getShiftEndNova($shiftEndId,$dayNight){
         }
     }
 }
-
+function getShiftEndBossOrTeam($shiftEndId, $dayNight, $bossOrNot){
+    $crews = getAllCrews();
+    $users = getListUsers();
+    foreach ($crews as $crew){
+        if($crew['day']== $dayNight && $crew['guardsheet_id']==$shiftEndId && $crew['boss']== $bossOrNot){
+            $day=$users[$crew['user_id']-1];
+            return $day['initials'];
+        }
+    }
+}
 /**
  * Retourne les items pour une base précise, identifiée par son id
  * ...
@@ -71,6 +80,10 @@ function readShiftEndItemsForBase($id)
             $shiftEnd['base'] = $bases[$id];
             $shiftEnd['novaday']= getShiftEndNova($shiftEnd['id'],1);
             $shiftEnd['novanight']= getShiftEndNova($shiftEnd['id'],0);
+            $shiftEnd['bossday']=getShiftEndBossOrTeam($shiftEnd['id'],1,1);
+            $shiftEnd['bossnight']=getShiftEndBossOrTeam($shiftEnd['id'],0,1);
+            $shiftEnd['teamday']=getShiftEndBossOrTeam($shiftEnd['id'],1,0);
+            $shiftEnd['teamnight']=getShiftEndBossOrTeam($shiftEnd['id'],0,0);
             $res[] = $shiftEnd;
         }
 

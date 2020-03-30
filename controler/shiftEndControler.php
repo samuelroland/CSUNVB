@@ -12,7 +12,7 @@ function  shiftEndHomePage($base)
     $guardsheets = readShiftEndItemsForBase($base);
     $guardusenovas = readGuardUseNovas();
     $novas = getAllNovas();
-    $crews = readCrews();
+    $crews = getAllCrews();
     $users = readAdminItems();
 
     require_once 'view/shiftEndHome.php';
