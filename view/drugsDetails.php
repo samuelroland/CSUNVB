@@ -37,7 +37,7 @@ $title = "CSU-NVB - Stupéfiants";
 <br>
 
 <br>
-<table class="table-bordered col-1 aligncenter">
+<table class=" table-bordered col-1 aligncenter">
     <thead>
     <tr>
         <th colspan="2"></th>   <!-- cellule vide haut gauche du tableau -->
@@ -98,7 +98,7 @@ $title = "CSU-NVB - Stupéfiants";
     </thead>
     <?php foreach ($drugs as $i => $drug) { ?>
         <tbody>
-        <tr>
+        <tr class="bg-lightgrey">
             <td colspan="2" class=""><strong><?= $drug["name"] ?></strong></td>
             <?php for ($f = 1; $f <= 7; $f++) { ?>
                 <td>X</td>
@@ -135,9 +135,9 @@ $title = "CSU-NVB - Stupéfiants";
                     if ($check["batch_id"] == $batch["id"] && strtotime($check['date']) == $day) { //si c'est le bon batch et le jour en cours ?>
                         <td><?= $sheet[$date][$nova_id][$batch_id] ?></td>
                         <td><?= $check["start"] ?> Checkid = <?= $check["id"] ?></td>
-                        <td class="bg-info"><?= date("d M", strtotime($check["date"])) ?></td>
-                        <td class="bg-secondary"><?= "stupsheetid = " . $check['stupsheet_id'] ?></td>
-                        <td class="bg-grey"><?= $check["batch_id"] ?></td>
+                        <td class=""><?= date("d M", strtotime($check["date"])) ?></td>
+                        <td class=""><?= "stupsheetid = " . $check['stupsheet_id'] ?></td>
+                        <td class=""><?= $check["batch_id"] ?></td>
                         <td><?= $check["end"] ?></td>
                         <?php
                         $foundacheck = true;    //donc on a trouvé.
