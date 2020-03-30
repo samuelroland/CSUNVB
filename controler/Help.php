@@ -19,5 +19,49 @@ function SelectSheets($mode)
     }
     require 'view/sheetselect.php';
 }
+function changeWeekDown($weekId)
+{
+    $weekNumber = getASheetById($weekId)["week"];
+    $base = getASheetById($weekId)["base_id"];
+    $weeks = getAllSheets();
+
+    $beforWeek = null;
+    foreach ($weeks as $week) {
+        if ($week["base_id"] == $base && $week["week"] < $weekNumber) {
+            if ($week["week"] > $beforWeek) {
+                $beforWeek = $week["id"];
+            }
+        }
+    }
+
+    if ($beforWeek == null) {
+        return $beforWeek;
+    } else {
+        return $beforWeek;
+    }
+}
+
+function changeWeekUp($weekId)
+{
+    $weekNumber = getASheetById($weekId)["week"];
+    $base = getASheetById($weekId)["base_id"];
+    $weeks = getAllSheets();
+
+    $afterWeek = 10000000;
+    foreach ($weeks as $week) {
+        if ($week["base_id"] == $base && $week["week"] > $weekNumber) {
+            if ($week["week"] < $afterWeek) {
+                $afterWeek = $week["id"];
+            }
+        }
+    }
+
+    if ($afterWeek == 10000000) {
+        return null;
+    } else {
+        return $afterWeek;
+    }
+
+}
 
 ?>

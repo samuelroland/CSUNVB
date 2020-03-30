@@ -47,7 +47,8 @@ switch ($action) {
         crew();
         break;
     case 'shiftend':
-        shiftEndHomePage();
+        $base = $_SESSION['user'][3]['id'];
+        shiftEndHomePage($base);
         break;
     case 'shiftEndList';
         shiftEndListPage($sheetid);
@@ -110,7 +111,8 @@ switch ($action) {
         displayMeds();
         break;
     case 'logs' :
-        logs();
+        $weekId = $_GET["week"];
+        logs($weekId);
         break;
 
     default: // unknown action

@@ -5,6 +5,12 @@ function getAllLogs(){
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
+        $user = getAnUser($p["author_id"]);
+        $p["user"] = $user["initials"];
+
+        $week = getASheetById($p["item_id"]);
+        $p["week"] = $week["week"];
+
         $goodArray[$p["id"]] = $p;
     }
 
@@ -19,6 +25,17 @@ function getALog($id){
             return $log;
         }
     }
+}
+
+function getLogsByItemId($itemId){
+    $logs = getAllLogs();
+
+    foreach ($logs as $key => $log){
+        if ($log["item_id"] != $itemId){
+            unset($logs[$key]);
+        }
+    }
+    return $logs;
 }
 
 function saveLogs($items)
@@ -69,5 +86,7 @@ function delALog($id)
 
     saveLogs($items);
 }
+
+
 
 ?>
