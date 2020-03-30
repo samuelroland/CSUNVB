@@ -112,7 +112,7 @@ $title = "CSU-NVB - Stupéfiants";
         foreach ($batches
 
         as $batch) {  //pour chaque lot
-        if ($batch["drug"] == $drug["name"]) { ?>
+        if ($batch["drug_id"] == $drug["id"] && in_array($batch['number'], $stupsheet['batches'])) { ?>
         <tr>
             <td colspan="2" class=""><?= $batch["number"] . " id:" . $batch['id'] ?></td>
             <?php
@@ -137,7 +137,8 @@ $title = "CSU-NVB - Stupéfiants";
             } ?>
         </tbody>
     <?php }
-    echo "</table><p>asjkldf</p><p>asdfjklsafjklsaj klésafjk safjklésa fjklsadf</p>";
+    echo "</table>";
+    echo "<p> </p>";
 
     $content = ob_get_clean();
     require "gabarit.php";

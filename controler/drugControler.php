@@ -25,8 +25,8 @@ function drugdetails($sheetid)  //détails d'une feuille de stups
     $batches = getAllBatches();
 
     $baseinfo = getABase($stupsheet['base_id']);
-    var_dump($baseinfo);
     $listofchecks = getAllChecksByASheetId($sheetid);
+
     require 'view/drugsDetails.php';
 }
 
