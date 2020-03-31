@@ -3,9 +3,9 @@ ob_start();
 
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-$semplus = $sheetid + 1;
-$semmoins = $sheetid - 1;
-$weeknum = $numweek -12.3;
+$semplus = changeWeekUp("todo", $sheetid);
+$semmoins = changeWeekDown("todo", $sheetid);
+//$weeknum = $numweek -12.3;
 
 ?>
 
@@ -17,7 +17,6 @@ $weeknum = $numweek -12.3;
 
 require_once 'controler/todoListControler.php';
 require_once 'controler/drugControler.php';
-var_dump($numweek);
 ?>
 
 
@@ -32,22 +31,22 @@ var_dump($numweek);
 <table class=" table table-striped">
     <div class="navbar nav-pills">
         <th>  <?php
-            if ($numweek == 1) {
-
+            if ($semmoins == null) {
+                echo "<button class='btn btn-info btnmenu' disabled> <</button>";
             } else {
-                echo "<button class='btn btn-info btnmenu' > <a href='?action=todolisthome&base=$base&sheetid=$semmoins'><</a></button>";
+                echo "<a href='?action=todolisthome&sheetid=$semmoins'><button class='btn btn-info btnmenu' > <</button></a>";
             }
 
             ?>Semaine <?php echo $numweek; ?>
             <?php
-
-
-            ?>
-            <?php
-            if ($numweek != 53) {
-                echo "<button class='btn btn-info btnmenu'><a href='?action=todolisthome&base=$base&sheetid=$semplus'>></a></button>";
+            if ($semplus == null) {
+                echo "<button class='btn btn-info btnmenu' disabled> ></button>";
+            } else {
+                echo "<a href='?action=todolisthome&sheetid=$semplus'><button class='btn btn-info btnmenu' > ></button></a>";
             }
+
             ?>
+
             <?php
             // Seulement les admins peuvent voir les boutons
             if ($_SESSION['user'][2] == true) {
