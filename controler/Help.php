@@ -19,11 +19,20 @@ function SelectSheets($mode)
     }
     require 'view/sheetselect.php';
 }
-function changeWeekDown($weekId)
+function changeWeekDown($type, $weekId)
 {
-    $weekNumber = getASheetById($weekId)["week"];
-    $base = getASheetById($weekId)["base_id"];
-    $weeks = getAllSheets();
+    switch ($type){
+        case "drug" :
+            $weekNumber = getASheetById($weekId)["week"];
+            $base = getASheetById($weekId)["base_id"];
+            $weeks = getAllSheets();
+            break;
+        case "todo" :
+            $weekNumber = readTodoListWeekById($weekId)["week"];
+            $base = readTodoListWeekById($weekId)["base_id"];
+            $weeks = getTodoListWeeks();
+            break;
+    }
 
     $beforWeek = null;
     foreach ($weeks as $week) {
@@ -41,11 +50,20 @@ function changeWeekDown($weekId)
     }
 }
 
-function changeWeekUp($weekId)
+function changeWeekUp($type, $weekId)
 {
-    $weekNumber = getASheetById($weekId)["week"];
-    $base = getASheetById($weekId)["base_id"];
-    $weeks = getAllSheets();
+    switch ($type){
+        case "drug" :
+            $weekNumber = getASheetById($weekId)["week"];
+            $base = getASheetById($weekId)["base_id"];
+            $weeks = getAllSheets();
+            break;
+        case "todo" :
+            $weekNumber = readTodoListWeekById($weekId)["week"];
+            $base = readTodoListWeekById($weekId)["base_id"];
+            $weeks = getTodoListWeeks();
+            break;
+    }
 
     $afterWeek = 10000000;
     foreach ($weeks as $week) {
