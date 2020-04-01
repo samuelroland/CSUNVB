@@ -33,10 +33,17 @@ function todoListDetailedWeek($sheetid, $base)
         $tasks[$i]['daytasks'] = getTodoListTaskByDay($i,1);
         $tasks[$i]['nighttasks'] = getTodoListTaskByDay($i,0);
     }
+
+    $daytasks = getTodoListTaskByDayOrNight(1);
+    var_dump($daytasks);
+    $nightasks = getTodoListTaskByDayOrNight(0);
+    var_dump($nightasks);
     $bases = getAllBases();
     $baseinfo = $bases[$base];
     require_once 'view/todoListHome.php';
 }
+
+
 
 function addNewToDo($tasks)
 {
