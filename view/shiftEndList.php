@@ -4,7 +4,9 @@ $title = "CSU-NVB - Remise de garde";
 
 
 ?>
+
 <?php
+
 foreach ($guardsections as $guardsection) {
     foreach ($guardsheets as $guardsheet) {
         if ($guardsheet['id'] == $sheetid) {

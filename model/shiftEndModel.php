@@ -36,9 +36,15 @@ function getAllCrews()
  * Retourne un item précis, identifié par son id
  * ...
  */
-function readShiftEndItem($id)
+function getShiftEndById($id)
 {
+
     $items = getShiftEndItems();
+    foreach ($items as $item){
+        if ($item["id"] == $id) {
+            return $item;
+        }
+    }
     // TODO: coder la recherche de l'item demandé
     return $item;
 }
@@ -88,31 +94,6 @@ function readShiftEndItemsForBase($id)
         }
 
     }
-    /*foreach ($guardusenovas as $guardusenova) {
-        foreach ($novas as $nova) {
-            if($nova['id']==$guardusenova['nova_id']){
-                $item =$nova['number'];
-                $res[] = $item;
-            }
-        }
-    }
-*/
-
-    /*foreach ($guardusenovas as $guardusenova) {
-    foreach ($novas as $nova) {
-        if ($nova['id'] == $guardusenova['nova_id']) {
-            if ($guardusenova['day'] == 1) {
-                $item['novaday'] = $nova['number'];
-                $res[] = $item;
-            } elseif ($guardusenova['day'] == 0) {
-                $item['novanight'] = $nova['number'];
-                $res[] = $item;
-            }
-        }
-    }
-}
-*/
-
 
     return $res;
 }
