@@ -114,6 +114,12 @@ switch ($action) {
     case 'logs' :
         logs($sheetid);
         break;
+    case 'updatePharmaCheck' :
+        $batch_id = $_GET["batch_id"];
+        $stupsheet_id = $_GET["stupsheet_id"];
+        $date = $_GET["date"];
+        updatePharmaCheckPage($batch_id, $stupsheet_id, $date);
+        break;
 
     default: // unknown action
         if (isset($_SESSION['user']) && $_SESSION['user'][4] != true) {

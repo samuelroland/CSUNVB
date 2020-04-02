@@ -35,6 +35,16 @@ function getABatche($number)
     }
 }
 
+function getABatcheById($id){
+    $batches = getAllBatches();
+
+    foreach ($batches as $batche) {
+        if ($batche["id"] == $id) {
+            return $batche;
+        }
+    }
+}
+
 function savebatches($items)
 {
     file_put_contents("model/dataStorage/batches.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json

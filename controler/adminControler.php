@@ -138,9 +138,12 @@ function displayNovas()
 }
 function novaHistoric($novaid)
 {
+    $bases = getBases();
+    $crews = getAllCrews();
     $nova = getOneNova($novaid);
     $gn = getGardUseByNova($novaid);
     $guardsheets = getGuardsheetsByNova($gn);
+
     require_once "view/novaHistoric.php";
 }
 ?>
