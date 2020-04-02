@@ -21,7 +21,12 @@ function shiftEndListPage($sheetid){
     $guardsections = readShiftEndGuardSection();
     $guardlines = readShiftEndGuardLines();
     $guardsheets = readShiftEndItems();
-    /*$guardsheet = getShiftEndById($sheetid);*/
+    $guardsheet = getShiftEndById($sheetid);
+    $baseinfo = getABase($guardsheet['base_id']);
+    $guardsheetinfo =readShiftEndItemsForBase($guardsheet['base_id']);
+
+
+
     require_once 'view/shiftEndList.php';
 }
 ?>
