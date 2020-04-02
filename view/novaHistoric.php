@@ -12,13 +12,20 @@ $title = "CSU-NVB - Novas Historic";
 <div class="my-auto">
     <table class="table table-bordered h-50 text-center">
         <tr>
-            <th>Date</th>
-            <th>Status</th>
+            <th rowspan="2">Date</th>
+            <th rowspan="2">Base</th>
+            <th colspan="2">Status</th>
+        </tr>
+        <tr class="font-weight-bold">
+            <td>Jour</td>
+            <td>Nuit</td>
         </tr>
         <?php foreach ($guardsheets as $gs) { ?>
             <tr>
                 <td><?= date("Y-m-d", strtotime($gs['date'])) ?></td>
-                <td class="bg-<?= ($gs['state'] == 'open') ? 'success' : 'danger'?> text-light"><?= $gs['state'] ?></td>
+                <td><?php foreach ($bases as $b){if ($b['id']==$gs['base_id']) echo $b['name'];}?></td>
+                <td><?php foreach ($crew as $c){if ($c['id']==$gs['base_id']) echo $b['name'];}?></td>
+                <td></td>
             </tr>
         <?php } ?>
     </table>
