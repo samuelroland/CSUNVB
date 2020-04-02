@@ -101,6 +101,9 @@ function getDatesOfAWeekBySheetId($sheetid)
 }
 
 function updatePharmaCheckPage($batch_id, $stupsheet_id, $date){
+    $batch = getABatcheById($batch_id);
+    $stupsheet = getASheetById($stupsheet_id);
+    $check = getAChek($date, $batch_id);
     require_once "view/updatePharmaCheck.php";
 }
 
