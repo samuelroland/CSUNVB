@@ -13,6 +13,8 @@ function getAllSheets()
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
+        $base = getABase($p["base_id"]);
+        $p["base"] = $base["name"];
         foreach ($novas as $key => $nova) {
             if ($nova["stupsheet_id"] == $p["id"]) {
                 $p["novas"][$key] = $nova["nova"];
