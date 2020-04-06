@@ -127,7 +127,11 @@ function bases()
     require_once 'view/bases.php';
 
 }
-function displayMeds($medsid)
+function displayMeds()
+{
+
+}
+function medicsHistoric($medsid)
 {
 
 }

@@ -110,7 +110,10 @@ switch ($action) {
         displayNovas();
         break;
     case 'viewMedics':
-        displayMeds($medsid);
+        displayMeds();
+        break;
+    case 'MedicsHistoric':
+        medicsHistoric($medsid);
         break;
     case 'logs' :
         logs($sheetid);
