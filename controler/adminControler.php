@@ -54,7 +54,7 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
         $id += 1;
         $idDisponible = verifyID($id);
     }
-    
+
     $newUser = [
         'id' => $id,
         'initials' => $initials,
@@ -135,8 +135,8 @@ function medicsHistoric($medsid)
 {
     $medic = getMedic($medsid);
     $batch = getMedBatches($medsid);
-    $stups = getRightStupsForBatches($batch);
-    var_dump($stups);
+    list($weeks,$stups,$stupsbatch) = getRightStupsForBatches($batch);
+    var_dump($weeks);
     require_once 'view/medicHistoric.php';
 }
 function displayNovas()

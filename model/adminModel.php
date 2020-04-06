@@ -184,11 +184,12 @@ function getRightStupsForBatches($batchesid)
         {
             if($c['stupsheet_id'] == $s['id'])
             {
-                $rightStups[]= $s['week'];
+                $rightStups[]= $s;
+                $weeks[] = $s['week'];
             }
         }
     }
-    $result = array_unique($rightStups);
-    return $result;
+    $weeksformated = array_unique($weeks);
+    return array($weeksformated,$rightStups,$compList);
 }
 ?>
