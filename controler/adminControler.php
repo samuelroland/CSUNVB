@@ -54,8 +54,7 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
         $id += 1;
         $idDisponible = verifyID($id);
     }
-
-
+    
     $newUser = [
         'id' => $id,
         'initials' => $initials,
@@ -66,7 +65,7 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
         'firstLogin' => true,
     ];
     $listUsers[] = $newUser;
-    file_put_contents("model/dataStorage/users.json", json_encode($listUsers));
+    writeUser($listUsers);
 }
 
 function crew()
