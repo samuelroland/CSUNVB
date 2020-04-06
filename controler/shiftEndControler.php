@@ -11,6 +11,9 @@ function  shiftEndHomePage($base)
 {
     $guardsheets = readShiftEndItemsForBase($base);
     $guardusenovas = readGuardUseNovas();
+    $guardsheet = getShiftEndById($base);
+    $baseinfo = getABase($guardsheet['base_id']);
+    $bases = getAllBases();
     $novas = getAllNovas();
     $crews = getAllCrews();
     $users = readAdminItems();
