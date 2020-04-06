@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$numweek = $_GET['week'];
 $getyear = $_GET['year'];
 $base = $_GET['base'];
 $daynight = $_GET['daything'];
