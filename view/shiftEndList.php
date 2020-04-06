@@ -4,10 +4,37 @@ $title = "CSU-NVB - Remise de garde";
 
 
 ?>
-<?= $guardsheet['date'] ?> <?= $guardsheet['state'] ?><?=$baseinfo['name']?>
+
+    <br>
+    <table class="table table-bordered  table-striped" style="text-align: center">
+        <thead class="thead-dark">
+        <th>Date</th>
+        <th>État</th>
+        <th>Véhicule</th>
+        <th>Résponsable</th>
+        <th>Équipage</th>
+        <th>Base</th>
+        </thead>
+        <tr>
+            <td><?= $guardsheet['date'] ?></td>
+            <td><?php if ($guardsheet['state'] == 'open') { ?>
+                    <?= "Ouvert " ?>
+                <?php } else { ?>
+                    <?= "Fermé " ?>
+                <?php } ?></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><?= $baseinfo['name'] ?></td>
+        </tr>
+    </table>
+
+
+<?= $baseinfo['name'] ?>
+
 <?php
 /*var_dump($guardsheetinfo);*/
-foreach ($guardsections as $guardsection) {?>
+foreach ($guardsections as $guardsection) { ?>
     <table class="table table-active table-bordered table-striped " style="text-align: center">
         <tr class="table-primary text-secondary ">
             <td class="font-weight-bold "><?= $guardsection['title']; ?></td>
@@ -33,7 +60,7 @@ foreach ($guardsections as $guardsection) {?>
         ?>
     </table>
 
-   <?php /*    foreach ($guardsheets as $guardsheet) {
+    <?php /*    foreach ($guardsheets as $guardsheet) {
         if ($guardsheet['id'] == $sheetid) {
             ?>
             <h2><?=$guardsheet['date']?></h2>

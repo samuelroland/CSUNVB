@@ -23,7 +23,7 @@ function shiftEndListPage($sheetid){
     $guardsheets = readShiftEndItems();
     $guardsheet = getShiftEndById($sheetid);
     $baseinfo = getABase($guardsheet['base_id']);
-    $guardsheetinfo =readShiftEndItemsForBase($guardsheet['base_id']);
+    $guardsheetinfo =readShiftEndItemsForBase($sheetid);
 
 
 

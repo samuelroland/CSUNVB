@@ -7,6 +7,7 @@ $title = "CSU-NVB - Remise de garde";
 <script src="js/shiftEnd.js"></script>
 <div class="row m-2">
     <h1>Remises de garde</h1>
+
     <table class="table table-bordered  table-striped" style="text-align: center">
         <thead class="thead-dark">
         <th>Date</th>

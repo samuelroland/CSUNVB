@@ -99,6 +99,11 @@ function readShiftEndItemsForBase($id)
     return $res;
 }
 
+function getOneShiftEnItemForBase(){
+    $oneShiftEnd = readShiftEndItemsForBase($id);
+
+}
+
 /**
  * Sauve l'ensemble des items dans le fichier json
  * ...
