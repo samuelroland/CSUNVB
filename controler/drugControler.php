@@ -107,4 +107,26 @@ function updatePharmaCheckPage($batch_id, $stupsheet_id, $date){
     require_once "view/updatePharmaCheck.php";
 }
 
+function changePharmaCheck($batch_id, $stupsheet_id, $date, $start, $end){
+    $check = getAChek($date, $batch_id);
+    $newCheck = [
+        "date" => $date,
+        "start" => $start,
+        "end" => $end,
+        "batch_id" => $batch_id,
+        "user_id" => $_SESSION["user"][0],
+        "stupsheet_id" => $stupsheet_id
+    ];
+
+    if ($check == null){
+        addAChek($newCheck);
+    }
+    else{
+        $newCheck["id"] = $check["id"];
+        updateAChek($newCheck);
+    }
+
+    drugdetails($stupsheet_id);
+}
+
 ?>

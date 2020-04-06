@@ -39,7 +39,7 @@ function getAllCrews()
 function getShiftEndById($id)
 {
 
-    $items = getShiftEndItems();
+    $items = readShiftEndItems();
     foreach ($items as $item){
         if ($item["id"] == $id) {
             return $item;
@@ -48,6 +48,7 @@ function getShiftEndById($id)
     // TODO: coder la recherche de l'item demandé
     return $item;
 }
+
 function getShiftEndNova($shiftEndId,$dayNight){
     $guardusenovas = readGuardUseNovas();
     $novas = getAllNovas();
