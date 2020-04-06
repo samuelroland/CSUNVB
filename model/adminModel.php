@@ -115,4 +115,76 @@ function getGuardsheetsByNova($guardUnova)
     }
     return $listSheets;
 }
+function getMedics()
+{
+    return json_decode(file_get_contents("model/dataStorage/drugs.json"),true);
+}
+function getMedic($id)
+{
+    $listMedics = getMedics();
+
+    foreach ($listMedics as $m) {
+        if ($m['id'] == $id) {
+            return $m;
+        }
+    }
+    return "";
+}
+function  getBatches()
+{
+    return json_decode(file_get_contents("model/dataStorage/batches.json"),true);
+}
+function getMedBatches($medsid)
+{
+    $listBatches = getBatches();
+
+    foreach ($listBatches as $b) {
+        if ($b['drug_id'] == $medsid) {
+            $listMedBatches[] = $b;
+        }
+    }
+    return $listMedBatches;
+}
+function getAllStupsheets()
+{
+    return json_decode(file_get_contents("model/dataStorage/stupsheets.json"),true);
+}
+function getStupsBatches()
+{
+    return json_decode(file_get_contents("model/dataStorage/stupsheet_use_batch.json"),true);
+}
+function getStupsBatchesWithId($batchesid)
+{
+    $AllStupsBatches = getStupsBatches();
+
+    foreach ($AllStupsBatches as $sb)
+    {
+        foreach ($batchesid as $batch)
+        {
+            if ($batch['id'] == $sb['batch_id'])
+            {
+                $compList[] = $sb;
+            }
+        }
+    }
+    return $compList;
+}
+function getRightStupsForBatches($batchesid)
+{
+    $compList = getStupsBatchesWithId($batchesid);
+    $stupsList = getAllStupsheets();
+
+    foreach ($stupsList as $s)
+    {
+        foreach ($compList as $c)
+        {
+            if($c['stupsheet_id'] == $s['id'])
+            {
+                $rightStups[]= $s['week'];
+            }
+        }
+    }
+    $result = array_unique($rightStups);
+    return $result;
+}
 ?>

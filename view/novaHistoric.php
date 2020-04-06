@@ -11,14 +11,14 @@ $title = "CSU-NVB - Novas Historic";
 <h1 style="text-align: center">Historique pour la Nova n°<?= $nova['number'] ?></h1>
 <div class="my-auto">
     <table class="table table-bordered h-50 text-center">
-        <tr>
+        <tr class="thead-dark">
             <th rowspan="2">Date</th>
             <th rowspan="2">Base</th>
             <th colspan="2">Responsable</th>
         </tr>
-        <tr class="font-weight-bold">
-            <td>Jour</td>
-            <td>Nuit</td>
+        <tr class="font-weight-bold thead-dark">
+            <th>Jour</th>
+            <th>Nuit</th>
         </tr>
         <?php foreach ($guardsheets as $gs) { ?>
             <tr>

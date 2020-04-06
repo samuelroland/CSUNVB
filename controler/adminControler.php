@@ -129,7 +129,16 @@ function bases()
 }
 function displayMeds()
 {
-
+    $AllMedics = getMedics();
+    require_once 'view/medics.php';
+}
+function medicsHistoric($medsid)
+{
+    $medic = getMedic($medsid);
+    $batch = getMedBatches($medsid);
+    $stups = getRightStupsForBatches($batch);
+    var_dump($stups);
+    require_once 'view/medicHistoric.php';
 }
 function displayNovas()
 {
