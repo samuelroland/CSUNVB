@@ -1,15 +1,15 @@
 <?php
 /**
- *   Title:  novas.php
+ *   Title:  medics.php
  *   Author: Luís Pedro
- *   Date:   23.03.2020
+ *   Date:   06.04.2020
  */
 
 ob_start();
-$title = "CSU-NVB - Novas";
+$title = "CSU-NVB - Medics";
 ?>
 
-<h1 style="text-align: center">Novas</h1>
+<h1 style="text-align: center">Médicaments</h1>
 <table class="table table-bordered" style="text-align: center">
 
     <tr class="thead-dark">
@@ -17,10 +17,13 @@ $title = "CSU-NVB - Novas";
     </tr>
 
     <?php
-    foreach ($listNovas as $nova) {
-        ?><tr><td><a href='?action=novaHistoric&novaid=<?=$nova['id']?>'>Nova n°<?=$nova['number']?></a></td></tr><?php
+    foreach ($AllMedics as $medic) {
+        ?>
+        <tr>
+        <td><a href='?action=medicsHistoric&medsid=<?= $medic['id'] ?>'><?= $medic['name'] ?></a></td></tr><?php
     }
     ?>
+</table>
 
 <?php
 if ($_SESSION['user'][2] == true) {

@@ -11,6 +11,7 @@ $adminchange = $_GET['idPerson'];
 $option = $_GET['option'];
 $basename = $_GET['base_id'];
 $novaid = $_GET['novaid'];
+$medsid = $_GET['medsid'];
 
 // Login token if exists
 if (isset($_POST["initials"]) || isset($_POST["password"]) || isset($_POST["firstname"])) {
@@ -108,8 +109,11 @@ switch ($action) {
     case 'viewNovas':
         displayNovas();
         break;
-    case 'viewMeds':
+    case 'viewMedics':
         displayMeds();
+        break;
+    case 'medicsHistoric':
+        medicsHistoric($medsid);
         break;
     case 'logs' :
         logs($sheetid);

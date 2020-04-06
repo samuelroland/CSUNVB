@@ -12,18 +12,14 @@ $title = "CSU-NVB - Bases";
 ?>
 <h1 style="text-align: center">Bases</h1>
 <table class="table table-bordered" style="text-align: center">
-
-    <tr>
+    <tr class="thead-dark">
         <th>Nom</th>
     </tr>
-
     <?php
     foreach ($listBases as $base) {
         echo "<tr><td>" .$base['name'] . "</td></tr>";
     }
     ?>
-
-
 </table>
 
 <?php
