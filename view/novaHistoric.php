@@ -14,7 +14,7 @@ $title = "CSU-NVB - Novas Historic";
         <tr>
             <th rowspan="2">Date</th>
             <th rowspan="2">Base</th>
-            <th colspan="2">Status</th>
+            <th colspan="2">Responsable</th>
         </tr>
         <tr class="font-weight-bold">
             <td>Jour</td>
@@ -24,8 +24,8 @@ $title = "CSU-NVB - Novas Historic";
             <tr>
                 <td><?= date("Y-m-d", strtotime($gs['date'])) ?></td>
                 <td><?php foreach ($bases as $b){if ($b['id']==$gs['base_id']) echo $b['name'];}?></td>
-                <td><?php foreach ($crew as $c){if ($c['id']==$gs['base_id']) echo $b['name'];}?></td>
-                <td></td>
+                <td><?php foreach ($crews as $c){if ($c['guardsheet_id'] == $gs['id'] && $c['boss']== 1 && $c['day'] == 1) $user = getAnUser($c['user_id']);}?><?=$user['initials']?></td>
+                <td><?php foreach ($crews as $c){if ($c['guardsheet_id'] == $gs['id'] && $c['boss']== 1 && $c['day'] == 0) $user = getAnUser($c['user_id']);}?><?=$user['initials']?></td>
             </tr>
         <?php } ?>
     </table>
