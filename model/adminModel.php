@@ -71,6 +71,10 @@ function createAdminItem($item)
     saveAdminItem($items);
     return ($item); // Pour que l'appelant connaisse l'id qui a été donné
 }
+function writeUser($listUsers)
+{
+    file_put_contents("model/dataStorage/users.json", json_encode($listUsers));
+}
 function getBases()
 {
     return json_decode(file_get_contents("model/dataStorage/bases.json"),true);
@@ -180,11 +184,12 @@ function getRightStupsForBatches($batchesid)
         {
             if($c['stupsheet_id'] == $s['id'])
             {
-                $rightStups[]= $s['week'];
+                $rightStups[]= $s;
+                $weeks[] = $s['week'];
             }
         }
     }
-    $result = array_unique($rightStups);
-    return $result;
+    $weeksformated = array_unique($weeks);
+    return array($weeksformated,$rightStups,$compList);
 }
 ?>

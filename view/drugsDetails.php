@@ -84,7 +84,9 @@ $title = "CSU-NVB - Stupéfiants";
                 <td>X</td>
                 <?php
                 foreach ($novas as $nova) {
-                    echo "<td>13-13</td>";  //la case pour novacheck
+                    echo "<td>{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["start"]}
+                           - {$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["end"]}</td>";
+                    //echo "<td>13-13</td>";  //la case pour novacheck
                 }
                 ?>
                 <td>X</td>

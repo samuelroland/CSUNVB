@@ -21,18 +21,16 @@ $title = "CSU-NVB - Medics Historic";
                 <p class="text-right">Semaine</p>
                 <p class="text-left">Lot</p>
             </th>
-            <?php foreach ($stups as $s){?>
-                <th><?= $s?></th>
-            <?php } ?>
+            <?php foreach ($weeks as $w){?><th><?= $w?></th><?php } ?>
         </tr>
-
-        <?php
-        foreach ($AllMedics as $medic) {
-            ?>
+        <?php foreach ($batch as $b){?>
             <tr>
-            <td><a href='?action=medicsHistoric&medsid=<?= $medic['id'] ?>'><?= $medic['name'] ?></a></td></tr><?php
-        }
-        ?>
+                <td><?= $b['number'] ?></td>
+
+            </tr>
+
+        <?php } ?>
+
     </table>
 
 <?php

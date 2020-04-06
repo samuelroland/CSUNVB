@@ -55,7 +55,6 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
         $idDisponible = verifyID($id);
     }
 
-
     $newUser = [
         'id' => $id,
         'initials' => $initials,
@@ -66,7 +65,7 @@ function addUser($initials, $firstname, $lastname, $hash, $admin)
         'firstLogin' => true,
     ];
     $listUsers[] = $newUser;
-    file_put_contents("model/dataStorage/users.json", json_encode($listUsers));
+    writeUser($listUsers);
 }
 
 function crew()
@@ -136,8 +135,8 @@ function medicsHistoric($medsid)
 {
     $medic = getMedic($medsid);
     $batch = getMedBatches($medsid);
-    $stups = getRightStupsForBatches($batch);
-    var_dump($stups);
+    list($weeks,$stups,$stupsbatch) = getRightStupsForBatches($batch);
+    var_dump($weeks);
     require_once 'view/medicHistoric.php';
 }
 function displayNovas()
