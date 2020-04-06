@@ -115,4 +115,19 @@ function getGuardsheetsByNova($guardUnova)
     }
     return $listSheets;
 }
+function getMedics()
+{
+    return json_decode(file_get_contents("model/dataStorage/drugs.json"),true);
+}
+function getMedic($id)
+{
+    $listMedics = getMedics();
+
+    foreach ($listMedics as $m) {
+        if ($m['id'] == $id) {
+            return $m;
+        }
+    }
+    return "";
+}
 ?>

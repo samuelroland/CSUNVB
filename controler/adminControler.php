@@ -129,11 +129,13 @@ function bases()
 }
 function displayMeds()
 {
-
+    $AllMedics = getMedics();
+    require_once 'view/medics.php';
 }
 function medicsHistoric($medsid)
 {
-
+    $medic = getMedic($medsid);
+    require_once 'view/medicHistoric.php';
 }
 function displayNovas()
 {

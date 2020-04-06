@@ -10,7 +10,7 @@ $users = readAdminItems();
 <a href="?action=changePasswordUser" class="btn btn-primary m-1 pull-right">Changer un mot de passe</a>
 <table class="table table-bordered" style="text-align: center">
 
-    <tr>
+    <tr class="thead-dark">
 
         <th>Initials</th>
         <th>Prénom</th>

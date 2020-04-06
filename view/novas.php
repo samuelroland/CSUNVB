@@ -12,7 +12,7 @@ $title = "CSU-NVB - Novas";
 <h1 style="text-align: center">Novas</h1>
 <table class="table table-bordered" style="text-align: center">
 
-    <tr>
+    <tr class="thead-dark">
         <th>Nom</th>
     </tr>
 

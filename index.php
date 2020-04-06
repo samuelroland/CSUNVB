@@ -112,7 +112,7 @@ switch ($action) {
     case 'viewMedics':
         displayMeds();
         break;
-    case 'MedicsHistoric':
+    case 'medicsHistoric':
         medicsHistoric($medsid);
         break;
     case 'logs' :
