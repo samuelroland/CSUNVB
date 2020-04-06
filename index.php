@@ -120,6 +120,11 @@ switch ($action) {
         $date = $_GET["date"];
         updatePharmaCheckPage($batch_id, $stupsheet_id, $date);
         break;
+    case 'changePharmaCheck' :
+        extract($_GET); // $batch_id, $stupsheet_id, $date
+        extract($_POST); // $start, $end
+        changePharmaCheck($batch_id, $stupsheet_id, $date, $start, $end);
+        break;
 
     default: // unknown action
         if (isset($_SESSION['user']) && $_SESSION['user'][4] != true) {
