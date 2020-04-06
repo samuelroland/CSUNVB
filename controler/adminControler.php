@@ -127,7 +127,7 @@ function bases()
     require_once 'view/bases.php';
 
 }
-function displayMeds()
+function displayMeds($medsid)
 {
 
 }
