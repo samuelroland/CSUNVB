@@ -43,7 +43,7 @@ $title = "CSU-NVB - Stupéfiants";
         <th colspan="2"></th>   <!-- cellule vide haut gauche du tableau -->
 
         <?php
-        $nbnovas = count($stupsheet['novas']);
+        $nbnovas = count($novas);
         $colspanforday = $nbnovas + 2;  //nombre de novas + 2 cases pharmacies
         foreach ($datesoftheweek as $onedate) {
             if (strcmp(date("Y-m-d", $onedate), date("Y-m-d")) == 0) {   //si la date est aujourdh'hui.
@@ -68,8 +68,8 @@ $title = "CSU-NVB - Stupéfiants";
     </tr>
     <tr>
         <?php for ($i = 0; $i < 7; $i++) {
-            foreach ($stupsheet["novas"] as $nova) {
-                echo "<th>$nova</th>";
+            foreach ($novas as $nova) {
+                echo "<th>{$nova["nova"]}</th>";
             }
 
         } ?>
@@ -83,7 +83,7 @@ $title = "CSU-NVB - Stupéfiants";
                 ?>
                 <td>X</td>
                 <?php
-                foreach ($stupsheet["novas"] as $nova) {
+                foreach ($novas as $nova) {
                     echo "<td>13-13</td>";  //la case pour novacheck
                 }
                 ?>
@@ -116,7 +116,7 @@ $title = "CSU-NVB - Stupéfiants";
                 foreach ($listofchecks as $check) { //pour chaque check
                     if ($check["batch_id"] == $batch["id"] && strtotime($check['date']) == $day) { //si c'est le bon batch et le jour en cours ?>
                         <td><?= $check["start"] ?> Checkid = <?= $check["id"] ?></td>
-                        <?php foreach ($stupsheet['novas'] as $nova) { ?>
+                        <?php foreach ($novas as $nova) { ?>
                             <td><?= $sheet[$date][$nova_id][$batch_id] ?></td>
                         <?php } ?>
 

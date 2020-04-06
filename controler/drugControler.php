@@ -12,6 +12,7 @@ require_once 'model/stupSheetModel.php';
 require_once 'model/batchesModel.php';
 require_once 'model/pharmaCheksModel.php';
 require_once 'model/logsModel.php';
+require_once 'model/novaChecksModel.php';
 
 function drugdetails($sheetid)  //détails d'une feuille de stups
 {
@@ -19,13 +20,37 @@ function drugdetails($sheetid)  //détails d'une feuille de stups
     $sheetid = $stupsheet['id'];
     $numweek = substr($stupsheet['week'], 2);    //extraire le numéro de la semaine uniquement.
     $year = substr($stupsheet['week'], 0, 2) + 2000;    //extraire l'année
-    var_dump($stupsheet);
+
     $datesoftheweek = getDatesOfAWeekBySheetId($sheetid);
     $drugs = getAllDrugs();
     $batches = getAllBatches();
 
     $baseinfo = getABase($stupsheet['base_id']);
     $listofchecks = getAllChecksByASheetId($sheetid);
+
+    $novaChecks = getAllNovaChecksByASheetId($sheetid);
+    $novas = $stupsheet["novas"];
+    unset($stupsheet["novas"]);
+
+    $result = [];
+    foreach ($drugs as $drug) {
+        foreach ($novas as $nova) {
+            foreach ($datesoftheweek as $dayindex => $day) {
+                foreach ($novaChecks as $novaCheck) {
+                    if ($novaCheck["drug_id"] == $drug['id']) {
+                        if ($novaCheck["nova_id"] == $nova['nova_id']) {
+                            if ($novaCheck["date"] == date("Y-m-d", $day)) {
+                                $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["start"] = $novaCheck["start"];
+                                $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["end"] = $novaCheck["end"];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    var_dump($stupsheet['novas']);
 
     require 'view/drugsDetails.php';
 }

@@ -12,6 +12,18 @@ function getAllNovaChecks()
     return $goodArray; //Retourne le tableau indexé avec ses id
 }
 
+function getAllNovaChecksBySheetId($sheet_id){
+    $cheks = getAllNovaChecks();
+
+    foreach ($cheks as $chek){
+        if ($chek["stupsheet_id"] == $sheet_id){
+            $trueChecks[] = $chek;
+        }
+    }
+
+    return $trueChecks;
+}
+
 function getANovaCheck($date, $drug_id, $nova_id)
 {
     $cheks = getAllNovaChecks();
@@ -36,6 +48,7 @@ function getAllNovaChecksByASheetId($id)
             $listofchecks[] = $check;   //on enregistre au bout de la liste
         }
     }
+
     return $listofchecks;
 }
 

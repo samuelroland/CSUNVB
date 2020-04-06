@@ -17,7 +17,7 @@ function getAllSheets()
         $p["base"] = $base["name"];
         foreach ($novas as $key => $nova) {
             if ($nova["stupsheet_id"] == $p["id"]) {
-                $p["novas"][$key] = $nova["nova"];
+                $p["novas"][$key] = $nova;
             }
         }
         foreach ($batches as $key => $batch) {
