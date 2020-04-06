@@ -18,14 +18,15 @@ function getTodoListTasks()
     return $tasksbyid;
 }
 
-// Récupère la liste des tâches de nuit / jour selon le paramètre $daynight (1 ou 0)
-function getTodoListTaskByDayOrNight($daynight)
+// Récupère la liste des tâches de nuit / jour selon le paramètre $daynight (1 ou 0) et le paramètre $numday (numéro du jour de la semaine)
+function getTodoListTaskByNumdayAndDayOrNight($daynight, $numday)
 {
-    // TODO Coder la récupération des tâches de nuit ou de jour en fonction du paramètre
     $tasks = getTodoListTasks();
     foreach ($tasks as $onetask) {
         if ($onetask['daything'] == $daynight) {
-            $tasksofdaynight[$onetask['id']] = $onetask;
+            if($onetask['days'][$numday] == true) {
+                $tasksofdaynight[$onetask['id']] = $onetask;
+            }
         }
     }
     return $tasksofdaynight;

@@ -27,15 +27,13 @@ function todoListDetailedWeek($sheetid, $base)
     $numweek = substr($sheetid, 2);    //extraire le numéro de la semaine uniquement.
     $year = substr($sheetid, 0, 2) + 2000;    // extraire l'année
 
-    $tasks = getTodoListTasks();
-    for ($i=0; $i<7; $i++)
+    // pour tous les numéros des jours de la semaine
+    for ($i=0; $i<7; $i++) // $i = numéro du jour de la semaine
     {
-        $tasks[$i]['daytasks'] = getTodoListTaskByDayOrNight(1);
-        $tasks[$i]['nighttasks'] = getTodoListTaskByDayOrNight(0);
+        $tasks[$i]['daytasks'] = getTodoListTaskByNumdayAndDayOrNight(1, $i);
+        $tasks[$i]['nighttasks'] = getTodoListTaskByNumdayAndDayOrNight(0, $i);
     }
 
-    $daytasks = getTodoListTaskByDayOrNight(1);
-    $nightasks = getTodoListTaskByDayOrNight(0);
     $bases = getAllBases();
     $baseinfo = $bases[$base];
     require_once 'view/todoListHome.php';
