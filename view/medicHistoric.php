@@ -14,7 +14,16 @@ $title = "CSU-NVB - Medics Historic";
     <table class="table table-bordered" style="text-align: center">
 
         <tr class="thead-dark">
-            <th>Nom</th>
+            <th colspan="100%">Utilisation des lots de <?= $medic['name'] ?> par semaine</th>
+        </tr>
+        <tr class="font-weight-bold">
+            <th>
+                <p class="text-right">Semaine</p>
+                <p class="text-left">Lot</p>
+            </th>
+            <?php foreach ($stups as $s){?>
+                <th><?= $s?></th>
+            <?php } ?>
         </tr>
 
         <?php
