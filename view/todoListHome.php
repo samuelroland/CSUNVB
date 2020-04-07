@@ -1,6 +1,6 @@
 <?php
 ob_start();
-
+//variables utiles pour les dates et jours
 $title = "CSU-NVB - Tâches hebdomadaires";
 $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 $semplus = changeWeekUp("todo", $sheetid);
@@ -32,14 +32,16 @@ require_once 'controler/drugControler.php';
 <table class=" table table-striped">
     <div class="navbar nav-pills">
         <th>  <?php
+            //if qui désactive le bouton s'il y a pas de semaines avant
             if ($semmoins == null) {
                 echo "<button class='btn btn-info btnmenu' disabled> <</button>";
             } else {
                 echo "<a href='?action=todolisthome&sheetid=$semmoins'><button class='btn btn-info btnmenu' > <</button></a>";
             }
-
+            //affichage du numero de la semaine
             ?>Semaine <?php echo $numweek; ?>
             <?php
+            //if qui désactive le bouton s'il y a pas de semaines après
             if ($semplus == null) {
                 echo "<button class='btn btn-info btnmenu' disabled> ></button>";
             } else {
@@ -68,7 +70,7 @@ require_once 'controler/drugControler.php';
 
     <div class="horizontal"><span style="font-weight: bold">JOURNÉE</span></div>
     <?php
-//code qui permets de génerer les dates
+//code qui permets de génerer les dates (qui marche plus ou moins suite a des gros changement dans le code en géneral)
     $dt = new DateTime;
     if (isset($getyear) && isset($sheetid)) {
         $dt->setISODate($getyear, $sheetid);
@@ -86,11 +88,12 @@ require_once 'controler/drugControler.php';
             echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>";
             $dt->modify('+1 day');
         } while ($weeknum == $dt->format('w'));
+
         //boucle qui parcours les taches et regarde si elles sont jour ou nuit
         foreach ($tasks as $task) {
+            //if qui nous va voir si c'est jour ou nuit
             if ($task['daytask'] == true) {
                 //affichage des tasks nuit
-
                 ?>
                 <div class='hour'><?= $task['description']; ?></div><?php
 
@@ -112,6 +115,7 @@ require_once 'controler/drugControler.php';
         echo "<div class='day'>";
         //boucle qui parcours les taches et regarde si elles sont jour ou nuit
         foreach ($tasks as $task) {
+            //if qui nous va voir si c'est jour ou nuit
             if ($task['nighttask'] == true) {
                 //affichage des tasks nuit
                 ?>
