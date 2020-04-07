@@ -21,6 +21,7 @@ require_once 'controler/drugControler.php';
 
 
 <div class="">
+
     <h1>Tâches hebdomadaires de la base <?= $baseinfo['name'] ?></h1>
 
 
@@ -48,6 +49,7 @@ require_once 'controler/drugControler.php';
             ?>
 
             <?php
+
             // Seulement les admins peuvent voir les boutons
             if ($_SESSION['user'][2] == true) {
                 echo "<button class='btn btn-info btnmenu'>Ajouter une tache</button>";
@@ -66,7 +68,7 @@ require_once 'controler/drugControler.php';
 
     <div class="horizontal"><span style="font-weight: bold">JOURNÉE</span></div>
     <?php
-
+//code qui permets de génerer les dates
     $dt = new DateTime;
     if (isset($getyear) && isset($sheetid)) {
         $dt->setISODate($getyear, $sheetid);
@@ -84,32 +86,11 @@ require_once 'controler/drugControler.php';
             echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>";
             $dt->modify('+1 day');
         } while ($weeknum == $dt->format('w'));
-
-
-        /* echo "<div class='dayheader'>$date</div>";
-         // Trouver le jour de la semaine d'une date donné
-     $firstDay = date("N", strtotime($queryYear-$queryMonth-01));
-     $lastDayLastMonth = date("t", strtotime("-1 month", strtotime("$queryYear-$queryMonth-01"))); // 31
-     $monthDate = "2019-$queryMonth-01";
-     // Combien y-a-t'il de jours de la semaine dans un mois 28-31
-     $nbDays = date("t", strtotime($monthDate));
-     $dates = date("d");
-
-     // date numéro de semaine
-     $queryDate = date("W");
-
-     // test tout les jours de l'année' date en cours date W
-     foreach ($dates as $date) {
-         if($queryDate = 13) {
-             return $queryDate;
-         } else{
-             return null;
-         }
-     }
-     var_dump($queryDate);
-     */
+        //boucle qui parcours les taches et regarde si elles sont jour ou nuit
         foreach ($tasks as $task) {
-            if ($task['daything'] == 1) {
+            if ($task['daytask'] == true) {
+                //affichage des tasks nuit
+
                 ?>
                 <div class='hour'><?= $task['description']; ?></div><?php
 
@@ -117,6 +98,7 @@ require_once 'controler/drugControler.php';
             }
         }
         echo "</div>";
+       // var_dump( $tasks[$i]['daytasks']);
     }
     ?>
 
@@ -128,9 +110,10 @@ require_once 'controler/drugControler.php';
     //Code PHP qui fait la nuit
     foreach ($jours as $jour) {
         echo "<div class='day'>";
+        //boucle qui parcours les taches et regarde si elles sont jour ou nuit
         foreach ($tasks as $task) {
-
-            if ($task['daything'] == 0) {
+            if ($task['nighttask'] == true) {
+                //affichage des tasks nuit
                 ?>
                 <div class='hour'><?= $task['description']; ?></div><?php
 
@@ -144,26 +127,6 @@ require_once 'controler/drugControler.php';
 </div>
 
 
-<!--
-<div class="">
-    <div class="week">
-        <div class="">
-<?php
-/*
-foreach ($jours as $jour) {
-    echo "<span class=' dayheader' >" . $jour . "</span>";
-    echo "</div>";
-}
-echo "</div>";
-
-
-    foreach ($taches as $tache) {
-        echo "<span class=' hour'>" . $tache . "</span>";
-
-    }
-*/
-?>
-</div>-->
 <?php
 $content = ob_get_clean();
 require "gabarit.php";
