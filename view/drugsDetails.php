@@ -81,15 +81,14 @@ $title = "CSU-NVB - Stupéfiants";
             <td colspan="2" class=""><strong><?= $drug["name"] ?></strong></td>
             <?php for ($f = 1; $f <= 7; $f++) { //pour les 7 jours de la semaine.
                 ?>
-                <td>X</td>
+                <td> </td>
                 <?php
                 foreach ($novas as $nova) {
-                    echo "<td>{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["start"]}
-                           - {$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["end"]}</td>";
+                    echo "<td>{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["start"]}-{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["end"]}</td>";
                     //echo "<td>13-13</td>";  //la case pour novacheck
                 }
                 ?>
-                <td>X</td>
+                <td> </td>
             <?php } ?>
         </tr>
         <?php
