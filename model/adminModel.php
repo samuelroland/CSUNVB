@@ -178,18 +178,17 @@ function getRightStupsForBatches($batchesid)
     $compList = getStupsBatchesWithId($batchesid);
     $stupsList = getAllStupsheets();
 
-    foreach ($stupsList as $s)
-    {
-        foreach ($compList as $c)
+    //foreach ($compList as $c){
+        foreach ($stupsList as $s)
         {
-            if($c['stupsheet_id'] == $s['id'])
+            /*if($c['stupsheet_id'] == $s['id'])
             {
                 $rightStups[]= $s;
-                $weeks[] = $s['week'];
-            }
+            }*/
+            $weeks[] = $s['week'];
         }
-    }
+    //}
     $weeksformated = array_unique($weeks);
-    return array($weeksformated,$rightStups,$compList);
+    return array($weeksformated,$stupsList);
 }
 ?>

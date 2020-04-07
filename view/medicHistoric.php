@@ -24,11 +24,20 @@ $title = "CSU-NVB - Medics Historic";
             <?php foreach ($weeks as $w){?><th><?= $w?></th><?php } ?>
         </tr>
         <?php foreach ($batch as $b){?>
-            <tr>
-                <td><?= $b['number'] ?></td>
+                <tr>
+                    <td><?= $b['number']?></td>
 
-            </tr>
+                    <?php foreach ($stupsbatch as $stp){
+                        foreach ($stups as $s){
+                            if ($b['id'] == $stp['batch_id'] && $s['id'] == $stp['stupsheet_id']){?>
 
+                                <td><?= $s['base_id'] ?></td>
+                            <?php }
+
+                        }
+                    }?>
+
+                </tr>
         <?php } ?>
 
     </table>
