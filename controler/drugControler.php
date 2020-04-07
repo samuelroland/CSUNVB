@@ -32,16 +32,17 @@ function drugdetails($sheetid)  //détails d'une feuille de stups
     $novas = $stupsheet["novas"];
     unset($stupsheet["novas"]);
 
-    $result = [];
-    foreach ($drugs as $drug) {
-        foreach ($novas as $nova) {
-            foreach ($datesoftheweek as $dayindex => $day) {
-                foreach ($novaChecks as $novaCheck) {
-                    if ($novaCheck["drug_id"] == $drug['id']) {
-                        if ($novaCheck["nova_id"] == $nova['nova_id']) {
-                            if ($novaCheck["date"] == date("Y-m-d", $day)) {
-                                $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["start"] = $novaCheck["start"];
-                                $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["end"] = $novaCheck["end"];
+    if (isset($novaChecks)) {
+        foreach ($drugs as $drug) {
+            foreach ($novas as $nova) {
+                foreach ($datesoftheweek as $dayindex => $day) {
+                    foreach ($novaChecks as $novaCheck) {
+                        if ($novaCheck["drug_id"] == $drug['id']) {
+                            if ($novaCheck["nova_id"] == $nova['nova_id']) {
+                                if ($novaCheck["date"] == date("Y-m-d", $day)) {
+                                    $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["start"] = $novaCheck["start"];
+                                    $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["end"] = $novaCheck["end"];
+                                }
                             }
                         }
                     }
@@ -49,8 +50,6 @@ function drugdetails($sheetid)  //détails d'une feuille de stups
             }
         }
     }
-
-    var_dump($stupsheet['novas']);
 
     require 'view/drugsDetails.php';
 }
