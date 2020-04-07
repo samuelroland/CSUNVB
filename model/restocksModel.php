@@ -2,12 +2,12 @@
 /*
   Author : Christopher Pardo
   Project : 
-  Date : 05.03.2020
+  Date : 07.04.2020
 */
 
-function getAllCheks()
+function getAllRestocks()
 {
-    $badArray = json_decode(file_get_contents("model/dataStorage/pharmachecks.json"), true); //Prend les éléments d'un fichier Json
+    $badArray = json_decode(file_get_contents("model/dataStorage/restocks.json"), true); //Prend les éléments d'un fichier Json
 
     //Ajoute une id aux différantes parties du tableau
     foreach ($badArray as $p) {
@@ -17,37 +17,36 @@ function getAllCheks()
     return $goodArray; //Retourne le tableau indexé avec ses id
 }
 
-function getAChek($date, $batch_id)
+function getARestock($id)
 {
-    $cheks = getAllCheks();
+    $restocks = getAllRestocks();
 
-    foreach ($cheks as $chek) {
-        if ($chek["date"] == $date) {
-            if ($chek["batch_id"] == $batch_id)
-                return $chek;
+    foreach ($restocks as $onerestock) {
+        if ($onerestock["id"] == $id) {
+            return $onerestock;
         }
     }
     return null;
 }
 
-function getAllChecksByASheetId($id)
+function getAllRestocksByASheetId($id)
 {
-    $checks = getAllCheks();
-    $listofchecks = null;   //liste de checks venant d'une feuille $id
-    foreach ($checks as $check) {
-        if ($check["stupsheet_id"] == $id) {
-            $listofchecks[] = $check;   //on enregistre au bout de la liste
+    $restocks = getAllRestocks();
+    $listofrestocks = null;   //liste de checks venant d'une feuille $id
+    foreach ($restocks as $onerestock) {
+        if ($onerestock["stupsheet_id"] == $id) {
+            $listofrestocks[] = $onerestock;   //on enregistre au bout de la liste
         }
     }
-    return $listofchecks;
+    return $listofrestocks;
 }
 
-function saveCheks($items)
+function saveRestocks($items)
 {
-    file_put_contents("model/dataStorage/pharmachecks.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
+    file_put_contents("model/dataStorage/restocks.json", json_encode($items)); //Écrit les éléments d'une variable dans un fichier Json
 }
 
-function addAChek($chek)
+function addARestock($restock)
 {
     $items = getAllCheks();
     $test = 0;
@@ -58,19 +57,19 @@ function addAChek($chek)
     }
 
     $id = $test + 1;
-    $chek = array_merge(["id" => $id], $chek);
-    $items[] = $chek;
+    $restock = array_merge(["id" => $id], $restock);
+    $items[] = $restock;
 
     saveCheks($items);
 }
 
-function updateAChek($chekToUpdate)
+function updateARestock($restock)
 {
-    $items = getAllCheks();
+    $items = getAllRestocks();
 
     foreach ($items as $item) {
-        if ($item["id"] == $chekToUpdate["id"]) {
-            $item = array_merge($item, $chekToUpdate);
+        if ($item["id"] == $restock["id"]) {
+            $item = array_merge($item, $restock);
             $items[$item["id"]] = $item;
         }
     }
@@ -78,13 +77,13 @@ function updateAChek($chekToUpdate)
     saveCheks($items);
 }
 
-function delAChek($id)
+function deleteARestock($id)
 {
-    $items = getAllCheks();
+    $items = getAllRestocks();
 
     unset($items[$id]);
 
-    saveCheks($items);
+    saveRestocks($items);
 }
 
 ?>
