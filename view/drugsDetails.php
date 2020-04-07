@@ -19,7 +19,7 @@ $title = "CSU-NVB - Stupéfiants";
 <?php if (changeWeekDown("drug", $sheetid) == null) { ?>
     <button class="btn btn-info disabled"><</button>
 <?php } else { ?>
-    <a href="?base=<?= $base ?>&action=detaildrug&sheetid=<?= changeWeekDown("drug", $sheetid) ?>">
+    <a href="?action=detaildrug&sheetid=<?= changeWeekDown("drug", $sheetid) ?>">
         <button class="btn btn-info"><</button>
     </a>
 <?php } ?>
@@ -27,7 +27,7 @@ $title = "CSU-NVB - Stupéfiants";
 <?php if (changeWeekUp("drug", $sheetid) == null) { ?>
     <button class="btn btn-info disabled">></button>
 <?php } else { ?>
-    <a href="?base=<?= $base ?>&action=detaildrug&sheetid=<?= changeWeekUp("drug", $sheetid) ?>">
+    <a href="?action=detaildrug&sheetid=<?= changeWeekUp("drug", $sheetid) ?>">
         <button class="btn btn-info">></button>
     </a>
 <?php } ?>

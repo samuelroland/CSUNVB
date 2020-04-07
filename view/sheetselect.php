@@ -10,7 +10,7 @@ Date: 16.03.2020
     <p>Choix de la base</p>
     <table class=" table table-striped">
         <th>
-            <select class="custom-select" id="Sites" name="base">
+            <select class="custom-select" id="Sites">
                 <?php
                 foreach ($bases as $onebase) {
                     if ($onebase['id'] == $_SESSION['user'][3]['id']) { //si la base est celle de la session
