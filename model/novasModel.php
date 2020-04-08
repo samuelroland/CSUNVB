@@ -25,6 +25,15 @@ function getANova($number){
         }
     }
 }
+function getNova($id){
+    $novas = getAllNovas(); //Récupère les Vehicules
+
+    foreach ($novas as $nova) {
+        if ($nova["id"] == $id){
+            return $nova;
+        }
+    }
+}
 function readGuardUseNovas(){
     return json_decode(file_get_contents("model/dataStorage/guard_use_nova.json"),true);
 }

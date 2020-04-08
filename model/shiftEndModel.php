@@ -49,23 +49,28 @@ function getShiftEndById($id)
     return $item;
 }
 
+/**
+ * fonction qui retourne les secouristes dans un rapport de garde.
+ */
+function getCrewForShiftEnd($shiftendid){
+
+}
 function getShiftEndNova($shiftEndId,$dayNight){
     $guardusenovas = readGuardUseNovas();
-    $novas = getAllNovas();
+
     foreach ($guardusenovas as $guardusenova){
         if($guardusenova['day']== $dayNight && $guardusenova['guardsheet_id']==$shiftEndId){
-            $day=$novas[$guardusenova['nova_id']];
-            return $day['number'];
+            return getNova($guardusenova['nova_id']);
         }
     }
 }
 function getShiftEndBossOrTeam($shiftEndId, $dayNight, $bossOrNot){
     $crews = getAllCrews();
-    $users = getListUsers();
+
     foreach ($crews as $crew){
         if($crew['day']== $dayNight && $crew['guardsheet_id']==$shiftEndId && $crew['boss']== $bossOrNot){
-            $day=$users[$crew['user_id']-1];
-            return $day['initials'];
+           return getAnUser($crew['user_id']);
+
         }
     }
 }

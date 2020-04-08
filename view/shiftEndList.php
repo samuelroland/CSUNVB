@@ -22,9 +22,9 @@ $title = "CSU-NVB - Remise de garde";
                 <?php } else { ?>
                     <?= "Fermé " ?>
                 <?php } ?></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Jour : <?= $novaday['number'] ?><br>Nuit : <?= $novanight['number'] ?></td>
+            <td>Jour : <?= $dayBoss['initials'] ?><br>Nuit : <?= $nightBoss['initials'] ?></td>
+            <td>Jour : <?= $dayTeam['initials'] ?><br>Nuit : <?= $nightTeam['initials'] ?></td>
             <td><?= $baseinfo['name'] ?></td>
         </tr>
     </table>
