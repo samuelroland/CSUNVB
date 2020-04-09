@@ -1,34 +1,2396 @@
 {
   "1": {
     "id": 1,
-    "timestamp": "2020-03-9 13:34:11",
-    "quantity": 1,
-    "user_id": 12,
-    "nova_id": 5,
-    "batch_id": 4
-  },
-  "2": {
-    "id": 2,
-    "timestamp": "2020-03-9 16:36:00",
-    "quantity": 2,
-    "user_id": 12,
-    "nova_id": 7,
-    "batch_id": 9
+    "timestamp": "2020-02-17 04:53:31",
+    "quantity": 9,
+    "user_id": 94,
+    "nova_id": 43,
+    "batch_id": 21,
+    "sheetidtest": 1
   },
   "3": {
     "id": 3,
-    "timestamp": "2020-03-10 11:14:11",
-    "quantity": 2,
-    "user_id": 14,
-    "nova_id": 8,
-    "batch_id": 15
+    "timestamp": "2020-02-18 04:22:00",
+    "quantity": 9,
+    "user_id": 59,
+    "nova_id": 43,
+    "batch_id": 21,
+    "sheetidtest": 1
   },
-  "4": {
-    "id": 4,
-    "timestamp": "2020-03-10 17:17:00",
-    "quantity": 1,
+  "5": {
+    "id": 5,
+    "timestamp": "2020-02-19 07:11:53",
+    "quantity": 9,
+    "user_id": 61,
+    "nova_id": 43,
+    "batch_id": 21,
+    "sheetidtest": 1
+  },
+  "7": {
+    "id": 7,
+    "timestamp": "2020-02-20 15:36:47",
+    "quantity": 9,
+    "user_id": 92,
+    "nova_id": 43,
+    "batch_id": 21,
+    "sheetidtest": 1
+  },
+  "9": {
+    "id": 9,
+    "timestamp": "2020-02-21 18:49:55",
+    "quantity": 9,
+    "user_id": 2,
+    "nova_id": 43,
+    "batch_id": 21,
+    "sheetidtest": 1
+  },
+  "11": {
+    "id": 11,
+    "timestamp": "2020-02-22 15:28:18",
+    "quantity": 9,
+    "user_id": 44,
+    "nova_id": 43,
+    "batch_id": 21,
+    "sheetidtest": 1
+  },
+  "13": {
+    "id": 13,
+    "timestamp": "2020-02-23 20:21:50",
+    "quantity": 9,
+    "user_id": 59,
+    "nova_id": 43,
+    "batch_id": 21,
+    "sheetidtest": 1
+  },
+  "85": {
+    "id": 85,
+    "timestamp": "2020-02-24 05:13:10",
+    "quantity": 8,
+    "user_id": 83,
+    "nova_id": 22,
+    "batch_id": 22,
+    "sheetidtest": 2
+  },
+  "87": {
+    "id": 87,
+    "timestamp": "2020-02-25 21:32:08",
+    "quantity": 8,
+    "user_id": 11,
+    "nova_id": 22,
+    "batch_id": 22,
+    "sheetidtest": 2
+  },
+  "89": {
+    "id": 89,
+    "timestamp": "2020-02-26 06:19:00",
+    "quantity": 8,
+    "user_id": 88,
+    "nova_id": 22,
+    "batch_id": 22,
+    "sheetidtest": 2
+  },
+  "91": {
+    "id": 91,
+    "timestamp": "2020-02-27 18:18:34",
+    "quantity": 8,
+    "user_id": 24,
+    "nova_id": 22,
+    "batch_id": 22,
+    "sheetidtest": 2
+  },
+  "93": {
+    "id": 93,
+    "timestamp": "2020-02-28 02:13:07",
+    "quantity": 8,
+    "user_id": 33,
+    "nova_id": 22,
+    "batch_id": 22,
+    "sheetidtest": 2
+  },
+  "95": {
+    "id": 95,
+    "timestamp": "2020-02-29 17:18:23",
+    "quantity": 8,
+    "user_id": 37,
+    "nova_id": 22,
+    "batch_id": 22,
+    "sheetidtest": 2
+  },
+  "97": {
+    "id": 97,
+    "timestamp": "2020-03-01 08:00:48",
+    "quantity": 8,
+    "user_id": 71,
+    "nova_id": 22,
+    "batch_id": 22,
+    "sheetidtest": 2
+  },
+  "155": {
+    "id": 155,
+    "timestamp": "2020-03-02 19:38:27",
+    "quantity": 4,
+    "user_id": 43,
+    "nova_id": 23,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "156": {
+    "id": 156,
+    "timestamp": "2020-03-02 15:09:42",
+    "quantity": 4,
+    "user_id": 103,
+    "nova_id": 45,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "158": {
+    "id": 158,
+    "timestamp": "2020-03-03 20:33:59",
+    "quantity": 4,
+    "user_id": 3,
+    "nova_id": 23,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "159": {
+    "id": 159,
+    "timestamp": "2020-03-03 22:18:21",
+    "quantity": 4,
+    "user_id": 44,
+    "nova_id": 45,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "161": {
+    "id": 161,
+    "timestamp": "2020-03-04 07:52:11",
+    "quantity": 4,
+    "user_id": 3,
+    "nova_id": 23,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "162": {
+    "id": 162,
+    "timestamp": "2020-03-04 11:13:26",
+    "quantity": 4,
+    "user_id": 11,
+    "nova_id": 45,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "164": {
+    "id": 164,
+    "timestamp": "2020-03-05 01:04:28",
+    "quantity": 4,
+    "user_id": 102,
+    "nova_id": 23,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "165": {
+    "id": 165,
+    "timestamp": "2020-03-05 21:12:14",
+    "quantity": 4,
+    "user_id": 67,
+    "nova_id": 45,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "167": {
+    "id": 167,
+    "timestamp": "2020-03-06 13:40:25",
+    "quantity": 4,
+    "user_id": 25,
+    "nova_id": 23,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "168": {
+    "id": 168,
+    "timestamp": "2020-03-06 21:37:53",
+    "quantity": 4,
+    "user_id": 54,
+    "nova_id": 45,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "170": {
+    "id": 170,
+    "timestamp": "2020-03-07 21:17:31",
+    "quantity": 4,
+    "user_id": 71,
+    "nova_id": 23,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "171": {
+    "id": 171,
+    "timestamp": "2020-03-07 01:11:12",
+    "quantity": 4,
+    "user_id": 28,
+    "nova_id": 45,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "173": {
+    "id": 173,
+    "timestamp": "2020-03-08 22:50:01",
+    "quantity": 4,
+    "user_id": 25,
+    "nova_id": 23,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "174": {
+    "id": 174,
+    "timestamp": "2020-03-08 13:34:59",
+    "quantity": 4,
+    "user_id": 9,
+    "nova_id": 45,
+    "batch_id": 23,
+    "sheetidtest": 3
+  },
+  "176": {
+    "id": 176,
+    "timestamp": "2020-03-02 12:41:22",
+    "quantity": 12,
+    "user_id": 30,
+    "nova_id": 23,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "177": {
+    "id": 177,
+    "timestamp": "2020-03-02 09:23:37",
+    "quantity": 12,
+    "user_id": 51,
+    "nova_id": 45,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "179": {
+    "id": 179,
+    "timestamp": "2020-03-03 16:41:59",
+    "quantity": 12,
+    "user_id": 15,
+    "nova_id": 23,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "180": {
+    "id": 180,
+    "timestamp": "2020-03-03 17:11:32",
+    "quantity": 12,
+    "user_id": 36,
+    "nova_id": 45,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "182": {
+    "id": 182,
+    "timestamp": "2020-03-04 04:15:02",
+    "quantity": 12,
+    "user_id": 12,
+    "nova_id": 23,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "183": {
+    "id": 183,
+    "timestamp": "2020-03-04 09:08:01",
+    "quantity": 12,
+    "user_id": 101,
+    "nova_id": 45,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "185": {
+    "id": 185,
+    "timestamp": "2020-03-05 02:11:06",
+    "quantity": 12,
+    "user_id": 75,
+    "nova_id": 23,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "186": {
+    "id": 186,
+    "timestamp": "2020-03-05 22:20:53",
+    "quantity": 11,
+    "user_id": 33,
+    "nova_id": 45,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "188": {
+    "id": 188,
+    "timestamp": "2020-03-06 05:36:49",
+    "quantity": 10,
+    "user_id": 39,
+    "nova_id": 23,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "189": {
+    "id": 189,
+    "timestamp": "2020-03-06 07:21:38",
+    "quantity": 12,
+    "user_id": 74,
+    "nova_id": 45,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "191": {
+    "id": 191,
+    "timestamp": "2020-03-07 00:19:05",
+    "quantity": 12,
+    "user_id": 32,
+    "nova_id": 23,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "192": {
+    "id": 192,
+    "timestamp": "2020-03-07 15:05:27",
+    "quantity": 12,
+    "user_id": 64,
+    "nova_id": 45,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "194": {
+    "id": 194,
+    "timestamp": "2020-03-08 11:02:20",
+    "quantity": 12,
+    "user_id": 26,
+    "nova_id": 23,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "195": {
+    "id": 195,
+    "timestamp": "2020-03-08 14:23:23",
+    "quantity": 12,
+    "user_id": 90,
+    "nova_id": 45,
+    "batch_id": 1,
+    "sheetidtest": 3
+  },
+  "218": {
+    "id": 218,
+    "timestamp": "2020-03-09 03:26:45",
+    "quantity": 2,
+    "user_id": 16,
+    "nova_id": 24,
+    "batch_id": 2,
+    "sheetidtest": 4
+  },
+  "220": {
+    "id": 220,
+    "timestamp": "2020-03-10 21:53:04",
+    "quantity": 2,
+    "user_id": 5,
+    "nova_id": 24,
+    "batch_id": 2,
+    "sheetidtest": 4
+  },
+  "222": {
+    "id": 222,
+    "timestamp": "2020-03-11 17:41:55",
+    "quantity": 2,
+    "user_id": 4,
+    "nova_id": 24,
+    "batch_id": 2,
+    "sheetidtest": 4
+  },
+  "224": {
+    "id": 224,
+    "timestamp": "2020-03-12 10:28:00",
+    "quantity": 2,
+    "user_id": 44,
+    "nova_id": 24,
+    "batch_id": 2,
+    "sheetidtest": 4
+  },
+  "226": {
+    "id": 226,
+    "timestamp": "2020-03-13 03:57:45",
+    "quantity": 2,
+    "user_id": 92,
+    "nova_id": 24,
+    "batch_id": 2,
+    "sheetidtest": 4
+  },
+  "228": {
+    "id": 228,
+    "timestamp": "2020-03-14 02:40:43",
+    "quantity": 2,
+    "user_id": 3,
+    "nova_id": 24,
+    "batch_id": 2,
+    "sheetidtest": 4
+  },
+  "230": {
+    "id": 230,
+    "timestamp": "2020-03-15 05:41:05",
+    "quantity": 2,
+    "user_id": 63,
+    "nova_id": 24,
+    "batch_id": 2,
+    "sheetidtest": 4
+  },
+  "246": {
+    "id": 246,
+    "timestamp": "2020-03-09 08:38:30",
+    "quantity": 2,
+    "user_id": 45,
+    "nova_id": 24,
+    "batch_id": 24,
+    "sheetidtest": 4
+  },
+  "248": {
+    "id": 248,
+    "timestamp": "2020-03-10 20:05:55",
+    "quantity": 2,
+    "user_id": 64,
+    "nova_id": 24,
+    "batch_id": 24,
+    "sheetidtest": 4
+  },
+  "250": {
+    "id": 250,
+    "timestamp": "2020-03-11 03:57:02",
+    "quantity": 2,
+    "user_id": 47,
+    "nova_id": 24,
+    "batch_id": 24,
+    "sheetidtest": 4
+  },
+  "252": {
+    "id": 252,
+    "timestamp": "2020-03-12 04:01:27",
+    "quantity": 2,
+    "user_id": 65,
+    "nova_id": 24,
+    "batch_id": 24,
+    "sheetidtest": 4
+  },
+  "254": {
+    "id": 254,
+    "timestamp": "2020-03-13 01:02:22",
+    "quantity": 2,
+    "user_id": 73,
+    "nova_id": 24,
+    "batch_id": 24,
+    "sheetidtest": 4
+  },
+  "256": {
+    "id": 256,
+    "timestamp": "2020-03-14 13:59:28",
+    "quantity": 2,
+    "user_id": 78,
+    "nova_id": 24,
+    "batch_id": 24,
+    "sheetidtest": 4
+  },
+  "258": {
+    "id": 258,
+    "timestamp": "2020-03-15 02:05:26",
+    "quantity": 2,
+    "user_id": 82,
+    "nova_id": 24,
+    "batch_id": 24,
+    "sheetidtest": 4
+  },
+  "288": {
+    "id": 288,
+    "timestamp": "2020-02-17 11:39:24",
+    "quantity": 4,
+    "user_id": 55,
+    "nova_id": 25,
+    "batch_id": 25,
+    "sheetidtest": 5
+  },
+  "290": {
+    "id": 290,
+    "timestamp": "2020-02-18 12:19:07",
+    "quantity": 4,
+    "user_id": 25,
+    "nova_id": 25,
+    "batch_id": 25,
+    "sheetidtest": 5
+  },
+  "292": {
+    "id": 292,
+    "timestamp": "2020-02-19 14:32:24",
+    "quantity": 3,
+    "user_id": 17,
+    "nova_id": 25,
+    "batch_id": 25,
+    "sheetidtest": 5
+  },
+  "294": {
+    "id": 294,
+    "timestamp": "2020-02-20 05:13:46",
+    "quantity": 4,
+    "user_id": 23,
+    "nova_id": 25,
+    "batch_id": 25,
+    "sheetidtest": 5
+  },
+  "296": {
+    "id": 296,
+    "timestamp": "2020-02-21 18:36:17",
+    "quantity": 4,
+    "user_id": 28,
+    "nova_id": 25,
+    "batch_id": 25,
+    "sheetidtest": 5
+  },
+  "298": {
+    "id": 298,
+    "timestamp": "2020-02-22 19:30:15",
+    "quantity": 4,
+    "user_id": 43,
+    "nova_id": 25,
+    "batch_id": 25,
+    "sheetidtest": 5
+  },
+  "300": {
+    "id": 300,
+    "timestamp": "2020-02-23 06:19:55",
+    "quantity": 4,
+    "user_id": 35,
+    "nova_id": 25,
+    "batch_id": 25,
+    "sheetidtest": 5
+  },
+  "316": {
+    "id": 316,
+    "timestamp": "2020-02-17 11:08:15",
+    "quantity": 2,
+    "user_id": 50,
+    "nova_id": 25,
+    "batch_id": 3,
+    "sheetidtest": 5
+  },
+  "318": {
+    "id": 318,
+    "timestamp": "2020-02-18 19:42:12",
+    "quantity": 2,
+    "user_id": 37,
+    "nova_id": 25,
+    "batch_id": 3,
+    "sheetidtest": 5
+  },
+  "320": {
+    "id": 320,
+    "timestamp": "2020-02-19 11:22:42",
+    "quantity": 2,
+    "user_id": 72,
+    "nova_id": 25,
+    "batch_id": 3,
+    "sheetidtest": 5
+  },
+  "322": {
+    "id": 322,
+    "timestamp": "2020-02-20 23:14:39",
+    "quantity": 2,
+    "user_id": 42,
+    "nova_id": 25,
+    "batch_id": 3,
+    "sheetidtest": 5
+  },
+  "324": {
+    "id": 324,
+    "timestamp": "2020-02-21 20:16:42",
+    "quantity": 2,
+    "user_id": 95,
+    "nova_id": 25,
+    "batch_id": 3,
+    "sheetidtest": 5
+  },
+  "326": {
+    "id": 326,
+    "timestamp": "2020-02-22 17:14:11",
+    "quantity": 2,
+    "user_id": 22,
+    "nova_id": 25,
+    "batch_id": 3,
+    "sheetidtest": 5
+  },
+  "328": {
+    "id": 328,
+    "timestamp": "2020-02-23 13:20:45",
+    "quantity": 2,
+    "user_id": 62,
+    "nova_id": 25,
+    "batch_id": 3,
+    "sheetidtest": 5
+  },
+  "351": {
+    "id": 351,
+    "timestamp": "2020-02-24 03:25:47",
+    "quantity": 12,
+    "user_id": 9,
+    "nova_id": 48,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "352": {
+    "id": 352,
+    "timestamp": "2020-02-24 16:53:23",
+    "quantity": 12,
+    "user_id": 29,
+    "nova_id": 26,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "354": {
+    "id": 354,
+    "timestamp": "2020-02-25 19:31:24",
+    "quantity": 12,
+    "user_id": 49,
+    "nova_id": 48,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "355": {
+    "id": 355,
+    "timestamp": "2020-02-25 08:21:56",
+    "quantity": 12,
+    "user_id": 92,
+    "nova_id": 26,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "357": {
+    "id": 357,
+    "timestamp": "2020-02-26 06:53:03",
+    "quantity": 12,
+    "user_id": 52,
+    "nova_id": 48,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "358": {
+    "id": 358,
+    "timestamp": "2020-02-26 02:09:47",
+    "quantity": 11,
+    "user_id": 40,
+    "nova_id": 26,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "360": {
+    "id": 360,
+    "timestamp": "2020-02-27 13:17:36",
+    "quantity": 12,
+    "user_id": 47,
+    "nova_id": 48,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "361": {
+    "id": 361,
+    "timestamp": "2020-02-27 16:29:52",
+    "quantity": 12,
+    "user_id": 76,
+    "nova_id": 26,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "363": {
+    "id": 363,
+    "timestamp": "2020-02-28 03:59:02",
+    "quantity": 12,
+    "user_id": 46,
+    "nova_id": 48,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "364": {
+    "id": 364,
+    "timestamp": "2020-02-28 07:50:42",
+    "quantity": 12,
+    "user_id": 12,
+    "nova_id": 26,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "366": {
+    "id": 366,
+    "timestamp": "2020-02-29 04:45:17",
+    "quantity": 12,
+    "user_id": 2,
+    "nova_id": 48,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "367": {
+    "id": 367,
+    "timestamp": "2020-02-29 16:49:08",
+    "quantity": 12,
+    "user_id": 17,
+    "nova_id": 26,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "369": {
+    "id": 369,
+    "timestamp": "2020-03-01 19:24:13",
+    "quantity": 12,
+    "user_id": 46,
+    "nova_id": 48,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "370": {
+    "id": 370,
+    "timestamp": "2020-03-01 18:44:36",
+    "quantity": 12,
+    "user_id": 31,
+    "nova_id": 26,
+    "batch_id": 26,
+    "sheetidtest": 6
+  },
+  "435": {
+    "id": 435,
+    "timestamp": "2020-02-24 17:01:04",
+    "quantity": 10,
+    "user_id": 13,
+    "nova_id": 48,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "436": {
+    "id": 436,
+    "timestamp": "2020-02-24 01:02:27",
+    "quantity": 10,
+    "user_id": 92,
+    "nova_id": 26,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "438": {
+    "id": 438,
+    "timestamp": "2020-02-25 02:32:20",
+    "quantity": 10,
+    "user_id": 63,
+    "nova_id": 48,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "439": {
+    "id": 439,
+    "timestamp": "2020-02-25 04:06:54",
+    "quantity": 10,
+    "user_id": 76,
+    "nova_id": 26,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "441": {
+    "id": 441,
+    "timestamp": "2020-02-26 07:06:10",
+    "quantity": 10,
+    "user_id": 10,
+    "nova_id": 48,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "442": {
+    "id": 442,
+    "timestamp": "2020-02-26 23:15:05",
+    "quantity": 10,
+    "user_id": 85,
+    "nova_id": 26,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "444": {
+    "id": 444,
+    "timestamp": "2020-02-27 08:53:25",
+    "quantity": 10,
+    "user_id": 19,
+    "nova_id": 48,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "445": {
+    "id": 445,
+    "timestamp": "2020-02-27 03:29:46",
+    "quantity": 10,
+    "user_id": 40,
+    "nova_id": 26,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "447": {
+    "id": 447,
+    "timestamp": "2020-02-28 12:16:39",
+    "quantity": 10,
+    "user_id": 72,
+    "nova_id": 48,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "448": {
+    "id": 448,
+    "timestamp": "2020-02-28 10:01:25",
+    "quantity": 10,
+    "user_id": 56,
+    "nova_id": 26,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "450": {
+    "id": 450,
+    "timestamp": "2020-02-29 14:05:42",
+    "quantity": 10,
+    "user_id": 100,
+    "nova_id": 48,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "451": {
+    "id": 451,
+    "timestamp": "2020-02-29 15:30:07",
+    "quantity": 10,
     "user_id": 8,
+    "nova_id": 26,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "453": {
+    "id": 453,
+    "timestamp": "2020-03-01 06:15:55",
+    "quantity": 10,
+    "user_id": 81,
+    "nova_id": 48,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "454": {
+    "id": 454,
+    "timestamp": "2020-03-01 06:32:05",
+    "quantity": 8,
+    "user_id": 59,
+    "nova_id": 26,
+    "batch_id": 4,
+    "sheetidtest": 6
+  },
+  "456": {
+    "id": 456,
+    "timestamp": "2020-03-02 11:14:03",
+    "quantity": 3,
+    "user_id": 9,
+    "nova_id": 27,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "457": {
+    "id": 457,
+    "timestamp": "2020-03-02 05:10:25",
+    "quantity": 3,
+    "user_id": 45,
+    "nova_id": 5,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "459": {
+    "id": 459,
+    "timestamp": "2020-03-03 19:54:41",
+    "quantity": 3,
+    "user_id": 84,
+    "nova_id": 27,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "460": {
+    "id": 460,
+    "timestamp": "2020-03-03 20:08:12",
+    "quantity": 3,
+    "user_id": 81,
+    "nova_id": 5,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "462": {
+    "id": 462,
+    "timestamp": "2020-03-04 08:43:36",
+    "quantity": 3,
+    "user_id": 18,
+    "nova_id": 27,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "463": {
+    "id": 463,
+    "timestamp": "2020-03-04 19:32:38",
+    "quantity": 3,
+    "user_id": 76,
+    "nova_id": 5,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "465": {
+    "id": 465,
+    "timestamp": "2020-03-05 11:26:08",
+    "quantity": 3,
+    "user_id": 63,
+    "nova_id": 27,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "466": {
+    "id": 466,
+    "timestamp": "2020-03-05 19:34:39",
+    "quantity": 3,
+    "user_id": 19,
+    "nova_id": 5,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "468": {
+    "id": 468,
+    "timestamp": "2020-03-06 14:35:28",
+    "quantity": 3,
+    "user_id": 43,
+    "nova_id": 27,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "469": {
+    "id": 469,
+    "timestamp": "2020-03-06 21:55:22",
+    "quantity": 3,
+    "user_id": 21,
+    "nova_id": 5,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "471": {
+    "id": 471,
+    "timestamp": "2020-03-07 05:47:50",
+    "quantity": 3,
+    "user_id": 19,
+    "nova_id": 27,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "472": {
+    "id": 472,
+    "timestamp": "2020-03-07 14:58:39",
+    "quantity": 3,
+    "user_id": 31,
+    "nova_id": 5,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "474": {
+    "id": 474,
+    "timestamp": "2020-03-08 00:09:52",
+    "quantity": 3,
+    "user_id": 74,
+    "nova_id": 27,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "475": {
+    "id": 475,
+    "timestamp": "2020-03-08 10:48:54",
+    "quantity": 3,
+    "user_id": 26,
+    "nova_id": 5,
+    "batch_id": 27,
+    "sheetidtest": 7
+  },
+  "498": {
+    "id": 498,
+    "timestamp": "2020-03-02 12:32:42",
+    "quantity": 5,
+    "user_id": 101,
+    "nova_id": 27,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "499": {
+    "id": 499,
+    "timestamp": "2020-03-02 22:31:13",
+    "quantity": 5,
+    "user_id": 24,
+    "nova_id": 5,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "501": {
+    "id": 501,
+    "timestamp": "2020-03-03 00:20:59",
+    "quantity": 5,
+    "user_id": 49,
+    "nova_id": 27,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "502": {
+    "id": 502,
+    "timestamp": "2020-03-03 13:05:38",
+    "quantity": 5,
+    "user_id": 43,
+    "nova_id": 5,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "504": {
+    "id": 504,
+    "timestamp": "2020-03-04 14:35:43",
+    "quantity": 5,
+    "user_id": 49,
+    "nova_id": 27,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "505": {
+    "id": 505,
+    "timestamp": "2020-03-04 03:37:51",
+    "quantity": 5,
+    "user_id": 83,
+    "nova_id": 5,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "507": {
+    "id": 507,
+    "timestamp": "2020-03-05 08:04:50",
+    "quantity": 5,
+    "user_id": 54,
+    "nova_id": 27,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "508": {
+    "id": 508,
+    "timestamp": "2020-03-05 20:12:31",
+    "quantity": 5,
+    "user_id": 15,
+    "nova_id": 5,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "510": {
+    "id": 510,
+    "timestamp": "2020-03-06 15:55:35",
+    "quantity": 5,
+    "user_id": 28,
+    "nova_id": 27,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "511": {
+    "id": 511,
+    "timestamp": "2020-03-06 11:52:30",
+    "quantity": 5,
+    "user_id": 69,
+    "nova_id": 5,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "513": {
+    "id": 513,
+    "timestamp": "2020-03-07 05:39:19",
+    "quantity": 5,
+    "user_id": 47,
+    "nova_id": 27,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "514": {
+    "id": 514,
+    "timestamp": "2020-03-07 00:10:03",
+    "quantity": 5,
+    "user_id": 26,
+    "nova_id": 5,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "516": {
+    "id": 516,
+    "timestamp": "2020-03-08 12:49:13",
+    "quantity": 5,
+    "user_id": 51,
+    "nova_id": 27,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "517": {
+    "id": 517,
+    "timestamp": "2020-03-08 17:03:29",
+    "quantity": 5,
+    "user_id": 28,
+    "nova_id": 5,
+    "batch_id": 5,
+    "sheetidtest": 7
+  },
+  "638": {
+    "id": 638,
+    "timestamp": "2020-03-09 20:06:42",
+    "quantity": 2,
+    "user_id": 16,
+    "nova_id": 6,
+    "batch_id": 28,
+    "sheetidtest": 8
+  },
+  "640": {
+    "id": 640,
+    "timestamp": "2020-03-10 08:25:14",
+    "quantity": 2,
+    "user_id": 33,
+    "nova_id": 6,
+    "batch_id": 28,
+    "sheetidtest": 8
+  },
+  "642": {
+    "id": 642,
+    "timestamp": "2020-03-11 03:20:18",
+    "quantity": 2,
+    "user_id": 94,
+    "nova_id": 6,
+    "batch_id": 28,
+    "sheetidtest": 8
+  },
+  "644": {
+    "id": 644,
+    "timestamp": "2020-03-12 10:19:05",
+    "quantity": 2,
+    "user_id": 30,
+    "nova_id": 6,
+    "batch_id": 28,
+    "sheetidtest": 8
+  },
+  "646": {
+    "id": 646,
+    "timestamp": "2020-03-13 16:57:54",
+    "quantity": 2,
+    "user_id": 19,
+    "nova_id": 6,
+    "batch_id": 28,
+    "sheetidtest": 8
+  },
+  "648": {
+    "id": 648,
+    "timestamp": "2020-03-14 00:33:00",
+    "quantity": 2,
+    "user_id": 15,
+    "nova_id": 6,
+    "batch_id": 28,
+    "sheetidtest": 8
+  },
+  "650": {
+    "id": 650,
+    "timestamp": "2020-03-15 00:40:22",
+    "quantity": 1,
+    "user_id": 81,
+    "nova_id": 6,
+    "batch_id": 28,
+    "sheetidtest": 8
+  },
+  "652": {
+    "id": 652,
+    "timestamp": "2020-03-09 04:22:17",
+    "quantity": 9,
+    "user_id": 61,
+    "nova_id": 6,
+    "batch_id": 6,
+    "sheetidtest": 8
+  },
+  "654": {
+    "id": 654,
+    "timestamp": "2020-03-10 16:32:11",
+    "quantity": 9,
+    "user_id": 99,
+    "nova_id": 6,
+    "batch_id": 6,
+    "sheetidtest": 8
+  },
+  "656": {
+    "id": 656,
+    "timestamp": "2020-03-11 05:26:12",
+    "quantity": 9,
+    "user_id": 9,
+    "nova_id": 6,
+    "batch_id": 6,
+    "sheetidtest": 8
+  },
+  "658": {
+    "id": 658,
+    "timestamp": "2020-03-12 00:11:54",
+    "quantity": 9,
+    "user_id": 88,
+    "nova_id": 6,
+    "batch_id": 6,
+    "sheetidtest": 8
+  },
+  "660": {
+    "id": 660,
+    "timestamp": "2020-03-13 03:27:08",
+    "quantity": 9,
+    "user_id": 34,
+    "nova_id": 6,
+    "batch_id": 6,
+    "sheetidtest": 8
+  },
+  "662": {
+    "id": 662,
+    "timestamp": "2020-03-14 20:57:14",
+    "quantity": 9,
+    "user_id": 3,
+    "nova_id": 6,
+    "batch_id": 6,
+    "sheetidtest": 8
+  },
+  "664": {
+    "id": 664,
+    "timestamp": "2020-03-15 20:25:06",
+    "quantity": 9,
+    "user_id": 45,
+    "nova_id": 6,
+    "batch_id": 6,
+    "sheetidtest": 8
+  },
+  "687": {
+    "id": 687,
+    "timestamp": "2020-02-17 07:01:27",
+    "quantity": 9,
+    "user_id": 63,
+    "nova_id": 51,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "688": {
+    "id": 688,
+    "timestamp": "2020-02-17 09:18:42",
+    "quantity": 9,
+    "user_id": 71,
+    "nova_id": 7,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "690": {
+    "id": 690,
+    "timestamp": "2020-02-18 04:53:40",
+    "quantity": 9,
+    "user_id": 69,
+    "nova_id": 51,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "691": {
+    "id": 691,
+    "timestamp": "2020-02-18 06:27:38",
+    "quantity": 9,
+    "user_id": 28,
+    "nova_id": 7,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "693": {
+    "id": 693,
+    "timestamp": "2020-02-19 14:50:49",
+    "quantity": 9,
+    "user_id": 20,
+    "nova_id": 51,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "694": {
+    "id": 694,
+    "timestamp": "2020-02-19 12:30:19",
+    "quantity": 9,
+    "user_id": 15,
+    "nova_id": 7,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "696": {
+    "id": 696,
+    "timestamp": "2020-02-20 17:03:24",
+    "quantity": 9,
+    "user_id": 12,
+    "nova_id": 51,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "697": {
+    "id": 697,
+    "timestamp": "2020-02-20 05:19:50",
+    "quantity": 9,
+    "user_id": 97,
+    "nova_id": 7,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "699": {
+    "id": 699,
+    "timestamp": "2020-02-21 07:01:13",
+    "quantity": 9,
+    "user_id": 18,
+    "nova_id": 51,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "700": {
+    "id": 700,
+    "timestamp": "2020-02-21 19:44:15",
+    "quantity": 9,
+    "user_id": 2,
+    "nova_id": 7,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "702": {
+    "id": 702,
+    "timestamp": "2020-02-22 18:06:20",
+    "quantity": 9,
+    "user_id": 102,
+    "nova_id": 51,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "703": {
+    "id": 703,
+    "timestamp": "2020-02-22 13:42:23",
+    "quantity": 9,
+    "user_id": 18,
+    "nova_id": 7,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "705": {
+    "id": 705,
+    "timestamp": "2020-02-23 06:16:51",
+    "quantity": 9,
+    "user_id": 1,
+    "nova_id": 51,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "706": {
+    "id": 706,
+    "timestamp": "2020-02-23 12:27:38",
+    "quantity": 9,
+    "user_id": 22,
+    "nova_id": 7,
+    "batch_id": 29,
+    "sheetidtest": 9
+  },
+  "750": {
+    "id": 750,
+    "timestamp": "2020-02-17 13:10:04",
+    "quantity": 12,
+    "user_id": 50,
+    "nova_id": 51,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "751": {
+    "id": 751,
+    "timestamp": "2020-02-17 21:32:25",
+    "quantity": 12,
+    "user_id": 25,
+    "nova_id": 7,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "753": {
+    "id": 753,
+    "timestamp": "2020-02-18 16:26:53",
+    "quantity": 12,
+    "user_id": 49,
+    "nova_id": 51,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "754": {
+    "id": 754,
+    "timestamp": "2020-02-18 19:48:11",
+    "quantity": 12,
+    "user_id": 10,
+    "nova_id": 7,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "756": {
+    "id": 756,
+    "timestamp": "2020-02-19 00:45:12",
+    "quantity": 12,
+    "user_id": 42,
+    "nova_id": 51,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "757": {
+    "id": 757,
+    "timestamp": "2020-02-19 01:35:59",
+    "quantity": 12,
+    "user_id": 37,
+    "nova_id": 7,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "759": {
+    "id": 759,
+    "timestamp": "2020-02-20 17:35:19",
+    "quantity": 12,
+    "user_id": 5,
+    "nova_id": 51,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "760": {
+    "id": 760,
+    "timestamp": "2020-02-20 10:17:22",
+    "quantity": 12,
+    "user_id": 7,
+    "nova_id": 7,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "762": {
+    "id": 762,
+    "timestamp": "2020-02-21 11:49:36",
+    "quantity": 12,
+    "user_id": 63,
+    "nova_id": 51,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "763": {
+    "id": 763,
+    "timestamp": "2020-02-21 14:33:57",
+    "quantity": 12,
+    "user_id": 76,
+    "nova_id": 7,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "765": {
+    "id": 765,
+    "timestamp": "2020-02-22 02:22:42",
+    "quantity": 12,
+    "user_id": 100,
+    "nova_id": 51,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "766": {
+    "id": 766,
+    "timestamp": "2020-02-22 10:23:29",
+    "quantity": 12,
+    "user_id": 66,
+    "nova_id": 7,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "768": {
+    "id": 768,
+    "timestamp": "2020-02-23 00:11:31",
+    "quantity": 12,
+    "user_id": 40,
+    "nova_id": 51,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "769": {
+    "id": 769,
+    "timestamp": "2020-02-23 19:39:48",
+    "quantity": 12,
+    "user_id": 46,
+    "nova_id": 7,
+    "batch_id": 7,
+    "sheetidtest": 9
+  },
+  "855": {
+    "id": 855,
+    "timestamp": "2020-02-24 11:04:49",
+    "quantity": 9,
+    "user_id": 30,
+    "nova_id": 30,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "856": {
+    "id": 856,
+    "timestamp": "2020-02-24 04:41:10",
+    "quantity": 9,
+    "user_id": 90,
     "nova_id": 8,
-    "batch_id": 2
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "858": {
+    "id": 858,
+    "timestamp": "2020-02-25 06:43:27",
+    "quantity": 9,
+    "user_id": 47,
+    "nova_id": 30,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "859": {
+    "id": 859,
+    "timestamp": "2020-02-25 03:39:37",
+    "quantity": 9,
+    "user_id": 28,
+    "nova_id": 8,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "861": {
+    "id": 861,
+    "timestamp": "2020-02-26 12:53:50",
+    "quantity": 9,
+    "user_id": 57,
+    "nova_id": 30,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "862": {
+    "id": 862,
+    "timestamp": "2020-02-26 02:44:59",
+    "quantity": 9,
+    "user_id": 31,
+    "nova_id": 8,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "864": {
+    "id": 864,
+    "timestamp": "2020-02-27 21:18:56",
+    "quantity": 9,
+    "user_id": 36,
+    "nova_id": 30,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "865": {
+    "id": 865,
+    "timestamp": "2020-02-27 06:22:38",
+    "quantity": 9,
+    "user_id": 70,
+    "nova_id": 8,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "867": {
+    "id": 867,
+    "timestamp": "2020-02-28 21:53:14",
+    "quantity": 9,
+    "user_id": 38,
+    "nova_id": 30,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "868": {
+    "id": 868,
+    "timestamp": "2020-02-28 14:17:59",
+    "quantity": 9,
+    "user_id": 29,
+    "nova_id": 8,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "870": {
+    "id": 870,
+    "timestamp": "2020-02-29 09:53:42",
+    "quantity": 9,
+    "user_id": 52,
+    "nova_id": 30,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "871": {
+    "id": 871,
+    "timestamp": "2020-02-29 01:18:07",
+    "quantity": 9,
+    "user_id": 85,
+    "nova_id": 8,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "873": {
+    "id": 873,
+    "timestamp": "2020-03-01 18:49:06",
+    "quantity": 9,
+    "user_id": 22,
+    "nova_id": 30,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "874": {
+    "id": 874,
+    "timestamp": "2020-03-01 11:40:14",
+    "quantity": 9,
+    "user_id": 45,
+    "nova_id": 8,
+    "batch_id": 8,
+    "sheetidtest": 10
+  },
+  "897": {
+    "id": 897,
+    "timestamp": "2020-03-09 21:42:16",
+    "quantity": 6,
+    "user_id": 44,
+    "nova_id": 9,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "898": {
+    "id": 898,
+    "timestamp": "2020-03-09 05:39:38",
+    "quantity": 6,
+    "user_id": 70,
+    "nova_id": 53,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "900": {
+    "id": 900,
+    "timestamp": "2020-03-10 11:44:35",
+    "quantity": 6,
+    "user_id": 76,
+    "nova_id": 9,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "901": {
+    "id": 901,
+    "timestamp": "2020-03-10 20:52:44",
+    "quantity": 6,
+    "user_id": 56,
+    "nova_id": 53,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "903": {
+    "id": 903,
+    "timestamp": "2020-03-11 01:40:19",
+    "quantity": 6,
+    "user_id": 5,
+    "nova_id": 9,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "904": {
+    "id": 904,
+    "timestamp": "2020-03-11 07:43:20",
+    "quantity": 6,
+    "user_id": 20,
+    "nova_id": 53,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "906": {
+    "id": 906,
+    "timestamp": "2020-03-12 12:40:30",
+    "quantity": 6,
+    "user_id": 57,
+    "nova_id": 9,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "907": {
+    "id": 907,
+    "timestamp": "2020-03-12 09:08:49",
+    "quantity": 6,
+    "user_id": 37,
+    "nova_id": 53,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "909": {
+    "id": 909,
+    "timestamp": "2020-03-13 06:38:21",
+    "quantity": 6,
+    "user_id": 78,
+    "nova_id": 9,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "910": {
+    "id": 910,
+    "timestamp": "2020-03-13 12:27:14",
+    "quantity": 6,
+    "user_id": 52,
+    "nova_id": 53,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "912": {
+    "id": 912,
+    "timestamp": "2020-03-14 23:45:17",
+    "quantity": 6,
+    "user_id": 6,
+    "nova_id": 9,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "913": {
+    "id": 913,
+    "timestamp": "2020-03-14 20:03:25",
+    "quantity": 6,
+    "user_id": 93,
+    "nova_id": 53,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "915": {
+    "id": 915,
+    "timestamp": "2020-03-15 15:55:58",
+    "quantity": 6,
+    "user_id": 7,
+    "nova_id": 9,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "916": {
+    "id": 916,
+    "timestamp": "2020-03-15 23:43:07",
+    "quantity": 6,
+    "user_id": 34,
+    "nova_id": 53,
+    "batch_id": 9,
+    "sheetidtest": 11
+  },
+  "918": {
+    "id": 918,
+    "timestamp": "2020-03-09 17:41:24",
+    "quantity": 11,
+    "user_id": 5,
+    "nova_id": 9,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "919": {
+    "id": 919,
+    "timestamp": "2020-03-09 00:15:05",
+    "quantity": 11,
+    "user_id": 13,
+    "nova_id": 53,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "921": {
+    "id": 921,
+    "timestamp": "2020-03-10 20:21:29",
+    "quantity": 11,
+    "user_id": 103,
+    "nova_id": 9,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "922": {
+    "id": 922,
+    "timestamp": "2020-03-10 15:59:50",
+    "quantity": 11,
+    "user_id": 17,
+    "nova_id": 53,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "924": {
+    "id": 924,
+    "timestamp": "2020-03-11 11:32:13",
+    "quantity": 11,
+    "user_id": 92,
+    "nova_id": 9,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "925": {
+    "id": 925,
+    "timestamp": "2020-03-11 02:53:51",
+    "quantity": 11,
+    "user_id": 87,
+    "nova_id": 53,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "927": {
+    "id": 927,
+    "timestamp": "2020-03-12 20:14:34",
+    "quantity": 11,
+    "user_id": 102,
+    "nova_id": 9,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "928": {
+    "id": 928,
+    "timestamp": "2020-03-12 16:46:48",
+    "quantity": 11,
+    "user_id": 47,
+    "nova_id": 53,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "930": {
+    "id": 930,
+    "timestamp": "2020-03-13 19:08:10",
+    "quantity": 11,
+    "user_id": 73,
+    "nova_id": 9,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "931": {
+    "id": 931,
+    "timestamp": "2020-03-13 04:09:12",
+    "quantity": 9,
+    "user_id": 76,
+    "nova_id": 53,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "933": {
+    "id": 933,
+    "timestamp": "2020-03-14 07:00:29",
+    "quantity": 11,
+    "user_id": 59,
+    "nova_id": 9,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "934": {
+    "id": 934,
+    "timestamp": "2020-03-14 21:35:53",
+    "quantity": 11,
+    "user_id": 3,
+    "nova_id": 53,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "936": {
+    "id": 936,
+    "timestamp": "2020-03-15 09:46:00",
+    "quantity": 11,
+    "user_id": 74,
+    "nova_id": 9,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "937": {
+    "id": 937,
+    "timestamp": "2020-03-15 01:22:06",
+    "quantity": 11,
+    "user_id": 69,
+    "nova_id": 53,
+    "batch_id": 31,
+    "sheetidtest": 11
+  },
+  "960": {
+    "id": 960,
+    "timestamp": "2020-02-17 12:48:58",
+    "quantity": 9,
+    "user_id": 81,
+    "nova_id": 32,
+    "batch_id": 10,
+    "sheetidtest": 12
+  },
+  "962": {
+    "id": 962,
+    "timestamp": "2020-02-18 08:29:29",
+    "quantity": 9,
+    "user_id": 68,
+    "nova_id": 32,
+    "batch_id": 10,
+    "sheetidtest": 12
+  },
+  "964": {
+    "id": 964,
+    "timestamp": "2020-02-19 02:00:27",
+    "quantity": 9,
+    "user_id": 53,
+    "nova_id": 32,
+    "batch_id": 10,
+    "sheetidtest": 12
+  },
+  "966": {
+    "id": 966,
+    "timestamp": "2020-02-20 01:17:30",
+    "quantity": 9,
+    "user_id": 94,
+    "nova_id": 32,
+    "batch_id": 10,
+    "sheetidtest": 12
+  },
+  "968": {
+    "id": 968,
+    "timestamp": "2020-02-21 21:46:41",
+    "quantity": 9,
+    "user_id": 59,
+    "nova_id": 32,
+    "batch_id": 10,
+    "sheetidtest": 12
+  },
+  "970": {
+    "id": 970,
+    "timestamp": "2020-02-22 22:38:53",
+    "quantity": 9,
+    "user_id": 30,
+    "nova_id": 32,
+    "batch_id": 10,
+    "sheetidtest": 12
+  },
+  "972": {
+    "id": 972,
+    "timestamp": "2020-02-23 13:26:27",
+    "quantity": 9,
+    "user_id": 3,
+    "nova_id": 32,
+    "batch_id": 10,
+    "sheetidtest": 12
+  },
+  "974": {
+    "id": 974,
+    "timestamp": "2020-02-17 00:30:34",
+    "quantity": 1,
+    "user_id": 19,
+    "nova_id": 32,
+    "batch_id": 32,
+    "sheetidtest": 12
+  },
+  "976": {
+    "id": 976,
+    "timestamp": "2020-02-18 15:33:27",
+    "quantity": 1,
+    "user_id": 78,
+    "nova_id": 32,
+    "batch_id": 32,
+    "sheetidtest": 12
+  },
+  "978": {
+    "id": 978,
+    "timestamp": "2020-02-19 16:26:05",
+    "quantity": 1,
+    "user_id": 11,
+    "nova_id": 32,
+    "batch_id": 32,
+    "sheetidtest": 12
+  },
+  "980": {
+    "id": 980,
+    "timestamp": "2020-02-20 09:26:35",
+    "quantity": 1,
+    "user_id": 24,
+    "nova_id": 32,
+    "batch_id": 32,
+    "sheetidtest": 12
+  },
+  "982": {
+    "id": 982,
+    "timestamp": "2020-02-21 16:09:00",
+    "quantity": 1,
+    "user_id": 86,
+    "nova_id": 32,
+    "batch_id": 32,
+    "sheetidtest": 12
+  },
+  "984": {
+    "id": 984,
+    "timestamp": "2020-02-22 19:25:15",
+    "quantity": 1,
+    "user_id": 51,
+    "nova_id": 32,
+    "batch_id": 32,
+    "sheetidtest": 12
+  },
+  "986": {
+    "id": 986,
+    "timestamp": "2020-02-23 21:50:33",
+    "quantity": 1,
+    "user_id": 33,
+    "nova_id": 32,
+    "batch_id": 32,
+    "sheetidtest": 12
+  },
+  "1030": {
+    "id": 1030,
+    "timestamp": "2020-02-24 10:56:31",
+    "quantity": 6,
+    "user_id": 92,
+    "nova_id": 33,
+    "batch_id": 11,
+    "sheetidtest": 13
+  },
+  "1032": {
+    "id": 1032,
+    "timestamp": "2020-02-25 10:02:14",
+    "quantity": 6,
+    "user_id": 6,
+    "nova_id": 33,
+    "batch_id": 11,
+    "sheetidtest": 13
+  },
+  "1034": {
+    "id": 1034,
+    "timestamp": "2020-02-26 14:43:04",
+    "quantity": 6,
+    "user_id": 99,
+    "nova_id": 33,
+    "batch_id": 11,
+    "sheetidtest": 13
+  },
+  "1036": {
+    "id": 1036,
+    "timestamp": "2020-02-27 17:20:17",
+    "quantity": 6,
+    "user_id": 83,
+    "nova_id": 33,
+    "batch_id": 11,
+    "sheetidtest": 13
+  },
+  "1038": {
+    "id": 1038,
+    "timestamp": "2020-02-28 05:29:17",
+    "quantity": 6,
+    "user_id": 80,
+    "nova_id": 33,
+    "batch_id": 11,
+    "sheetidtest": 13
+  },
+  "1040": {
+    "id": 1040,
+    "timestamp": "2020-02-29 05:14:17",
+    "quantity": 6,
+    "user_id": 39,
+    "nova_id": 33,
+    "batch_id": 11,
+    "sheetidtest": 13
+  },
+  "1042": {
+    "id": 1042,
+    "timestamp": "2020-03-01 11:19:23",
+    "quantity": 6,
+    "user_id": 72,
+    "nova_id": 33,
+    "batch_id": 11,
+    "sheetidtest": 13
+  },
+  "1100": {
+    "id": 1100,
+    "timestamp": "2020-03-02 08:10:46",
+    "quantity": 1,
+    "user_id": 4,
+    "nova_id": 12,
+    "batch_id": 12,
+    "sheetidtest": 14
+  },
+  "1102": {
+    "id": 1102,
+    "timestamp": "2020-03-03 09:02:04",
+    "quantity": 1,
+    "user_id": 85,
+    "nova_id": 12,
+    "batch_id": 12,
+    "sheetidtest": 14
+  },
+  "1104": {
+    "id": 1104,
+    "timestamp": "2020-03-04 12:46:55",
+    "quantity": 1,
+    "user_id": 66,
+    "nova_id": 12,
+    "batch_id": 12,
+    "sheetidtest": 14
+  },
+  "1106": {
+    "id": 1106,
+    "timestamp": "2020-03-05 11:40:03",
+    "quantity": 1,
+    "user_id": 27,
+    "nova_id": 12,
+    "batch_id": 12,
+    "sheetidtest": 14
+  },
+  "1108": {
+    "id": 1108,
+    "timestamp": "2020-03-06 12:25:00",
+    "quantity": 1,
+    "user_id": 86,
+    "nova_id": 12,
+    "batch_id": 12,
+    "sheetidtest": 14
+  },
+  "1110": {
+    "id": 1110,
+    "timestamp": "2020-03-07 22:35:41",
+    "quantity": 1,
+    "user_id": 65,
+    "nova_id": 12,
+    "batch_id": 12,
+    "sheetidtest": 14
+  },
+  "1112": {
+    "id": 1112,
+    "timestamp": "2020-03-08 19:37:17",
+    "quantity": 1,
+    "user_id": 13,
+    "nova_id": 12,
+    "batch_id": 12,
+    "sheetidtest": 14
+  },
+  "1184": {
+    "id": 1184,
+    "timestamp": "2020-03-09 16:38:35",
+    "quantity": 3,
+    "user_id": 23,
+    "nova_id": 35,
+    "batch_id": 13,
+    "sheetidtest": 15
+  },
+  "1186": {
+    "id": 1186,
+    "timestamp": "2020-03-10 01:44:59",
+    "quantity": 3,
+    "user_id": 59,
+    "nova_id": 35,
+    "batch_id": 13,
+    "sheetidtest": 15
+  },
+  "1188": {
+    "id": 1188,
+    "timestamp": "2020-03-11 04:08:51",
+    "quantity": 3,
+    "user_id": 49,
+    "nova_id": 35,
+    "batch_id": 13,
+    "sheetidtest": 15
+  },
+  "1190": {
+    "id": 1190,
+    "timestamp": "2020-03-12 09:57:06",
+    "quantity": 3,
+    "user_id": 60,
+    "nova_id": 35,
+    "batch_id": 13,
+    "sheetidtest": 15
+  },
+  "1192": {
+    "id": 1192,
+    "timestamp": "2020-03-13 03:33:19",
+    "quantity": 3,
+    "user_id": 43,
+    "nova_id": 35,
+    "batch_id": 13,
+    "sheetidtest": 15
+  },
+  "1194": {
+    "id": 1194,
+    "timestamp": "2020-03-14 03:15:07",
+    "quantity": 3,
+    "user_id": 9,
+    "nova_id": 35,
+    "batch_id": 13,
+    "sheetidtest": 15
+  },
+  "1196": {
+    "id": 1196,
+    "timestamp": "2020-03-15 04:50:50",
+    "quantity": 1,
+    "user_id": 75,
+    "nova_id": 35,
+    "batch_id": 13,
+    "sheetidtest": 15
+  },
+  "1240": {
+    "id": 1240,
+    "timestamp": "2020-03-02 19:24:04",
+    "quantity": 8,
+    "user_id": 19,
+    "nova_id": 14,
+    "batch_id": 14,
+    "sheetidtest": 16
+  },
+  "1242": {
+    "id": 1242,
+    "timestamp": "2020-03-03 05:04:53",
+    "quantity": 8,
+    "user_id": 44,
+    "nova_id": 14,
+    "batch_id": 14,
+    "sheetidtest": 16
+  },
+  "1244": {
+    "id": 1244,
+    "timestamp": "2020-03-04 07:25:22",
+    "quantity": 8,
+    "user_id": 103,
+    "nova_id": 14,
+    "batch_id": 14,
+    "sheetidtest": 16
+  },
+  "1246": {
+    "id": 1246,
+    "timestamp": "2020-03-05 02:29:43",
+    "quantity": 8,
+    "user_id": 26,
+    "nova_id": 14,
+    "batch_id": 14,
+    "sheetidtest": 16
+  },
+  "1248": {
+    "id": 1248,
+    "timestamp": "2020-03-06 17:42:29",
+    "quantity": 8,
+    "user_id": 37,
+    "nova_id": 14,
+    "batch_id": 14,
+    "sheetidtest": 16
+  },
+  "1250": {
+    "id": 1250,
+    "timestamp": "2020-03-07 06:24:57",
+    "quantity": 8,
+    "user_id": 89,
+    "nova_id": 14,
+    "batch_id": 14,
+    "sheetidtest": 16
+  },
+  "1252": {
+    "id": 1252,
+    "timestamp": "2020-03-08 13:20:55",
+    "quantity": 8,
+    "user_id": 97,
+    "nova_id": 14,
+    "batch_id": 14,
+    "sheetidtest": 16
+  },
+  "1352": {
+    "id": 1352,
+    "timestamp": "2020-03-09 22:12:07",
+    "quantity": 3,
+    "user_id": 25,
+    "nova_id": 15,
+    "batch_id": 15,
+    "sheetidtest": 17
+  },
+  "1354": {
+    "id": 1354,
+    "timestamp": "2020-03-10 09:57:30",
+    "quantity": 3,
+    "user_id": 11,
+    "nova_id": 15,
+    "batch_id": 15,
+    "sheetidtest": 17
+  },
+  "1356": {
+    "id": 1356,
+    "timestamp": "2020-03-11 15:22:51",
+    "quantity": 3,
+    "user_id": 6,
+    "nova_id": 15,
+    "batch_id": 15,
+    "sheetidtest": 17
+  },
+  "1358": {
+    "id": 1358,
+    "timestamp": "2020-03-12 19:54:38",
+    "quantity": 3,
+    "user_id": 1,
+    "nova_id": 15,
+    "batch_id": 15,
+    "sheetidtest": 17
+  },
+  "1360": {
+    "id": 1360,
+    "timestamp": "2020-03-13 16:31:49",
+    "quantity": 3,
+    "user_id": 13,
+    "nova_id": 15,
+    "batch_id": 15,
+    "sheetidtest": 17
+  },
+  "1362": {
+    "id": 1362,
+    "timestamp": "2020-03-14 01:12:01",
+    "quantity": 3,
+    "user_id": 31,
+    "nova_id": 15,
+    "batch_id": 15,
+    "sheetidtest": 17
+  },
+  "1364": {
+    "id": 1364,
+    "timestamp": "2020-03-15 07:25:59",
+    "quantity": 3,
+    "user_id": 10,
+    "nova_id": 15,
+    "batch_id": 15,
+    "sheetidtest": 17
+  },
+  "1394": {
+    "id": 1394,
+    "timestamp": "2020-03-16 07:30:07",
+    "quantity": 6,
+    "user_id": 5,
+    "nova_id": 16,
+    "batch_id": 16,
+    "sheetidtest": 18
+  },
+  "1396": {
+    "id": 1396,
+    "timestamp": "2020-03-17 23:49:58",
+    "quantity": 6,
+    "user_id": 60,
+    "nova_id": 16,
+    "batch_id": 16,
+    "sheetidtest": 18
+  },
+  "1398": {
+    "id": 1398,
+    "timestamp": "2020-03-18 22:48:55",
+    "quantity": 6,
+    "user_id": 11,
+    "nova_id": 16,
+    "batch_id": 16,
+    "sheetidtest": 18
+  },
+  "1400": {
+    "id": 1400,
+    "timestamp": "2020-03-19 19:55:28",
+    "quantity": 6,
+    "user_id": 65,
+    "nova_id": 16,
+    "batch_id": 16,
+    "sheetidtest": 18
+  },
+  "1402": {
+    "id": 1402,
+    "timestamp": "2020-03-20 16:38:15",
+    "quantity": 6,
+    "user_id": 85,
+    "nova_id": 16,
+    "batch_id": 16,
+    "sheetidtest": 18
+  },
+  "1404": {
+    "id": 1404,
+    "timestamp": "2020-03-21 21:57:25",
+    "quantity": 6,
+    "user_id": 9,
+    "nova_id": 16,
+    "batch_id": 16,
+    "sheetidtest": 18
+  },
+  "1406": {
+    "id": 1406,
+    "timestamp": "2020-03-22 00:00:15",
+    "quantity": 6,
+    "user_id": 43,
+    "nova_id": 16,
+    "batch_id": 16,
+    "sheetidtest": 18
   }
 }
