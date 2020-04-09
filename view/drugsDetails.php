@@ -116,7 +116,7 @@ $title = "CSU-NVB - Stupéfiants";
                 $foundacheck = false;   //si on a trouvé un check pour le jour en cours. par défaut à faux
                 foreach ($listofchecks as $check) { //pour chaque check
                     if ($check["batch_id"] == $batch["id"] && strtotime($check['date']) == $day) { //si c'est le bon batch et le jour en cours ?>
-                        <td><a href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>>&date=<?= date("Y-m-d", $day) ?>"><?= $check["start"] ?> Checkid = <?= $check["id"] ?></a></td>
+                        <td><a href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>&date=<?= date("Y-m-d", $day) ?>"><?= $check["start"] ?> Checkid = <?= $check["id"] ?></a></td>
                         <?php foreach ($novas as $nova) { ?>
                             <td><?= $sheet[$date][$nova_id][$batch_id] ?></td>
                         <?php } ?>

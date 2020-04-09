@@ -3,6 +3,8 @@ $title = "CSU-NVB - logs";
 ob_start();
 ?>
 <br>
+<a href="?action=detaildrug&sheetid=<?= $sheetid ?>"<button class="btn btn-primary">Revenir sur la semaine</button></a>
+<br>
 
 <table>
     <thead>
