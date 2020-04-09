@@ -45,7 +45,7 @@ $title = "CSU-NVB - Stupéfiants";
         <?php
         $nbnovas = count($novas);
         $colspanforday = $nbnovas + 2;  //nombre de novas + 2 cases pharmacies
-        foreach ($datesoftheweek as $onedate) {
+        foreach ($datesoftheweek as $onedate) { //pour toutes les dates de la semaine de la feuille
             if (strcmp(date("Y-m-d", $onedate), date("Y-m-d")) == 0) {   //si la date est aujourdh'hui.
                 echo "<th class='bg-cell-today' colspan='$colspanforday'><img src='assets/images/today.png' class='icontoday' alt='icone pour le jour actuel'>" . date("j F Y", $onedate) . "</th>";
             } else {
