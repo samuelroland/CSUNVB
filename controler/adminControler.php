@@ -136,8 +136,8 @@ function medicsHistoric($medsid)
     $medic = getMedic($medsid);
     $batch = getMedBatches($medsid);
     $stupsbatch = getStupsBatchesWithId($batch);
-    list($weeks,$stups) = getRightStupsForBatches($batch);
-    var_dump($stups);
+    $weeks = getWeeksStups();
+    var_dump($stupsbatch);
     require_once 'view/medicHistoric.php';
 }
 function displayNovas()

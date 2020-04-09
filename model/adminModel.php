@@ -161,9 +161,9 @@ function getStupsBatchesWithId($batchesid)
 {
     $AllStupsBatches = getStupsBatches();
 
-    foreach ($AllStupsBatches as $sb)
+    foreach ($batchesid as $batch)
     {
-        foreach ($batchesid as $batch)
+        foreach ($AllStupsBatches as $sb)
         {
             if ($batch['id'] == $sb['batch_id'])
             {
@@ -171,24 +171,25 @@ function getStupsBatchesWithId($batchesid)
             }
         }
     }
+    foreach ($stups as $s)
+    {
+        foreach ($compList as $c)
+        {
+            if($s['id'] == $c ['stupsheet_id']);
+        }
+    }
+
     return $compList;
 }
-function getRightStupsForBatches($batchesid)
+function getWeeksStups()
 {
-    $compList = getStupsBatchesWithId($batchesid);
     $stupsList = getAllStupsheets();
 
-    //foreach ($compList as $c){
-        foreach ($stupsList as $s)
-        {
-            /*if($c['stupsheet_id'] == $s['id'])
-            {
-                $rightStups[]= $s;
-            }*/
-            $weeks[] = $s['week'];
-        }
-    //}
+    foreach ($stupsList as $s)
+    {
+        $weeks[] = $s['week'];
+    }
     $weeksformated = array_unique($weeks);
-    return array($weeksformated,$stupsList);
+    return $weeksformated;
 }
 ?>
