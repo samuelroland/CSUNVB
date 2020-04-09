@@ -17,7 +17,7 @@ function shiftEndHomePage($base)
     $nightBoss = getShiftEndBossOrTeam($guardsheet['id'],0,1);
     $dayTeam = getShiftEndBossOrTeam($guardsheet['id'],1,0);
     $nightTeam = getShiftEndBossOrTeam($guardsheet['id'],0,0);
-    $novaday = getShiftEndNova($guardsheet['id'],1);
+    $novaday = getShiftEndNova($base[],1);
     $novanight = getShiftEndNova($guardsheet['id'],0);
     $bases = getAllBases();
     $novas = getAllNovas();

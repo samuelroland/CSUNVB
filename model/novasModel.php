@@ -37,6 +37,15 @@ function getNova($id){
 function readGuardUseNovas(){
     return json_decode(file_get_contents("model/dataStorage/guard_use_nova.json"),true);
 }
+function getAGuardUseNova(){
+    $GuardNovas = readGuardUseNovas(); //Récupère les Vehicules
+
+    foreach ($GuardNovas as $GuardNova) {
+        if ($GuardNova["id"] == $id){
+            return $GuardNova;
+        }
+    }
+}
 
 function saveNovas($items)
 {
