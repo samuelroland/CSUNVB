@@ -13,6 +13,7 @@ require_once 'model/batchesModel.php';
 require_once 'model/pharmaCheksModel.php';
 require_once 'model/logsModel.php';
 require_once 'model/novaChecksModel.php';
+require "model/restocksModel.php";
 
 function drugdetails($sheetid)  //détails d'une feuille de stups
 {
