@@ -22,7 +22,7 @@ function getAllSheets()
         }
         foreach ($batches as $key => $batch) {
             if ($batch["stupsheet_id"] == $p["id"]) {
-                $p["batches"][$key] = $batch["batch"];
+                $p["batches"][$batch['id']] = $batch["batch"];
             }
         }
         $goodArray[$p["id"]] = $p;
