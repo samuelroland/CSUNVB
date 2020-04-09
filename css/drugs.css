@@ -37,27 +37,31 @@
 .bg-grey {
     background-color: #aaaaaa;
 }
-
-.bg-lightgreen {
-    background-color: #1eec5b;
+/*3 classes pour la couleur de fond de la cellule des batches */
+.bg-batch-new {
+    background-color: #2eec1e82;
 }
 
-.bg-lightblue {
-    background-color: #53cbee;
+.bg-batch-inuse {
+    background-color: #00ffff59;
+}
+
+.bg-batch-used {
+    background-color: #ffb30091;
 }
 
 .bg-lightgrey {
     background-color: #f2f2f2;
 }
-
-.bg-violet {
-    background-color: #eeba0d;
-}
-
+/*img/icon de tache finie*/
 .imgtaskclose {
     height: 18px;
     margin-right: 10px;
     margin-left: 10px;
+}
+
+.bg-cell-today{
+    background-color: #e0ff008c;
 }
 
 .icontoday {
