@@ -8,3 +8,5 @@
 1. (__SRD__, 27.02.2020) Sprint 1 terminé. Les Stories restantes non terminées ont été transférées dans le sprint 2. Sprint 2 démarré.
 1. (__SRD__, 13.03.2020) Sprint review sur le sprint 2. Notes prises par Gatien et Samuel se trouvant dans le dossier `Réunions` à  la racine du repos.
 1. (__SRD__, 13.03.2020) Sprint 2 terminé. Les Stories restantes non terminées ont été transférées dans le sprint 3. Sprint 3 démarré.
+1. (__SRD__, 27.03.2020) Sprint 3 terminé. Les Stories restantes non terminées ont été transférées dans le sprint 4. Sprint 4 démarré.
+1. (__SRD__, 07.04.2020) Décision par XCL annoncée en réunion Zoom de la fin du projet pour le 15.04.2020. Le rendu sera une documentation et le lien dans la documentation de la dernière release contenant le code source.
