@@ -39,3 +39,12 @@ function changestupssheets() {  //changer l'affichage des blocs
     bloctodisplay.classList.remove("d-none")
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    var els= document.getElementsByClassName("clickable");
+    Array.prototype.forEach.call(els, function (el) {
+        el.addEventListener('click', function(evt) {
+            window.location = evt.target.getAttribute('data-href')
+        })
+    })
+})
+

@@ -73,3 +73,11 @@ td {
 th {
     padding: 5px;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    background-color: #d7fffd;
+}
