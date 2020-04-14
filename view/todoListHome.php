@@ -23,11 +23,7 @@ require_once 'controler/drugControler.php';
 <div class="">
 
     <h1>Tâches hebdomadaires de la base <?= $baseinfo['name'] ?></h1>
-
-
-
-    <script src="js/todoList.js"></script>
-
+    <h2>Feuille de tâches - <?= ($sheet['state'] == 'open') ? 'Ouverte' : 'Fermée' ?></h2>
 </div>
 <table class=" table table-striped">
     <div class="navbar nav-pills">
@@ -39,8 +35,7 @@ require_once 'controler/drugControler.php';
                 echo "<a href='?action=todolisthome&sheetid=$semmoins'><button class='btn btn-info btnmenu' > <</button></a>";
             }
             //affichage du numero de la semaine
-            ?>Semaine <?php echo $numweek; ?>
-            <?php
+            echo "Semaine $numweek en $year";
             //if qui désactive le bouton s'il y a pas de semaines après
             if ($semplus == null) {
                 echo "<button class='btn btn-info btnmenu' disabled> ></button>";
@@ -70,19 +65,19 @@ require_once 'controler/drugControler.php';
 
     <div class="horizontal"><span style="font-weight: bold">JOURNÉE</span></div>
     <?php
-//code qui permets de génerer les dates (qui marche plus ou moins suite a des gros changement dans le code en géneral)
+    //code qui permets de génerer les dates (qui marche plus ou moins suite a des gros changement dans le code en géneral)
     $dt = new DateTime;
     if (isset($getyear) && isset($sheetid)) {
         $dt->setISODate($getyear, $sheetid);
     } else {
-        $dt->setISODate($dt->format('o'),$weeknum+$dt->format('W'));
+        $dt->setISODate($dt->format('o'), $weeknum + $dt->format('W'));
     }
     // $year = $dt->format('o');
     // $week = $dt->format('W');
     ?>
     <?php
     // Affichage des jours de la semaine et des jours du mois
-    foreach ($jours as $jour) {
+    foreach ($jours as $numjour => $jour) {
         echo "<div class='day'><div class='dayheader'>$jour</div>";
         do {
             echo "<div  class='dayheader'>" . $dt->format('d M Y') . "</div>";
@@ -90,18 +85,10 @@ require_once 'controler/drugControler.php';
         } while ($weeknum == $dt->format('w'));
 
         //boucle qui parcours les taches et regarde si elles sont jour ou nuit
-        foreach ($tasks as $task) {
-            //if qui nous va voir si c'est jour ou nuit
-            if ($task['daytask'] == true) {
-                //affichage des tasks nuit
-                ?>
-                <div class='hour'><?= $task['description']; ?></div><?php
-
-
-            }
+        foreach ($tasks[$numjour]['daytasks'] as $onetask) {
+            echo "<div class='hour'>" . $onetask['description'] . "</div>";
         }
         echo "</div>";
-       // var_dump( $tasks[$i]['daytasks']);
     }
     ?>
 
@@ -111,18 +98,11 @@ require_once 'controler/drugControler.php';
 
     <?php
     //Code PHP qui fait la nuit
-    foreach ($jours as $jour) {
+    foreach ($jours as $numjour => $jour) {
         echo "<div class='day'>";
         //boucle qui parcours les taches et regarde si elles sont jour ou nuit
-        foreach ($tasks as $task) {
-            //if qui nous va voir si c'est jour ou nuit
-            if ($task['nighttask'] == true) {
-                //affichage des tasks nuit
-                ?>
-                <div class='hour'><?= $task['description']; ?></div><?php
-
-            }
-
+        foreach ($tasks[$numjour]['nighttasks'] as $onetask) {
+            echo "<div class='hour'>" . $onetask['description'] . "</div>";
         }
         echo "</div>";
     }
