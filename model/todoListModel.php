@@ -1,10 +1,11 @@
 <?php
 /*
- * Program : CSUNVBA2 todoList dans le model
+ * Program : CSUNVBA2 ensemble des fonction du model pour les todos
  * Author: Gatien Jayme / Miguel Soares
- * Date: 04.02.2020
+ * Date: 04.2020
  * Version: 1.0
- * */
+ *
+*/
 
 /** ------------------TASK---------------------- */
 

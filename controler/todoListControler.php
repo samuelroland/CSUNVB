@@ -1,9 +1,10 @@
 <?php
-/**
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
- * Date: Février 2020
- **/
+/*
+ * Program : CSUNVBA2 ensemble des fonction du controler pour les todos
+ * Author: Gatien Jayme / Miguel Soares
+ * Date: 04.2020
+ * Version: 1.0
+ * */
 
 require 'model/todoListModel.php';
 require_once 'model/drugModel.php';
@@ -15,10 +16,7 @@ require_once 'model/pharmaCheksModel.php';
 
 function todoListHomePage()
 {
-
-
     require_once 'view/todoHomePage.php';
-
 }
 
 function todoListDetailedWeek($sheetid)
