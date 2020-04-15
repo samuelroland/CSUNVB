@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$title = "CSU-NVB - Stupéfiants";
+$title = "Feuille de stupéfiants";
 ?>
 <div class="row m-2">
     <h1>Stupéfiants</h1>

@@ -1,11 +1,12 @@
 <?php
 ob_start();
-$title = "CSU-NVB - Liste Stupéfiants";
+$title = "Liste des feuilles de stupéfiants";
 ?>
     <h1>Feuilles de stupéfiants</h1>
 
 
-<?php SelectSheets("Stups"); //générer la vue de la sélection des feuilles
+<?php
+SelectSheets("Stups"); //générer la vue de la sélection des feuilles
 ?>
 
 <?php
