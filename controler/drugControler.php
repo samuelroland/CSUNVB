@@ -51,7 +51,6 @@ function drugdetails($sheetid)  //détails d'une feuille de stups
             }
         }
     }
-    var_dump($stupsheet['novas']);
 
     //Grand tableau de restocks trié par date, nova id et batch id:
     $bigSheetOfRestocks = getBigSheetOfRestocks($sheetid);
