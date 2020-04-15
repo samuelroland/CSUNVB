@@ -147,7 +147,9 @@ $title = "Feuille de stupéfiants";
                     }
                 }
                 if ($foundacheck == false) {   //si on a pas trouvé de check parce qu'il est manquant ou pas encore créé
-                    echo "<td></td><td></td><td></td><td></td><td></td>";    //afficher 5 cases vides ne pas décaler les checks des jours suivants
+                    for ($i = 0; $i < 2 + count($novas); $i++) {
+                        echo "<td></td>";    //afficher 5 cases vides ne pas décaler les checks des jours suivants
+                    }
                 }
             }
             echo "</tr>";   //fin de la ligne du batch
