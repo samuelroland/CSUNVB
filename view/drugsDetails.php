@@ -69,7 +69,7 @@ $title = "CSU-NVB - Stupéfiants";
     <tr>
         <?php for ($i = 0; $i < 7; $i++) {
             foreach ($novas as $nova) {
-                echo "<th>{$nova["nova"]}</th>";
+                echo "<th>{$nova["nova"]}.id={$nova["nova_id"]}</th>";
             }
 
         } ?>
@@ -84,8 +84,8 @@ $title = "CSU-NVB - Stupéfiants";
                 <td> </td>
                 <?php
                 foreach ($novas as $nova) {
+                    //la case pour novacheck
                     echo "<td>{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["start"]}-{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["end"]}</td>";
-                    //echo "<td>13-13</td>";  //la case pour novacheck
                 }
                 ?>
                 <td> </td>
@@ -113,15 +113,27 @@ $title = "CSU-NVB - Stupéfiants";
         }
         ?>
         <tr>
-            <td colspan="2" class="<?= $CssClassForTheBatch ?>"><?= $batch["number"]?><br><?= $text ?></td>
+            <td colspan="2" class="<?= $CssClassForTheBatch ?>"><?= $batch["number"]?><br>id=<?= $batch["id"]?><?= $text ?></td>
             <?php
             foreach ($datesoftheweek as $day) {  //pour chaque jour de la semaine
                 $foundacheck = false;   //si on a trouvé un check pour le jour en cours. par défaut à faux
                 foreach ($listofchecks as $check) { //pour chaque check
                     if ($check["batch_id"] == $batch["id"] && strtotime($check['date']) == $day) { //si c'est le bon batch et le jour en cours ?>
-                        <td class="clickable" data-href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>&date=<?= date("Y-m-d", $day) ?>"><?= $check["start"] ?></td>
-                        <?php foreach ($novas as $nova) { ?>
-                            <td><?= $sheet[$date][$nova_id][$batch_id] ?></td>
+                        <td class="clickable" data-href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>&date=<?= date("Y-m-d", $day) ?>"><?= $check["start"] ?>.id:<?= $check["id"] ?></td>
+                        <?php
+
+                        foreach ($novas as $nova) {
+                            ?>
+                            <td><?php $restock = $bigSheetOfRestocks[date("Y-m-d", $day)][$nova['nova_id']][$batch['id']];
+                                if ($restock!=null){
+                                    echo "idrest:".$restock['id']."q:".$restock['quantity']." batch:".$restock['batch_id']." nova:".$restock['nova_id']." date:".$restock['timestamp'];
+
+                                }
+                                else{
+                                    echo "null!";
+                                }
+
+                                ?></td>
                         <?php } ?>
 
                         <td class="clickable" data-href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>&date=<?= date("Y-m-d", $day) ?>"><?= $check["end"] ?></td>

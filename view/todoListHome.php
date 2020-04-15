@@ -1,4 +1,10 @@
 <?php
+/*
+ * Program : CSUNVBA2 affichage de la vue todoListHome des todos
+ * Author: Gatien Jayme / Miguel Soares
+ * Date: 04.2020
+ * Version: 1.0
+ * */
 ob_start();
 //variables utiles pour les dates et jours
 $title = "CSU-NVB - Tâches hebdomadaires";
@@ -53,10 +59,7 @@ require_once 'controler/drugControler.php';
                 echo "<button class='btn btn-info btnmenu' >Modifier une tache</button>";
                 echo "<button class='btn btn-info btnmenu' >Supprimer une tache</button>";
             }
-
-
             ?>
-
         </th>
     </div>
 </table>

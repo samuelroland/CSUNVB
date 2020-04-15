@@ -39,7 +39,7 @@ function drugdetails($sheetid)  //détails d'une feuille de stups
                 foreach ($datesoftheweek as $dayindex => $day) {
                     foreach ($novaChecks as $novaCheck) {
                         if ($novaCheck["drug_id"] == $drug['id']) {
-                            if ($novaCheck["nova_id"] == $nova['id']) {
+                            if ($novaCheck["nova_id"] == $nova['nova_id']) {
                                 if ($novaCheck["date"] == date("Y-m-d", $day)) {
                                     $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["start"] = $novaCheck["start"];
                                     $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["end"] = $novaCheck["end"];
@@ -51,6 +51,10 @@ function drugdetails($sheetid)  //détails d'une feuille de stups
             }
         }
     }
+    var_dump($stupsheet['novas']);
+
+    //Grand tableau de restocks trié par date, nova id et batch id:
+    $bigSheetOfRestocks = getBigSheetOfRestocks($sheetid);
 
     require 'view/drugsDetails.php';
 }
@@ -125,14 +129,16 @@ function getDatesOfAWeekBySheetId($sheetid)
     return $datesoftheweek;
 }
 
-function updatePharmaCheckPage($batch_id, $stupsheet_id, $date){
+function updatePharmaCheckPage($batch_id, $stupsheet_id, $date)
+{
     $batch = getABatcheById($batch_id);
     $stupsheet = getASheetById($stupsheet_id);
     $check = getAChek($date, $batch_id);
     require_once "view/updatePharmaCheck.php";
 }
 
-function changePharmaCheck($batch_id, $stupsheet_id, $date, $start, $end){
+function changePharmaCheck($batch_id, $stupsheet_id, $date, $start, $end)
+{
     $check = getAChek($date, $batch_id);
     $newCheck = [
         "date" => $date,
@@ -143,10 +149,9 @@ function changePharmaCheck($batch_id, $stupsheet_id, $date, $start, $end){
         "stupsheet_id" => $stupsheet_id
     ];
 
-    if ($check == null){
+    if ($check == null) {
         addAChek($newCheck);
-    }
-    else{
+    } else {
         $newCheck["id"] = $check["id"];
         updateAChek($newCheck);
     }

@@ -17,9 +17,12 @@ function createPharmaChecks()   //générer des données de pharmachecks
     for ($sheetid = 1; $sheetid <= 23; $sheetid++) {  //pour chaque stupsheet
         $datesoftheweek = getDatesOfAWeekBySheetId($sheetid);
         for ($i = 1; $i <= HowMuchGenerateChecks / 7; $i++) {   //pour chaque batch/lo
-            $start = rand(3, 20);
-            $end = $start - rand(0, 1);
             for ($day = 1; $day <= 7; $day++) {//pour 7 jours.
+                $start = rand(3, 20);
+                $end = $start - rand(0, $start - 2) + rand(-1, 2);
+                if ($start < $end) {
+                    $end = $start;
+                }
                 $daytoadd = -1 + $day;
                 $dateofcheck = strtotime("+$daytoadd day", $datesoftheweek[1]); //rajouter un certain nombre de jours à la première date de la semaine.
                 echo "Sheetid = " . $sheetid . " et dateofcheck = " . date("Y-m-d", $dateofcheck) . "   \n ";
@@ -48,7 +51,7 @@ function createNovachecks()
     $listnovachecks = array();  //liste crée de novachecks
 
     $indexturn = 1; //pour l'id, index de l'élément généré
-    for ($sheetid = 1; $sheetid <= 23; $sheetid++) {    //pour toutes les feuilles
+    for ($sheetid = 1; $sheetid <= 22; $sheetid++) {    //pour toutes les feuilles
         $dates = getDatesOfAWeekBySheetId($sheetid);
 
         //Prendre les bonnes novas
@@ -77,7 +80,7 @@ function createNovachecks()
                         "date" => date("Y-m-d", $onedate),
                         "start" => $start,
                         "end" => $end,
-                        "nova_id" => $onenova['id'],
+                        "nova_id" => $onenova['nova_id'],
                         "drug_id" => $drug,
                         "user_id" => $user,
                         "stupsheet_id" => $sheetid
@@ -136,13 +139,13 @@ function createRestocks()
                     $stringprecisetime = date("H:i:s", rand(1500000000, 1586349000));    //string d'un temps en format H:i:s random sur une date random pour ne pas avoir 00:00:00
                     $timestamp = $datestr . $stringprecisetime;
 
-                    $randvar = rand(0, 25); //25 pour 1 erreur sur 3-4 parmi 80-90 restocks par feuille
+                    $randvar = rand(0, 25); //25 pour 1 erreur sur 25 donc 3-4 erreurs parmi 80-90 restocks par feuille
 
                     $user = rand(1, 103);
 
                     if ($check == null) {
                         $nbchecknull++;
-                        echo "check null n $nbchecknull $sheetid $indexturn\n";
+                        //echo "check null n $nbchecknull $sheetid $indexturn\n";
                         //On ne crée pas le restock car il n'y a pas de pharmacheck à cet endroit.
                     } else {
 
@@ -151,7 +154,7 @@ function createRestocks()
                             $quantity = $check['start'] - $check['end'] - $quantityremoved;
                         } else {
                             //Quantité donnée par la différence de start et end, divisé par nombre de novas, arrondi inférieur, moins 1.
-                            $quantity = round($check['start'] - $check['end'] / count($novas), 0, PHP_ROUND_HALF_DOWN) - 1; //division integer
+                            $quantity = round(($check['start'] - $check['end']) / (count($novas)), 0, PHP_ROUND_HALF_DOWN); //division integer
                         }
 
                         //Enregistrer la quantité enlevée
@@ -163,24 +166,25 @@ function createRestocks()
                             //ne pas compter l'erreur dans quantityremoved, continuer comme si ca n'avait pas changé
                         }
 
-                        //Si après toutes ces manipulations $quantity vaut 0 on ne le crée pas, et ca fera une case vide.
+                        //Si après toutes ces manipulations $quantity vaut 0 ou inférieur on ne le crée pas, et ca fera une case vide.
                         if ($quantity <= 0) {
                             $quantity = null;
                             $quantityremoved -= $quantity;  //retirer la quantité enlevée parce que pas enlevée finalement.
                         } else {    //sinon le crée
-                            $listrestocks[$indexturn] = [
+                            $newrestock = [
                                 "id" => $indexturn,
                                 "timestamp" => $timestamp,
                                 "quantity" => $quantity,
                                 "user_id" => $user,
-                                "nova_id" => $onenova['id'],
-                                "batch_id" => $onebatchid,
-                                "sheetidtest" => $sheetid
+                                "nova_id" => $onenova['nova_id'],
+                                "batch_id" => $onebatchid
                             ];
+                            print_r($newrestock);
+                            //echo "\nrestockid={$newrestock['id']} - pharmachecksid={$check['id']} - start:{$check['start']} - end:{$check['end']} - quantity=$quantity - quantityremoved=$quantityremoved";
+                            $listrestocks[$indexturn] = $newrestock;
+                            $indexturn++;   //numéro suivant (id)
                         }
                     }
-                        $indexturn++;   //numéro suivant (id) pour le prochain tour même si pas créé
-
                 }
             }
         }
@@ -189,9 +193,11 @@ function createRestocks()
 
 }
 
-//Liste des fonctions (à activer ou désactiver avec des commentaires) pour générer selon les besoins.
+//Liste des fonctions (à activer ou désactiver avec des commentaires) pour générer selon les besoins depuis un shell.
+//INFO: pour éxecuter le fichier: "cd ...../CSUNVNA2" puis "php -f controler/generationData.php".
+
 //createPharmaChecks();
 //createNovachecks();
-createRestocks();
+//createRestocks();
 
 ?>
