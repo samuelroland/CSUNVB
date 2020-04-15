@@ -1,4 +1,9 @@
 <?php
+/*
+  Author : Tous
+  File : index.php seul fichier php appelé directement depuis l'url. renvoie vers le controleur avec des données selon $action
+  Date : 05.02.2020
+*/
 
 session_start();
 
@@ -33,7 +38,7 @@ require "controler/shiftEndControler.php";
 require "controler/todoListControler.php";
 require "controler/drugControler.php";
 require "controler/loginControler.php";
-require "controler/Help.php";
+require "controler/Help.php";   //controleur d'aide de génération de contenu commun
 
 if (isset($_SESSION['user']) == false && $action != "tryLogin") {
     $action = "error";
