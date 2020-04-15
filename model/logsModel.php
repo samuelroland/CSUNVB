@@ -1,4 +1,9 @@
 <?php
+/*
+  Author : Christopher Pardo
+  File : logsModel.php fonctions du modèle pour les logs
+  Date : 05.03.2020
+*/
 
 function getAllLogs(){
     $badArray = json_decode(file_get_contents("model/dataStorage/logs.json"), true); //Prend les éléments d'un fichier Json

@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
+  File : baseModel.php fonctions du modèle pour les bases
   Date : 09.03.2020
 */
 

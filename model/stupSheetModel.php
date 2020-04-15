@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project :
+  File : stupSheetModel.php fonctions du modèle pour les stupsheets
   Date : 02.03.2020
 */
 

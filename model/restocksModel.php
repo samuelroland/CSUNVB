@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
+  File : restocksModel.php fonctions du modèle pour les restocks
   Date : 07.04.2020
 */
 

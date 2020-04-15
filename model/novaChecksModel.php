@@ -1,4 +1,9 @@
 <?php
+/*
+  Author : Christopher Pardo
+  File : novaChecksModel.php fonctions du modèle pour les novachecks
+  Date : 05.03.2020
+*/
 
 function getAllNovaChecks()
 {
