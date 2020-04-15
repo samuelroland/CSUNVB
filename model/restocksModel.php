@@ -86,4 +86,23 @@ function deleteARestock($id)
     saveRestocks($items);
 }
 
+//retourne un grand tableau de restocks trié par date, nova id, batch id.
+function getBigSheetOfRestocks($sheetid)
+{
+    $result = [];   //tableau vide
+
+    $dates = getDatesOfAWeekBySheetId($sheetid);
+    foreach ($dates as $index => $onedate) {
+        $dates[$index] = date("Y-m-d", $onedate);
+    }
+    $restocks = getAllRestocks();
+    foreach ($restocks as $restock) {
+        // if $restock[date] is in the sheet$
+        if (in_array(date("Y-m-d", strtotime($restock['timestamp'])), $dates) == true) {
+            $result[(date("Y-m-d", strtotime($restock['timestamp'])))][$restock['nova_id']][$restock['batch_id']] = $restock;
+        }
+    }
+    return $result;
+}
+
 ?>
