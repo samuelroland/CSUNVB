@@ -17,9 +17,12 @@ function createPharmaChecks()   //générer des données de pharmachecks
     for ($sheetid = 1; $sheetid <= 23; $sheetid++) {  //pour chaque stupsheet
         $datesoftheweek = getDatesOfAWeekBySheetId($sheetid);
         for ($i = 1; $i <= HowMuchGenerateChecks / 7; $i++) {   //pour chaque batch/lo
-            $start = rand(3, 20);
-            $end = $start - rand(0, 1);
             for ($day = 1; $day <= 7; $day++) {//pour 7 jours.
+                $start = rand(3, 20);
+                $end = $start - rand(0, $start - 2) + rand(-1, 2);
+                if ($start < $end) {
+                    $end = $start;
+                }
                 $daytoadd = -1 + $day;
                 $dateofcheck = strtotime("+$daytoadd day", $datesoftheweek[1]); //rajouter un certain nombre de jours à la première date de la semaine.
                 echo "Sheetid = " . $sheetid . " et dateofcheck = " . date("Y-m-d", $dateofcheck) . "   \n ";
