@@ -23,7 +23,14 @@
 }
 
 .txtvertical {
-    writing-mode: sideways-lr;
+    position: absolute;
+    margin-top: 15px;
+    margin-right: 15px;
+    text-align:center;
+    padding: 3px;
+    table-layout:fixed;
+    width: 25px;
+    transform: rotate(270deg);
 }
 
 .pharmaciecolonne {

@@ -59,9 +59,9 @@ $title = "CSU-NVB - Stupéfiants";
         <?php
         for ($j = 0; $j < 7; $j++) {
             ?>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
+            <th rowspan="2"><p class="txtvertical">Pharmacie</p></th>
             <th colspan="<?= $nbnovas ?>">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
+            <th rowspan="2"><p class="txtvertical">Pharmacie</p></th>
         <?php }
         ?>
     </tr>
