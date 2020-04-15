@@ -1,10 +1,8 @@
-/**
- * Le fichier stups.js contient les fonctionnalités javascript qui ne sont utilisées que pour la gestion des stupéfiants
- *
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
- * Date: Février 2020
- **/
+ /*
+ Author : Samuel Roland
+ File : SheetSelect.js contient les fonctionnalités javascript qui ne sont utilisées que pour la vue sheetselect.php
+ Date : 15.03.2020
+ */
 
 //Pour tous les labels, on doit récuperer la valeur de l'attribut "data-sheetid" avant d'envoyer le formulaire
 $(document).ready(function () {
