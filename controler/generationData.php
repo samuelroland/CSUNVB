@@ -51,7 +51,7 @@ function createNovachecks()
     $listnovachecks = array();  //liste crée de novachecks
 
     $indexturn = 1; //pour l'id, index de l'élément généré
-    for ($sheetid = 1; $sheetid <= 23; $sheetid++) {    //pour toutes les feuilles
+    for ($sheetid = 1; $sheetid <= 22; $sheetid++) {    //pour toutes les feuilles
         $dates = getDatesOfAWeekBySheetId($sheetid);
 
         //Prendre les bonnes novas
@@ -80,7 +80,7 @@ function createNovachecks()
                         "date" => date("Y-m-d", $onedate),
                         "start" => $start,
                         "end" => $end,
-                        "nova_id" => $onenova['id'],
+                        "nova_id" => $onenova['nova_id'],
                         "drug_id" => $drug,
                         "user_id" => $user,
                         "stupsheet_id" => $sheetid

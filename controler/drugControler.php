@@ -39,7 +39,7 @@ function drugdetails($sheetid)  //détails d'une feuille de stups
                 foreach ($datesoftheweek as $dayindex => $day) {
                     foreach ($novaChecks as $novaCheck) {
                         if ($novaCheck["drug_id"] == $drug['id']) {
-                            if ($novaCheck["nova_id"] == $nova['id']) {
+                            if ($novaCheck["nova_id"] == $nova['nova_id']) {
                                 if ($novaCheck["date"] == date("Y-m-d", $day)) {
                                     $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["start"] = $novaCheck["start"];
                                     $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $day)]["end"] = $novaCheck["end"];
