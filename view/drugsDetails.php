@@ -80,14 +80,20 @@ $title = "CSU-NVB - Stupéfiants";
             <td colspan="2" class=""><strong><?= $drug["name"] ?></strong></td>
             <?php for ($f = 1; $f <= 7; $f++) { //pour les 7 jours de la semaine.
                 ?>
-                <td> </td>
+                <td></td>
                 <?php
-                foreach ($novas as $nova) {
-                    //la case pour novacheck
-                    echo "<td>{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["start"]}-{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["end"]}</td>";
+                foreach ($novas as $nova) { //Affichage des cases pour les novachecks
+                    //Simplifier la manipulation de novacheck
+                    $novacheck = $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])];
+
+                    $classWarning = "";  //vide par défaut, donc pas de couleur.
+                    if ($novacheck['start'] != $novacheck['end']) {
+                        $classWarning = "dataerror";
+                    }
+                    echo "<td class='$classWarning'>{$novacheck['start']}-{$novacheck['end']}</td>";
                 }
                 ?>
-                <td> </td>
+                <td></td>
             <?php } ?>
         </tr>
         <?php
