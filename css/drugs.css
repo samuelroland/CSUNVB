@@ -49,10 +49,11 @@
 .bg-batch-used {
     background-color: #ffb30091;
 }
-
+/*Couleur de fond pour les lignes du tableau avec les stups. gris différent de la classe "table-striped"*/
 .bg-lightgrey {
     background-color: #f2f2f2;
 }
+
 /*img/icon de tache finie*/
 .imgtaskclose {
     height: 18px;
@@ -63,13 +64,13 @@
 .bg-cell-today{
     background-color: #e0ff008c;
 }
-
+/*icon pour montrer aujourd'hui dans la page détails*/
 .icontoday {
     height: 24px;
     margin-right: 10px;
     margin-left: 10px;
 }
-
+/*Pour le tableau de la page détails*/
 td {
     padding: 7px;
 }
@@ -77,11 +78,16 @@ td {
 th {
     padding: 5px;
 }
-
+/*Les cases clickable pour aller vers la page edit*/
 .clickable {
     cursor: pointer;
 }
 
 .clickable:hover {
     background-color: #d7fffd;
+}
+
+/*Les cellules mises en évidence quand il y un problème*/
+.dataerror{
+    background-color: rgba(255, 87, 0, 0.93);
 }

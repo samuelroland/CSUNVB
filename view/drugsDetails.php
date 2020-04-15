@@ -128,7 +128,12 @@ $title = "CSU-NVB - Stupéfiants";
                                 echo $restock['quantity'];  //on affiche que la quantité. si restock null alors il y aura une case vide.
                                 $totalrestock += $restock['quantity'];  //ajout de la quantité au total
                                 ?></td>
-                        <?php } ?>
+                        <?php }
+                        $classWarning ="";  //vide par défaut, donc pas de couleur.
+                        if ($totalrestock != $check['start']-$check['end']){
+                            $classWarning = "dataerror";
+                        }
+                        ?>
 
                         <td class="clickable <?=$classWarning ?>" data-href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>&date=<?= date("Y-m-d", $day) ?>"><?= $check["end"] ?></td>
                         <?php
