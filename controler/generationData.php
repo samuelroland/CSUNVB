@@ -154,7 +154,7 @@ function createRestocks()
                             $quantity = $check['start'] - $check['end'] - $quantityremoved;
                         } else {
                             //Quantité donnée par la différence de start et end, divisé par nombre de novas, arrondi inférieur, moins 1.
-                            $quantity = round($check['start'] - $check['end'] / count($novas), 0, PHP_ROUND_HALF_DOWN) - 1; //division integer
+                            $quantity = round(($check['start'] - $check['end']) / (count($novas)), 0, PHP_ROUND_HALF_DOWN); //division integer
                         }
 
                         //Enregistrer la quantité enlevée
