@@ -1,10 +1,12 @@
 <?php
 /**
- * Fichier: page contenant des fonctions pour générer des données en json
- * Auteur: Samuel Roland
- * Date: Mars 2020
- **/
+ * Fichier:
 
+/*
+  Author : Samuel Roland
+  File : generationData.php fonctions pour générer des données cohérentes et réalistse en json
+  Date : 15.03.2020
+*/
 
 require "controler/drugControler.php";
 

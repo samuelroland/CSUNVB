@@ -1,4 +1,9 @@
 <?php
+/*
+  Author : Samuel Roland
+  File : Help.php fonctions du contrôleur pour les fonctions de générations de bouts de contenu
+  Date : 30.02.2020
+*/
 
 //Gére la génération de la vue d'une zone de sélection d'une feuille (stups par ex.) dépendant de la base et du site
 function SelectSheets($mode)

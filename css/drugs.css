@@ -1,3 +1,9 @@
+/*
+  Author : Samuel Roland
+  File : styles.css classes CSS pour les drugs.
+  Date : 04.02.2020
+*/
+
 #divJoursSemaine {
     display: flex;
     flex-direction: row;

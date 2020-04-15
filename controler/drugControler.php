@@ -1,9 +1,9 @@
 <?php
-/**
- * Ce cartouche vaudra quelques points en moins au groupe qui osera le laisser là tel quel ...
- * Auteur: X. Carrel
- * Date: Février 2020
- **/
+/*
+  Author : Samuel Roland
+  File : drugControler.php fonction du contrôleur pour les drugs
+  Date : 04.02.2020
+*/
 
 require_once 'model/drugModel.php';
 require_once 'model/basesModel.php';
