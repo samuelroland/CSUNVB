@@ -54,7 +54,7 @@ $title = "CSU-NVB - Stupéfiants";
         ?>
     </tr>
     <tr>
-        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/assets/images/logo-stups.png"
                                                                     alt="stups logo" class="imgheadertable"></th>
         <?php
         for ($j = 0; $j < 7; $j++) {
