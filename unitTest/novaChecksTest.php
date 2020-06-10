@@ -1,5 +1,9 @@
 <?php
-
+/*
+  Author : Christopher Pardo
+  File : novaChecksTest.php tests du modèle des novachecks novaChecksModel.php
+  Date : 06.04.2020
+*/
 require_once "model/novaChecksModel.php";
 
 print "Fonction de récupération des cheks : ";

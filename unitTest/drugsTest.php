@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
+  File : drugsTest.php tests du modèle des drugs drugsModel.php
   Date : 04.02.2020
 */
 

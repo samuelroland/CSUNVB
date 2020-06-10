@@ -1,8 +1,8 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
-  Date : 02.03.2020
+  File : stupSheetTest.php tests du modèle des stupsheets stupSheetModel.php
+  Date : 11.03.2020
 */
 
 require_once "model/stupSheetModel.php";

@@ -1,8 +1,8 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
-  Date : 05.03.2020
+  File : novasTest.php tests du modèle des novas novasModel.php
+  Date : 11.03.2020
 */
 
 require_once "model/novasModel.php";

@@ -1,5 +1,5 @@
 <!--
-Fichier: Page vue de la zone de sélection d'une feuille (stups par ex.)
+Fichier: Page vue de la zone de sélection d'une feuille (stups par ex.) pour la page home de todos et stups
 Auteur: Samuel Roland
 Date: 16.03.2020
 -->

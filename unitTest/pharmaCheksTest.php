@@ -1,5 +1,9 @@
 <?php
-
+/*
+  Author : Christopher Pardo
+  File : pharmaChecksTest.php tests du modèle des pharmachecks pharmaChecksModel.php
+  Date : 19.03.2020
+*/
 require_once "model/pharmaCheksModel.php";
 
 print "Fonction de récupération des cheks : ";

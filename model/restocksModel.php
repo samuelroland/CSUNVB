@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
+  File : restocksModel.php fonctions du modèle pour les restocks
   Date : 07.04.2020
 */
 
@@ -84,6 +84,28 @@ function deleteARestock($id)
     unset($items[$id]);
 
     saveRestocks($items);
+}
+
+//retourne un grand tableau de restocks trié par date, nova id, batch id, uniquement pour la feuille demandée par $sheetid
+function getBigSheetOfRestocks($sheetid)
+{
+    $result = [];   //tableau vide
+    $dates = getDatesOfAWeekBySheetId($sheetid);
+
+    //Changer le format des dates: timestamp vers Y-m-d
+    foreach ($dates as $index => $onedate) {
+        $dates[$index] = date("Y-m-d", $onedate);
+    }
+
+    $restocks = getAllRestocks();
+    foreach ($restocks as $restock) {
+        // if $restock[date] est dans le tableau de dates
+        if (in_array(date("Y-m-d", strtotime($restock['timestamp'])), $dates) == true) {
+            //On stocke tout le restock dans un tableau à 3 dimensions, pour y accéder facilement dans la vue
+            $result[(date("Y-m-d", strtotime($restock['timestamp'])))][$restock['nova_id']][$restock['batch_id']] = $restock;
+        }
+    }
+    return $result;
 }
 
 ?>

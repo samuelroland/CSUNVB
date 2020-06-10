@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
+  File : pharmaChecksModel.php fonctions du modèle pour les pharmachecks
   Date : 05.03.2020
 */
 

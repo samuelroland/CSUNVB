@@ -1,5 +1,17 @@
 [
   {
+    "id": 0,
+    "state": "used",
+    "number": "655421",
+    "drug_id": 1
+  },
+  {
+    "id": 1,
+    "state": "used",
+    "number": "987456",
+    "drug_id": 1
+  },
+  {
     "id": 2,
     "state": "used",
     "number": "123123",

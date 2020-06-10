@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project : 
+  File : batchesTest.php tests du modèle des batches batchesModel.php
   Date : 05.03.2020
 */
 

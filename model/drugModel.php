@@ -1,9 +1,11 @@
 <?php
-/**
- * Retourne tous les items dans un tableau indexé de tableaux associatifs
- * Des points seront également retirés au groupe qui osera laisser une des fonctions de ce fichier telle quelle
- * sans l'adapter au niveau de son nom et de son code pour qu'elle dise plus précisément de quelles données elle traite
- */
+/*
+  Author : Christopher Pardo
+  File : drugModel.php fonctions du modèle pour les drugs
+  Date : 05.03.2020
+*/
+
+//Retourne tous les items dans un tableau indexé de tableaux associatifs
 function getAllDrugs()
 {
     $badArray = json_decode(file_get_contents("model/dataStorage/drugs.json"), true); //Prend les éléments d'un fichier Json

@@ -1,10 +1,11 @@
 <?php
 /*
- * Program : CSUNVBA2 todoList dans le model
+ * Program : CSUNVBA2 ensemble des fonction du model pour les todos
  * Author: Gatien Jayme / Miguel Soares
- * Date: 04.02.2020
+ * Date: 04.2020
  * Version: 1.0
- * */
+ *
+*/
 
 /** ------------------TASK---------------------- */
 
@@ -17,6 +18,8 @@ function getTodoListTasks()
     }
     return $tasksbyid;
 }
+
+
 
 // Récupère la liste des tâches de nuit / jour selon le paramètre $daynight (1 ou 0) et le paramètre $numday (numéro du jour de la semaine)
 function getTodoListTaskByNumdayAndDayOrNight($daynight, $numday)

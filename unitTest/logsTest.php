@@ -1,5 +1,9 @@
 <?php
-
+/*
+  Author : Christopher Pardo
+  File : logsTest.php tests du modèle des logs logsModel.php
+  Date : 26.03.2020
+*/
 require_once "model/logsModel.php";
 require_once "model/loginModel.php";
 require_once "model/stupSheetModel.php";

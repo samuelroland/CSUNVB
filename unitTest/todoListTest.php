@@ -1,8 +1,9 @@
 <?php
 /*
+  Program : CSUNVBA2 ensemble des tests pour les todos
   Author : Gatien Jayme
-  Project : Test
-  Date : 04.02.2020
+  Date : 04.2020
+  Version : 1.0
 */
 require 'model/todoListModel.php';
 

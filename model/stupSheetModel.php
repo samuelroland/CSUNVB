@@ -1,7 +1,7 @@
 <?php
 /*
   Author : Christopher Pardo
-  Project :
+  File : stupSheetModel.php fonctions du modèle pour les stupsheets
   Date : 02.03.2020
 */
 
@@ -22,7 +22,7 @@ function getAllSheets()
         }
         foreach ($batches as $key => $batch) {
             if ($batch["stupsheet_id"] == $p["id"]) {
-                $p["batches"][$key] = $batch["batch"];
+                $p["batches"][$batch['batch_id']] = $batch["batch"];
             }
         }
         $goodArray[$p["id"]] = $p;
@@ -141,19 +141,5 @@ function getSheetUseBatch()
     return $uses;
 }
 
-function getBigSheet($weeknb)
-{
-    /*
-    $result = [];
-    // Find date of first day: 2020-03-09
-    "Y-m-d H:i"
-    $restocks=getRestocks();
-    foreach ($restocks as $restock)
-    {
-        // if $restock[date] is in the sheet
-        $result[$restock['date as day']][$restock['nova_id']][$restock['batch_id']] = $restock['quantity'];
-    }
-    return $result;
-    */
-}
+
 ?>

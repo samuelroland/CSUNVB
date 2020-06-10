@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$title = "CSU-NVB - Stupéfiants";
+$title = "Feuille de stupéfiants";
 ?>
 <div class="row m-2">
     <h1>Stupéfiants</h1>
@@ -41,13 +41,12 @@ $title = "CSU-NVB - Stupéfiants";
     <thead>
     <tr>
         <th colspan="2"></th>   <!-- cellule vide haut gauche du tableau -->
-
         <?php
         $nbnovas = count($novas);
         $colspanforday = $nbnovas + 2;  //nombre de novas + 2 cases pharmacies
-        foreach ($datesoftheweek as $onedate) {
+        foreach ($datesoftheweek as $onedate) { //pour toutes les dates de la semaine de la feuille
             if (strcmp(date("Y-m-d", $onedate), date("Y-m-d")) == 0) {   //si la date est aujourdh'hui.
-                echo "<th class='bg-info' colspan='$colspanforday'><img src='assets/images/today.png' class='icontoday' alt='icone pour le jour actuel'>" . date("j F Y", $onedate) . "</th>";
+                echo "<th class='bg-cell-today' colspan='$colspanforday'><img src='assets/images/today.png' class='icontoday' alt='icone pour le jour actuel'>" . date("j F Y", $onedate) . "</th>";
             } else {
                 echo "<th colspan='$colspanforday'>" . date("j F Y", $onedate) . "</th>";
             }
@@ -55,14 +54,14 @@ $title = "CSU-NVB - Stupéfiants";
         ?>
     </tr>
     <tr>
-        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/model/dataStorage/img/logo-stups.png"
+        <th colspan="2" rowspan="2" class="imgheadertablezone"><img src="/assets/images/logo-stups.png"
                                                                     alt="stups logo" class="imgheadertable"></th>
         <?php
         for ($j = 0; $j < 7; $j++) {
             ?>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
+            <th rowspan="2"><p class="txtvertical">Pharmacie</p></th>
             <th colspan="<?= $nbnovas ?>">Véhicules</th>
-            <th rowspan="2" class="txtvertical">Pharmacie</th>
+            <th rowspan="2"><p class="txtvertical">Pharmacie</p></th>
         <?php }
         ?>
     </tr>
@@ -81,14 +80,20 @@ $title = "CSU-NVB - Stupéfiants";
             <td colspan="2" class=""><strong><?= $drug["name"] ?></strong></td>
             <?php for ($f = 1; $f <= 7; $f++) { //pour les 7 jours de la semaine.
                 ?>
-                <td> </td>
+                <td></td>
                 <?php
-                foreach ($novas as $nova) {
-                    echo "<td>{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["start"]}-{$stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])]["end"]}</td>";
-                    //echo "<td>13-13</td>";  //la case pour novacheck
+                foreach ($novas as $nova) { //Affichage des cases pour les novachecks
+                    //Simplifier la manipulation de novacheck
+                    $novacheck = $stupsheet['novas'][$drug["name"]][$nova["nova"]][date("Y-m-d", $datesoftheweek[$f])];
+
+                    $classWarning = "";  //vide par défaut, donc pas de couleur.
+                    if ($novacheck['start'] != $novacheck['end']) {
+                        $classWarning = "dataerror";
+                    }
+                    echo "<td class='$classWarning'>{$novacheck['start']}-{$novacheck['end']}</td>";
                 }
                 ?>
-                <td> </td>
+                <td></td>
             <?php } ?>
         </tr>
         <?php
@@ -98,40 +103,58 @@ $title = "CSU-NVB - Stupéfiants";
         if ($batch["drug_id"] == $drug["id"] && in_array($batch['number'], $stupsheet['batches'])) {
         switch ($batch['state']) {
             case "new":
-                $CssClassForTheBatch = "bg-lightgreen";
+                $CssClassForTheBatch = "bg-batch-new";
+                $text = "Nouveau";
                 break;
             case "inuse":
-                $CssClassForTheBatch = "bg-lightblue";
+                $CssClassForTheBatch = "bg-batch-inuse";
+                $text = "En cours";
                 break;
             case "used":
-                $CssClassForTheBatch = "bg-violet";
+                $CssClassForTheBatch = "bg-batch-used";
+                $text = "Utilisé";
                 break;
 
         }
         ?>
-        <tr class="<?= $CssClassForTheBatch ?>">
-            <td colspan="2" class=""><?= $batch["number"] . " id:" . $batch['id'] ?> state=<?= $batch["state"] ?></td>
+        <tr>
+            <td colspan="2" class="<?= $CssClassForTheBatch ?>"><?= $batch["number"]?><br><?= $text ?></td>
             <?php
             foreach ($datesoftheweek as $day) {  //pour chaque jour de la semaine
                 $foundacheck = false;   //si on a trouvé un check pour le jour en cours. par défaut à faux
                 foreach ($listofchecks as $check) { //pour chaque check
                     if ($check["batch_id"] == $batch["id"] && strtotime($check['date']) == $day) { //si c'est le bon batch et le jour en cours ?>
-                        <td><a href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>>&date=<?= date("Y-m-d", $day) ?>"><?= $check["start"] ?> Checkid = <?= $check["id"] ?></a></td>
-                        <?php foreach ($novas as $nova) { ?>
-                            <td><?= $sheet[$date][$nova_id][$batch_id] ?></td>
-                        <?php } ?>
+                        <td class="clickable" data-href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>&date=<?= date("Y-m-d", $day) ?>"><?= $check["start"] ?></td>
+                        <?php
+                        $totalrestock = 0;  //le total des quantités de restocks part de 0.
+                        foreach ($novas as $nova) {
+                            ?>
+                            <td><?php
+                                $restock = $bigSheetOfRestocks[date("Y-m-d", $day)][$nova['nova_id']][$batch['id']];
+                                echo $restock['quantity'];  //on affiche que la quantité. si restock null alors il y aura une case vide.
+                                $totalrestock += $restock['quantity'];  //ajout de la quantité au total
+                                ?></td>
+                        <?php }
+                        $classWarning ="";  //vide par défaut, donc pas de couleur.
+                        if ($totalrestock != $check['start']-$check['end']){
+                            $classWarning = "dataerror";
+                        }
+                        ?>
 
-                        <td><?= $check["end"] ?></td>
+                        <td class="clickable <?=$classWarning ?>" data-href="?action=updatePharmaCheck&batch_id=<?= $batch["id"] ?>&stupsheet_id=<?= $stupsheet["id"] ?>&date=<?= date("Y-m-d", $day) ?>"><?= $check["end"] ?></td>
                         <?php
                         $foundacheck = true;    //donc on a trouvé.
                     }
                 }
                 if ($foundacheck == false) {   //si on a pas trouvé de check parce qu'il est manquant ou pas encore créé
-                    echo "<td></td><td></td><td></td><td></td><td></td>";    //afficher 5 cases vides ne pas décaler les checks des jours suivants
+                    for ($i = 0; $i < 2 + count($novas); $i++) {
+                        echo "<td></td>";    //afficher 5 cases vides ne pas décaler les checks des jours suivants
+                    }
                 }
             }
-            }
-            echo "<tr>";
+            echo "</tr>";   //fin de la ligne du batch
+            }   //fin du if
+
             } ?>
         </tbody>
     <?php }

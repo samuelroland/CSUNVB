@@ -1,3 +1,9 @@
+/*
+  Author : Samuel Roland
+  File : styles.css classes CSS pour les drugs.
+  Date : 04.02.2020
+*/
+
 #divJoursSemaine {
     display: flex;
     flex-direction: row;
@@ -23,7 +29,14 @@
 }
 
 .txtvertical {
-    writing-mode: sideways-lr;
+    position: absolute;
+    margin-top: 15px;
+    margin-right: 15px;
+    text-align:center;
+    padding: 3px;
+    table-layout:fixed;
+    width: 25px;
+    transform: rotate(270deg);
 }
 
 .pharmaciecolonne {
@@ -37,39 +50,57 @@
 .bg-grey {
     background-color: #aaaaaa;
 }
-
-.bg-lightgreen {
-    background-color: #1eec5b;
+/*3 classes pour la couleur de fond de la cellule des batches */
+.bg-batch-new {
+    background-color: #2eec1e82;
 }
 
-.bg-lightblue {
-    background-color: #53cbee;
+.bg-batch-inuse {
+    background-color: #00ffff59;
 }
 
+.bg-batch-used {
+    background-color: #ffb30091;
+}
+/*Couleur de fond pour les lignes du tableau avec les stups. gris différent de la classe "table-striped"*/
 .bg-lightgrey {
     background-color: #f2f2f2;
 }
 
-.bg-violet {
-    background-color: #eeba0d;
-}
-
+/*img/icon de tache finie*/
 .imgtaskclose {
     height: 18px;
     margin-right: 10px;
     margin-left: 10px;
 }
 
+.bg-cell-today{
+    background-color: #e0ff008c;
+}
+/*icon pour montrer aujourd'hui dans la page détails*/
 .icontoday {
     height: 24px;
     margin-right: 10px;
     margin-left: 10px;
 }
-
+/*Pour le tableau de la page détails*/
 td {
     padding: 7px;
 }
 
 th {
     padding: 5px;
+}
+/*Les cases clickable pour aller vers la page edit*/
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    background-color: #d7fffd;
+}
+
+/*Les cellules mises en évidence quand il y un problème*/
+.dataerror{
+    background-color: rgba(255, 87, 0, 0.93);
 }
