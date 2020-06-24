@@ -30,7 +30,7 @@ function shiftEndHomePage($base)
 function shiftEndListPage($sheetid)
 {
     $guardsections = readShiftEndGuardSection();
-    $guardlines = readShiftEndGuardLines();
+    $guardlines = readShiftEndGuardLines(); 
     $guardsheets = readShiftEndItems();
     $guardsheet = getShiftEndById($sheetid);
     $baseinfo = getABase($guardsheet['base_id']);
